@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 The tidyverse | Introduction to R</title>
+  <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 The tidyverse | Introduction to R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 The tidyverse | Introduction to R" />
+  
+  <meta name="twitter:description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
+  
+
+
+
+<meta name="date" content="2022-03-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="data-processing.html"/>
+<link rel="next" href="basic-stats-epi.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this document</a></li>
+<li class="part"><span><b>I Getting started</b></span></li>
+<li class="chapter" data-level="1" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>1</b> Background</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="background.html"><a href="background.html#what-is-r"><i class="fa fa-check"></i><b>1.1</b> What is R?</a></li>
+<li class="chapter" data-level="1.2" data-path="background.html"><a href="background.html#what-is-rstudio"><i class="fa fa-check"></i><b>1.2</b> What is RStudio?</a></li>
+<li class="chapter" data-level="1.3" data-path="background.html"><a href="background.html#software-installation"><i class="fa fa-check"></i><b>1.3</b> Software installation</a></li>
+<li class="chapter" data-level="1.4" data-path="background.html"><a href="background.html#references"><i class="fa fa-check"></i><b>1.4</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Working with R</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#starting-r"><i class="fa fa-check"></i><b>2.1</b> Starting R</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction.html"><a href="introduction.html#storing-data-as-objects"><i class="fa fa-check"></i><b>2.2</b> Storing data as objects</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="introduction.html"><a href="introduction.html#about-variable-names"><i class="fa fa-check"></i><b>2.2.1</b> About variable names</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="introduction.html"><a href="introduction.html#data-structure-i-the-vector"><i class="fa fa-check"></i><b>2.3</b> Data structure I: The vector</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="introduction.html"><a href="introduction.html#example-simple-descriptives"><i class="fa fa-check"></i><b>2.3.1</b> Example: simple descriptives</a></li>
+<li class="chapter" data-level="2.3.2" data-path="introduction.html"><a href="introduction.html#example-simple-plots"><i class="fa fa-check"></i><b>2.3.2</b> Example: simple plots</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="introduction.html"><a href="introduction.html#non-numeric-data"><i class="fa fa-check"></i><b>2.4</b> Non-numeric data</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="introduction.html"><a href="introduction.html#descriptives-for-grouping-data"><i class="fa fa-check"></i><b>2.4.1</b> Descriptives for grouping data</a></li>
+<li class="chapter" data-level="2.4.2" data-path="introduction.html"><a href="introduction.html#character-vector-vs-factor"><i class="fa fa-check"></i><b>2.4.2</b> Character vector vs factor</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="introduction.html"><a href="introduction.html#general-data-in-r"><i class="fa fa-check"></i><b>2.5</b> General data in R</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="introduction.html"><a href="introduction.html#extracting-parts-of-a-data-frame"><i class="fa fa-check"></i><b>2.5.1</b> Extracting parts of a data frame</a></li>
+<li class="chapter" data-level="2.5.2" data-path="introduction.html"><a href="introduction.html#example-descriptive-statistics"><i class="fa fa-check"></i><b>2.5.2</b> Example: descriptive statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="introduction.html"><a href="introduction.html#importing-data"><i class="fa fa-check"></i><b>2.6</b> Importing data</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction.html"><a href="introduction.html#meta-activity"><i class="fa fa-check"></i><b>2.7</b> Meta-activity</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="introduction.html"><a href="introduction.html#getting-help"><i class="fa fa-check"></i><b>2.7.1</b> Getting help</a></li>
+<li class="chapter" data-level="2.7.2" data-path="introduction.html"><a href="introduction.html#keeping-track-of-objects"><i class="fa fa-check"></i><b>2.7.2</b> Keeping track of objects</a></li>
+<li class="chapter" data-level="2.7.3" data-path="introduction.html"><a href="introduction.html#quitting-r"><i class="fa fa-check"></i><b>2.7.3</b> Quitting R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="intro_rstudio.html"><a href="intro_rstudio.html"><i class="fa fa-check"></i><b>3</b> Working in RStudio</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="intro_rstudio.html"><a href="intro_rstudio.html#getting-started"><i class="fa fa-check"></i><b>3.1</b> Getting started</a></li>
+<li class="chapter" data-level="3.2" data-path="intro_rstudio.html"><a href="intro_rstudio.html#a-quick-tour-of-the-gui"><i class="fa fa-check"></i><b>3.2</b> A quick tour of the GUI</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="intro_rstudio.html"><a href="intro_rstudio.html#console-and-friends"><i class="fa fa-check"></i><b>3.2.1</b> Console and friends</a></li>
+<li class="chapter" data-level="3.2.2" data-path="intro_rstudio.html"><a href="intro_rstudio.html#rstudio-console-specials"><i class="fa fa-check"></i><b>3.2.2</b> RStudio Console specials</a></li>
+<li class="chapter" data-level="3.2.3" data-path="intro_rstudio.html"><a href="intro_rstudio.html#navigating-the-pane-layout"><i class="fa fa-check"></i><b>3.2.3</b> Navigating the pane layout</a></li>
+<li class="chapter" data-level="3.2.4" data-path="intro_rstudio.html"><a href="intro_rstudio.html#the-default-upper-pane"><i class="fa fa-check"></i><b>3.2.4</b> The default upper pane</a></li>
+<li class="chapter" data-level="3.2.5" data-path="intro_rstudio.html"><a href="intro_rstudio.html#the-default-lower-pane"><i class="fa fa-check"></i><b>3.2.5</b> The default lower pane</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="intro_rstudio.html"><a href="intro_rstudio.html#source-pane-scripting"><i class="fa fa-check"></i><b>3.3</b> Source pane &amp; scripting</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="intro_rstudio.html"><a href="intro_rstudio.html#console2source"><i class="fa fa-check"></i><b>3.3.1</b> From console to source</a></li>
+<li class="chapter" data-level="3.3.2" data-path="intro_rstudio.html"><a href="intro_rstudio.html#the-source-pane-file-editor"><i class="fa fa-check"></i><b>3.3.2</b> The Source pane file editor</a></li>
+<li class="chapter" data-level="3.3.3" data-path="intro_rstudio.html"><a href="intro_rstudio.html#displays"><i class="fa fa-check"></i><b>3.3.3</b> Displays</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="intro-example.html"><a href="intro-example.html"><i class="fa fa-check"></i><b>4</b> A simple example</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="intro-example.html"><a href="intro-example.html#data-import"><i class="fa fa-check"></i><b>4.1</b> Data import</a></li>
+<li class="chapter" data-level="4.2" data-path="intro-example.html"><a href="intro-example.html#analysis"><i class="fa fa-check"></i><b>4.2</b> Analysis</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="intro-example.html"><a href="intro-example.html#desc-ex"><i class="fa fa-check"></i><b>4.2.1</b> Descriptives</a></li>
+<li class="chapter" data-level="4.2.2" data-path="intro-example.html"><a href="intro-example.html#blood-pressure-by-salt-intake"><i class="fa fa-check"></i><b>4.2.2</b> Blood pressure by salt intake</a></li>
+<li class="chapter" data-level="4.2.3" data-path="intro-example.html"><a href="intro-example.html#salt-intake-by-sex"><i class="fa fa-check"></i><b>4.2.3</b> Salt intake by sex</a></li>
+<li class="chapter" data-level="4.2.4" data-path="intro-example.html"><a href="intro-example.html#save-results"><i class="fa fa-check"></i><b>4.2.4</b> Save results</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="intro-example.html"><a href="intro-example.html#turning-into-script"><i class="fa fa-check"></i><b>4.3</b> Turning it into a script</a></li>
+<li class="chapter" data-level="4.4" data-path="intro-example.html"><a href="intro-example.html#exp-res"><i class="fa fa-check"></i><b>4.4</b> Exporting results</a></li>
+</ul></li>
+<li class="part"><span><b>II Working with data</b></span></li>
+<li class="chapter" data-level="5" data-path="data-types-struct.html"><a href="data-types-struct.html"><i class="fa fa-check"></i><b>5</b> Data types and structures</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="data-types-struct.html"><a href="data-types-struct.html#overview"><i class="fa fa-check"></i><b>5.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="data-types-struct.html"><a href="data-types-struct.html#data-examples"><i class="fa fa-check"></i><b>5.1.1</b> Data examples</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="data-types-struct.html"><a href="data-types-struct.html#background-1"><i class="fa fa-check"></i><b>5.2</b> Background</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="data-types-struct.html"><a href="data-types-struct.html#recap"><i class="fa fa-check"></i><b>5.2.1</b> Recap</a></li>
+<li class="chapter" data-level="5.2.2" data-path="data-types-struct.html"><a href="data-types-struct.html#motivation"><i class="fa fa-check"></i><b>5.2.2</b> Motivation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="data-types-struct.html"><a href="data-types-struct.html#more-about-vectors"><i class="fa fa-check"></i><b>5.3</b> More about vectors</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="data-types-struct.html"><a href="data-types-struct.html#vector-calculations"><i class="fa fa-check"></i><b>5.3.1</b> Vector calculations</a></li>
+<li class="chapter" data-level="5.3.2" data-path="data-types-struct.html"><a href="data-types-struct.html#indexing-vectors-by-position"><i class="fa fa-check"></i><b>5.3.2</b> Indexing vectors by position</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="data-types-struct.html"><a href="data-types-struct.html#logical-data"><i class="fa fa-check"></i><b>5.4</b> Logical data</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="data-types-struct.html"><a href="data-types-struct.html#definition"><i class="fa fa-check"></i><b>5.4.1</b> Definition</a></li>
+<li class="chapter" data-level="5.4.2" data-path="data-types-struct.html"><a href="data-types-struct.html#logical-expressions"><i class="fa fa-check"></i><b>5.4.2</b> Logical expressions</a></li>
+<li class="chapter" data-level="5.4.3" data-path="data-types-struct.html"><a href="data-types-struct.html#logical-vectors"><i class="fa fa-check"></i><b>5.4.3</b> Logical vectors</a></li>
+<li class="chapter" data-level="5.4.4" data-path="data-types-struct.html"><a href="data-types-struct.html#logical-vectors-for-indexing"><i class="fa fa-check"></i><b>5.4.4</b> Logical vectors for indexing</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="data-types-struct.html"><a href="data-types-struct.html#more-on-rectangular-data"><i class="fa fa-check"></i><b>5.5</b> More on rectangular data</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="data-types-struct.html"><a href="data-types-struct.html#data-frame"><i class="fa fa-check"></i><b>5.5.1</b> Data frame</a></li>
+<li class="chapter" data-level="5.5.2" data-path="data-types-struct.html"><a href="data-types-struct.html#matrix"><i class="fa fa-check"></i><b>5.5.2</b> Matrix</a></li>
+<li class="chapter" data-level="5.5.3" data-path="data-types-struct.html"><a href="data-types-struct.html#extensions-alternatives"><i class="fa fa-check"></i><b>5.5.3</b> Extensions &amp; alternatives</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="data-types-struct.html"><a href="data-types-struct.html#helpers-subset-and-transform"><i class="fa fa-check"></i><b>5.6</b> Helpers: <code>subset</code> and <code>transform</code></a></li>
+<li class="chapter" data-level="5.7" data-path="data-types-struct.html"><a href="data-types-struct.html#free-style-data-lists"><i class="fa fa-check"></i><b>5.7</b> Free-style data: lists</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="data-types-struct.html"><a href="data-types-struct.html#background-2"><i class="fa fa-check"></i><b>5.7.1</b> Background</a></li>
+<li class="chapter" data-level="5.7.2" data-path="data-types-struct.html"><a href="data-types-struct.html#basic-list"><i class="fa fa-check"></i><b>5.7.2</b> Basic list</a></li>
+<li class="chapter" data-level="5.7.3" data-path="data-types-struct.html"><a href="data-types-struct.html#named-lists"><i class="fa fa-check"></i><b>5.7.3</b> Named lists</a></li>
+<li class="chapter" data-level="5.7.4" data-path="data-types-struct.html"><a href="data-types-struct.html#example-data-frames"><i class="fa fa-check"></i><b>5.7.4</b> Example: data frames</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="data-types-struct.html"><a href="data-types-struct.html#technical-notes"><i class="fa fa-check"></i><b>5.8</b> Technical notes</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-processing.html"><a href="data-processing.html"><i class="fa fa-check"></i><b>6</b> Processing data</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-processing.html"><a href="data-processing.html#overview-1"><i class="fa fa-check"></i><b>6.1</b> Overview</a></li>
+<li class="chapter" data-level="6.2" data-path="data-processing.html"><a href="data-processing.html#groupwise-statistics"><i class="fa fa-check"></i><b>6.2</b> Groupwise statistics</a></li>
+<li class="chapter" data-level="6.3" data-path="data-processing.html"><a href="data-processing.html#using-your-own-functions"><i class="fa fa-check"></i><b>6.3</b> Using your own functions</a></li>
+<li class="chapter" data-level="6.4" data-path="data-processing.html"><a href="data-processing.html#split---apply---combine"><i class="fa fa-check"></i><b>6.4</b> Split - Apply - Combine</a></li>
+<li class="chapter" data-level="6.5" data-path="data-processing.html"><a href="data-processing.html#merging-data-sets"><i class="fa fa-check"></i><b>6.5</b> Merging data sets</a></li>
+<li class="chapter" data-level="6.6" data-path="data-processing.html"><a href="data-processing.html#using-pipelines"><i class="fa fa-check"></i><b>6.6</b> Using pipelines</a></li>
+<li class="chapter" data-level="6.7" data-path="data-processing.html"><a href="data-processing.html#technical-notes-1"><i class="fa fa-check"></i><b>6.7</b> Technical notes</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="data-tidyverse.html"><a href="data-tidyverse.html"><i class="fa fa-check"></i><b>7</b> The <code>tidyverse</code></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="data-tidyverse.html"><a href="data-tidyverse.html#overview-2"><i class="fa fa-check"></i><b>7.1</b> Overview</a></li>
+<li class="chapter" data-level="7.2" data-path="data-tidyverse.html"><a href="data-tidyverse.html#using-dplyr-for-data-processing"><i class="fa fa-check"></i><b>7.2</b> Using <code>dplyr</code> for data processing</a></li>
+</ul></li>
+<li class="part"><span><b>III Estimation, inference, modelling</b></span></li>
+<li class="chapter" data-level="8" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html"><i class="fa fa-check"></i><b>8</b> Basic Statistics &amp; Epidemiology</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#descriptives"><i class="fa fa-check"></i><b>8.1</b> Descriptives</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#distribution-characteristics"><i class="fa fa-check"></i><b>8.1.1</b> Distribution characteristics</a></li>
+<li class="chapter" data-level="8.1.2" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#confidence-intervals"><i class="fa fa-check"></i><b>8.1.2</b> Confidence intervals</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#statistical-tests"><i class="fa fa-check"></i><b>8.2</b> Statistical tests</a></li>
+<li class="chapter" data-level="8.3" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#epidemiological-risk-measures"><i class="fa fa-check"></i><b>8.3</b> Epidemiological risk measures</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="regression_linear.html"><a href="regression_linear.html"><i class="fa fa-check"></i><b>9</b> Linear regression</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="regression_linear.html"><a href="regression_linear.html#overview-3"><i class="fa fa-check"></i><b>9.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="regression_linear.html"><a href="regression_linear.html#data-example-hemoglobin"><i class="fa fa-check"></i><b>9.1.1</b> Data example: Hemoglobin</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="regression_linear.html"><a href="regression_linear.html#background-3"><i class="fa fa-check"></i><b>9.2</b> Background</a></li>
+<li class="chapter" data-level="9.3" data-path="regression_linear.html"><a href="regression_linear.html#simple-linear-regression"><i class="fa fa-check"></i><b>9.3</b> Simple linear regression</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="regression_linear.html"><a href="regression_linear.html#looking-at-the-data"><i class="fa fa-check"></i><b>9.3.1</b> Looking at the data</a></li>
+<li class="chapter" data-level="9.3.2" data-path="regression_linear.html"><a href="regression_linear.html#fitting-a-linear-regression-model"><i class="fa fa-check"></i><b>9.3.2</b> Fitting a linear regression model</a></li>
+<li class="chapter" data-level="9.3.3" data-path="regression_linear.html"><a href="regression_linear.html#regression-table-and-inference"><i class="fa fa-check"></i><b>9.3.3</b> Regression table and inference</a></li>
+<li class="chapter" data-level="9.3.4" data-path="regression_linear.html"><a href="regression_linear.html#prediction"><i class="fa fa-check"></i><b>9.3.4</b> Prediction</a></li>
+<li class="chapter" data-level="9.3.5" data-path="regression_linear.html"><a href="regression_linear.html#diagnostics"><i class="fa fa-check"></i><b>9.3.5</b> Diagnostics</a></li>
+<li class="chapter" data-level="9.3.6" data-path="regression_linear.html"><a href="regression_linear.html#binary-predictor-and-dummy-coding"><i class="fa fa-check"></i><b>9.3.6</b> Binary predictor and dummy coding</a></li>
+<li class="chapter" data-level="9.3.7" data-path="regression_linear.html"><a href="regression_linear.html#aside-generating-nice-regression-tables"><i class="fa fa-check"></i><b>9.3.7</b> Aside: generating nice regression tables</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="regression_linear.html"><a href="regression_linear.html#multiple-linear-regression"><i class="fa fa-check"></i><b>9.4</b> Multiple linear regression</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="regression_linear.html"><a href="regression_linear.html#multiple-predictors"><i class="fa fa-check"></i><b>9.4.1</b> Multiple predictors</a></li>
+<li class="chapter" data-level="9.4.2" data-path="regression_linear.html"><a href="regression_linear.html#categorical-predictors-with-2-levels"><i class="fa fa-check"></i><b>9.4.2</b> Categorical predictors with <span class="math inline">\(&gt;\)</span> 2 levels</a></li>
+<li class="chapter" data-level="9.4.3" data-path="regression_linear.html"><a href="regression_linear.html#interactions"><i class="fa fa-check"></i><b>9.4.3</b> Interactions</a></li>
+<li class="chapter" data-level="9.4.4" data-path="regression_linear.html"><a href="regression_linear.html#splines"><i class="fa fa-check"></i><b>9.4.4</b> Splines</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="regression_linear.html"><a href="regression_linear.html#technical-notes-2"><i class="fa fa-check"></i><b>9.5</b> Technical notes</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression_more.html"><a href="regression_more.html"><i class="fa fa-check"></i><b>10</b> More regression models</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="regression_more.html"><a href="regression_more.html#logistic-regression"><i class="fa fa-check"></i><b>10.1</b> Logistic regression</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="regression_more.html"><a href="regression_more.html#ex.-birthweight-uterine-irritability"><i class="fa fa-check"></i><b>10.1.1</b> Ex.: Birthweight &amp; uterine irritability</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression_more.html"><a href="regression_more.html#survival-regression"><i class="fa fa-check"></i><b>10.2</b> Survival regression</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="regression_more.html"><a href="regression_more.html#survival-data"><i class="fa fa-check"></i><b>10.2.1</b> Survival data</a></li>
+<li class="chapter" data-level="10.2.2" data-path="regression_more.html"><a href="regression_more.html#survival-curves"><i class="fa fa-check"></i><b>10.2.2</b> Survival curves</a></li>
+<li class="chapter" data-level="10.2.3" data-path="regression_more.html"><a href="regression_more.html#cox-regression"><i class="fa fa-check"></i><b>10.2.3</b> Cox regression</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="regression_more.html"><a href="regression_more.html#other-models"><i class="fa fa-check"></i><b>10.3</b> Other models</a></li>
+</ul></li>
+<li class="part"><span><b>IV Graphics</b></span></li>
+<li class="chapter" data-level="11" data-path="graphics_base.html"><a href="graphics_base.html"><i class="fa fa-check"></i><b>11</b> Graphics in base R</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="graphics_base.html"><a href="graphics_base.html#overview-4"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
+<li class="chapter" data-level="11.2" data-path="graphics_base.html"><a href="graphics_base.html#base-plots"><i class="fa fa-check"></i><b>11.2</b> Base plots</a>
+<ul>
+<li class="chapter" data-level="" data-path="graphics_base.html"><a href="graphics_base.html#vectorized-graphical-parameters"><i class="fa fa-check"></i>Vectorized graphical parameters</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="graphics_base.html"><a href="graphics_base.html#low-level-and-high-level-plotting"><i class="fa fa-check"></i><b>11.3</b> Low-level and high-level plotting</a></li>
+<li class="chapter" data-level="11.4" data-path="graphics_base.html"><a href="graphics_base.html#displaying-saving-coloring-plots"><i class="fa fa-check"></i><b>11.4</b> Displaying, saving, coloring plots</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html"><i class="fa fa-check"></i><b>12</b> Graphics using <code>ggplot2</code></a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#overview-5"><i class="fa fa-check"></i><b>12.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#data-example-hemoglobin-1"><i class="fa fa-check"></i><b>12.1.1</b> Data example: Hemoglobin</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#background-4"><i class="fa fa-check"></i><b>12.2</b> Background</a></li>
+<li class="chapter" data-level="12.3" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#concepts"><i class="fa fa-check"></i><b>12.3</b> Concepts</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#aesthetics"><i class="fa fa-check"></i><b>12.3.1</b> Aesthetics</a></li>
+<li class="chapter" data-level="12.3.2" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#example-data"><i class="fa fa-check"></i><b>12.3.2</b> Example data</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#background-5"><i class="fa fa-check"></i><b>12.4</b> Background</a></li>
+<li class="chapter" data-level="12.5" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#basic-usage"><i class="fa fa-check"></i><b>12.5</b> Basic usage</a></li>
+<li class="chapter" data-level="12.6" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#slightly-extended-usage"><i class="fa fa-check"></i><b>12.6</b> Slightly extended usage</a></li>
+<li class="chapter" data-level="12.7" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#multiple-layers"><i class="fa fa-check"></i><b>12.7</b> Multiple layers</a></li>
+<li class="chapter" data-level="12.8" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#splitting-the-plot"><i class="fa fa-check"></i><b>12.8</b> Splitting the plot</a></li>
+<li class="chapter" data-level="12.9" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#messing-with-the-defaults"><i class="fa fa-check"></i><b>12.9</b> Messing with the defaults</a>
+<ul>
+<li class="chapter" data-level="12.9.1" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#fixing-aesthetics"><i class="fa fa-check"></i><b>12.9.1</b> {-} Fixing aesthetics</a></li>
+<li class="chapter" data-level="" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#scales"><i class="fa fa-check"></i>Scales</a></li>
+</ul></li>
+<li class="chapter" data-level="12.10" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#messing-with-defaults-ii-themes"><i class="fa fa-check"></i><b>12.10</b> Messing with defaults II: themes</a></li>
+<li class="chapter" data-level="12.11" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#extension-packages"><i class="fa fa-check"></i><b>12.11</b> Extension packages</a></li>
+<li class="chapter" data-level="12.12" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#technical-notes-3"><i class="fa fa-check"></i><b>12.12</b> Technical notes</a></li>
+</ul></li>
+<li class="part"><span><b>V Organizing the analysis</b></span></li>
+<li class="chapter" data-level="13" data-path="tables_nice.html"><a href="tables_nice.html"><i class="fa fa-check"></i><b>13</b> Generating nice tables</a></li>
+<li class="chapter" data-level="14" data-path="dynamic_documents.html"><a href="dynamic_documents.html"><i class="fa fa-check"></i><b>14</b> Dynamic documents</a></li>
+<li class="chapter" data-level="15" data-path="scripting-workflow.html"><a href="scripting-workflow.html"><i class="fa fa-check"></i><b>15</b> Scripting and workflow</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-tidyverse" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> The <code>tidyverse</code></h1>
+<div id="overview-2" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Overview</h2>
+<p>So I want to talk very briefly about the so-called tidyverse. This is a collection of R packages written or inspired by one Hadley Wickham, which aim to augment and replace large parts of base R with more modern implementations, with a focus on data science rather than classical statistics or data analysis. This is desribed in the book R for Data Science, which is freely available online.</p>
+<p>The name is based on the concept of tiyda data, which was named by Haldey Wickham in 2014 in the Journal of Statistical Software. Data is tidy, essentially, if every column is a variable, every row an observation, and every cell a single value (though the last point has become apparently become somewhat negotiable). So this is very similar to the usual requirement for statistical data being rectangular.</p>
+<p>However, the tidyverse packages also share some design principles: for example, the idea to make analysis output also tidy, so rectangular, instead of a named list, as in much of base R; this can allow elegant processing of analysis results. There is also a focus on making functions pipeline friendly, and to put the data as first argument, whereas in base R, it tends to be in the second place (t.test, lm etc.) Finally, the user interface is often stripped down, to allow easy reference to variables, withouyt much typing, similar to subset and transform.</p>
+<p>This is a short table showing some of the parallel functionality in the tidyverse. We have talked about dplyr, and ggplot2, and magrittr, and implicitly also the tibble package. But there also packages for handling factors, strings, and for handling dates. The important point is however that this all corresponds to functionality in base R.</p>
+<table>
+<caption><span id="tab:tidyverse">Table 7.1: </span> FIXME: check this</caption>
+<thead>
+<tr class="header">
+<th>Tidyverse</th>
+<th>Related R concept(s)</th>
+<th>R functions / packages</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>dplyr</td>
+<td>Data handling</td>
+<td><code>[]</code>, <code>subset</code>, <code>transform</code>, <code>aggregate</code></td>
+</tr>
+<tr class="even">
+<td>forcats</td>
+<td>Grouping variables</td>
+<td><code>factor</code></td>
+</tr>
+<tr class="odd">
+<td>ggplot2</td>
+<td>Graphics</td>
+<td><code>plot</code>, <code>boxplot</code>, <code>par</code></td>
+</tr>
+<tr class="even">
+<td>haven</td>
+<td>Data import</td>
+<td>e.g. package foreign</td>
+</tr>
+<tr class="odd">
+<td>lubridate</td>
+<td>Dates &amp; times</td>
+<td><code>as.Date</code>, <code>strptime</code></td>
+</tr>
+<tr class="even">
+<td>magrittr</td>
+<td>Pipelines</td>
+<td><code>|&gt;</code></td>
+</tr>
+<tr class="odd">
+<td>readr</td>
+<td>Text data import</td>
+<td><code>read.table</code></td>
+</tr>
+<tr class="even">
+<td>readxl</td>
+<td>Excel data import</td>
+<td>e.g. package openxlsx</td>
+</tr>
+<tr class="odd">
+<td>stringr</td>
+<td>String processing</td>
+<td><code>nchar</code>, <code>substr</code>, <code>paste</code> etc.</td>
+</tr>
+<tr class="even">
+<td>tibble</td>
+<td>Data frame</td>
+<td><code>data.frame</code> and related</td>
+</tr>
+<tr class="odd">
+<td>tidyr</td>
+<td>Data cleaning</td>
+<td><code>reshape</code></td>
+</tr>
+</tbody>
+</table>
+<p>So do you have to choose? Not really, at this point. Formally, the tidyverse is just a set of R packages that share goal and methods, as well as developers and users. Generally, but not always, the tidyverse functionality plays nice with base R, and very generally, there is a non-tidyverse alternative available that covers the same ground. I have mentioned data.table as alternative to dplyr already, especially for large data sets.</p>
+<p>At this point, the tidyverse is often referred to as a mutally intelligible dialect of the R language, and that makes sense to me. It leaves however the door open for an actual split at some point in the future.</p>
+<p>A common theme for the tidyverse packages is that they reflect a more modern approach to software development and programming: the user interfaces for functions are more consistent, they are better optimised for memory usage and speed than at least some base functions, and they emphasize interactivity, e.g. via the shiny package, which is not part of this course. However, this also includes some less attractive features, like a commitmen to “mive fast and break things”, which makes the tidyverse notably less backwards compatible and less stable than base R. It also involves complicated interdependencies between packages, not quite the dependency hell of e.g. javascript frameworks, but not that far off either.</p>
+<p>At the end of the day, my assessment is that the tidyverse is more focused on coding, in terms of formal packages, than base R, which is more focused on data analysis in its own right. Also, one should acknolwedge that the tidyverse represents a generational and cultural shift from the earlier mathematicians and statisticians develepong base R to developers who have a stronger computer science perspective.</p>
+<p>From a personal perspective, I try to make the choice between alternatives from the tidyverse and the rest of the R ecology on a case to case base. So I ask myself, what is the application? Is there espeically suitable software available, one way or the other? I tend to consider my options, to see what alternatives are available either way. I have to amdit though, that for, backward compatability and stability of code is a very important factor, and I hate it when my code suddenly breaks, which tends to make me wary of the tidyverse.</p>
+<p>There is also the factor of my own time: for many applications, any speed up I would get from more modern software might be completely negated by having to work with an unfamiliar package.</p>
+<p>Overall, I like to think that within these parameters, I am reasonably pragmatic with regard to my choices in this question.</p>
+<p>Ok, wrap up time. We have seen the use of aggregate for simpler per-group descriptives, and the more general split/lapply for any kind of groupwise processing. We have tipped our toes in the river of writing your own functions, something that is useful with both aggregate and split/lapply, and not that hard after all.</p>
+<p>We have talked about the tidyverse as a bundle of packages re-implementing much of base R functionality, and we have looked a bit closer at dplyr for data manipulation and the %&gt;% pipe operator for workflow. There is of course much more, and I have recommended pragmatism in the choice of packages.</p>
+<p>Where to go from here? The general open question we are going to attack in the last module is, how can we put all the elements we have discussed so far into reasonable workflow, to produce interesting, attractive and replicable results with the minimum amount of hassle.</p>
+<p>Specifically, with regard to tables, we will look at some packages that promise to generate attractive result tables. We’ll also talk more about how compilation of scripts works, and how we can apply this in our analyses. And finally, I will present some suggestions about how to arrange the code and the data as part of a general research workflow. Thank you.</p>
+</div>
+<div id="using-dplyr-for-data-processing" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Using <code>dplyr</code> for data processing</h2>
+<p>So how does this work in dplyr, and why should we care?</p>
+<p>dplyr is a package developed originally by Hadley Wickham, of ggplot2 fame. It can be used to process data frames and databases, so you can perform all the usual operations. That functionality is however systematically implemented via functions, so there is a function for selecting rows of a data frame, filter, and another function for selecting columns, select, and so on. The interface for these functions is similar to subset or transform, where the data is the first argument, followed by other options where you can use variable names directly, without having to quote them or use the $ notation.</p>
+<p>And actually, the names of the functions, as well as how they are organised, are both strongly inspired by SQL, so that may look familiar to you. dplyr is often faster than base R for medium to large-ish data sets, in the thousands, not millions, but tends to be slower on large data sets than package data.table. Let’s see how this works.</p>
+<table>
+<caption><span id="tab:dplyr">Table 7.2: </span> Correspondence between <code>dplyr</code> and base R functionality</caption>
+<thead>
+<tr class="header">
+<th><code>dplyr</code></th>
+<th>Base R function(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>filter</code></td>
+<td><code>subset</code>, <code>[</code> (conditional)</td>
+</tr>
+<tr class="even">
+<td><code>slice</code></td>
+<td><code>subset</code>, <code>[</code> (positional)</td>
+</tr>
+<tr class="odd">
+<td><code>select</code></td>
+<td><code>subset</code>, <code>[</code></td>
+</tr>
+<tr class="even">
+<td><code>mutate</code></td>
+<td><code>transform</code>, <code>[</code></td>
+</tr>
+<tr class="odd">
+<td><code>arrange</code></td>
+<td><code>[</code> with <code>order</code></td>
+</tr>
+<tr class="even">
+<td><code>group_by</code> + <code>summarise</code></td>
+<td><code>split</code> + <code>lapply</code></td>
+</tr>
+<tr class="odd">
+<td><code>left_join</code> etc.</td>
+<td><code>merge</code></td>
+</tr>
+</tbody>
+</table>
+<p>So I start by loading the dplyr package, and I have re-implemented here the data extractions and data modifications I have demonstrated previosuly in Module 2, using base R.</p>
+<p>So there is the function slice to extract rows of the data via their position, we can extract the first row of the data, or multiple rows, the first, third and so on. And I can use filter to extract rows via a logical condition, so here I extract all females in the data set, and here all participants over 60. I can add multiple logical conditions here, as multiple arguments, in which case they are connected by a logical AND, so here we get everybody who is both female and over 60. For an OR connection, however, I still have to use and explicit operator, the vertical line or pipe character, and that gives me all respondents who are either female or over 60.</p>
+<p>As mentioned, there is a separate function for extracting columns of a data frame, called select, where we can extract the first column only, or the first three columns, as before. Note however an interesting difference, when we extract only one column, like here, it is not automatically returned as a simple vector, but instead as a data frame with only one column. So the select function always returns a data frame, which is more consistent than base R, which can return either a data frame or a vector.</p>
+<p>And we can just list variable names, without quotation marks, to select the named columns. There even some useful helper functions that allow you to extract a range of variables based on their names, so e.g. here I want to select all columns whose name ends with “bp”, and that are of course just sbp and dbp, the blood pressure variables, in this example.</p>
+<p>Note that there is no function for selecting rectangular subsets of the data, as we can using the bracket notation. Instead, if you want to extract a subset of rows and columns, you just use nested calls to slice and select, or to filter and select, like here.</p>
+<p>If you want to modify variables in a data frame, or generate new ones, there is another function called mutate, so here we can add columns to the data with the logarithmized systolic and diastolic blood pressures. This works mostly like the transform function that we already know, but implemented differently, which can make it easier to create sequences of interdependent new variables.</p>
+<p>dplyr also has a special function for sorting data frames, called arrange, and this works as you would expect, so here we see the oldest partipants last, or if we specify desc, for descending, we sort by age, but in reversed order, and we get the youngest last here.</p>
+<p>And here we see how we can join the two data frames, as before. Again, here we have a specialized function for exactly that kind of left join, called of course left_join. And if you are interested, maybe because you have some SQL background, there more specialized functions of that type.</p>
+<p>An interesting feature in dplyr is how you organise groupwise operations. As we have just seen, in base R you use a function like aggregate for whatever you want to do, and you feed it the data frame and the grouping information, for exampel via the formulation notation. In dplur, instead you add the grouping information to the data itself, and carry the grouped data forward. And as you can see, this, too, is done by a function, which is aptly called group_by.</p>
+<p>The thing is though that ordinary data frames don’t have a slot where you can store the grouping information, so you need some kind of generalization of the data frame concept to make this work. And this is a generalization that we have already seen before, when looking at extended plotting, namely a tibble. As you will remember, a tibble is ane extension of a data frame, which means that it is a data frame, too, so all the usual base R operations will work here. And it has rather clever printing feature, where it tries to show you only as much information as fits in the current console.</p>
+<p>So what can we do with grouped tibbles? Pretty much everything. We can calculate simple one-number summaries, like with aggregate. We can also do groupwise filtering and transformation, similar to what we could do with split/lapply, simply using the same filter and mutate functions we have just seen.</p>
+<p>Now for general operations on groups, like the fitting of regression models, where we have used again split/lapply, this can be done in different ways, either by using a nest_by approach instead of a group_by, which is the official way. Alternatively, we can do this on top of group_by, using the do-mechanism in dplyr, which has however been superseeded by the official mechanism.</p>
+<p>Let’s have a look. If we use group_by on a tibble, then the grouping variables are displayed at the top of the output here. And then we can use this grouped tibble as the first argument to summarise, and the other arguments here simply define statistics we want to see in the result: the number of rows per group, using the specialized function n(), the mean of the systolic blood pressure, and the standard deviation. And the format here is that you have your chosen name, Count and so on, on the left hand side, and some function of the columns of the data frame on the right hand side.</p>
+<p>And this creates indeed a new tibble, with two rows for females and males, and four columns, corresponding to the specified summaries.</p>
+<p>We can also do this for more than one grouping variable, here stored as an object for further processing. Note that here, the tibble is listed as having two grouping variables, sex and saltadd, corresponding to six different groups overall. And we see why this is when we run the same summaries as before on this grouped tibble, namely that missing values in the grouping variables are not dropped, but rather included as a new level. So because we have missing values in variable salt_add, we have three levels there, times the two sexes, gives us six groups.</p>
+<p>By the way, it’s interesting here to see that the individuals with missing salt-added information actually have rather higher mean systolic blood pressure, so it would be interesting to ask more about why there are actually missing.</p>
+<p>So this is to show how grouping combines with filtering. In the first call to filter, we us the original, ungrouped data, and we ask for all rows where the age of the participant is equal to the maximum age. And here, this is just one person with 71 years of age. But when we run this on the grouped tibble, the filtering applies to the subgroup: we see that there is one person from the male salt-adders, with maximum age 68 in this group, but there two female salt-adders with the maximum age of 60 in that group. So these kind of groupwise selections can be useful.</p>
+<p>Finally, here is some code for doing fitting linear models using a grouped tibble and the do-function, and I am not going to look closer at this. I’ll just refer you to the quote from the documentation for do here. And this is a part of dplyr that I personally find less appealing, in that things can change based on Wickham’s feelings… which he is entitled to, of course, but Id’ rather not have them in my tool chain.</p>
+<p>This is a short comparison of functionality between dplyr and base R, and you can see that effectively, dplyr has broken up everything we can do with brackets in base R, and introduced a number of specialized functions.</p>
+<p>Let’ look briefly at what is probably the most distinct visual feature of much dplyr code that you see in the wild: the extensive use of the piping operator %&gt;%. This looks quite striking, but is really only cosmetic, as we have already seen that the dplyr functions work perfectly well without it.</p>
+<p>The motivation is that deeply nested function calls need to be read inside-out: to understand what is going on, you need to know what function1 does to the input, what function2 does to the output from function1, and so on. This can get ugly and unplesant to read. And the solution is this specialized operator, %&gt;%, which is implemented in package magrittr (not dplyr).</p>
+<p>This operator can be used to unwrap the nested function calls. So we take the input x, we send this as first argument to function1, and the output from function1 to function2 and so on. Here, the order of reading and function calls is the same. Let’s see some examples here.</p>
+<p>So we had this rectanular data selection, of both rows and columns above, a combination of slice and select, and we can re-formulate this as here: send salt_ht as first argument to slice, and extract the first 50 rows, and then send these 50 rows on to select, which extracts the fourthe and the fifth column. And this arguably a bit easier to follow than the original.</p>
+<p>And we don’t have to unwrap this completely, this is the same example, but I have spelled out the call to slice, and send this forward to select. And we can of course store the output from such a unwrapped function call sequence as an object as ususally.</p>
+<p>Going back, we see easier reading and writing of code as an advantage of using the pipe operator %&gt;%. It also avoids storing intermediate results in temporary objects, which is another technique for avoiding deeply nested function calls. On the downside,
+you can of course write inefficient and ugly code with the pipe operator %&gt;%, too, especially if it just goes on and on. And there may be some aesthetics concern among long-time R users, that would be a matter of personal preference.</p>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="data-tidyverse.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="do">## Example: dplyr I</span></span>
+<span id="cb150-2"><a href="data-tidyverse.html#cb150-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> </span>
+<span id="cb150-3"><a href="data-tidyverse.html#cb150-3" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Compare with Intro2R_2_3_DataTypesStructures.R: Same extractions /</span></span>
+<span id="cb150-4"><a href="data-tidyverse.html#cb150-4" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="co"># modifications in base R</span></span>
+<span id="cb150-5"><a href="data-tidyverse.html#cb150-5" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> </span>
+<span id="cb150-6"><a href="data-tidyverse.html#cb150-6" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">library</span>(dplyr)</span>
+<span id="cb150-7"><a href="data-tidyverse.html#cb150-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb150-8"><a href="data-tidyverse.html#cb150-8" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Select subjects: filter, slice slice for position</span></span>
+<span id="cb150-9"><a href="data-tidyverse.html#cb150-9" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">slice</span>(salt_ht, <span class="dv">1</span>)</span>
+<span id="cb150-10"><a href="data-tidyverse.html#cb150-10" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">slice</span>(salt_ht, <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">89</span>))</span>
+<span id="cb150-11"><a href="data-tidyverse.html#cb150-11" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># filter with conditions</span></span>
+<span id="cb150-12"><a href="data-tidyverse.html#cb150-12" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">filter</span>(salt_ht, sex <span class="sc">==</span> <span class="st">&quot;female&quot;</span>)</span>
+<span id="cb150-13"><a href="data-tidyverse.html#cb150-13" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">filter</span>(salt_ht, age <span class="sc">&gt;</span> <span class="dv">60</span>)</span>
+<span id="cb150-14"><a href="data-tidyverse.html#cb150-14" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">filter</span>(salt_ht, sex <span class="sc">==</span> <span class="st">&quot;female&quot;</span>, age <span class="sc">&gt;</span> <span class="dv">60</span>)</span>
+<span id="cb150-15"><a href="data-tidyverse.html#cb150-15" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">filter</span>(salt_ht, sex <span class="sc">==</span> <span class="st">&quot;female&quot;</span> <span class="sc">|</span> age <span class="sc">&gt;</span> <span class="dv">60</span>)</span>
+<span id="cb150-16"><a href="data-tidyverse.html#cb150-16" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb150-17"><a href="data-tidyverse.html#cb150-17" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Select variables with select</span></span>
+<span id="cb150-18"><a href="data-tidyverse.html#cb150-18" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">select</span>(salt_ht, <span class="dv">1</span>)</span>
+<span id="cb150-19"><a href="data-tidyverse.html#cb150-19" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">select</span>(salt_ht, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
+<span id="cb150-20"><a href="data-tidyverse.html#cb150-20" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">select</span>(salt_ht, sbp, dbp)</span>
+<span id="cb150-21"><a href="data-tidyverse.html#cb150-21" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Use place holder functions</span></span>
+<span id="cb150-22"><a href="data-tidyverse.html#cb150-22" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">select</span>(salt_ht, <span class="fu">ends_with</span>(<span class="st">&quot;bp&quot;</span>))</span>
+<span id="cb150-23"><a href="data-tidyverse.html#cb150-23" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb150-24"><a href="data-tidyverse.html#cb150-24" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Row- and columns: nested function calls</span></span>
+<span id="cb150-25"><a href="data-tidyverse.html#cb150-25" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">select</span>(<span class="fu">slice</span>(salt_ht, <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>), <span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb150-26"><a href="data-tidyverse.html#cb150-26" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">select</span>(<span class="fu">slice</span>(salt_ht, <span class="dv">51</span><span class="sc">:</span><span class="dv">100</span>), dbp, sbp)</span>
+<span id="cb150-27"><a href="data-tidyverse.html#cb150-27" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb150-28"><a href="data-tidyverse.html#cb150-28" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># New variables: mutate</span></span>
+<span id="cb150-29"><a href="data-tidyverse.html#cb150-29" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">mutate</span>(salt_ht, <span class="at">log_dbp =</span> <span class="fu">log</span>(dbp), <span class="at">log_sbp =</span> <span class="fu">log</span>(sbp))</span>
+<span id="cb150-30"><a href="data-tidyverse.html#cb150-30" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb150-31"><a href="data-tidyverse.html#cb150-31" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Sort easy</span></span>
+<span id="cb150-32"><a href="data-tidyverse.html#cb150-32" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">arrange</span>(salt_ht, age)</span>
+<span id="cb150-33"><a href="data-tidyverse.html#cb150-33" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">arrange</span>(salt_ht, <span class="fu">desc</span>(age))</span>
+<span id="cb150-34"><a href="data-tidyverse.html#cb150-34" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb150-35"><a href="data-tidyverse.html#cb150-35" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Joining data sets works too</span></span>
+<span id="cb150-36"><a href="data-tidyverse.html#cb150-36" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> salt_ht_centers2 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(salt_ht, centers, <span class="at">by =</span> <span class="st">&quot;ID&quot;</span>)</span>
+<span id="cb150-37"><a href="data-tidyverse.html#cb150-37" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(salt_ht_centers2)</span>
+<span id="cb150-38"><a href="data-tidyverse.html#cb150-38" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># More joining functions</span></span>
+<span id="cb150-39"><a href="data-tidyverse.html#cb150-39" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">apropos</span>(<span class="st">&quot;join&quot;</span>)</span>
+<span id="cb150-40"><a href="data-tidyverse.html#cb150-40" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb150-41"><a href="data-tidyverse.html#cb150-41" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> </span>
+<span id="cb150-42"><a href="data-tidyverse.html#cb150-42" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="do">## Example: dplyr II</span></span>
+<span id="cb150-43"><a href="data-tidyverse.html#cb150-43" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> </span>
+<span id="cb150-44"><a href="data-tidyverse.html#cb150-44" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Group the data &amp; summarise</span></span>
+<span id="cb150-45"><a href="data-tidyverse.html#cb150-45" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">group_by</span>(salt_ht, sex)</span>
+<span id="cb150-46"><a href="data-tidyverse.html#cb150-46" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summarise</span>(<span class="fu">group_by</span>(salt_ht, sex), <span class="at">Count =</span> <span class="fu">n</span>(), <span class="at">Mean_syst =</span> <span class="fu">mean</span>(sbp), <span class="at">StdDev_syst =</span> <span class="fu">sd</span>(sbp))</span>
+<span id="cb150-47"><a href="data-tidyverse.html#cb150-47" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb150-48"><a href="data-tidyverse.html#cb150-48" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># More than one grouping variable</span></span>
+<span id="cb150-49"><a href="data-tidyverse.html#cb150-49" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> group_salt_ht <span class="ot">&lt;-</span> <span class="fu">group_by</span>(salt_ht, sex, saltadd)</span>
+<span id="cb150-50"><a href="data-tidyverse.html#cb150-50" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> group_salt_ht</span>
+<span id="cb150-51"><a href="data-tidyverse.html#cb150-51" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Note that group_by keeps NAs in the grouping variables Note that this is</span></span>
+<span id="cb150-52"><a href="data-tidyverse.html#cb150-52" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="co"># kinda interesting here</span></span>
+<span id="cb150-53"><a href="data-tidyverse.html#cb150-53" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">summarise</span>(group_salt_ht, <span class="at">Count =</span> <span class="fu">n</span>(), <span class="at">Mean_syst =</span> <span class="fu">mean</span>(sbp), <span class="at">StdDev_syst =</span> <span class="fu">sd</span>(sbp))</span>
+<span id="cb150-54"><a href="data-tidyverse.html#cb150-54" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb150-55"><a href="data-tidyverse.html#cb150-55" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Groupwise filtering: only extract the oldest members Ungrouped: one person</span></span>
+<span id="cb150-56"><a href="data-tidyverse.html#cb150-56" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">filter</span>(salt_ht, age <span class="sc">==</span> <span class="fu">max</span>(age))</span>
+<span id="cb150-57"><a href="data-tidyverse.html#cb150-57" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Grouped: oldest in each group</span></span>
+<span id="cb150-58"><a href="data-tidyverse.html#cb150-58" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">filter</span>(group_salt_ht, age <span class="sc">==</span> <span class="fu">max</span>(age))</span>
+<span id="cb150-59"><a href="data-tidyverse.html#cb150-59" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb150-60"><a href="data-tidyverse.html#cb150-60" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Fit group-wise linear models This approach is superseeded use nest_by instead</span></span>
+<span id="cb150-61"><a href="data-tidyverse.html#cb150-61" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="co"># of group_by</span></span>
+<span id="cb150-62"><a href="data-tidyverse.html#cb150-62" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> split_lm2 <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="fu">group_by</span>(salt_ht, sex), <span class="at">model =</span> <span class="fu">lm</span>(sbp <span class="sc">~</span> dbp, <span class="at">data =</span> .))</span>
+<span id="cb150-63"><a href="data-tidyverse.html#cb150-63" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> split_lm2</span>
+<span id="cb150-64"><a href="data-tidyverse.html#cb150-64" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> split_lm2<span class="sc">$</span>model</span>
+<span id="cb150-65"><a href="data-tidyverse.html#cb150-65" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">lapply</span>(split_lm2<span class="sc">$</span>model, summary)</span>
+<span id="cb150-66"><a href="data-tidyverse.html#cb150-66" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># ?do: &#39;do() is superseded as of dplyr 1.0.0, because its syntax never really</span></span>
+<span id="cb150-67"><a href="data-tidyverse.html#cb150-67" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="co"># felt like it belong with the rest of dplyr.&#39;  (current version: 1.05)</span></span>
+<span id="cb150-68"><a href="data-tidyverse.html#cb150-68" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> </span>
+<span id="cb150-69"><a href="data-tidyverse.html#cb150-69" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="do">## Example: pipeline</span></span>
+<span id="cb150-70"><a href="data-tidyverse.html#cb150-70" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> </span>
+<span id="cb150-71"><a href="data-tidyverse.html#cb150-71" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Same calls as above</span></span>
+<span id="cb150-72"><a href="data-tidyverse.html#cb150-72" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> salt_ht <span class="sc">%&gt;%</span></span>
+<span id="cb150-73"><a href="data-tidyverse.html#cb150-73" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>     <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb150-74"><a href="data-tidyverse.html#cb150-74" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>     <span class="fu">select</span>(<span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb150-75"><a href="data-tidyverse.html#cb150-75" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Same thing</span></span>
+<span id="cb150-76"><a href="data-tidyverse.html#cb150-76" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">slice</span>(salt_ht, <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb150-77"><a href="data-tidyverse.html#cb150-77" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>     <span class="fu">select</span>(<span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>)</span></code></pre></div>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-processing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="basic-stats-epi.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/data_tidy.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["introductio-to-r.pdf", "introductio-to-r.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
