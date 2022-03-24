@@ -23,7 +23,7 @@
 
 
 
-<meta name="date" content="2022-03-06" />
+<meta name="date" content="2022-03-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="data-tidyverse.html"/>
-<link rel="next" href="regression_linear.html"/>
+<link rel="next" href="regression-linear.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -237,7 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.5.3" data-path="data-types-struct.html"><a href="data-types-struct.html#extensions-alternatives"><i class="fa fa-check"></i><b>5.5.3</b> Extensions &amp; alternatives</a></li>
 </ul></li>
 <li class="chapter" data-level="5.6" data-path="data-types-struct.html"><a href="data-types-struct.html#helpers-subset-and-transform"><i class="fa fa-check"></i><b>5.6</b> Helpers: <code>subset</code> and <code>transform</code></a></li>
-<li class="chapter" data-level="5.7" data-path="data-types-struct.html"><a href="data-types-struct.html#free-style-data-lists"><i class="fa fa-check"></i><b>5.7</b> Free-style data: lists</a>
+<li class="chapter" data-level="5.7" data-path="data-types-struct.html"><a href="data-types-struct.html#list-struct"><i class="fa fa-check"></i><b>5.7</b> Free-style data: lists</a>
 <ul>
 <li class="chapter" data-level="5.7.1" data-path="data-types-struct.html"><a href="data-types-struct.html#background-2"><i class="fa fa-check"></i><b>5.7.1</b> Background</a></li>
 <li class="chapter" data-level="5.7.2" data-path="data-types-struct.html"><a href="data-types-struct.html#basic-list"><i class="fa fa-check"></i><b>5.7.2</b> Basic list</a></li>
@@ -250,7 +250,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="6.1" data-path="data-processing.html"><a href="data-processing.html#overview-1"><i class="fa fa-check"></i><b>6.1</b> Overview</a></li>
 <li class="chapter" data-level="6.2" data-path="data-processing.html"><a href="data-processing.html#groupwise-statistics"><i class="fa fa-check"></i><b>6.2</b> Groupwise statistics</a></li>
-<li class="chapter" data-level="6.3" data-path="data-processing.html"><a href="data-processing.html#using-your-own-functions"><i class="fa fa-check"></i><b>6.3</b> Using your own functions</a></li>
+<li class="chapter" data-level="6.3" data-path="data-processing.html"><a href="data-processing.html#own-functions"><i class="fa fa-check"></i><b>6.3</b> Using your own functions</a></li>
 <li class="chapter" data-level="6.4" data-path="data-processing.html"><a href="data-processing.html#split---apply---combine"><i class="fa fa-check"></i><b>6.4</b> Split - Apply - Combine</a></li>
 <li class="chapter" data-level="6.5" data-path="data-processing.html"><a href="data-processing.html#merging-data-sets"><i class="fa fa-check"></i><b>6.5</b> Merging data sets</a></li>
 <li class="chapter" data-level="6.6" data-path="data-processing.html"><a href="data-processing.html#using-pipelines"><i class="fa fa-check"></i><b>6.6</b> Using pipelines</a></li>
@@ -264,94 +264,98 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="part"><span><b>III Estimation, inference, modelling</b></span></li>
 <li class="chapter" data-level="8" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html"><i class="fa fa-check"></i><b>8</b> Basic Statistics &amp; Epidemiology</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#descriptives"><i class="fa fa-check"></i><b>8.1</b> Descriptives</a>
+<li class="chapter" data-level="8.1" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#descriptives"><i class="fa fa-check"></i><b>8.1</b> Descriptive statistics</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#distribution-characteristics"><i class="fa fa-check"></i><b>8.1.1</b> Distribution characteristics</a></li>
-<li class="chapter" data-level="8.1.2" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#confidence-intervals"><i class="fa fa-check"></i><b>8.1.2</b> Confidence intervals</a></li>
+<li class="chapter" data-level="8.1.1" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#base-desc"><i class="fa fa-check"></i><b>8.1.1</b> In base R</a></li>
+<li class="chapter" data-level="8.1.2" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#using-package-summarytools"><i class="fa fa-check"></i><b>8.1.2</b> Using package <code>summarytools</code></a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#statistical-tests"><i class="fa fa-check"></i><b>8.2</b> Statistical tests</a></li>
-<li class="chapter" data-level="8.3" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#epidemiological-risk-measures"><i class="fa fa-check"></i><b>8.3</b> Epidemiological risk measures</a></li>
+<li class="chapter" data-level="8.2" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#confidence-intervals"><i class="fa fa-check"></i><b>8.2</b> Confidence intervals</a></li>
+<li class="chapter" data-level="8.3" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#statistical-tests"><i class="fa fa-check"></i><b>8.3</b> Statistical tests</a></li>
+<li class="chapter" data-level="8.4" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#epidemiological-risk-measures"><i class="fa fa-check"></i><b>8.4</b> Epidemiological risk measures</a></li>
+<li class="chapter" data-level="8.5" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#pander-intro"><i class="fa fa-check"></i><b>8.5</b> Improved display of descriptives</a></li>
+<li class="chapter" data-level="8.6" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#next-steps"><i class="fa fa-check"></i><b>8.6</b> Next steps</a></li>
+<li class="chapter" data-level="8.7" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#technical-notes-2"><i class="fa fa-check"></i><b>8.7</b> Technical notes</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="regression_linear.html"><a href="regression_linear.html"><i class="fa fa-check"></i><b>9</b> Linear regression</a>
+<li class="chapter" data-level="9" data-path="regression-linear.html"><a href="regression-linear.html"><i class="fa fa-check"></i><b>9</b> Linear regression</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="regression_linear.html"><a href="regression_linear.html#overview-3"><i class="fa fa-check"></i><b>9.1</b> Overview</a>
+<li class="chapter" data-level="9.1" data-path="regression-linear.html"><a href="regression-linear.html#overview-3"><i class="fa fa-check"></i><b>9.1</b> Overview</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="regression_linear.html"><a href="regression_linear.html#data-example-hemoglobin"><i class="fa fa-check"></i><b>9.1.1</b> Data example: Hemoglobin</a></li>
+<li class="chapter" data-level="9.1.1" data-path="regression-linear.html"><a href="regression-linear.html#data-example-hemoglobin"><i class="fa fa-check"></i><b>9.1.1</b> Data example: Hemoglobin</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="regression_linear.html"><a href="regression_linear.html#background-3"><i class="fa fa-check"></i><b>9.2</b> Background</a></li>
-<li class="chapter" data-level="9.3" data-path="regression_linear.html"><a href="regression_linear.html#simple-linear-regression"><i class="fa fa-check"></i><b>9.3</b> Simple linear regression</a>
+<li class="chapter" data-level="9.2" data-path="regression-linear.html"><a href="regression-linear.html#background-3"><i class="fa fa-check"></i><b>9.2</b> Background</a></li>
+<li class="chapter" data-level="9.3" data-path="regression-linear.html"><a href="regression-linear.html#simple-linear-regression"><i class="fa fa-check"></i><b>9.3</b> Simple linear regression</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="regression_linear.html"><a href="regression_linear.html#looking-at-the-data"><i class="fa fa-check"></i><b>9.3.1</b> Looking at the data</a></li>
-<li class="chapter" data-level="9.3.2" data-path="regression_linear.html"><a href="regression_linear.html#fitting-a-linear-regression-model"><i class="fa fa-check"></i><b>9.3.2</b> Fitting a linear regression model</a></li>
-<li class="chapter" data-level="9.3.3" data-path="regression_linear.html"><a href="regression_linear.html#regression-table-and-inference"><i class="fa fa-check"></i><b>9.3.3</b> Regression table and inference</a></li>
-<li class="chapter" data-level="9.3.4" data-path="regression_linear.html"><a href="regression_linear.html#prediction"><i class="fa fa-check"></i><b>9.3.4</b> Prediction</a></li>
-<li class="chapter" data-level="9.3.5" data-path="regression_linear.html"><a href="regression_linear.html#diagnostics"><i class="fa fa-check"></i><b>9.3.5</b> Diagnostics</a></li>
-<li class="chapter" data-level="9.3.6" data-path="regression_linear.html"><a href="regression_linear.html#binary-predictor-and-dummy-coding"><i class="fa fa-check"></i><b>9.3.6</b> Binary predictor and dummy coding</a></li>
-<li class="chapter" data-level="9.3.7" data-path="regression_linear.html"><a href="regression_linear.html#aside-generating-nice-regression-tables"><i class="fa fa-check"></i><b>9.3.7</b> Aside: generating nice regression tables</a></li>
+<li class="chapter" data-level="9.3.1" data-path="regression-linear.html"><a href="regression-linear.html#looking-at-the-data"><i class="fa fa-check"></i><b>9.3.1</b> Looking at the data</a></li>
+<li class="chapter" data-level="9.3.2" data-path="regression-linear.html"><a href="regression-linear.html#fitting-a-linear-regression-model"><i class="fa fa-check"></i><b>9.3.2</b> Fitting a linear regression model</a></li>
+<li class="chapter" data-level="9.3.3" data-path="regression-linear.html"><a href="regression-linear.html#regression-table-and-inference"><i class="fa fa-check"></i><b>9.3.3</b> Regression table and inference</a></li>
+<li class="chapter" data-level="9.3.4" data-path="regression-linear.html"><a href="regression-linear.html#prediction"><i class="fa fa-check"></i><b>9.3.4</b> Prediction</a></li>
+<li class="chapter" data-level="9.3.5" data-path="regression-linear.html"><a href="regression-linear.html#diagnostics"><i class="fa fa-check"></i><b>9.3.5</b> Diagnostics</a></li>
+<li class="chapter" data-level="9.3.6" data-path="regression-linear.html"><a href="regression-linear.html#binary-predictor-and-dummy-coding"><i class="fa fa-check"></i><b>9.3.6</b> Binary predictor and dummy coding</a></li>
+<li class="chapter" data-level="9.3.7" data-path="regression-linear.html"><a href="regression-linear.html#aside-generating-nice-regression-tables"><i class="fa fa-check"></i><b>9.3.7</b> Aside: generating nice regression tables</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="regression_linear.html"><a href="regression_linear.html#multiple-linear-regression"><i class="fa fa-check"></i><b>9.4</b> Multiple linear regression</a>
+<li class="chapter" data-level="9.4" data-path="regression-linear.html"><a href="regression-linear.html#multiple-linear-regression"><i class="fa fa-check"></i><b>9.4</b> Multiple linear regression</a>
 <ul>
-<li class="chapter" data-level="9.4.1" data-path="regression_linear.html"><a href="regression_linear.html#multiple-predictors"><i class="fa fa-check"></i><b>9.4.1</b> Multiple predictors</a></li>
-<li class="chapter" data-level="9.4.2" data-path="regression_linear.html"><a href="regression_linear.html#categorical-predictors-with-2-levels"><i class="fa fa-check"></i><b>9.4.2</b> Categorical predictors with <span class="math inline">\(&gt;\)</span> 2 levels</a></li>
-<li class="chapter" data-level="9.4.3" data-path="regression_linear.html"><a href="regression_linear.html#interactions"><i class="fa fa-check"></i><b>9.4.3</b> Interactions</a></li>
-<li class="chapter" data-level="9.4.4" data-path="regression_linear.html"><a href="regression_linear.html#splines"><i class="fa fa-check"></i><b>9.4.4</b> Splines</a></li>
+<li class="chapter" data-level="9.4.1" data-path="regression-linear.html"><a href="regression-linear.html#multiple-predictors"><i class="fa fa-check"></i><b>9.4.1</b> Multiple predictors</a></li>
+<li class="chapter" data-level="9.4.2" data-path="regression-linear.html"><a href="regression-linear.html#categorical-predictors-with-2-levels"><i class="fa fa-check"></i><b>9.4.2</b> Categorical predictors with <span class="math inline">\(&gt;\)</span> 2 levels</a></li>
+<li class="chapter" data-level="9.4.3" data-path="regression-linear.html"><a href="regression-linear.html#interactions"><i class="fa fa-check"></i><b>9.4.3</b> Interactions</a></li>
+<li class="chapter" data-level="9.4.4" data-path="regression-linear.html"><a href="regression-linear.html#splines"><i class="fa fa-check"></i><b>9.4.4</b> Splines</a></li>
 </ul></li>
-<li class="chapter" data-level="9.5" data-path="regression_linear.html"><a href="regression_linear.html#technical-notes-2"><i class="fa fa-check"></i><b>9.5</b> Technical notes</a></li>
+<li class="chapter" data-level="9.5" data-path="regression-linear.html"><a href="regression-linear.html#technical-notes-3"><i class="fa fa-check"></i><b>9.5</b> Technical notes</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="regression_more.html"><a href="regression_more.html"><i class="fa fa-check"></i><b>10</b> More regression models</a>
+<li class="chapter" data-level="10" data-path="regression-other.html"><a href="regression-other.html"><i class="fa fa-check"></i><b>10</b> More regression models</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="regression_more.html"><a href="regression_more.html#logistic-regression"><i class="fa fa-check"></i><b>10.1</b> Logistic regression</a>
+<li class="chapter" data-level="10.1" data-path="regression-other.html"><a href="regression-other.html#logistic-regression"><i class="fa fa-check"></i><b>10.1</b> Logistic regression</a>
 <ul>
-<li class="chapter" data-level="10.1.1" data-path="regression_more.html"><a href="regression_more.html#ex.-birthweight-uterine-irritability"><i class="fa fa-check"></i><b>10.1.1</b> Ex.: Birthweight &amp; uterine irritability</a></li>
+<li class="chapter" data-level="10.1.1" data-path="regression-other.html"><a href="regression-other.html#ex.-birthweight-uterine-irritability"><i class="fa fa-check"></i><b>10.1.1</b> Ex.: Birthweight &amp; uterine irritability</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="regression_more.html"><a href="regression_more.html#survival-regression"><i class="fa fa-check"></i><b>10.2</b> Survival regression</a>
+<li class="chapter" data-level="10.2" data-path="regression-other.html"><a href="regression-other.html#survival-regression"><i class="fa fa-check"></i><b>10.2</b> Survival regression</a>
 <ul>
-<li class="chapter" data-level="10.2.1" data-path="regression_more.html"><a href="regression_more.html#survival-data"><i class="fa fa-check"></i><b>10.2.1</b> Survival data</a></li>
-<li class="chapter" data-level="10.2.2" data-path="regression_more.html"><a href="regression_more.html#survival-curves"><i class="fa fa-check"></i><b>10.2.2</b> Survival curves</a></li>
-<li class="chapter" data-level="10.2.3" data-path="regression_more.html"><a href="regression_more.html#cox-regression"><i class="fa fa-check"></i><b>10.2.3</b> Cox regression</a></li>
+<li class="chapter" data-level="10.2.1" data-path="regression-other.html"><a href="regression-other.html#survival-data"><i class="fa fa-check"></i><b>10.2.1</b> Survival data</a></li>
+<li class="chapter" data-level="10.2.2" data-path="regression-other.html"><a href="regression-other.html#survival-curves"><i class="fa fa-check"></i><b>10.2.2</b> Survival curves</a></li>
+<li class="chapter" data-level="10.2.3" data-path="regression-other.html"><a href="regression-other.html#cox-regression"><i class="fa fa-check"></i><b>10.2.3</b> Cox regression</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="regression_more.html"><a href="regression_more.html#other-models"><i class="fa fa-check"></i><b>10.3</b> Other models</a></li>
+<li class="chapter" data-level="10.3" data-path="regression-other.html"><a href="regression-other.html#other-models"><i class="fa fa-check"></i><b>10.3</b> Other models</a></li>
 </ul></li>
 <li class="part"><span><b>IV Graphics</b></span></li>
-<li class="chapter" data-level="11" data-path="graphics_base.html"><a href="graphics_base.html"><i class="fa fa-check"></i><b>11</b> Graphics in base R</a>
+<li class="chapter" data-level="11" data-path="graphics-base.html"><a href="graphics-base.html"><i class="fa fa-check"></i><b>11</b> Graphics in base R</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="graphics_base.html"><a href="graphics_base.html#overview-4"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
-<li class="chapter" data-level="11.2" data-path="graphics_base.html"><a href="graphics_base.html#base-plots"><i class="fa fa-check"></i><b>11.2</b> Base plots</a>
+<li class="chapter" data-level="11.1" data-path="graphics-base.html"><a href="graphics-base.html#overview-4"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
+<li class="chapter" data-level="11.2" data-path="graphics-base.html"><a href="graphics-base.html#base-plots"><i class="fa fa-check"></i><b>11.2</b> Base plots</a>
 <ul>
-<li class="chapter" data-level="" data-path="graphics_base.html"><a href="graphics_base.html#vectorized-graphical-parameters"><i class="fa fa-check"></i>Vectorized graphical parameters</a></li>
+<li class="chapter" data-level="" data-path="graphics-base.html"><a href="graphics-base.html#vectorized-graphical-parameters"><i class="fa fa-check"></i>Vectorized graphical parameters</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="graphics_base.html"><a href="graphics_base.html#low-level-and-high-level-plotting"><i class="fa fa-check"></i><b>11.3</b> Low-level and high-level plotting</a></li>
-<li class="chapter" data-level="11.4" data-path="graphics_base.html"><a href="graphics_base.html#displaying-saving-coloring-plots"><i class="fa fa-check"></i><b>11.4</b> Displaying, saving, coloring plots</a></li>
+<li class="chapter" data-level="11.3" data-path="graphics-base.html"><a href="graphics-base.html#low-level-and-high-level-plotting"><i class="fa fa-check"></i><b>11.3</b> Low-level and high-level plotting</a></li>
+<li class="chapter" data-level="11.4" data-path="graphics-base.html"><a href="graphics-base.html#displaying-saving-coloring-plots"><i class="fa fa-check"></i><b>11.4</b> Displaying, saving, coloring plots</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html"><i class="fa fa-check"></i><b>12</b> Graphics using <code>ggplot2</code></a>
+<li class="chapter" data-level="12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html"><i class="fa fa-check"></i><b>12</b> Graphics using <code>ggplot2</code></a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#overview-5"><i class="fa fa-check"></i><b>12.1</b> Overview</a>
+<li class="chapter" data-level="12.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#overview-5"><i class="fa fa-check"></i><b>12.1</b> Overview</a>
 <ul>
-<li class="chapter" data-level="12.1.1" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#data-example-hemoglobin-1"><i class="fa fa-check"></i><b>12.1.1</b> Data example: Hemoglobin</a></li>
+<li class="chapter" data-level="12.1.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#data-example-hemoglobin-1"><i class="fa fa-check"></i><b>12.1.1</b> Data example: Hemoglobin</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#background-4"><i class="fa fa-check"></i><b>12.2</b> Background</a></li>
-<li class="chapter" data-level="12.3" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#concepts"><i class="fa fa-check"></i><b>12.3</b> Concepts</a>
+<li class="chapter" data-level="12.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#background-4"><i class="fa fa-check"></i><b>12.2</b> Background</a></li>
+<li class="chapter" data-level="12.3" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#concepts"><i class="fa fa-check"></i><b>12.3</b> Concepts</a>
 <ul>
-<li class="chapter" data-level="12.3.1" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#aesthetics"><i class="fa fa-check"></i><b>12.3.1</b> Aesthetics</a></li>
-<li class="chapter" data-level="12.3.2" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#example-data"><i class="fa fa-check"></i><b>12.3.2</b> Example data</a></li>
+<li class="chapter" data-level="12.3.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#aesthetics"><i class="fa fa-check"></i><b>12.3.1</b> Aesthetics</a></li>
+<li class="chapter" data-level="12.3.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#example-data"><i class="fa fa-check"></i><b>12.3.2</b> Example data</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#background-5"><i class="fa fa-check"></i><b>12.4</b> Background</a></li>
-<li class="chapter" data-level="12.5" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#basic-usage"><i class="fa fa-check"></i><b>12.5</b> Basic usage</a></li>
-<li class="chapter" data-level="12.6" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#slightly-extended-usage"><i class="fa fa-check"></i><b>12.6</b> Slightly extended usage</a></li>
-<li class="chapter" data-level="12.7" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#multiple-layers"><i class="fa fa-check"></i><b>12.7</b> Multiple layers</a></li>
-<li class="chapter" data-level="12.8" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#splitting-the-plot"><i class="fa fa-check"></i><b>12.8</b> Splitting the plot</a></li>
-<li class="chapter" data-level="12.9" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#messing-with-the-defaults"><i class="fa fa-check"></i><b>12.9</b> Messing with the defaults</a>
+<li class="chapter" data-level="12.4" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#background-5"><i class="fa fa-check"></i><b>12.4</b> Background</a></li>
+<li class="chapter" data-level="12.5" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#basic-usage"><i class="fa fa-check"></i><b>12.5</b> Basic usage</a></li>
+<li class="chapter" data-level="12.6" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#slightly-extended-usage"><i class="fa fa-check"></i><b>12.6</b> Slightly extended usage</a></li>
+<li class="chapter" data-level="12.7" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#multiple-layers"><i class="fa fa-check"></i><b>12.7</b> Multiple layers</a></li>
+<li class="chapter" data-level="12.8" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#splitting-the-plot"><i class="fa fa-check"></i><b>12.8</b> Splitting the plot</a></li>
+<li class="chapter" data-level="12.9" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#messing-with-the-defaults"><i class="fa fa-check"></i><b>12.9</b> Messing with the defaults</a>
 <ul>
-<li class="chapter" data-level="12.9.1" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#fixing-aesthetics"><i class="fa fa-check"></i><b>12.9.1</b> {-} Fixing aesthetics</a></li>
-<li class="chapter" data-level="" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#scales"><i class="fa fa-check"></i>Scales</a></li>
+<li class="chapter" data-level="12.9.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#fixing-aesthetics"><i class="fa fa-check"></i><b>12.9.1</b> {-} Fixing aesthetics</a></li>
+<li class="chapter" data-level="" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#scales"><i class="fa fa-check"></i>Scales</a></li>
 </ul></li>
-<li class="chapter" data-level="12.10" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#messing-with-defaults-ii-themes"><i class="fa fa-check"></i><b>12.10</b> Messing with defaults II: themes</a></li>
-<li class="chapter" data-level="12.11" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#extension-packages"><i class="fa fa-check"></i><b>12.11</b> Extension packages</a></li>
-<li class="chapter" data-level="12.12" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#technical-notes-3"><i class="fa fa-check"></i><b>12.12</b> Technical notes</a></li>
+<li class="chapter" data-level="12.10" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#messing-with-defaults-ii-themes"><i class="fa fa-check"></i><b>12.10</b> Messing with defaults II: themes</a></li>
+<li class="chapter" data-level="12.11" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#extension-packages"><i class="fa fa-check"></i><b>12.11</b> Extension packages</a></li>
+<li class="chapter" data-level="12.12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#technical-notes-4"><i class="fa fa-check"></i><b>12.12</b> Technical notes</a></li>
 </ul></li>
 <li class="part"><span><b>V Organizing the analysis</b></span></li>
-<li class="chapter" data-level="13" data-path="tables_nice.html"><a href="tables_nice.html"><i class="fa fa-check"></i><b>13</b> Generating nice tables</a></li>
-<li class="chapter" data-level="14" data-path="dynamic_documents.html"><a href="dynamic_documents.html"><i class="fa fa-check"></i><b>14</b> Dynamic documents</a></li>
+<li class="chapter" data-level="13" data-path="tables-nice.html"><a href="tables-nice.html"><i class="fa fa-check"></i><b>13</b> Generating nice tables</a></li>
+<li class="chapter" data-level="14" data-path="dynamic-documents.html"><a href="dynamic-documents.html"><i class="fa fa-check"></i><b>14</b> Dynamic documents</a></li>
 <li class="chapter" data-level="15" data-path="scripting-workflow.html"><a href="scripting-workflow.html"><i class="fa fa-check"></i><b>15</b> Scripting and workflow</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -375,26 +379,640 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="basic-stats-epi" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Basic Statistics &amp; Epidemiology</h1>
-<p>UNDER CONSTRUCTION</p>
+<p>In this chapter, we look at basic statistical measures and methods in R, with special emphasis on tools and concepts commonly used in epidemiology, especially measures of effect and risk.</p>
+<p>This chapter assumes that you can interact with R/RStudio in a basic manner (start the program, load data, perform simple analysis, quit safely) and have a working knowledge of basic data types (numerical, character, factors) and data structures (vectors and data frames). Having gone through the introduction in Chapter <a href="introduction.html#introduction">2</a> should provide the necessary context. This chapter also makes heavy use of add-on packages, so you should also be able to install and load such packages, as described in Chapter FIXME.</p>
+<p>The examples in this chapter make use of a classic data set<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a> that contains information on 189 mother-child pairs recorded at an US hospital. The data file comes as part of the collection of examples that come with these notes</p>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="basic-stats-epi.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">load</span>(<span class="st">&quot;Data/birthweights.RData&quot;</span>)</span>
+<span id="cb151-2"><a href="basic-stats-epi.html#cb151-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">names</span>(bwts)</span>
+<span id="cb151-3"><a href="basic-stats-epi.html#cb151-3" aria-hidden="true" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;LowBw&quot;</span>          <span class="st">&quot;Age&quot;</span>            <span class="st">&quot;LastWeight&quot;</span>     <span class="st">&quot;Race&quot;</span>          </span>
+<span id="cb151-4"><a href="basic-stats-epi.html#cb151-4" aria-hidden="true" tabindex="-1"></a> [<span class="dv">5</span>] <span class="st">&quot;Smoking&quot;</span>        <span class="st">&quot;PrevPremature&quot;</span>  <span class="st">&quot;Hypertension&quot;</span>   <span class="st">&quot;UterineIrritab&quot;</span></span>
+<span id="cb151-5"><a href="basic-stats-epi.html#cb151-5" aria-hidden="true" tabindex="-1"></a> [<span class="dv">9</span>] <span class="st">&quot;PhysVisits&quot;</span>     <span class="st">&quot;BirthWeight&quot;</span>   </span></code></pre></div>
+<p>with birth weight in the infant generally seen as main outcome (either binary for low weight or continous in g). The other eight potential risk factors were measured on the mothers: age at birth, weight before pregnancy (lbs), the peculiar ethno-demographic race category popular in the US, smoking during pregnancy, number of previous premature labors, history of hypertension, uterine irritability, and number of physician visits during the first trimester.</p>
 <div id="descriptives" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Descriptives</h2>
+<h2><span class="header-section-number">8.1</span> Descriptive statistics</h2>
+<div id="base-desc" class="section level3" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> In base R</h3>
+<p>Let’s start with what we know already, the <code>summary</code> function:</p>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="basic-stats-epi.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(bwts)</span>
+<span id="cb152-2"><a href="basic-stats-epi.html#cb152-2" aria-hidden="true" tabindex="-1"></a> LowBw          Age          LastWeight       Race    Smoking   PrevPremature</span>
+<span id="cb152-3"><a href="basic-stats-epi.html#cb152-3" aria-hidden="true" tabindex="-1"></a> no <span class="sc">:</span><span class="dv">130</span>   Min.   <span class="sc">:</span><span class="fl">14.00</span>   Min.   <span class="sc">:</span> <span class="fl">80.0</span>   white<span class="sc">:</span><span class="dv">96</span>   no <span class="sc">:</span><span class="dv">115</span>   no  <span class="sc">:</span><span class="dv">159</span>     </span>
+<span id="cb152-4"><a href="basic-stats-epi.html#cb152-4" aria-hidden="true" tabindex="-1"></a> yes<span class="sc">:</span> <span class="dv">59</span>   1st Qu.<span class="sc">:</span><span class="fl">19.00</span>   1st Qu.<span class="sc">:</span><span class="fl">110.0</span>   black<span class="sc">:</span><span class="dv">26</span>   yes<span class="sc">:</span> <span class="dv">74</span>   yes <span class="sc">:</span> <span class="dv">24</span>     </span>
+<span id="cb152-5"><a href="basic-stats-epi.html#cb152-5" aria-hidden="true" tabindex="-1"></a>           Median <span class="sc">:</span><span class="fl">23.00</span>   Median <span class="sc">:</span><span class="fl">121.0</span>   other<span class="sc">:</span><span class="dv">67</span>             NA<span class="st">&#39;s:  6     </span></span>
+<span id="cb152-6"><a href="basic-stats-epi.html#cb152-6" aria-hidden="true" tabindex="-1"></a><span class="st">           Mean   :23.24   Mean   :129.8                                     </span></span>
+<span id="cb152-7"><a href="basic-stats-epi.html#cb152-7" aria-hidden="true" tabindex="-1"></a><span class="st">           3rd Qu.:26.00   3rd Qu.:140.0                                     </span></span>
+<span id="cb152-8"><a href="basic-stats-epi.html#cb152-8" aria-hidden="true" tabindex="-1"></a><span class="st">           Max.   :45.00   Max.   :250.0                                     </span></span>
+<span id="cb152-9"><a href="basic-stats-epi.html#cb152-9" aria-hidden="true" tabindex="-1"></a><span class="st"> Hypertension UterineIrritab   PhysVisits      BirthWeight  </span></span>
+<span id="cb152-10"><a href="basic-stats-epi.html#cb152-10" aria-hidden="true" tabindex="-1"></a><span class="st"> no :177      no :161        Min.   :0.0000   Min.   : 709  </span></span>
+<span id="cb152-11"><a href="basic-stats-epi.html#cb152-11" aria-hidden="true" tabindex="-1"></a><span class="st"> yes: 12      yes: 28        1st Qu.:0.0000   1st Qu.:2414  </span></span>
+<span id="cb152-12"><a href="basic-stats-epi.html#cb152-12" aria-hidden="true" tabindex="-1"></a><span class="st">                             Median :0.0000   Median :2977  </span></span>
+<span id="cb152-13"><a href="basic-stats-epi.html#cb152-13" aria-hidden="true" tabindex="-1"></a><span class="st">                             Mean   :0.7937   Mean   :2945  </span></span>
+<span id="cb152-14"><a href="basic-stats-epi.html#cb152-14" aria-hidden="true" tabindex="-1"></a><span class="st">                             3rd Qu.:1.0000   3rd Qu.:3487  </span></span>
+<span id="cb152-15"><a href="basic-stats-epi.html#cb152-15" aria-hidden="true" tabindex="-1"></a><span class="st">                             Max.   :6.0000   Max.   :4990  </span></span></code></pre></div>
+<p>As we have seen before, this serves as an excellent quality control for, and initial introduction to, a reasonably small data set, with relevant information for all variables: we see about 2/3 low birth weights, maternal ages between 14 to 45 years, with a median at 23 years, range of weights before pregnancy corresponding to ca. 40 to 125kg, a <em>lot</em> of smoking during pregnancy (this is old data), previous premature labor is rare, with some missing values, not much hypertension or uterine irritability; shockingly, more than half of the women had no physician’s visit during the first trimester. The actual birth weights vary from a scary 700g to a very solid 5kg, with a median of ca. 3kg.</p>
+<p>Looking at these birth weights specifically, we may interested in other quantities, too: e.g. we may want to complement the mean weight with the standard deviation, or we may be interested in the lowest birth weights specifically, e.g. the lowest 5% and 10%. In this case, we can use specific functions to calculate the statistics of interest, like <code>sd</code> and <code>quantile</code> in this case: we see a standard deviation of more than 700g, which seems quite large. We also see that 5% of births are at under 1800g, and 10% under just about 2000g, which seems a lot.</p>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="basic-stats-epi.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(bwts<span class="sc">$</span>BirthWeight)</span>
+<span id="cb153-2"><a href="basic-stats-epi.html#cb153-2" aria-hidden="true" tabindex="-1"></a>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
+<span id="cb153-3"><a href="basic-stats-epi.html#cb153-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">709</span>    <span class="dv">2414</span>    <span class="dv">2977</span>    <span class="dv">2945</span>    <span class="dv">3487</span>    <span class="dv">4990</span> </span>
+<span id="cb153-4"><a href="basic-stats-epi.html#cb153-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sd</span>(bwts<span class="sc">$</span>BirthWeight)</span>
+<span id="cb153-5"><a href="basic-stats-epi.html#cb153-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">729.2143</span></span>
+<span id="cb153-6"><a href="basic-stats-epi.html#cb153-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">quantile</span>(bwts<span class="sc">$</span>BirthWeight, <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.1</span>))</span>
+<span id="cb153-7"><a href="basic-stats-epi.html#cb153-7" aria-hidden="true" tabindex="-1"></a>    <span class="dv">5</span><span class="sc">%    10%</span> </span>
+<span id="cb153-8"><a href="basic-stats-epi.html#cb153-8" aria-hidden="true" tabindex="-1"></a><span class="fl">1801.2</span> <span class="fl">2038.0</span> </span></code></pre></div>
+<p>Moving on to discrete variables, we have already encountered the basic functions <code>table</code> and <code>proportions</code> in FIXME. Applied to the low birth weight indicator in our data, we see the same 59 cases as above, corresponding to 31% of all births.</p>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="basic-stats-epi.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> tab <span class="ot">&lt;-</span> <span class="fu">table</span>(bwts<span class="sc">$</span>LowBw)</span>
+<span id="cb154-2"><a href="basic-stats-epi.html#cb154-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> tab</span>
+<span id="cb154-3"><a href="basic-stats-epi.html#cb154-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb154-4"><a href="basic-stats-epi.html#cb154-4" aria-hidden="true" tabindex="-1"></a> no yes </span>
+<span id="cb154-5"><a href="basic-stats-epi.html#cb154-5" aria-hidden="true" tabindex="-1"></a><span class="dv">130</span>  <span class="dv">59</span> </span>
+<span id="cb154-6"><a href="basic-stats-epi.html#cb154-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">proportions</span>(tab)</span>
+<span id="cb154-7"><a href="basic-stats-epi.html#cb154-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb154-8"><a href="basic-stats-epi.html#cb154-8" aria-hidden="true" tabindex="-1"></a>       no       yes </span>
+<span id="cb154-9"><a href="basic-stats-epi.html#cb154-9" aria-hidden="true" tabindex="-1"></a><span class="fl">0.6878307</span> <span class="fl">0.3121693</span> </span></code></pre></div>
+<p>The <code>table</code>-function can also be used for cross-tabulating two variables, like e.g. low birth weight and smoking during pregnancy.</p>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="basic-stats-epi.html#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(bwts<span class="sc">$</span>Smoking, bwts<span class="sc">$</span>LowBw)</span>
+<span id="cb155-2"><a href="basic-stats-epi.html#cb155-2" aria-hidden="true" tabindex="-1"></a>     </span>
+<span id="cb155-3"><a href="basic-stats-epi.html#cb155-3" aria-hidden="true" tabindex="-1"></a>      no yes</span>
+<span id="cb155-4"><a href="basic-stats-epi.html#cb155-4" aria-hidden="true" tabindex="-1"></a>  no  <span class="dv">86</span>  <span class="dv">29</span></span>
+<span id="cb155-5"><a href="basic-stats-epi.html#cb155-5" aria-hidden="true" tabindex="-1"></a>  yes <span class="dv">44</span>  <span class="dv">30</span></span></code></pre></div>
+<p>Note that in a situation like this, where both variables have the same levels (yes/no), it is not obvious how to read the result. Fortunately, we can specify row- and column names in the call to <code>table</code>, which makes this far easier to interpret:</p>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="basic-stats-epi.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> tab_smo <span class="ot">&lt;-</span> <span class="fu">table</span>(<span class="at">Smoking =</span> bwts<span class="sc">$</span>Smoking, <span class="at">LowBwt =</span> bwts<span class="sc">$</span>LowBw)</span>
+<span id="cb156-2"><a href="basic-stats-epi.html#cb156-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> tab_smo</span>
+<span id="cb156-3"><a href="basic-stats-epi.html#cb156-3" aria-hidden="true" tabindex="-1"></a>       LowBwt</span>
+<span id="cb156-4"><a href="basic-stats-epi.html#cb156-4" aria-hidden="true" tabindex="-1"></a>Smoking no yes</span>
+<span id="cb156-5"><a href="basic-stats-epi.html#cb156-5" aria-hidden="true" tabindex="-1"></a>    no  <span class="dv">86</span>  <span class="dv">29</span></span>
+<span id="cb156-6"><a href="basic-stats-epi.html#cb156-6" aria-hidden="true" tabindex="-1"></a>    yes <span class="dv">44</span>  <span class="dv">30</span></span>
+<span id="cb156-7"><a href="basic-stats-epi.html#cb156-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">proportions</span>(tab_smo, <span class="at">margin =</span> <span class="dv">1</span>)</span>
+<span id="cb156-8"><a href="basic-stats-epi.html#cb156-8" aria-hidden="true" tabindex="-1"></a>       LowBwt</span>
+<span id="cb156-9"><a href="basic-stats-epi.html#cb156-9" aria-hidden="true" tabindex="-1"></a>Smoking        no       yes</span>
+<span id="cb156-10"><a href="basic-stats-epi.html#cb156-10" aria-hidden="true" tabindex="-1"></a>    no  <span class="fl">0.7478261</span> <span class="fl">0.2521739</span></span>
+<span id="cb156-11"><a href="basic-stats-epi.html#cb156-11" aria-hidden="true" tabindex="-1"></a>    yes <span class="fl">0.5945946</span> <span class="fl">0.4054054</span></span></code></pre></div>
+<p>We see almost the same number of low birth weights, but overall more non-smoking mothers. This corresponds to about 25% low birth weights among non-smoking mothers, and 40% for smoking mothers.</p>
+<p>Though not strictly descriptive, we can also run this table through a <span class="math inline">\(\chi^2\)</span>-test, and we find that the difference between smoking and non-smoking mothers is indeed (just about) statistically significant at the usual 5% level:</p>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="basic-stats-epi.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">chisq.test</span>(tab_smo)</span>
+<span id="cb157-2"><a href="basic-stats-epi.html#cb157-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb157-3"><a href="basic-stats-epi.html#cb157-3" aria-hidden="true" tabindex="-1"></a>    Pearson<span class="st">&#39;s Chi-squared test with Yates&#39;</span> continuity correction</span>
+<span id="cb157-4"><a href="basic-stats-epi.html#cb157-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb157-5"><a href="basic-stats-epi.html#cb157-5" aria-hidden="true" tabindex="-1"></a>data<span class="sc">:</span>  tab_smo</span>
+<span id="cb157-6"><a href="basic-stats-epi.html#cb157-6" aria-hidden="true" tabindex="-1"></a>X<span class="sc">-</span>squared <span class="ot">=</span> <span class="fl">4.2359</span>, df <span class="ot">=</span> <span class="dv">1</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">0.03958</span></span></code></pre></div>
+<p>However, and this is epidemiologically disappointing, we get just a naked p-value, and no corresponding measure of effect strength, like a relative risk, so this is somewhat limited.</p>
+<p>While this assembly approach to descriptive statistics in base R can produce perfectly respectable results, it does have a couple of shortcomings: firstly, it may take a bit of patience to put together all the pieces, and we have to remember quite a number of different functions for doing so (like <code>min</code>, <code>max</code>, <code>range</code>, <code>IQR</code> etc.). Secondly, as main function, <code>summary</code> only offers a fixed set of statistics, which does not include any measure of variability for the data<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a>. Thirdly, there is generally a lack of information about the variability of the descriptive statistics, like standard errors or confidence intervals<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a>. And finally, base R has very little<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a> to show in terms of basic epidemiological descriptives like risk ratios or odds ratios.</p>
+<p>But that is the beauty of R as a platform for programming and code sharing: it does not have to do everything itself, because it allows user to implement and distribute additional functionality - if people don’t like the base R descriptives, they can roll their own - and they have! There are thousands of packages on CRAN that provide functions for calculating descriptive statistics, from the common (e.g. coefficient of variation) to the more specialized (e.g. winsorized means) to the obscure (e.g. trimmed L-moments).</p>
+<p>For the purpose of these notes, I have selected three complementary packages that address the potential shortcomings in base R as listed above to a useful degree:</p>
+<ul>
+<li><code>summarytools</code>, which offers flexible general descriptives, as seen in the rest of this section,</li>
+<li><code>DescTools</code>, which offers confidence intervals for a wide range of statistics,</li>
+<li><code>epitools</code>, which calculates epidemiological risk measures. FIXME: references</li>
+</ul>
+<p>Importantly, these are <em>not</em> canonical solutions - you should absolutely explore the R package space for alternatives if they do not fulfill your needs (and maybe even if they mostly do).</p>
+</div>
+<div id="using-package-summarytools" class="section level3" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> Using package <code>summarytools</code></h3>
+<p>In contrast to base <code>summary</code>, <code>summarytools</code> splits the job of calculating numerical descriptives into two separate functions: <code>descr</code> for continuous variables and <code>freq</code> for discrete variables.</p>
+<p>Let’s start by loading the package and looking at the descriptives for the birthweights:</p>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="basic-stats-epi.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(summarytools)</span>
+<span id="cb158-2"><a href="basic-stats-epi.html#cb158-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">descr</span>(bwts<span class="sc">$</span>BirthWeight)</span>
+<span id="cb158-3"><a href="basic-stats-epi.html#cb158-3" aria-hidden="true" tabindex="-1"></a>Descriptive Statistics  </span>
+<span id="cb158-4"><a href="basic-stats-epi.html#cb158-4" aria-hidden="true" tabindex="-1"></a>bwts<span class="sc">$</span>BirthWeight  </span>
+<span id="cb158-5"><a href="basic-stats-epi.html#cb158-5" aria-hidden="true" tabindex="-1"></a>N<span class="sc">:</span> <span class="dv">189</span>  </span>
+<span id="cb158-6"><a href="basic-stats-epi.html#cb158-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb158-7"><a href="basic-stats-epi.html#cb158-7" aria-hidden="true" tabindex="-1"></a>                    BirthWeight</span>
+<span id="cb158-8"><a href="basic-stats-epi.html#cb158-8" aria-hidden="true" tabindex="-1"></a><span class="sc">-----------------</span> <span class="sc">-------------</span></span>
+<span id="cb158-9"><a href="basic-stats-epi.html#cb158-9" aria-hidden="true" tabindex="-1"></a>             Mean       <span class="fl">2944.59</span></span>
+<span id="cb158-10"><a href="basic-stats-epi.html#cb158-10" aria-hidden="true" tabindex="-1"></a>          Std.Dev        <span class="fl">729.21</span></span>
+<span id="cb158-11"><a href="basic-stats-epi.html#cb158-11" aria-hidden="true" tabindex="-1"></a>              Min        <span class="fl">709.00</span></span>
+<span id="cb158-12"><a href="basic-stats-epi.html#cb158-12" aria-hidden="true" tabindex="-1"></a>               Q1       <span class="fl">2414.00</span></span>
+<span id="cb158-13"><a href="basic-stats-epi.html#cb158-13" aria-hidden="true" tabindex="-1"></a>           Median       <span class="fl">2977.00</span></span>
+<span id="cb158-14"><a href="basic-stats-epi.html#cb158-14" aria-hidden="true" tabindex="-1"></a>               Q3       <span class="fl">3487.00</span></span>
+<span id="cb158-15"><a href="basic-stats-epi.html#cb158-15" aria-hidden="true" tabindex="-1"></a>              Max       <span class="fl">4990.00</span></span>
+<span id="cb158-16"><a href="basic-stats-epi.html#cb158-16" aria-hidden="true" tabindex="-1"></a>              MAD        <span class="fl">834.70</span></span>
+<span id="cb158-17"><a href="basic-stats-epi.html#cb158-17" aria-hidden="true" tabindex="-1"></a>              IQR       <span class="fl">1073.00</span></span>
+<span id="cb158-18"><a href="basic-stats-epi.html#cb158-18" aria-hidden="true" tabindex="-1"></a>               CV          <span class="fl">0.25</span></span>
+<span id="cb158-19"><a href="basic-stats-epi.html#cb158-19" aria-hidden="true" tabindex="-1"></a>         Skewness         <span class="sc">-</span><span class="fl">0.21</span></span>
+<span id="cb158-20"><a href="basic-stats-epi.html#cb158-20" aria-hidden="true" tabindex="-1"></a>      SE.Skewness          <span class="fl">0.18</span></span>
+<span id="cb158-21"><a href="basic-stats-epi.html#cb158-21" aria-hidden="true" tabindex="-1"></a>         Kurtosis         <span class="sc">-</span><span class="fl">0.14</span></span>
+<span id="cb158-22"><a href="basic-stats-epi.html#cb158-22" aria-hidden="true" tabindex="-1"></a>          N.Valid        <span class="fl">189.00</span></span>
+<span id="cb158-23"><a href="basic-stats-epi.html#cb158-23" aria-hidden="true" tabindex="-1"></a>        Pct.Valid        <span class="fl">100.00</span></span></code></pre></div>
+<p>By default, we get everything we get from base <code>summary</code> (mean, median, min/max, quartiles), but we also get the standard deviation, right below the mean. We also get two additional measures of variability further down, the interquartile range (<a href="https://en.wikipedia.org/wiki/Interquartile_range" title="Wikipedia">IQR</a>) and the median absolute deviation (<a href="https://en.wikipedia.org/wiki/Median_absolute_deviation" title="Wikipedia">MAD</a>): like the standard deviation, these are non-negative measures of dispersion, with larger values implying larger dispersion, in the same units as the underlying variable<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> (so for this example, reported values are in g); however, these measures are more robust to outliers, and can be useful for comparing variability between noisy data sets.</p>
+<p><code>descr</code> also displays numerical descriptives for the shape of the distribution: <a href="https://en.wikipedia.org/wiki/Skewness" title="Wikipedia">skewness</a> measures the asymmetry, with values around zero indicating approximate symmetry, large negative values indicating a long left tail, and large positive values indicating a long right tail in the data distribution. <a href="https://en.wikipedia.org/wiki/Kurtosis" title="Wikipedia">(Excess) kurtosis</a> measures the presence of very large or very small observations in the tails of the distribution, relative to a normal distribution, with negative values indicating fewer extreme values, and positive values indicating more extreme values<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a>. Note that while these measures may be somewhat useful in comparing distributions, they cannot replace inspecting the actual data for shape and outliers (e.g. via a histogram).</p>
+<p>Looking at the distribution on low birth weights, we see that <code>freq</code> generates a ver comprehensive frequency table, which by default reports missing values and several types of percentages, in a manner not dissimilar to SAS PROC FREQ:</p>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="basic-stats-epi.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">freq</span>(bwts<span class="sc">$</span>LowBw)</span>
+<span id="cb159-2"><a href="basic-stats-epi.html#cb159-2" aria-hidden="true" tabindex="-1"></a>Frequencies  </span>
+<span id="cb159-3"><a href="basic-stats-epi.html#cb159-3" aria-hidden="true" tabindex="-1"></a>bwts<span class="sc">$</span>LowBw  </span>
+<span id="cb159-4"><a href="basic-stats-epi.html#cb159-4" aria-hidden="true" tabindex="-1"></a>Type<span class="sc">:</span> Factor  </span>
+<span id="cb159-5"><a href="basic-stats-epi.html#cb159-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb159-6"><a href="basic-stats-epi.html#cb159-6" aria-hidden="true" tabindex="-1"></a>              Freq   <span class="sc">% Valid   %</span> Valid Cum.   <span class="sc">% Total   %</span> Total Cum.</span>
+<span id="cb159-7"><a href="basic-stats-epi.html#cb159-7" aria-hidden="true" tabindex="-1"></a><span class="sc">-----------</span> <span class="sc">------</span> <span class="sc">---------</span> <span class="sc">--------------</span> <span class="sc">---------</span> <span class="sc">--------------</span></span>
+<span id="cb159-8"><a href="basic-stats-epi.html#cb159-8" aria-hidden="true" tabindex="-1"></a>         no    <span class="dv">130</span>     <span class="fl">68.78</span>          <span class="fl">68.78</span>     <span class="fl">68.78</span>          <span class="fl">68.78</span></span>
+<span id="cb159-9"><a href="basic-stats-epi.html#cb159-9" aria-hidden="true" tabindex="-1"></a>        yes     <span class="dv">59</span>     <span class="fl">31.22</span>         <span class="fl">100.00</span>     <span class="fl">31.22</span>         <span class="fl">100.00</span></span>
+<span id="cb159-10"><a href="basic-stats-epi.html#cb159-10" aria-hidden="true" tabindex="-1"></a>       <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>      <span class="dv">0</span>                               <span class="fl">0.00</span>         <span class="fl">100.00</span></span>
+<span id="cb159-11"><a href="basic-stats-epi.html#cb159-11" aria-hidden="true" tabindex="-1"></a>      Total    <span class="dv">189</span>    <span class="fl">100.00</span>         <span class="fl">100.00</span>    <span class="fl">100.00</span>         <span class="fl">100.00</span></span></code></pre></div>
+<p>Both <code>descr</code> and <code>freq</code> allow you to configure what statistics to display. For example, we can display a shorter list of descriptive statistics, or suppress the missing value reports, which generates more compact output</p>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="basic-stats-epi.html#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">descr</span>(bwts<span class="sc">$</span>BirthWeight, <span class="at">stats =</span> <span class="st">&quot;common&quot;</span>)  <span class="co"># Fewer statistics</span></span>
+<span id="cb160-2"><a href="basic-stats-epi.html#cb160-2" aria-hidden="true" tabindex="-1"></a>Descriptive Statistics  </span>
+<span id="cb160-3"><a href="basic-stats-epi.html#cb160-3" aria-hidden="true" tabindex="-1"></a>bwts<span class="sc">$</span>BirthWeight  </span>
+<span id="cb160-4"><a href="basic-stats-epi.html#cb160-4" aria-hidden="true" tabindex="-1"></a>N<span class="sc">:</span> <span class="dv">189</span>  </span>
+<span id="cb160-5"><a href="basic-stats-epi.html#cb160-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb160-6"><a href="basic-stats-epi.html#cb160-6" aria-hidden="true" tabindex="-1"></a>                  BirthWeight</span>
+<span id="cb160-7"><a href="basic-stats-epi.html#cb160-7" aria-hidden="true" tabindex="-1"></a><span class="sc">---------------</span> <span class="sc">-------------</span></span>
+<span id="cb160-8"><a href="basic-stats-epi.html#cb160-8" aria-hidden="true" tabindex="-1"></a>           Mean       <span class="fl">2944.59</span></span>
+<span id="cb160-9"><a href="basic-stats-epi.html#cb160-9" aria-hidden="true" tabindex="-1"></a>        Std.Dev        <span class="fl">729.21</span></span>
+<span id="cb160-10"><a href="basic-stats-epi.html#cb160-10" aria-hidden="true" tabindex="-1"></a>            Min        <span class="fl">709.00</span></span>
+<span id="cb160-11"><a href="basic-stats-epi.html#cb160-11" aria-hidden="true" tabindex="-1"></a>         Median       <span class="fl">2977.00</span></span>
+<span id="cb160-12"><a href="basic-stats-epi.html#cb160-12" aria-hidden="true" tabindex="-1"></a>            Max       <span class="fl">4990.00</span></span>
+<span id="cb160-13"><a href="basic-stats-epi.html#cb160-13" aria-hidden="true" tabindex="-1"></a>        N.Valid        <span class="fl">189.00</span></span>
+<span id="cb160-14"><a href="basic-stats-epi.html#cb160-14" aria-hidden="true" tabindex="-1"></a>      Pct.Valid        <span class="fl">100.00</span></span>
+<span id="cb160-15"><a href="basic-stats-epi.html#cb160-15" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">freq</span>(bwts<span class="sc">$</span>LowBw, <span class="at">report.nas =</span> <span class="cn">FALSE</span>)  <span class="co"># Do not report missing values</span></span>
+<span id="cb160-16"><a href="basic-stats-epi.html#cb160-16" aria-hidden="true" tabindex="-1"></a>Frequencies  </span>
+<span id="cb160-17"><a href="basic-stats-epi.html#cb160-17" aria-hidden="true" tabindex="-1"></a>bwts<span class="sc">$</span>LowBw  </span>
+<span id="cb160-18"><a href="basic-stats-epi.html#cb160-18" aria-hidden="true" tabindex="-1"></a>Type<span class="sc">:</span> Factor  </span>
+<span id="cb160-19"><a href="basic-stats-epi.html#cb160-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb160-20"><a href="basic-stats-epi.html#cb160-20" aria-hidden="true" tabindex="-1"></a>              Freq        <span class="sc">%   %</span> Cum.</span>
+<span id="cb160-21"><a href="basic-stats-epi.html#cb160-21" aria-hidden="true" tabindex="-1"></a><span class="sc">-----------</span> <span class="sc">------</span> <span class="sc">--------</span> <span class="sc">--------</span></span>
+<span id="cb160-22"><a href="basic-stats-epi.html#cb160-22" aria-hidden="true" tabindex="-1"></a>         no    <span class="dv">130</span>    <span class="fl">68.78</span>    <span class="fl">68.78</span></span>
+<span id="cb160-23"><a href="basic-stats-epi.html#cb160-23" aria-hidden="true" tabindex="-1"></a>        yes     <span class="dv">59</span>    <span class="fl">31.22</span>   <span class="fl">100.00</span></span>
+<span id="cb160-24"><a href="basic-stats-epi.html#cb160-24" aria-hidden="true" tabindex="-1"></a>      Total    <span class="dv">189</span>   <span class="fl">100.00</span>   <span class="fl">100.00</span></span></code></pre></div>
+<p>Details can be found in the documentation, via e.g. <code>?descr</code> or the tool tips in the RStudio, and <code>vignette("introduction", package="summarytools")</code>.</p>
+<p>Both <code>descr</code> and <code>freq</code> can also be applied to whole data frames, as a kind of drop-in replacement for base <code>summary</code>, though <code>descr</code> will only report numerical variables, and <code>freq</code> only discrete variables<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a>. We can combine these options to e.g. produce a nice compact table of means and standard deviations for all numeric variables:</p>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="basic-stats-epi.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">descr</span>(bwts, <span class="at">stats =</span> <span class="fu">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;sd&quot;</span>))</span>
+<span id="cb161-2"><a href="basic-stats-epi.html#cb161-2" aria-hidden="true" tabindex="-1"></a>Descriptive Statistics  </span>
+<span id="cb161-3"><a href="basic-stats-epi.html#cb161-3" aria-hidden="true" tabindex="-1"></a>bwts  </span>
+<span id="cb161-4"><a href="basic-stats-epi.html#cb161-4" aria-hidden="true" tabindex="-1"></a>N<span class="sc">:</span> <span class="dv">189</span>  </span>
+<span id="cb161-5"><a href="basic-stats-epi.html#cb161-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb161-6"><a href="basic-stats-epi.html#cb161-6" aria-hidden="true" tabindex="-1"></a>                  Age   BirthWeight   LastWeight   PhysVisits</span>
+<span id="cb161-7"><a href="basic-stats-epi.html#cb161-7" aria-hidden="true" tabindex="-1"></a><span class="sc">-------------</span> <span class="sc">-------</span> <span class="sc">-------------</span> <span class="sc">------------</span> <span class="sc">------------</span></span>
+<span id="cb161-8"><a href="basic-stats-epi.html#cb161-8" aria-hidden="true" tabindex="-1"></a>         Mean   <span class="fl">23.24</span>       <span class="fl">2944.59</span>       <span class="fl">129.81</span>         <span class="fl">0.79</span></span>
+<span id="cb161-9"><a href="basic-stats-epi.html#cb161-9" aria-hidden="true" tabindex="-1"></a>      Std.Dev    <span class="fl">5.30</span>        <span class="fl">729.21</span>        <span class="fl">30.58</span>         <span class="fl">1.06</span></span></code></pre></div>
+<p>Note that both <code>descr</code> and <code>freq</code> do not just print to the console, but return the statistics as an R object that can be stored and further processed; we can e.g. take the calculated statistics and strip them from all decorative elemenst by turning them into a data frame for further plotting or display:</p>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="basic-stats-epi.html#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> mnsd <span class="ot">&lt;-</span> <span class="fu">descr</span>(bwts, <span class="at">stats =</span> <span class="fu">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;sd&quot;</span>))</span>
+<span id="cb162-2"><a href="basic-stats-epi.html#cb162-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">as.data.frame</span>(mnsd)</span>
+<span id="cb162-3"><a href="basic-stats-epi.html#cb162-3" aria-hidden="true" tabindex="-1"></a>              Age BirthWeight LastWeight PhysVisits</span>
+<span id="cb162-4"><a href="basic-stats-epi.html#cb162-4" aria-hidden="true" tabindex="-1"></a>Mean    <span class="fl">23.238095</span>   <span class="fl">2944.5873</span>  <span class="fl">129.81481</span>  <span class="fl">0.7936508</span></span>
+<span id="cb162-5"><a href="basic-stats-epi.html#cb162-5" aria-hidden="true" tabindex="-1"></a>Std.Dev  <span class="fl">5.298678</span>    <span class="fl">729.2143</span>   <span class="fl">30.57938</span>  <span class="fl">1.0592861</span></span></code></pre></div>
+<p>FIXME: reference <code>styby</code>, groupwise processing</p>
+<p>FIXME: reference <code>pander</code> styles</p>
+</div>
+</div>
+<div id="confidence-intervals" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Confidence intervals</h2>
+<p>Base R is not great with confidence intervals - some test functions like <code>t.test</code> and <code>fisher.test</code> sometimes include confidence intervals, but these are very limited and inflexible; and while base R includes the function <code>confint</code>, this only works for regression models, and I would rather not re-formulate simple confidence intervals for means or proportions as regression problems.</p>
+<p>Package <code>DescTools</code> offers a family of functions for calculating simple and not-so-simple confidence intervals directly from the observed data<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a>. Starting with the birth weights again, we can use <code>MeanCI</code> to calculate a 95% confidence interval for the mean birth weight:</p>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="basic-stats-epi.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(DescTools)</span>
+<span id="cb163-2"><a href="basic-stats-epi.html#cb163-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">MeanCI</span>(bwts<span class="sc">$</span>BirthWeight)</span>
+<span id="cb163-3"><a href="basic-stats-epi.html#cb163-3" aria-hidden="true" tabindex="-1"></a>    mean   lwr.ci   upr.ci </span>
+<span id="cb163-4"><a href="basic-stats-epi.html#cb163-4" aria-hidden="true" tabindex="-1"></a><span class="fl">2944.587</span> <span class="fl">2839.952</span> <span class="fl">3049.222</span> </span></code></pre></div>
+<p>For this example, the confidence interval is fairly tight, just about <span class="math inline">\(\pm\)</span> 100g around the mean</p>
+<p><code>BinomCI</code> calculates proportions plus confidence intervals based on the frequency of events. Here we have to specify the number of events (successes) as first argument, and the number of attempts (records) as the second argument; e.g. we know from our initial exploration of the birth weight data set that we have 59 low birth weights out of 189 live births, so
+we can calculate the proportion as</p>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="basic-stats-epi.html#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">BinomCI</span>(<span class="at">x =</span> <span class="dv">59</span>, <span class="at">n =</span> <span class="dv">189</span>)</span>
+<span id="cb164-2"><a href="basic-stats-epi.html#cb164-2" aria-hidden="true" tabindex="-1"></a>           est    lwr.ci    upr.ci</span>
+<span id="cb164-3"><a href="basic-stats-epi.html#cb164-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>,] <span class="fl">0.3121693</span> <span class="fl">0.2504031</span> <span class="fl">0.3814188</span></span></code></pre></div>
+<p>So we get a proportion of ca. 31% with 95% confidence interval [25%, 38%]. We can also combine the call to <code>BinomCI</code> with a call to <code>table</code> and get the results in one go:</p>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="basic-stats-epi.html#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">BinomCI</span>(<span class="fu">table</span>(bwts<span class="sc">$</span>LowBw), <span class="at">n =</span> <span class="fu">nrow</span>(bwts))</span>
+<span id="cb165-2"><a href="basic-stats-epi.html#cb165-2" aria-hidden="true" tabindex="-1"></a>          est    lwr.ci    upr.ci</span>
+<span id="cb165-3"><a href="basic-stats-epi.html#cb165-3" aria-hidden="true" tabindex="-1"></a>no  <span class="fl">0.6878307</span> <span class="fl">0.6185812</span> <span class="fl">0.7495969</span></span>
+<span id="cb165-4"><a href="basic-stats-epi.html#cb165-4" aria-hidden="true" tabindex="-1"></a>yes <span class="fl">0.3121693</span> <span class="fl">0.2504031</span> <span class="fl">0.3814188</span></span></code></pre></div>
+<p>Here we use the function <code>nrow</code> to extract the number of rows (records) in data frame <code>bwts</code>. As the <code>table</code> function returns counts for both normal and low birth weights in the data, <code>BinomCI</code> returns proportions and confidence intervals for both (though as they are complementary, we would generally only report one of them).</p>
+<p>Both <code>MeanCI</code> and <code>BinomCI</code> allow different confidence levels: if we are willing to accept a bit more uncertainty, e.g. at a 90% confidence level, we get slightly narrower confidence intervals, e.g. here for the mean:</p>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="basic-stats-epi.html#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">MeanCI</span>(bwts<span class="sc">$</span>BirthWeight, <span class="at">conf.level =</span> <span class="fl">0.9</span>)  <span class="co"># Default: 0.95 (as is tradition)</span></span>
+<span id="cb166-2"><a href="basic-stats-epi.html#cb166-2" aria-hidden="true" tabindex="-1"></a>    mean   lwr.ci   upr.ci </span>
+<span id="cb166-3"><a href="basic-stats-epi.html#cb166-3" aria-hidden="true" tabindex="-1"></a><span class="fl">2944.587</span> <span class="fl">2856.908</span> <span class="fl">3032.267</span> </span></code></pre></div>
+<p>Both functions also support a <code>method</code>-argument, that allows you to specify different ways for calculating the confidence interval. For <code>MeanCI</code>, these methods are</p>
+<ul>
+<li><p><em>classic</em>, which calculates a conventional confidence interval based on the t-distribution<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a></p></li>
+<li><p><em>boot</em>, which calculates bootstrap confidence intervals.</p></li>
+</ul>
+<p>Bootstrapping<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a> is a re-sampling based method for calculating standard errors and confidence intervals which does not rely on exact or approximate assumptions<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a> about the underlying distribution - this can be useful in situations where the usual assumptions may be suspect (e.g. small sample sizes, asymmetric data distributions for a t-test). For our example, we find that the classic and the bootstrap confidence intervals are very close, suggesting that our assumptions for the classic case are probably justified.</p>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="basic-stats-epi.html#cb167-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">MeanCI</span>(bwts<span class="sc">$</span>BirthWeight, <span class="at">method =</span> <span class="st">&quot;boot&quot;</span>)  <span class="co"># Boostrap CI</span></span>
+<span id="cb167-2"><a href="basic-stats-epi.html#cb167-2" aria-hidden="true" tabindex="-1"></a>    mean   lwr.ci   upr.ci </span>
+<span id="cb167-3"><a href="basic-stats-epi.html#cb167-3" aria-hidden="true" tabindex="-1"></a><span class="fl">2944.587</span> <span class="fl">2835.090</span> <span class="fl">3050.450</span> </span></code></pre></div>
+<p><code>BinomCI</code> offers 16 different ways of calculating a confidence interval for a proportion (though no bootstrap-option). In practice, the different versions will generally differ very little<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a>, and the deault method (<code>wilson</code>) will do nicely. E.g. for this is the exact confidence interval for our example:</p>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="basic-stats-epi.html#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">BinomCI</span>(tab, <span class="at">n =</span> <span class="fu">nrow</span>(bwts), <span class="at">method =</span> <span class="st">&quot;clopper&quot;</span>)  <span class="co"># exact CI</span></span>
+<span id="cb168-2"><a href="basic-stats-epi.html#cb168-2" aria-hidden="true" tabindex="-1"></a>          est    lwr.ci    upr.ci</span>
+<span id="cb168-3"><a href="basic-stats-epi.html#cb168-3" aria-hidden="true" tabindex="-1"></a>no  <span class="fl">0.6878307</span> <span class="fl">0.6165454</span> <span class="fl">0.7531114</span></span>
+<span id="cb168-4"><a href="basic-stats-epi.html#cb168-4" aria-hidden="true" tabindex="-1"></a>yes <span class="fl">0.3121693</span> <span class="fl">0.2468886</span> <span class="fl">0.3834546</span></span></code></pre></div>
+<p>This is extremely close to the approximate confidence interval above.</p>
+<p>We can use the <code>apropos</code> function to list all functions whose name ends in <code>CI</code> using the following expression:</p>
+<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="basic-stats-epi.html#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">apropos</span>(<span class="st">&quot;CI$&quot;</span>, <span class="at">ignore.case =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb169-2"><a href="basic-stats-epi.html#cb169-2" aria-hidden="true" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;BinomCI&quot;</span>      <span class="st">&quot;BinomDiffCI&quot;</span>  <span class="st">&quot;BinomRatioCI&quot;</span> <span class="st">&quot;BootCI&quot;</span>       <span class="st">&quot;CorCI&quot;</span>       </span>
+<span id="cb169-3"><a href="basic-stats-epi.html#cb169-3" aria-hidden="true" tabindex="-1"></a> [<span class="dv">6</span>] <span class="st">&quot;MADCI&quot;</span>        <span class="st">&quot;MeanCI&quot;</span>       <span class="st">&quot;MeanDiffCI&quot;</span>   <span class="st">&quot;MedianCI&quot;</span>     <span class="st">&quot;MultinomCI&quot;</span>  </span>
+<span id="cb169-4"><a href="basic-stats-epi.html#cb169-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">11</span>] <span class="st">&quot;PlotDotCI&quot;</span>    <span class="st">&quot;PoissonCI&quot;</span>    <span class="st">&quot;QuantileCI&quot;</span>   <span class="st">&quot;survfitCI&quot;</span>    <span class="st">&quot;VarCI&quot;</span>       </span></code></pre></div>
+<p>We see that <code>DescTools</code> offers a wide range of ready-made functions for confidence intervals for common descriptives, including the median, quantiles, correlation etc. This set of tools can be extended to (almost) any descriptive statistic of the data using the function <code>BootCI</code>, which allows you to calculate a bootstrap confidence interval for any function of one or two variables in your data set, including functions that you define yourself (Section <a href="data-processing.html#own-functions">6.3</a>).</p>
+</div>
+<div id="statistical-tests" class="section level2" number="8.3">
+<h2><span class="header-section-number">8.3</span> Statistical tests</h2>
 <p>UNDER CONSTRUCTION</p>
-<div id="distribution-characteristics" class="section level3" number="8.1.1">
-<h3><span class="header-section-number">8.1.1</span> Distribution characteristics</h3>
 </div>
-<div id="confidence-intervals" class="section level3" number="8.1.2">
-<h3><span class="header-section-number">8.1.2</span> Confidence intervals</h3>
+<div id="epidemiological-risk-measures" class="section level2" number="8.4">
+<h2><span class="header-section-number">8.4</span> Epidemiological risk measures</h2>
+<p>Package <code>epitools</code> contains some specialized tools which are useful in epidemiological data analysis, but rarely well supported in general statistical software, including base R, e.g. for handling dates or for calculating age-adjusted rates. The main functionality however is for calculating three classic epidemiological risk measures, namely risk ratios, odds ratios and event rates, from simple tables of outcome vs exposure levels. In applications, these estimates will generally only be a starting point, as they are not adjusted for potential confounding - that will require at least some kind of regression model which can accommodate both an exposure variable and as many confounding variables as necessary, something is actually well supported in R. However, these crude risk estimates are a natural part of the initial descriptive phase of an analysis, and <code>epitools</code> offers a convenient interface for them.</p>
+<p>The main function for this is <code>epitab</code>. Assuming that we have already generated a table of the exposure-outcome association beforehand, with the exposure levels as rows and the (two) outcome level as columns, we can just feed this table to <code>epitab</code>:</p>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="basic-stats-epi.html#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(epitools)</span>
+<span id="cb170-2"><a href="basic-stats-epi.html#cb170-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> tab_smo  <span class="do">## Low birth weight vs smoking from above</span></span>
+<span id="cb170-3"><a href="basic-stats-epi.html#cb170-3" aria-hidden="true" tabindex="-1"></a>       LowBwt</span>
+<span id="cb170-4"><a href="basic-stats-epi.html#cb170-4" aria-hidden="true" tabindex="-1"></a>Smoking no yes</span>
+<span id="cb170-5"><a href="basic-stats-epi.html#cb170-5" aria-hidden="true" tabindex="-1"></a>    no  <span class="dv">86</span>  <span class="dv">29</span></span>
+<span id="cb170-6"><a href="basic-stats-epi.html#cb170-6" aria-hidden="true" tabindex="-1"></a>    yes <span class="dv">44</span>  <span class="dv">30</span></span>
+<span id="cb170-7"><a href="basic-stats-epi.html#cb170-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">epitab</span>(tab_smo)</span>
+<span id="cb170-8"><a href="basic-stats-epi.html#cb170-8" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>tab</span>
+<span id="cb170-9"><a href="basic-stats-epi.html#cb170-9" aria-hidden="true" tabindex="-1"></a>       LowBwt</span>
+<span id="cb170-10"><a href="basic-stats-epi.html#cb170-10" aria-hidden="true" tabindex="-1"></a>Smoking no        p0 yes        p1 oddsratio   lower    upper   p.value</span>
+<span id="cb170-11"><a href="basic-stats-epi.html#cb170-11" aria-hidden="true" tabindex="-1"></a>    no  <span class="dv">86</span> <span class="fl">0.6615385</span>  <span class="dv">29</span> <span class="fl">0.4915254</span>  <span class="fl">1.000000</span>      <span class="cn">NA</span>       <span class="cn">NA</span>        <span class="cn">NA</span></span>
+<span id="cb170-12"><a href="basic-stats-epi.html#cb170-12" aria-hidden="true" tabindex="-1"></a>    yes <span class="dv">44</span> <span class="fl">0.3384615</span>  <span class="dv">30</span> <span class="fl">0.5084746</span>  <span class="fl">2.021944</span> <span class="fl">1.08066</span> <span class="fl">3.783112</span> <span class="fl">0.0361765</span></span>
+<span id="cb170-13"><a href="basic-stats-epi.html#cb170-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb170-14"><a href="basic-stats-epi.html#cb170-14" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>measure</span>
+<span id="cb170-15"><a href="basic-stats-epi.html#cb170-15" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;wald&quot;</span></span>
+<span id="cb170-16"><a href="basic-stats-epi.html#cb170-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb170-17"><a href="basic-stats-epi.html#cb170-17" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>conf.level</span>
+<span id="cb170-18"><a href="basic-stats-epi.html#cb170-18" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.95</span></span>
+<span id="cb170-19"><a href="basic-stats-epi.html#cb170-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb170-20"><a href="basic-stats-epi.html#cb170-20" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>pvalue</span>
+<span id="cb170-21"><a href="basic-stats-epi.html#cb170-21" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;fisher.exact&quot;</span></span></code></pre></div>
+<p>This output is somewhat different from what we have seen so far, in that it is a <em>list</em> containing both the results of interest (as element <code>$tab</code>) and some parameter settings for the calculation of the results (see <a href="data-types-struct.html#list-struct">5.7</a> for more about lists). We can easily extract the main result using the <code>$</code>-notation, in the same way as for data frames:</p>
+<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="basic-stats-epi.html#cb171-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">epitab</span>(tab_smo)<span class="sc">$</span>tab</span>
+<span id="cb171-2"><a href="basic-stats-epi.html#cb171-2" aria-hidden="true" tabindex="-1"></a>       LowBwt</span>
+<span id="cb171-3"><a href="basic-stats-epi.html#cb171-3" aria-hidden="true" tabindex="-1"></a>Smoking no        p0 yes        p1 oddsratio   lower    upper   p.value</span>
+<span id="cb171-4"><a href="basic-stats-epi.html#cb171-4" aria-hidden="true" tabindex="-1"></a>    no  <span class="dv">86</span> <span class="fl">0.6615385</span>  <span class="dv">29</span> <span class="fl">0.4915254</span>  <span class="fl">1.000000</span>      <span class="cn">NA</span>       <span class="cn">NA</span>        <span class="cn">NA</span></span>
+<span id="cb171-5"><a href="basic-stats-epi.html#cb171-5" aria-hidden="true" tabindex="-1"></a>    yes <span class="dv">44</span> <span class="fl">0.3384615</span>  <span class="dv">30</span> <span class="fl">0.5084746</span>  <span class="fl">2.021944</span> <span class="fl">1.08066</span> <span class="fl">3.783112</span> <span class="fl">0.0361765</span></span></code></pre></div>
+<p>This output shows first the frequencies of the exposure-outcome combinations, and the proportional split of the exposure levels within each outcome level (e.g. here, we have 66% non-smoking mothers vs 34% smoking mothers for the births where the infant did not have low birth weight). This is followed by the actual odds ratio (the default risk measure) with a confidence interval and an associated p-value for the mull hypothesis that the true odds ratio is actually one: we see an odds ratio of ca. 2, with a fairly wide confidence interval [1.1, 3.8] and a marginally statistically significant p-value of 0.036. This is clearly a much more appealing summary than the simple table plus <span class="math inline">\(\chi^2\)</span>-test we have seen in Section <a href="basic-stats-epi.html#base-desc">8.1.1</a> above.</p>
+<p>If we want to look at the risk ratio instead of the odds ratio (feasible, as this is a cross-sectional cohort design, not a case-control design), we just specify the corresponding <code>method</code>-argument:</p>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="basic-stats-epi.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">epitab</span>(tab_smo, <span class="at">method =</span> <span class="st">&quot;riskratio&quot;</span>)<span class="sc">$</span>tab  <span class="co"># RR</span></span>
+<span id="cb172-2"><a href="basic-stats-epi.html#cb172-2" aria-hidden="true" tabindex="-1"></a>       LowBwt</span>
+<span id="cb172-3"><a href="basic-stats-epi.html#cb172-3" aria-hidden="true" tabindex="-1"></a>Smoking no        p0 yes        p1 riskratio    lower    upper   p.value</span>
+<span id="cb172-4"><a href="basic-stats-epi.html#cb172-4" aria-hidden="true" tabindex="-1"></a>    no  <span class="dv">86</span> <span class="fl">0.7478261</span>  <span class="dv">29</span> <span class="fl">0.2521739</span>  <span class="fl">1.000000</span>       <span class="cn">NA</span>       <span class="cn">NA</span>        <span class="cn">NA</span></span>
+<span id="cb172-5"><a href="basic-stats-epi.html#cb172-5" aria-hidden="true" tabindex="-1"></a>    yes <span class="dv">44</span> <span class="fl">0.5945946</span>  <span class="dv">30</span> <span class="fl">0.4054054</span>  <span class="fl">1.607642</span> <span class="fl">1.057812</span> <span class="fl">2.443262</span> <span class="fl">0.0361765</span></span></code></pre></div>
+<p>We find a risk ratio of ca. 1.6, with a confidence interval from 1.06 to 2.4, and the same p-value as before (because the same test is used). This is a bit smaller than the odds ratio, but leads to the same conclusion, namely that the risk of a low-weight birth is increased in mothers smoking during pregnancy.</p>
+<p>A short demonstration that <code>epitab</code> also works with more than two exposure levels:</p>
+<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="basic-stats-epi.html#cb173-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> tab_r <span class="ot">&lt;-</span> <span class="fu">table</span>(<span class="at">Race =</span> bwts<span class="sc">$</span>Race, <span class="at">LowBw =</span> bwts<span class="sc">$</span>LowBw)</span>
+<span id="cb173-2"><a href="basic-stats-epi.html#cb173-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">epitab</span>(tab_r)<span class="sc">$</span>tab</span>
+<span id="cb173-3"><a href="basic-stats-epi.html#cb173-3" aria-hidden="true" tabindex="-1"></a>       LowBw</span>
+<span id="cb173-4"><a href="basic-stats-epi.html#cb173-4" aria-hidden="true" tabindex="-1"></a>Race    no        p0 yes        p1 oddsratio     lower    upper    p.value</span>
+<span id="cb173-5"><a href="basic-stats-epi.html#cb173-5" aria-hidden="true" tabindex="-1"></a>  white <span class="dv">73</span> <span class="fl">0.5615385</span>  <span class="dv">23</span> <span class="fl">0.3898305</span>  <span class="fl">1.000000</span>        <span class="cn">NA</span>       <span class="cn">NA</span>         <span class="cn">NA</span></span>
+<span id="cb173-6"><a href="basic-stats-epi.html#cb173-6" aria-hidden="true" tabindex="-1"></a>  black <span class="dv">15</span> <span class="fl">0.1153846</span>  <span class="dv">11</span> <span class="fl">0.1864407</span>  <span class="fl">2.327536</span> <span class="fl">0.9385073</span> <span class="fl">5.772385</span> <span class="fl">0.08433263</span></span>
+<span id="cb173-7"><a href="basic-stats-epi.html#cb173-7" aria-hidden="true" tabindex="-1"></a>  other <span class="dv">42</span> <span class="fl">0.3230769</span>  <span class="dv">25</span> <span class="fl">0.4237288</span>  <span class="fl">1.889234</span> <span class="fl">0.9554577</span> <span class="fl">3.735597</span> <span class="fl">0.08111446</span></span></code></pre></div>
+<p>FIXME: more about display (rev=)?</p>
 </div>
+<div id="pander-intro" class="section level2" number="8.5">
+<h2><span class="header-section-number">8.5</span> Improved display of descriptives</h2>
+<p>The descriptive statistics we have displayed so far in this chapter have been shown as they would appear in the R console, as pure text. This is perfectly reasonable for interactive work, but it is not really suitable for a report or a manuscript: when we e.g. compile a script from within RStudio, as described in Section <a href="intro-example.html#exp-res">4.4</a>, these results will be shown as unattractive blobs of unformatted text in the resulting .pdf or .docx files, and will require significant manual clean-up and editing to be presentable. We will talk extensively about how to write scripts that generate publication-quality tabular output in Chapters <a href="tables-nice.html#tables-nice">13</a> and <a href="dynamic-documents.html#dynamic-documents">14</a>, but here I just want to introduce a quick solution that improves display quality immensely with almost no effort, namely the package <code>pander</code>.</p>
+<p>The main function in this package is also called <code>pander</code>, with simple default usage: just wrap any output you want show in a compiled script into a call to <code>pander</code>. At the console, this just shows a slightly different text-based output:</p>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="basic-stats-epi.html#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(pander)</span>
+<span id="cb174-2"><a href="basic-stats-epi.html#cb174-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">pander</span>(<span class="fu">descr</span>(bwts, <span class="at">stats =</span> <span class="fu">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;sd&quot;</span>)))</span>
+<span id="cb174-3"><a href="basic-stats-epi.html#cb174-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb174-4"><a href="basic-stats-epi.html#cb174-4" aria-hidden="true" tabindex="-1"></a><span class="sc">-------------------------------------------------------------</span></span>
+<span id="cb174-5"><a href="basic-stats-epi.html#cb174-5" aria-hidden="true" tabindex="-1"></a>   <span class="er">&amp;</span>nbsp;       Age    BirthWeight   LastWeight   PhysVisits </span>
+<span id="cb174-6"><a href="basic-stats-epi.html#cb174-6" aria-hidden="true" tabindex="-1"></a><span class="sc">-------------</span> <span class="sc">-------</span> <span class="sc">-------------</span> <span class="sc">------------</span> <span class="sc">------------</span></span>
+<span id="cb174-7"><a href="basic-stats-epi.html#cb174-7" aria-hidden="true" tabindex="-1"></a>  <span class="er">**</span>Mean<span class="sc">**</span>     <span class="fl">23.24</span>      <span class="dv">2945</span>         <span class="fl">129.8</span>        <span class="fl">0.7937</span>   </span>
+<span id="cb174-8"><a href="basic-stats-epi.html#cb174-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb174-9"><a href="basic-stats-epi.html#cb174-9" aria-hidden="true" tabindex="-1"></a> <span class="sc">**</span>Std.Dev<span class="sc">**</span>   <span class="fl">5.299</span>      <span class="fl">729.2</span>        <span class="fl">30.58</span>        <span class="fl">1.059</span>    </span>
+<span id="cb174-10"><a href="basic-stats-epi.html#cb174-10" aria-hidden="true" tabindex="-1"></a><span class="sc">-------------------------------------------------------------</span></span></code></pre></div>
+<p>However, in a compiled script or manuscript, like this document, this will be translated into an actual table object:</p>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="basic-stats-epi.html#cb175-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">pander</span>(<span class="fu">descr</span>(bwts, <span class="at">stats =</span> <span class="fu">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;sd&quot;</span>)))</span></code></pre></div>
+<table style="width:86%;">
+<colgroup>
+<col width="19%" />
+<col width="11%" />
+<col width="19%" />
+<col width="18%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">Age</th>
+<th align="center">BirthWeight</th>
+<th align="center">LastWeight</th>
+<th align="center">PhysVisits</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>Mean</strong></td>
+<td align="center">23.24</td>
+<td align="center">2945</td>
+<td align="center">129.8</td>
+<td align="center">0.7937</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Std.Dev</strong></td>
+<td align="center">5.299</td>
+<td align="center">729.2</td>
+<td align="center">30.58</td>
+<td align="center">1.059</td>
+</tr>
+</tbody>
+</table>
+<p>This does look ok-ish in its own right, and if you want to modify the appearance, you can either do this on the R side, by adding arguments to <code>pander</code> (as described in <code>pandoc.table</code>), or by editing the resulting .html or .docx file (which is substantially less work than working on the raw unformatted text).</p>
+<p>The advantage of <code>pander</code> is that it will work with a very wide range of R objects, including all the descriptive statistics we have seen in this chapter:</p>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="basic-stats-epi.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">pander</span>(<span class="fu">summary</span>(bwts))</span></code></pre></div>
+<table style="width:100%;">
+<caption>Table continues below</caption>
+<colgroup>
+<col width="12%" />
+<col width="20%" />
+<col width="20%" />
+<col width="13%" />
+<col width="12%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">LowBw</th>
+<th align="center">Age</th>
+<th align="center">LastWeight</th>
+<th align="center">Race</th>
+<th align="center">Smoking</th>
+<th align="center">PrevPremature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">no :130</td>
+<td align="center">Min. :14.00</td>
+<td align="center">Min. : 80.0</td>
+<td align="center">white:96</td>
+<td align="center">no :115</td>
+<td align="center">no :159</td>
+</tr>
+<tr class="even">
+<td align="center">yes: 59</td>
+<td align="center">1st Qu.:19.00</td>
+<td align="center">1st Qu.:110.0</td>
+<td align="center">black:26</td>
+<td align="center">yes: 74</td>
+<td align="center">yes : 24</td>
+</tr>
+<tr class="odd">
+<td align="center">NA</td>
+<td align="center">Median :23.00</td>
+<td align="center">Median :121.0</td>
+<td align="center">other:67</td>
+<td align="center">NA</td>
+<td align="center">NA’s: 6</td>
+</tr>
+<tr class="even">
+<td align="center">NA</td>
+<td align="center">Mean :23.24</td>
+<td align="center">Mean :129.8</td>
+<td align="center">NA</td>
+<td align="center">NA</td>
+<td align="center">NA</td>
+</tr>
+<tr class="odd">
+<td align="center">NA</td>
+<td align="center">3rd Qu.:26.00</td>
+<td align="center">3rd Qu.:140.0</td>
+<td align="center">NA</td>
+<td align="center">NA</td>
+<td align="center">NA</td>
+</tr>
+<tr class="even">
+<td align="center">NA</td>
+<td align="center">Max. :45.00</td>
+<td align="center">Max. :250.0</td>
+<td align="center">NA</td>
+<td align="center">NA</td>
+<td align="center">NA</td>
+</tr>
+</tbody>
+</table>
+<table style="width:92%;">
+<colgroup>
+<col width="20%" />
+<col width="23%" />
+<col width="23%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Hypertension</th>
+<th align="center">UterineIrritab</th>
+<th align="center">PhysVisits</th>
+<th align="center">BirthWeight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">no :177</td>
+<td align="center">no :161</td>
+<td align="center">Min. :0.0000</td>
+<td align="center">Min. : 709</td>
+</tr>
+<tr class="even">
+<td align="center">yes: 12</td>
+<td align="center">yes: 28</td>
+<td align="center">1st Qu.:0.0000</td>
+<td align="center">1st Qu.:2414</td>
+</tr>
+<tr class="odd">
+<td align="center">NA</td>
+<td align="center">NA</td>
+<td align="center">Median :0.0000</td>
+<td align="center">Median :2977</td>
+</tr>
+<tr class="even">
+<td align="center">NA</td>
+<td align="center">NA</td>
+<td align="center">Mean :0.7937</td>
+<td align="center">Mean :2945</td>
+</tr>
+<tr class="odd">
+<td align="center">NA</td>
+<td align="center">NA</td>
+<td align="center">3rd Qu.:1.0000</td>
+<td align="center">3rd Qu.:3487</td>
+</tr>
+<tr class="even">
+<td align="center">NA</td>
+<td align="center">NA</td>
+<td align="center">Max. :6.0000</td>
+<td align="center">Max. :4990</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="basic-stats-epi.html#cb177-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">pander</span>(<span class="fu">MeanCI</span>(bwts<span class="sc">$</span>BirthWeight))</span></code></pre></div>
+<table style="width:35%;">
+<colgroup>
+<col width="9%" />
+<col width="12%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">mean</th>
+<th align="center">lwr.ci</th>
+<th align="center">upr.ci</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">2945</td>
+<td align="center">2840</td>
+<td align="center">3049</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="basic-stats-epi.html#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">pander</span>(<span class="fu">freq</span>(bwts<span class="sc">$</span>LowBw))</span></code></pre></div>
+<table style="width:96%;">
+<colgroup>
+<col width="16%" />
+<col width="9%" />
+<col width="13%" />
+<col width="20%" />
+<col width="13%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">Freq</th>
+<th align="center">% Valid</th>
+<th align="center">% Valid Cum.</th>
+<th align="center">% Total</th>
+<th align="center">% Total Cum.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>no</strong></td>
+<td align="center">130</td>
+<td align="center">68.78</td>
+<td align="center">68.78</td>
+<td align="center">68.78</td>
+<td align="center">68.78</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>yes</strong></td>
+<td align="center">59</td>
+<td align="center">31.22</td>
+<td align="center">100</td>
+<td align="center">31.22</td>
+<td align="center">100</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong><NA></strong></td>
+<td align="center">0</td>
+<td align="center">NA</td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">100</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Total</strong></td>
+<td align="center">189</td>
+<td align="center">100</td>
+<td align="center">100</td>
+<td align="center">100</td>
+<td align="center">100</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="basic-stats-epi.html#cb179-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">pander</span>(<span class="fu">chisq.test</span>(tab_smo))</span></code></pre></div>
+<table style="width:47%;">
+<caption>Pearson’s Chi-squared test with Yates’ continuity correction: <code>tab_smo</code></caption>
+<colgroup>
+<col width="23%" />
+<col width="6%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Test statistic</th>
+<th align="center">df</th>
+<th align="center">P value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">4.236</td>
+<td align="center">1</td>
+<td align="center">0.03958 *</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="basic-stats-epi.html#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">pander</span>(<span class="fu">epitab</span>(tab_smo))</span></code></pre></div>
+<ul>
+<li><p><strong>tab</strong>:</p>
+<table style="width:100%;">
+<colgroup>
+<col width="12%" />
+<col width="6%" />
+<col width="11%" />
+<col width="7%" />
+<col width="11%" />
+<col width="15%" />
+<col width="10%" />
+<col width="10%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">no</th>
+<th align="center">p0</th>
+<th align="center">yes</th>
+<th align="center">p1</th>
+<th align="center">oddsratio</th>
+<th align="center">lower</th>
+<th align="center">upper</th>
+<th align="center">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>no</strong></td>
+<td align="center">86</td>
+<td align="center">0.6615</td>
+<td align="center">29</td>
+<td align="center">0.4915</td>
+<td align="center">1</td>
+<td align="center">NA</td>
+<td align="center">NA</td>
+<td align="center">NA</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>yes</strong></td>
+<td align="center">44</td>
+<td align="center">0.3385</td>
+<td align="center">30</td>
+<td align="center">0.5085</td>
+<td align="center">2.022</td>
+<td align="center">1.081</td>
+<td align="center">3.783</td>
+<td align="center">0.03618</td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>measure</strong>: wald</p></li>
+<li><p><strong>conf.level</strong>: <em>0.95</em></p></li>
+<li><p><strong>pvalue</strong>: fisher.exact</p></li>
+</ul>
+<!-- end of list -->
 </div>
-<div id="statistical-tests" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Statistical tests</h2>
-<p>UNDER CONSTRUCTION</p>
+<div id="next-steps" class="section level2" number="8.6">
+<h2><span class="header-section-number">8.6</span> Next steps</h2>
+<p>For more on lists and other complex R objects, as seen in the <code>epitab</code>-output, see Chapter <a href="data-types-struct.html#data-types-struct">5</a>. For more in-depth modelling of exposure-outcome associations that can also account for confounding variables, see Chapters <a href="regression-linear.html#regression-linear">9</a> and <a href="regression-other.html#regression-other">10</a>. Graphical descriptives as complement to the numerical descriptives here are discussed in Chapters <a href="graphics-base.html#graphics-base">11</a> and <a href="graphics-ggplot2.html#graphics-ggplot2">12</a>. More on creating attractive tables in scripts in Chapter <a href="tables-nice.html#tables-nice">13</a>, and more on integrating R results into reports and manuscripts in Chapter <a href="dynamic-documents.html#dynamic-documents">14</a>.</p>
 </div>
-<div id="epidemiological-risk-measures" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> Epidemiological risk measures</h2>
-<p>UNDER CONSTRUCTION</p>
+<div id="technical-notes-2" class="section level2" number="8.7">
+<h2><span class="header-section-number">8.7</span> Technical notes</h2>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="19">
+<li id="fn19"><p>This is the same data as <code>birthwt</code> in package <code>MASS</code>, so <code>help("birthwt", package = "MASS")</code> will show extra information and references. Note however that our data set is much nicer formatted (as an exercise, consider the R commands you would use to transform the data set in <code>MASS</code> to the one we are using).<a href="basic-stats-epi.html#fnref19" class="footnote-back">↩︎</a></p></li>
+<li id="fn20"><p>Ok, so technically, you can kind of read the interquartile range as the difference between the 75%- and the 25% quantile for continuous variables, as a robust counterpart to the standard deviation, much like the median is the robust counterpart to the mean, but frankly, that’s not great.<a href="basic-stats-epi.html#fnref20" class="footnote-back">↩︎</a></p></li>
+<li id="fn21"><p>Ok, so technically, we do move out of the region of purely descriptive statistics and into the region of statistical inference when we start talking about standard errors and confidence intervals. IMO, the general usefulness of these tools, eepcially for simple means and proportions, far outweighs the risks and burdens of having to keep in mind some very generic sampling model for the data, but the base R approach is not completely <em>crazy</em> either.<a href="basic-stats-epi.html#fnref21" class="footnote-back">↩︎</a></p></li>
+<li id="fn22"><p>Nothing, really; so yes, the <code>fisher.test</code> reports an odds ratio for 2x2 tables, but seriously?!<a href="basic-stats-epi.html#fnref22" class="footnote-back">↩︎</a></p></li>
+<li id="fn23"><p>Unlike the variance, which would be <span class="math inline">\(g^2\)</span>.<a href="basic-stats-epi.html#fnref23" class="footnote-back">↩︎</a></p></li>
+<li id="fn24"><p>For a technical discussion and some great examples for what kurtosis actually captures, see <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4321753/" title="PMC">Westfall, Kurtosis as Peakedness, 1905 – 2014. R.I.P., <em>American Statistician</em>, 2014</a>, especially Figure 2 and Table 1.<a href="basic-stats-epi.html#fnref24" class="footnote-back">↩︎</a></p></li>
+<li id="fn25"><p>Or what <code>freq</code> thinks is discrete, which by default is every variable with no more than 25 unique different values - in our birth weight example, this would include e.g. the mother’s age at birth, which may not be intended; this can be modified via argument <code>freq.ignore.threshold</code> to function <code>st_options</code>.<a href="basic-stats-epi.html#fnref25" class="footnote-back">↩︎</a></p></li>
+<li id="fn26"><p>As well as many other graphical and numerical descriptives - if you are not content with <code>summarytools</code>, this is not a bad place to look for alternatives, see e.g. <code>vignette("DescToolsCompanion")</code>.<a href="basic-stats-epi.html#fnref26" class="footnote-back">↩︎</a></p></li>
+<li id="fn27"><p>Respective the standard-normal distribution if you specify a fixed (“known”) standard deviation, correspodnign to what is taught as a <em>z-test</em> in many introductory statistics courses.<a href="basic-stats-epi.html#fnref27" class="footnote-back">↩︎</a></p></li>
+<li id="fn28"><p>Should you be interested, <a href="https://towardsdatascience.com/bootstrapping-statistics-what-it-is-and-why-its-used-e2fa29577307?gi=b393109dc692" title="Towards Data Science">this</a> blog post is a quite readable introduction of the idea, and <a href="https://bookdown.org/jgscott/DSGI/the-bootstrap.html" title="Bookdown">this</a> online book chapter offers a slightly more formal description of the idea.<a href="basic-stats-epi.html#fnref28" class="footnote-back">↩︎</a></p></li>
+<li id="fn29"><p>Like invoking the central limit theorem to argue that the two means we want to compare via a t-test have an approximately normal sampling distribution.<a href="basic-stats-epi.html#fnref29" class="footnote-back">↩︎</a></p></li>
+<li id="fn30"><p>Except when the number of events and / or records is so low that the different approximations do not work properly, in which case the exact Clopper-Pearson intervals are a good (if conservative) choice; see `<code>BinomCI</code> for references and a brief discussion of the methods if you are concerned.<a href="basic-stats-epi.html#fnref30" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
@@ -402,7 +1020,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="data-tidyverse.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="regression_linear.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="regression-linear.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

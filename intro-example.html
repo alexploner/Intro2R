@@ -23,7 +23,7 @@
 
 
 
-<meta name="date" content="2022-03-06" />
+<meta name="date" content="2022-03-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -237,7 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.5.3" data-path="data-types-struct.html"><a href="data-types-struct.html#extensions-alternatives"><i class="fa fa-check"></i><b>5.5.3</b> Extensions &amp; alternatives</a></li>
 </ul></li>
 <li class="chapter" data-level="5.6" data-path="data-types-struct.html"><a href="data-types-struct.html#helpers-subset-and-transform"><i class="fa fa-check"></i><b>5.6</b> Helpers: <code>subset</code> and <code>transform</code></a></li>
-<li class="chapter" data-level="5.7" data-path="data-types-struct.html"><a href="data-types-struct.html#free-style-data-lists"><i class="fa fa-check"></i><b>5.7</b> Free-style data: lists</a>
+<li class="chapter" data-level="5.7" data-path="data-types-struct.html"><a href="data-types-struct.html#list-struct"><i class="fa fa-check"></i><b>5.7</b> Free-style data: lists</a>
 <ul>
 <li class="chapter" data-level="5.7.1" data-path="data-types-struct.html"><a href="data-types-struct.html#background-2"><i class="fa fa-check"></i><b>5.7.1</b> Background</a></li>
 <li class="chapter" data-level="5.7.2" data-path="data-types-struct.html"><a href="data-types-struct.html#basic-list"><i class="fa fa-check"></i><b>5.7.2</b> Basic list</a></li>
@@ -250,7 +250,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="6.1" data-path="data-processing.html"><a href="data-processing.html#overview-1"><i class="fa fa-check"></i><b>6.1</b> Overview</a></li>
 <li class="chapter" data-level="6.2" data-path="data-processing.html"><a href="data-processing.html#groupwise-statistics"><i class="fa fa-check"></i><b>6.2</b> Groupwise statistics</a></li>
-<li class="chapter" data-level="6.3" data-path="data-processing.html"><a href="data-processing.html#using-your-own-functions"><i class="fa fa-check"></i><b>6.3</b> Using your own functions</a></li>
+<li class="chapter" data-level="6.3" data-path="data-processing.html"><a href="data-processing.html#own-functions"><i class="fa fa-check"></i><b>6.3</b> Using your own functions</a></li>
 <li class="chapter" data-level="6.4" data-path="data-processing.html"><a href="data-processing.html#split---apply---combine"><i class="fa fa-check"></i><b>6.4</b> Split - Apply - Combine</a></li>
 <li class="chapter" data-level="6.5" data-path="data-processing.html"><a href="data-processing.html#merging-data-sets"><i class="fa fa-check"></i><b>6.5</b> Merging data sets</a></li>
 <li class="chapter" data-level="6.6" data-path="data-processing.html"><a href="data-processing.html#using-pipelines"><i class="fa fa-check"></i><b>6.6</b> Using pipelines</a></li>
@@ -264,94 +264,98 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="part"><span><b>III Estimation, inference, modelling</b></span></li>
 <li class="chapter" data-level="8" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html"><i class="fa fa-check"></i><b>8</b> Basic Statistics &amp; Epidemiology</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#descriptives"><i class="fa fa-check"></i><b>8.1</b> Descriptives</a>
+<li class="chapter" data-level="8.1" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#descriptives"><i class="fa fa-check"></i><b>8.1</b> Descriptive statistics</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#distribution-characteristics"><i class="fa fa-check"></i><b>8.1.1</b> Distribution characteristics</a></li>
-<li class="chapter" data-level="8.1.2" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#confidence-intervals"><i class="fa fa-check"></i><b>8.1.2</b> Confidence intervals</a></li>
+<li class="chapter" data-level="8.1.1" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#base-desc"><i class="fa fa-check"></i><b>8.1.1</b> In base R</a></li>
+<li class="chapter" data-level="8.1.2" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#using-package-summarytools"><i class="fa fa-check"></i><b>8.1.2</b> Using package <code>summarytools</code></a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#statistical-tests"><i class="fa fa-check"></i><b>8.2</b> Statistical tests</a></li>
-<li class="chapter" data-level="8.3" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#epidemiological-risk-measures"><i class="fa fa-check"></i><b>8.3</b> Epidemiological risk measures</a></li>
+<li class="chapter" data-level="8.2" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#confidence-intervals"><i class="fa fa-check"></i><b>8.2</b> Confidence intervals</a></li>
+<li class="chapter" data-level="8.3" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#statistical-tests"><i class="fa fa-check"></i><b>8.3</b> Statistical tests</a></li>
+<li class="chapter" data-level="8.4" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#epidemiological-risk-measures"><i class="fa fa-check"></i><b>8.4</b> Epidemiological risk measures</a></li>
+<li class="chapter" data-level="8.5" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#pander-intro"><i class="fa fa-check"></i><b>8.5</b> Improved display of descriptives</a></li>
+<li class="chapter" data-level="8.6" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#next-steps"><i class="fa fa-check"></i><b>8.6</b> Next steps</a></li>
+<li class="chapter" data-level="8.7" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#technical-notes-2"><i class="fa fa-check"></i><b>8.7</b> Technical notes</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="regression_linear.html"><a href="regression_linear.html"><i class="fa fa-check"></i><b>9</b> Linear regression</a>
+<li class="chapter" data-level="9" data-path="regression-linear.html"><a href="regression-linear.html"><i class="fa fa-check"></i><b>9</b> Linear regression</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="regression_linear.html"><a href="regression_linear.html#overview-3"><i class="fa fa-check"></i><b>9.1</b> Overview</a>
+<li class="chapter" data-level="9.1" data-path="regression-linear.html"><a href="regression-linear.html#overview-3"><i class="fa fa-check"></i><b>9.1</b> Overview</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="regression_linear.html"><a href="regression_linear.html#data-example-hemoglobin"><i class="fa fa-check"></i><b>9.1.1</b> Data example: Hemoglobin</a></li>
+<li class="chapter" data-level="9.1.1" data-path="regression-linear.html"><a href="regression-linear.html#data-example-hemoglobin"><i class="fa fa-check"></i><b>9.1.1</b> Data example: Hemoglobin</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="regression_linear.html"><a href="regression_linear.html#background-3"><i class="fa fa-check"></i><b>9.2</b> Background</a></li>
-<li class="chapter" data-level="9.3" data-path="regression_linear.html"><a href="regression_linear.html#simple-linear-regression"><i class="fa fa-check"></i><b>9.3</b> Simple linear regression</a>
+<li class="chapter" data-level="9.2" data-path="regression-linear.html"><a href="regression-linear.html#background-3"><i class="fa fa-check"></i><b>9.2</b> Background</a></li>
+<li class="chapter" data-level="9.3" data-path="regression-linear.html"><a href="regression-linear.html#simple-linear-regression"><i class="fa fa-check"></i><b>9.3</b> Simple linear regression</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="regression_linear.html"><a href="regression_linear.html#looking-at-the-data"><i class="fa fa-check"></i><b>9.3.1</b> Looking at the data</a></li>
-<li class="chapter" data-level="9.3.2" data-path="regression_linear.html"><a href="regression_linear.html#fitting-a-linear-regression-model"><i class="fa fa-check"></i><b>9.3.2</b> Fitting a linear regression model</a></li>
-<li class="chapter" data-level="9.3.3" data-path="regression_linear.html"><a href="regression_linear.html#regression-table-and-inference"><i class="fa fa-check"></i><b>9.3.3</b> Regression table and inference</a></li>
-<li class="chapter" data-level="9.3.4" data-path="regression_linear.html"><a href="regression_linear.html#prediction"><i class="fa fa-check"></i><b>9.3.4</b> Prediction</a></li>
-<li class="chapter" data-level="9.3.5" data-path="regression_linear.html"><a href="regression_linear.html#diagnostics"><i class="fa fa-check"></i><b>9.3.5</b> Diagnostics</a></li>
-<li class="chapter" data-level="9.3.6" data-path="regression_linear.html"><a href="regression_linear.html#binary-predictor-and-dummy-coding"><i class="fa fa-check"></i><b>9.3.6</b> Binary predictor and dummy coding</a></li>
-<li class="chapter" data-level="9.3.7" data-path="regression_linear.html"><a href="regression_linear.html#aside-generating-nice-regression-tables"><i class="fa fa-check"></i><b>9.3.7</b> Aside: generating nice regression tables</a></li>
+<li class="chapter" data-level="9.3.1" data-path="regression-linear.html"><a href="regression-linear.html#looking-at-the-data"><i class="fa fa-check"></i><b>9.3.1</b> Looking at the data</a></li>
+<li class="chapter" data-level="9.3.2" data-path="regression-linear.html"><a href="regression-linear.html#fitting-a-linear-regression-model"><i class="fa fa-check"></i><b>9.3.2</b> Fitting a linear regression model</a></li>
+<li class="chapter" data-level="9.3.3" data-path="regression-linear.html"><a href="regression-linear.html#regression-table-and-inference"><i class="fa fa-check"></i><b>9.3.3</b> Regression table and inference</a></li>
+<li class="chapter" data-level="9.3.4" data-path="regression-linear.html"><a href="regression-linear.html#prediction"><i class="fa fa-check"></i><b>9.3.4</b> Prediction</a></li>
+<li class="chapter" data-level="9.3.5" data-path="regression-linear.html"><a href="regression-linear.html#diagnostics"><i class="fa fa-check"></i><b>9.3.5</b> Diagnostics</a></li>
+<li class="chapter" data-level="9.3.6" data-path="regression-linear.html"><a href="regression-linear.html#binary-predictor-and-dummy-coding"><i class="fa fa-check"></i><b>9.3.6</b> Binary predictor and dummy coding</a></li>
+<li class="chapter" data-level="9.3.7" data-path="regression-linear.html"><a href="regression-linear.html#aside-generating-nice-regression-tables"><i class="fa fa-check"></i><b>9.3.7</b> Aside: generating nice regression tables</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="regression_linear.html"><a href="regression_linear.html#multiple-linear-regression"><i class="fa fa-check"></i><b>9.4</b> Multiple linear regression</a>
+<li class="chapter" data-level="9.4" data-path="regression-linear.html"><a href="regression-linear.html#multiple-linear-regression"><i class="fa fa-check"></i><b>9.4</b> Multiple linear regression</a>
 <ul>
-<li class="chapter" data-level="9.4.1" data-path="regression_linear.html"><a href="regression_linear.html#multiple-predictors"><i class="fa fa-check"></i><b>9.4.1</b> Multiple predictors</a></li>
-<li class="chapter" data-level="9.4.2" data-path="regression_linear.html"><a href="regression_linear.html#categorical-predictors-with-2-levels"><i class="fa fa-check"></i><b>9.4.2</b> Categorical predictors with <span class="math inline">\(&gt;\)</span> 2 levels</a></li>
-<li class="chapter" data-level="9.4.3" data-path="regression_linear.html"><a href="regression_linear.html#interactions"><i class="fa fa-check"></i><b>9.4.3</b> Interactions</a></li>
-<li class="chapter" data-level="9.4.4" data-path="regression_linear.html"><a href="regression_linear.html#splines"><i class="fa fa-check"></i><b>9.4.4</b> Splines</a></li>
+<li class="chapter" data-level="9.4.1" data-path="regression-linear.html"><a href="regression-linear.html#multiple-predictors"><i class="fa fa-check"></i><b>9.4.1</b> Multiple predictors</a></li>
+<li class="chapter" data-level="9.4.2" data-path="regression-linear.html"><a href="regression-linear.html#categorical-predictors-with-2-levels"><i class="fa fa-check"></i><b>9.4.2</b> Categorical predictors with <span class="math inline">\(&gt;\)</span> 2 levels</a></li>
+<li class="chapter" data-level="9.4.3" data-path="regression-linear.html"><a href="regression-linear.html#interactions"><i class="fa fa-check"></i><b>9.4.3</b> Interactions</a></li>
+<li class="chapter" data-level="9.4.4" data-path="regression-linear.html"><a href="regression-linear.html#splines"><i class="fa fa-check"></i><b>9.4.4</b> Splines</a></li>
 </ul></li>
-<li class="chapter" data-level="9.5" data-path="regression_linear.html"><a href="regression_linear.html#technical-notes-2"><i class="fa fa-check"></i><b>9.5</b> Technical notes</a></li>
+<li class="chapter" data-level="9.5" data-path="regression-linear.html"><a href="regression-linear.html#technical-notes-3"><i class="fa fa-check"></i><b>9.5</b> Technical notes</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="regression_more.html"><a href="regression_more.html"><i class="fa fa-check"></i><b>10</b> More regression models</a>
+<li class="chapter" data-level="10" data-path="regression-other.html"><a href="regression-other.html"><i class="fa fa-check"></i><b>10</b> More regression models</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="regression_more.html"><a href="regression_more.html#logistic-regression"><i class="fa fa-check"></i><b>10.1</b> Logistic regression</a>
+<li class="chapter" data-level="10.1" data-path="regression-other.html"><a href="regression-other.html#logistic-regression"><i class="fa fa-check"></i><b>10.1</b> Logistic regression</a>
 <ul>
-<li class="chapter" data-level="10.1.1" data-path="regression_more.html"><a href="regression_more.html#ex.-birthweight-uterine-irritability"><i class="fa fa-check"></i><b>10.1.1</b> Ex.: Birthweight &amp; uterine irritability</a></li>
+<li class="chapter" data-level="10.1.1" data-path="regression-other.html"><a href="regression-other.html#ex.-birthweight-uterine-irritability"><i class="fa fa-check"></i><b>10.1.1</b> Ex.: Birthweight &amp; uterine irritability</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="regression_more.html"><a href="regression_more.html#survival-regression"><i class="fa fa-check"></i><b>10.2</b> Survival regression</a>
+<li class="chapter" data-level="10.2" data-path="regression-other.html"><a href="regression-other.html#survival-regression"><i class="fa fa-check"></i><b>10.2</b> Survival regression</a>
 <ul>
-<li class="chapter" data-level="10.2.1" data-path="regression_more.html"><a href="regression_more.html#survival-data"><i class="fa fa-check"></i><b>10.2.1</b> Survival data</a></li>
-<li class="chapter" data-level="10.2.2" data-path="regression_more.html"><a href="regression_more.html#survival-curves"><i class="fa fa-check"></i><b>10.2.2</b> Survival curves</a></li>
-<li class="chapter" data-level="10.2.3" data-path="regression_more.html"><a href="regression_more.html#cox-regression"><i class="fa fa-check"></i><b>10.2.3</b> Cox regression</a></li>
+<li class="chapter" data-level="10.2.1" data-path="regression-other.html"><a href="regression-other.html#survival-data"><i class="fa fa-check"></i><b>10.2.1</b> Survival data</a></li>
+<li class="chapter" data-level="10.2.2" data-path="regression-other.html"><a href="regression-other.html#survival-curves"><i class="fa fa-check"></i><b>10.2.2</b> Survival curves</a></li>
+<li class="chapter" data-level="10.2.3" data-path="regression-other.html"><a href="regression-other.html#cox-regression"><i class="fa fa-check"></i><b>10.2.3</b> Cox regression</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="regression_more.html"><a href="regression_more.html#other-models"><i class="fa fa-check"></i><b>10.3</b> Other models</a></li>
+<li class="chapter" data-level="10.3" data-path="regression-other.html"><a href="regression-other.html#other-models"><i class="fa fa-check"></i><b>10.3</b> Other models</a></li>
 </ul></li>
 <li class="part"><span><b>IV Graphics</b></span></li>
-<li class="chapter" data-level="11" data-path="graphics_base.html"><a href="graphics_base.html"><i class="fa fa-check"></i><b>11</b> Graphics in base R</a>
+<li class="chapter" data-level="11" data-path="graphics-base.html"><a href="graphics-base.html"><i class="fa fa-check"></i><b>11</b> Graphics in base R</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="graphics_base.html"><a href="graphics_base.html#overview-4"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
-<li class="chapter" data-level="11.2" data-path="graphics_base.html"><a href="graphics_base.html#base-plots"><i class="fa fa-check"></i><b>11.2</b> Base plots</a>
+<li class="chapter" data-level="11.1" data-path="graphics-base.html"><a href="graphics-base.html#overview-4"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
+<li class="chapter" data-level="11.2" data-path="graphics-base.html"><a href="graphics-base.html#base-plots"><i class="fa fa-check"></i><b>11.2</b> Base plots</a>
 <ul>
-<li class="chapter" data-level="" data-path="graphics_base.html"><a href="graphics_base.html#vectorized-graphical-parameters"><i class="fa fa-check"></i>Vectorized graphical parameters</a></li>
+<li class="chapter" data-level="" data-path="graphics-base.html"><a href="graphics-base.html#vectorized-graphical-parameters"><i class="fa fa-check"></i>Vectorized graphical parameters</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="graphics_base.html"><a href="graphics_base.html#low-level-and-high-level-plotting"><i class="fa fa-check"></i><b>11.3</b> Low-level and high-level plotting</a></li>
-<li class="chapter" data-level="11.4" data-path="graphics_base.html"><a href="graphics_base.html#displaying-saving-coloring-plots"><i class="fa fa-check"></i><b>11.4</b> Displaying, saving, coloring plots</a></li>
+<li class="chapter" data-level="11.3" data-path="graphics-base.html"><a href="graphics-base.html#low-level-and-high-level-plotting"><i class="fa fa-check"></i><b>11.3</b> Low-level and high-level plotting</a></li>
+<li class="chapter" data-level="11.4" data-path="graphics-base.html"><a href="graphics-base.html#displaying-saving-coloring-plots"><i class="fa fa-check"></i><b>11.4</b> Displaying, saving, coloring plots</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html"><i class="fa fa-check"></i><b>12</b> Graphics using <code>ggplot2</code></a>
+<li class="chapter" data-level="12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html"><i class="fa fa-check"></i><b>12</b> Graphics using <code>ggplot2</code></a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#overview-5"><i class="fa fa-check"></i><b>12.1</b> Overview</a>
+<li class="chapter" data-level="12.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#overview-5"><i class="fa fa-check"></i><b>12.1</b> Overview</a>
 <ul>
-<li class="chapter" data-level="12.1.1" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#data-example-hemoglobin-1"><i class="fa fa-check"></i><b>12.1.1</b> Data example: Hemoglobin</a></li>
+<li class="chapter" data-level="12.1.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#data-example-hemoglobin-1"><i class="fa fa-check"></i><b>12.1.1</b> Data example: Hemoglobin</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#background-4"><i class="fa fa-check"></i><b>12.2</b> Background</a></li>
-<li class="chapter" data-level="12.3" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#concepts"><i class="fa fa-check"></i><b>12.3</b> Concepts</a>
+<li class="chapter" data-level="12.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#background-4"><i class="fa fa-check"></i><b>12.2</b> Background</a></li>
+<li class="chapter" data-level="12.3" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#concepts"><i class="fa fa-check"></i><b>12.3</b> Concepts</a>
 <ul>
-<li class="chapter" data-level="12.3.1" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#aesthetics"><i class="fa fa-check"></i><b>12.3.1</b> Aesthetics</a></li>
-<li class="chapter" data-level="12.3.2" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#example-data"><i class="fa fa-check"></i><b>12.3.2</b> Example data</a></li>
+<li class="chapter" data-level="12.3.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#aesthetics"><i class="fa fa-check"></i><b>12.3.1</b> Aesthetics</a></li>
+<li class="chapter" data-level="12.3.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#example-data"><i class="fa fa-check"></i><b>12.3.2</b> Example data</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#background-5"><i class="fa fa-check"></i><b>12.4</b> Background</a></li>
-<li class="chapter" data-level="12.5" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#basic-usage"><i class="fa fa-check"></i><b>12.5</b> Basic usage</a></li>
-<li class="chapter" data-level="12.6" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#slightly-extended-usage"><i class="fa fa-check"></i><b>12.6</b> Slightly extended usage</a></li>
-<li class="chapter" data-level="12.7" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#multiple-layers"><i class="fa fa-check"></i><b>12.7</b> Multiple layers</a></li>
-<li class="chapter" data-level="12.8" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#splitting-the-plot"><i class="fa fa-check"></i><b>12.8</b> Splitting the plot</a></li>
-<li class="chapter" data-level="12.9" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#messing-with-the-defaults"><i class="fa fa-check"></i><b>12.9</b> Messing with the defaults</a>
+<li class="chapter" data-level="12.4" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#background-5"><i class="fa fa-check"></i><b>12.4</b> Background</a></li>
+<li class="chapter" data-level="12.5" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#basic-usage"><i class="fa fa-check"></i><b>12.5</b> Basic usage</a></li>
+<li class="chapter" data-level="12.6" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#slightly-extended-usage"><i class="fa fa-check"></i><b>12.6</b> Slightly extended usage</a></li>
+<li class="chapter" data-level="12.7" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#multiple-layers"><i class="fa fa-check"></i><b>12.7</b> Multiple layers</a></li>
+<li class="chapter" data-level="12.8" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#splitting-the-plot"><i class="fa fa-check"></i><b>12.8</b> Splitting the plot</a></li>
+<li class="chapter" data-level="12.9" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#messing-with-the-defaults"><i class="fa fa-check"></i><b>12.9</b> Messing with the defaults</a>
 <ul>
-<li class="chapter" data-level="12.9.1" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#fixing-aesthetics"><i class="fa fa-check"></i><b>12.9.1</b> {-} Fixing aesthetics</a></li>
-<li class="chapter" data-level="" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#scales"><i class="fa fa-check"></i>Scales</a></li>
+<li class="chapter" data-level="12.9.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#fixing-aesthetics"><i class="fa fa-check"></i><b>12.9.1</b> {-} Fixing aesthetics</a></li>
+<li class="chapter" data-level="" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#scales"><i class="fa fa-check"></i>Scales</a></li>
 </ul></li>
-<li class="chapter" data-level="12.10" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#messing-with-defaults-ii-themes"><i class="fa fa-check"></i><b>12.10</b> Messing with defaults II: themes</a></li>
-<li class="chapter" data-level="12.11" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#extension-packages"><i class="fa fa-check"></i><b>12.11</b> Extension packages</a></li>
-<li class="chapter" data-level="12.12" data-path="graphics_ggplot2.html"><a href="graphics_ggplot2.html#technical-notes-3"><i class="fa fa-check"></i><b>12.12</b> Technical notes</a></li>
+<li class="chapter" data-level="12.10" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#messing-with-defaults-ii-themes"><i class="fa fa-check"></i><b>12.10</b> Messing with defaults II: themes</a></li>
+<li class="chapter" data-level="12.11" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#extension-packages"><i class="fa fa-check"></i><b>12.11</b> Extension packages</a></li>
+<li class="chapter" data-level="12.12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#technical-notes-4"><i class="fa fa-check"></i><b>12.12</b> Technical notes</a></li>
 </ul></li>
 <li class="part"><span><b>V Organizing the analysis</b></span></li>
-<li class="chapter" data-level="13" data-path="tables_nice.html"><a href="tables_nice.html"><i class="fa fa-check"></i><b>13</b> Generating nice tables</a></li>
-<li class="chapter" data-level="14" data-path="dynamic_documents.html"><a href="dynamic_documents.html"><i class="fa fa-check"></i><b>14</b> Dynamic documents</a></li>
+<li class="chapter" data-level="13" data-path="tables-nice.html"><a href="tables-nice.html"><i class="fa fa-check"></i><b>13</b> Generating nice tables</a></li>
+<li class="chapter" data-level="14" data-path="dynamic-documents.html"><a href="dynamic-documents.html"><i class="fa fa-check"></i><b>14</b> Dynamic documents</a></li>
 <li class="chapter" data-level="15" data-path="scripting-workflow.html"><a href="scripting-workflow.html"><i class="fa fa-check"></i><b>15</b> Scripting and workflow</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -555,7 +559,7 @@ and read it in</p>
 <p>In order to generate such an output file, simply load the script into the RStudio Source Pane, and click on the notebook icon (alternatively, press the hotkey combination Ctrl-Shift-K). This will open a small dialogue with a choice of three output formats, HTML, PDF and MS Word. Clicking on Compile will generate an output file with the same basename as the script file and the file extension corresponding to the chosen output format.</p>
 <p>Figure <a href="intro-example.html#fig:compiledViewer">4.1</a> below shows what this looks like: in the output file, the comments and code from the original script (<code>boxplot</code>, <code>subset</code>, <code>summary</code>) are combined with the output they produce, both graphical (the boxplots) and numerical (the six-number summaries). Together, this is a self-contained record of both the analysis steps and their results.</p>
 <p>If we compile the script to a file format that is a bit easier to edit than HTML, say the MS Word format, the resulting output file can also serve as the starting point for a report on the analysis and its results.</p>
-<p>Note that this is just a starting point for exporting results from R/RStudio. We will see that it is easy to add R functions to a script that will format results in an attractive manner in the compiled document (Section <a href="#est-inf-mod"><strong>??</strong></a>), and easy to write comments that appear as formatted text (Section <a href="scripting-workflow.html#scripting-workflow">15</a>). Together, this will allow us to turn a simple R script into a very reasonable draft report with just the click of a button.</p>
+<p>Note that this is just a starting point for exporting results from R/RStudio. We will see that it is easy to add R functions to a script that will format results in an attractive manner in the compiled document (Sections <a href="basic-stats-epi.html#pander-intro">8.5</a> and <a href="tables-nice.html#tables-nice">13</a>), and easy to write comments that appear as formatted text (Section <a href="dynamic-documents.html#dynamic-documents">14</a>). Together, this will allow us to turn a simple R script into a very reasonable draft report with just the click of a button.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:compiledViewer"></span>
 <img src="figures/RStudio_1_4_1106/CompiledBasicExample_Viewer.png" alt="Extract from \texttt{BasicExample.html}, compiled from script \texttt{BasicExample.R}" width="90%" />
 <p class="caption">
