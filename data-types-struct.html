@@ -241,7 +241,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.7.1" data-path="data-types-struct.html"><a href="data-types-struct.html#background-2"><i class="fa fa-check"></i><b>5.7.1</b> Background</a></li>
 <li class="chapter" data-level="5.7.2" data-path="data-types-struct.html"><a href="data-types-struct.html#basic_lists"><i class="fa fa-check"></i><b>5.7.2</b> Basic list</a></li>
-<li class="chapter" data-level="5.7.3" data-path="data-types-struct.html"><a href="data-types-struct.html#named-lists"><i class="fa fa-check"></i><b>5.7.3</b> Named lists</a></li>
+<li class="chapter" data-level="5.7.3" data-path="data-types-struct.html"><a href="data-types-struct.html#named_lists"><i class="fa fa-check"></i><b>5.7.3</b> Named lists</a></li>
 <li class="chapter" data-level="5.7.4" data-path="data-types-struct.html"><a href="data-types-struct.html#example-data-frames"><i class="fa fa-check"></i><b>5.7.4</b> Example: data frames</a></li>
 </ul></li>
 <li class="chapter" data-level="5.8" data-path="data-types-struct.html"><a href="data-types-struct.html#technical-notes"><i class="fa fa-check"></i><b>5.8</b> Technical notes</a></li>
@@ -794,13 +794,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb110-11"><a href="data-types-struct.html#cb110-11" aria-hidden="true" tabindex="-1"></a>    One Sample t<span class="sc">-</span>test</span>
 <span id="cb110-12"><a href="data-types-struct.html#cb110-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb110-13"><a href="data-types-struct.html#cb110-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">:</span>  <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb110-14"><a href="data-types-struct.html#cb110-14" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="fl">1.7935</span>, df <span class="ot">=</span> <span class="dv">9</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">0.1065</span></span>
+<span id="cb110-14"><a href="data-types-struct.html#cb110-14" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="sc">-</span><span class="fl">0.53748</span>, df <span class="ot">=</span> <span class="dv">9</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">0.604</span></span>
 <span id="cb110-15"><a href="data-types-struct.html#cb110-15" aria-hidden="true" tabindex="-1"></a>alternative hypothesis<span class="sc">:</span> true mean is not equal to <span class="dv">0</span></span>
 <span id="cb110-16"><a href="data-types-struct.html#cb110-16" aria-hidden="true" tabindex="-1"></a><span class="dv">95</span> percent confidence interval<span class="sc">:</span></span>
-<span id="cb110-17"><a href="data-types-struct.html#cb110-17" aria-hidden="true" tabindex="-1"></a> <span class="sc">-</span><span class="fl">0.1534716</span>  <span class="fl">1.3281702</span></span>
+<span id="cb110-17"><a href="data-types-struct.html#cb110-17" aria-hidden="true" tabindex="-1"></a> <span class="sc">-</span><span class="fl">0.8933671</span>  <span class="fl">0.5503477</span></span>
 <span id="cb110-18"><a href="data-types-struct.html#cb110-18" aria-hidden="true" tabindex="-1"></a>sample estimates<span class="sc">:</span></span>
-<span id="cb110-19"><a href="data-types-struct.html#cb110-19" aria-hidden="true" tabindex="-1"></a>mean of x </span>
-<span id="cb110-20"><a href="data-types-struct.html#cb110-20" aria-hidden="true" tabindex="-1"></a><span class="fl">0.5873493</span> </span></code></pre></div>
+<span id="cb110-19"><a href="data-types-struct.html#cb110-19" aria-hidden="true" tabindex="-1"></a> mean of x </span>
+<span id="cb110-20"><a href="data-types-struct.html#cb110-20" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span><span class="fl">0.1715097</span> </span></code></pre></div>
 <p>In this sense, <code>list()</code> works similar to <code>c()</code>, except for the part about <em>any type of data</em>. Specifically, this means that within the list, the different components are stored in the order they were originally specified. This is indicated in the output above by the component number written in double brackets <code>[[</code> (as opposed to the single brackets we have used so far).</p>
 <p>It may come as not much of a surprise that at this point that we can use these double brackets to access an element of the list by position:</p>
 <div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="data-types-struct.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> mylist[[<span class="dv">1</span>]]</span>
@@ -821,15 +821,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb113-11"><a href="data-types-struct.html#cb113-11" aria-hidden="true" tabindex="-1"></a>    One Sample t<span class="sc">-</span>test</span>
 <span id="cb113-12"><a href="data-types-struct.html#cb113-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb113-13"><a href="data-types-struct.html#cb113-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">:</span>  <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb113-14"><a href="data-types-struct.html#cb113-14" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="fl">1.7935</span>, df <span class="ot">=</span> <span class="dv">9</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">0.1065</span></span>
+<span id="cb113-14"><a href="data-types-struct.html#cb113-14" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="sc">-</span><span class="fl">0.53748</span>, df <span class="ot">=</span> <span class="dv">9</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">0.604</span></span>
 <span id="cb113-15"><a href="data-types-struct.html#cb113-15" aria-hidden="true" tabindex="-1"></a>alternative hypothesis<span class="sc">:</span> true mean is not equal to <span class="dv">0</span></span>
 <span id="cb113-16"><a href="data-types-struct.html#cb113-16" aria-hidden="true" tabindex="-1"></a><span class="dv">95</span> percent confidence interval<span class="sc">:</span></span>
-<span id="cb113-17"><a href="data-types-struct.html#cb113-17" aria-hidden="true" tabindex="-1"></a> <span class="sc">-</span><span class="fl">0.1534716</span>  <span class="fl">1.3281702</span></span>
+<span id="cb113-17"><a href="data-types-struct.html#cb113-17" aria-hidden="true" tabindex="-1"></a> <span class="sc">-</span><span class="fl">0.8933671</span>  <span class="fl">0.5503477</span></span>
 <span id="cb113-18"><a href="data-types-struct.html#cb113-18" aria-hidden="true" tabindex="-1"></a>sample estimates<span class="sc">:</span></span>
-<span id="cb113-19"><a href="data-types-struct.html#cb113-19" aria-hidden="true" tabindex="-1"></a>mean of x </span>
-<span id="cb113-20"><a href="data-types-struct.html#cb113-20" aria-hidden="true" tabindex="-1"></a><span class="fl">0.5873493</span> </span></code></pre></div>
+<span id="cb113-19"><a href="data-types-struct.html#cb113-19" aria-hidden="true" tabindex="-1"></a> mean of x </span>
+<span id="cb113-20"><a href="data-types-struct.html#cb113-20" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span><span class="fl">0.1715097</span> </span></code></pre></div>
 </div>
-<div id="named-lists" class="section level3" number="5.7.3">
+<div id="named_lists" class="section level3" number="5.7.3">
 <h3><span class="header-section-number">5.7.3</span> Named lists</h3>
 <p>As an additional service, mostly to readability, we can also <em>name</em> the components of a list, e.g. by simple specifying the name in the call to <code>list</code>:</p>
 <div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="data-types-struct.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> mylist_named <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">data =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">label =</span> <span class="st">&quot;a&quot;</span>, <span class="at">test_result =</span> <span class="fu">t.test</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>)))</span>
@@ -845,13 +845,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb114-11"><a href="data-types-struct.html#cb114-11" aria-hidden="true" tabindex="-1"></a>    One Sample t<span class="sc">-</span>test</span>
 <span id="cb114-12"><a href="data-types-struct.html#cb114-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb114-13"><a href="data-types-struct.html#cb114-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">:</span>  <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb114-14"><a href="data-types-struct.html#cb114-14" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="sc">-</span><span class="fl">1.1359</span>, df <span class="ot">=</span> <span class="dv">9</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">0.2853</span></span>
+<span id="cb114-14"><a href="data-types-struct.html#cb114-14" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="fl">0.35852</span>, df <span class="ot">=</span> <span class="dv">9</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">0.7282</span></span>
 <span id="cb114-15"><a href="data-types-struct.html#cb114-15" aria-hidden="true" tabindex="-1"></a>alternative hypothesis<span class="sc">:</span> true mean is not equal to <span class="dv">0</span></span>
 <span id="cb114-16"><a href="data-types-struct.html#cb114-16" aria-hidden="true" tabindex="-1"></a><span class="dv">95</span> percent confidence interval<span class="sc">:</span></span>
-<span id="cb114-17"><a href="data-types-struct.html#cb114-17" aria-hidden="true" tabindex="-1"></a> <span class="sc">-</span><span class="fl">1.1779132</span>  <span class="fl">0.3904081</span></span>
+<span id="cb114-17"><a href="data-types-struct.html#cb114-17" aria-hidden="true" tabindex="-1"></a> <span class="sc">-</span><span class="fl">0.5217005</span>  <span class="fl">0.7182111</span></span>
 <span id="cb114-18"><a href="data-types-struct.html#cb114-18" aria-hidden="true" tabindex="-1"></a>sample estimates<span class="sc">:</span></span>
-<span id="cb114-19"><a href="data-types-struct.html#cb114-19" aria-hidden="true" tabindex="-1"></a> mean of x </span>
-<span id="cb114-20"><a href="data-types-struct.html#cb114-20" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span><span class="fl">0.3937525</span> </span></code></pre></div>
+<span id="cb114-19"><a href="data-types-struct.html#cb114-19" aria-hidden="true" tabindex="-1"></a>mean of x </span>
+<span id="cb114-20"><a href="data-types-struct.html#cb114-20" aria-hidden="true" tabindex="-1"></a><span class="fl">0.0982553</span> </span></code></pre></div>
 <p>The components of the list are the same, but now they have somewhat informative names, which is displayed in the output above instead of their number, and with leading <code>$</code> instead of the double brackets.</p>
 <p>And of course we can use this <code>$</code>-notation to access (and change) the elements of a named list via their name:</p>
 <div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="data-types-struct.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> mylist_named<span class="sc">$</span>data</span>

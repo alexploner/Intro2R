@@ -72,7 +72,7 @@ helpers-subset-and-transform
 list-struct
 background-2
 basic_lists
-named-lists
+named_lists
 example-data-frames
 technical-notes
 data-processing
