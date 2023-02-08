@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Introduction to R</title>
   <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Introduction to R" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
   
@@ -23,7 +22,7 @@
 
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2023-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +31,6 @@
   
 
 <link rel="next" href="background.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -386,12 +385,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 class="title">Introduction to R</h1>
 <p class="author"><em><div class="line-block">Alexander Ploner<br />
 <code>&lt;Alexander.Ploner@ki.se&gt;</code></div></em></p>
-<p class="date"><em>2022-03-30</em></p>
+<p class="date"><em>2023-02-08</em></p>
 </div>
-<div id="about-this-document" class="section level1 unnumbered">
-<h1>About this document</h1>
-<div id="content" class="section level2 unnumbered unlisted">
-<h2>Content</h2>
+<div id="about-this-document" class="section level1 unnumbered hasAnchor">
+<h1>About this document<a href="index.html#about-this-document" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="content" class="section level2 unnumbered unlisted hasAnchor">
+<h2>Content<a href="index.html#content" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This document offers an introduction to the statistical language R and the integrated development environment RStudio built on top of it. It is aimed at non-statisticians working in research, especially biomedical research and the life sciences, and does not require previous familiarity with R/RStudio.</p>
 <p>This is not an introduction to statistics - I assume that the reader is familiar with basic statistical tools and concepts, including descriptive statistics numerical (means, medians etc.) and graphical (histograms, boxplots etc.), classical hypothesis tests (t-tests etc.) as well as linear regression.
 On the other hand, nothing beyond these basics is required for most parts - there some specialized sections dealing with things like odds ratios and some extensions of linear regression widely used in epidemiology, but these are fairly self-contained.</p>
@@ -407,12 +406,12 @@ On the other hand, nothing beyond these basics is required for most parts - ther
 </ul>
 <p>This is definitely not the shortest introduction to getting productive with RStudio as fast as possible. The goal is to provide an understanding for how R works, and can be used in (epidemiological) research, providing a context for broad applications and a foundation for extending one’s knowledge beyond the content presented here, according to one’s needs and interests.</p>
 </div>
-<div id="status" class="section level2 unnumbered unlisted">
-<h2>Status</h2>
+<div id="status" class="section level2 unnumbered unlisted hasAnchor">
+<h2>Status<a href="index.html#status" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>These notes are under development, and brutally incomplete even for the simple purpose of accompanying the motivating course. Suggestions, comments and (constructive) criticism are welcome, and will used to improve the product.</p>
 <p>Version: 0.7.8</p>
-<div id="license" class="section level3 unnumbered unlisted">
-<h3>License</h3>
+<div id="license" class="section level3 unnumbered unlisted hasAnchor">
+<h3>License<a href="index.html#license" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>These notes are licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license</a></p>
 <p><img src="figures/by-nc-nd.png" width="25%" style="display: block; margin: auto auto auto 0;" /></p>
 
@@ -488,7 +487,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 A simple example | Introduction to R</title>
   <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 A simple example | Introduction to R" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
   
@@ -23,7 +22,7 @@
 
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2023-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="intro_rstudio.html"/>
 <link rel="next" href="data-types-struct.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -382,10 +381,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro-example" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> A simple example</h1>
-<div id="data-import" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Data import</h2>
+<div id="intro-example" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> A simple example<a href="intro-example.html#intro-example" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="data-import" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Data import<a href="intro-example.html#data-import" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The data in question is part of a survey, where patients who came to a health center for having their blood pressure measured were asked about lifestyle factors, including physical activity and nutrition. For the current example, we only have a small subset of <span class="math inline">\(n=100\)</span> subjects, for whom we have age, sex, systolic and diastolic blood pressure as well their answer to the question “Do you regularly add salt to your meal after it has been served?”. We are interested in how the risk factors sex and “extra salt” are related to the blood pressure variables.</p>
 <p>Looking at the file <code>saltadd.txt</code> in a text editor (e.g. notepad on Windows), we notice that</p>
 <ol style="list-style-type: lower-alpha">
@@ -393,8 +392,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>the columns of the data seem to be separated by tabulators (tabs).</li>
 </ol>
 <p>We therefore can read the file with the command</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="intro-example.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;Data/saltadd.txt&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>,</span>
-<span id="cb46-2"><a href="intro-example.html#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>     <span class="at">stringsAsFactors =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="intro-example.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;Data/saltadd.txt&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">stringsAsFactors =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <p>In other words, take the file named <code>saltadd.txt</code> in the current working directory,
 and read it in</p>
 <ul>
@@ -405,10 +403,10 @@ and read it in</p>
 <p>The resulting data frame is then stored as object <code>salt_ht</code> in the current working environment, where we can process it as we see fit.</p>
 <p>Alternatively, you can import the data file via opening the drop-down menu <em>Import Data</em> in the Environment tab and selecting <em>From Text (base)</em>. After selecting the data file via the GUI, this opens a dialogue where you can set the appropriate options for the data import, including tha name of the resulting data frame, the column separator, and conversion of text columns to factors, just as above. RStudio will translate your input into the corresponding call to function <code>read.delim</code>, which is a variant of <code>read.table</code> with different default settings (see <code>?read.delim</code> for details).</p>
 </div>
-<div id="analysis" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Analysis</h2>
-<div id="desc-ex" class="section level3" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Descriptives</h3>
+<div id="analysis" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Analysis<a href="intro-example.html#analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="desc-ex" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Descriptives<a href="intro-example.html#desc-ex" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s start with a simple summary of the whole data, to familiarize ourselves with it, and to do some general quality control:</p>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="intro-example.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(salt_ht)</span>
 <span id="cb47-2"><a href="intro-example.html#cb47-2" aria-hidden="true" tabindex="-1"></a>       ID           sex          sbp             dbp         saltadd        age       </span>
@@ -421,15 +419,15 @@ and read it in</p>
 <p>These seem overall reasonable values, though the blood pressure of the subjects do tend towards high and even very high values (e.g. systolic blood pressures above 200 points).</p>
 <p>Note that the salt variable actually has 20 missing values (coded as <code>NA</code> in R); any comparison involving this variable will therefore only use the 80 subjects where the variable has non-missing values.</p>
 </div>
-<div id="blood-pressure-by-salt-intake" class="section level3" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> Blood pressure by salt intake</h3>
+<div id="blood-pressure-by-salt-intake" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Blood pressure by salt intake<a href="intro-example.html#blood-pressure-by-salt-intake" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s look at the distribution of the systolic blood pressure by salt intake. For a small data set like this, side-by-side boxplots work well for comparison, so we use the function <code>boxplot</code> with the formula interface we have seen before:</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="intro-example.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">boxplot</span>(sbp <span class="sc">~</span> saltadd, <span class="at">data =</span> salt_ht)</span></code></pre></div>
 <p><img src="introductio-to-r_files/figure-html/unnamed-chunk-54-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>It appears that the median blood pressure is higher in those who add extra salt, though both groups also show considerable variability, as indicated by the box heights (interquartile ranges).</p>
 <p>We also want to report the actual mean- and median blood pressures for both groups separately. We can do this using the <code>subset</code> function we have introduced earlier:</p>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="intro-example.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht_yes <span class="ot">&lt;-</span> <span class="fu">subset</span>(salt_ht, saltadd <span class="sc">==</span> <span class="st">&quot;yes&quot;</span>)</span>
-<span id="cb49-2"><a href="intro-example.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht_no <span class="ot">&lt;-</span> <span class="fu">subset</span>(salt_ht, saltadd <span class="sc">==</span> <span class="st">&quot;no&quot;</span>)</span>
+<span id="cb49-2"><a href="intro-example.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht_no  <span class="ot">&lt;-</span> <span class="fu">subset</span>(salt_ht, saltadd <span class="sc">==</span> <span class="st">&quot;no&quot;</span>)</span>
 <span id="cb49-3"><a href="intro-example.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(salt_ht_yes<span class="sc">$</span>sbp)</span>
 <span id="cb49-4"><a href="intro-example.html#cb49-4" aria-hidden="true" tabindex="-1"></a>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
 <span id="cb49-5"><a href="intro-example.html#cb49-5" aria-hidden="true" tabindex="-1"></a>   <span class="fl">80.0</span>   <span class="fl">125.0</span>   <span class="fl">171.0</span>   <span class="fl">163.0</span>   <span class="fl">195.5</span>   <span class="fl">224.0</span> </span>
@@ -458,8 +456,8 @@ and read it in</p>
 <li>Repeat the analysis, but for the diastolic blood pressure; add an informative title to the boxplot.</li>
 </ol>
 </div>
-<div id="salt-intake-by-sex" class="section level3" number="4.2.3">
-<h3><span class="header-section-number">4.2.3</span> Salt intake by sex</h3>
+<div id="salt-intake-by-sex" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> Salt intake by sex<a href="intro-example.html#salt-intake-by-sex" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We also want to look a the relationship between sex and salt intake. As both of these are categorical, we just need to look at the corresponding cross-tabulation. This can be done via the function <code>table</code> simply by specifying two arguments instead of one as before:</p>
 <div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="intro-example.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(salt_ht<span class="sc">$</span>sex, salt_ht<span class="sc">$</span>saltadd)</span>
 <span id="cb51-2"><a href="intro-example.html#cb51-2" aria-hidden="true" tabindex="-1"></a>        </span>
@@ -474,12 +472,12 @@ and read it in</p>
 <span id="cb52-5"><a href="intro-example.html#cb52-5" aria-hidden="true" tabindex="-1"></a>  female <span class="fl">0.1625</span> <span class="fl">0.3500</span></span>
 <span id="cb52-6"><a href="intro-example.html#cb52-6" aria-hidden="true" tabindex="-1"></a>  male   <span class="fl">0.3000</span> <span class="fl">0.1875</span></span></code></pre></div>
 <p>Note that for a two-by-two table like here, we have different possibilities for calculating proportions: we can report the proportion of the total, like above, or we can calculate row- or column-proportions (i.e. split by salt intake within sex, or split within salt intake by sex). If we want one of the latter, we can specify the <em>margin</em> as second argument to <code>proportions</code>, with <code>1</code> indicating rows and <code>2</code> indicating columns:</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="intro-example.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">proportions</span>(tab, <span class="at">margin =</span> <span class="dv">1</span>)</span>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="intro-example.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">proportions</span>(tab, <span class="at">margin=</span><span class="dv">1</span>)</span>
 <span id="cb53-2"><a href="intro-example.html#cb53-2" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb53-3"><a href="intro-example.html#cb53-3" aria-hidden="true" tabindex="-1"></a>                no       yes</span>
 <span id="cb53-4"><a href="intro-example.html#cb53-4" aria-hidden="true" tabindex="-1"></a>  female <span class="fl">0.3170732</span> <span class="fl">0.6829268</span></span>
 <span id="cb53-5"><a href="intro-example.html#cb53-5" aria-hidden="true" tabindex="-1"></a>  male   <span class="fl">0.6153846</span> <span class="fl">0.3846154</span></span>
-<span id="cb53-6"><a href="intro-example.html#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">proportions</span>(tab, <span class="at">margin =</span> <span class="dv">2</span>)</span>
+<span id="cb53-6"><a href="intro-example.html#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">proportions</span>(tab, <span class="at">margin=</span><span class="dv">2</span>)</span>
 <span id="cb53-7"><a href="intro-example.html#cb53-7" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb53-8"><a href="intro-example.html#cb53-8" aria-hidden="true" tabindex="-1"></a>                no       yes</span>
 <span id="cb53-9"><a href="intro-example.html#cb53-9" aria-hidden="true" tabindex="-1"></a>  female <span class="fl">0.3513514</span> <span class="fl">0.6511628</span></span>
@@ -494,15 +492,15 @@ and read it in</p>
 <span id="cb54-6"><a href="intro-example.html#cb54-6" aria-hidden="true" tabindex="-1"></a>X<span class="sc">-</span>squared <span class="ot">=</span> <span class="fl">6.0053</span>, df <span class="ot">=</span> <span class="dv">1</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">0.01426</span></span></code></pre></div>
 <p>Note that the result of this test looks quite similar to what we have seen from the t-test above: name of the test, test statistic and degrees of freedom, p-value (and it appears that men and women do differ significantly in their intake of salt in this example, at least at the conventional <span class="math inline">\(\alpha=0.05\)</span>).</p>
 </div>
-<div id="save-results" class="section level3" number="4.2.4">
-<h3><span class="header-section-number">4.2.4</span> Save results</h3>
+<div id="save-results" class="section level3 hasAnchor" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> Save results<a href="intro-example.html#save-results" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>As final touch, we want to save the data frame we have imported for further processing. This can be done via the function <code>save</code> which takes any number of objects as arguments, and saves them to the binary data file specified via argument <code>file</code>:</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="intro-example.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">save</span>(salt_ht, <span class="at">file =</span> <span class="st">&quot;Data/saltadd.RData&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="intro-example.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">save</span>(salt_ht, <span class="at">file=</span><span class="st">&quot;Data/saltadd.RData&quot;</span>)</span></code></pre></div>
 <p>A quick check with <code>dir</code> will show that we now have the new file <code>saltadd.RData</code> in the folder <code>Data</code>. The content of this file (i.e. the single data frame <code>salt_ht</code>) can be loaded into any R session either via the function <code>load</code> at the console, by clicking on the file name in the Files tab, or via the open folder-icon in the top left of the Environment tab.</p>
 </div>
 </div>
-<div id="turning-into-script" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Turning it into a script</h2>
+<div id="turning-into-script" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Turning it into a script<a href="intro-example.html#turning-into-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A proper statistical analysis consists of two elements, the original raw data and the code used to generate the reported output. Everything else is just messing around with data. Specifically, a result file is <em>not</em> an analysis, but only the output from an analysis.</p>
 <p>This means we are not done yet - we still have to turn our interactive session into a proper R script. We have already looked at the mechanics of the that process in Section <a href="intro_rstudio.html#console2source">3.3.1</a>: highlight all relevant commands in the History tab and click on <code>To Source</code> to copy them to the Source pane, either to a freshly opened new script file or just into the currently open text file.</p>
 <p>Here, let’s assume that we have saved the commands we just copied to from the History tab to a script file called <code>BasicExample.R</code>. This is still a very crude affair: hard to read, may well continue incorrect commands (typos), and completely lacks context. This cannot stand, and we should perform at a minimum the following four steps:</p>
@@ -551,8 +549,8 @@ and read it in</p>
 <span id="cb56-36"><a href="intro-example.html#cb56-36" aria-hidden="true" tabindex="-1"></a><span class="co"># as for original text file</span></span>
 <span id="cb56-37"><a href="intro-example.html#cb56-37" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(salt_ht, <span class="at">file=</span><span class="st">&quot;~/Rcourse/Data/saltadd.RData&quot;</span>)</span></code></pre></div>
 </div>
-<div id="exp-res" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Exporting results</h2>
+<div id="exp-res" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Exporting results<a href="intro-example.html#exp-res" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Simply running an analysis script will recreate the original analysis results in RStudio, with numerical output in the console and graphical output in the Plots tab. Alternatively, R scripts can be <em>compiled</em> to create a document that contains both the original R commands and the output they generate. At the simplest level, the resulting document corresponds to a log file in other statistical programs like Stata or SAS, which serves as a record of running a script on a specific data set.</p>
 <p>In order to generate such an output file, simply load the script into the RStudio Source Pane, and click on the notebook icon (alternatively, press the hotkey combination Ctrl-Shift-K). This will open a small dialogue with a choice of three output formats, HTML, PDF and MS Word. Clicking on Compile will generate an output file with the same basename as the script file and the file extension corresponding to the chosen output format.</p>
 <p>Figure <a href="intro-example.html#fig:compiledViewer">4.1</a> below shows what this looks like: in the output file, the comments and code from the original script (<code>boxplot</code>, <code>subset</code>, <code>summary</code>) are combined with the output they produce, both graphical (the boxplots) and numerical (the six-number summaries). Together, this is a self-contained record of both the analysis steps and their results.</p>
@@ -561,7 +559,7 @@ and read it in</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:compiledViewer"></span>
 <img src="figures/RStudio_1_4_1106/CompiledBasicExample_Viewer.png" alt="Extract from \texttt{BasicExample.html}, compiled from script \texttt{BasicExample.R}" width="90%" />
 <p class="caption">
-Figure 4.1: Extract from , compiled from script 
+Figure 4.1: Extract from , compiled from script
 </p>
 </div>
 
@@ -636,7 +634,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

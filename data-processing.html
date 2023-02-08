@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 Processing data | Introduction to R</title>
   <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 Processing data | Introduction to R" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
   
@@ -23,7 +22,7 @@
 
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2023-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="data-types-struct.html"/>
 <link rel="next" href="data-tidyverse.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -382,10 +381,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-processing" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Processing data</h1>
-<div id="overview-1" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Overview</h2>
+<div id="data-processing" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Processing data<a href="data-processing.html#data-processing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-1" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Overview<a href="data-processing.html#overview-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The previous section has already covered central aspects of data handling in base R: how to extract parts of a data frame, and how to change parts of a data frame, using either the bracket- or <code>$</code>-notation, or helper functions <code>subset</code> and <code>transform</code>. However, we have not yet discussed a good solution for working with <em>groups</em> of data, or how to combine data from multiple sources, which is what will be covered in this section. This will also involve a short excursion into how to write your own function in R, which is actually not hard and often very useful.</p>
 <p>As example data, we will use the same data on blood pressure and salt consumption in 100 subjects already seen in Section <a href="intro-example.html#intro-example">4</a>:</p>
 <div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="data-processing.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">head</span>(salt_ht, <span class="at">nrow =</span> <span class="dv">5</span>)</span>
@@ -396,10 +395,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb122-6"><a href="data-processing.html#cb122-6" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">2265</span>   male <span class="dv">167</span> <span class="dv">112</span>     yes  <span class="dv">68</span></span>
 <span id="cb122-7"><a href="data-processing.html#cb122-7" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="dv">7408</span> female <span class="dv">145</span> <span class="dv">110</span>     yes  <span class="dv">55</span></span>
 <span id="cb122-8"><a href="data-processing.html#cb122-8" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span> <span class="dv">2160</span> female <span class="dv">179</span> <span class="dv">120</span>      no  <span class="dv">60</span></span></code></pre></div>
-<p>As before, this section will only deal with methods from base R. For a demonstration of how to achieve the same tasks using the package  that is part of the tidyverse, see Section <a href="data-tidyverse.html#data-tidyverse">7</a>,</p>
+<p>As before, this section will only deal with methods from base R. For a demonstration of how to achieve the same tasks using the package that is part of the tidyverse, see Section <a href="data-tidyverse.html#data-tidyverse">7</a>,</p>
 </div>
-<div id="group-stats" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Groupwise statistics</h2>
+<div id="group-stats" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Groupwise statistics<a href="data-processing.html#group-stats" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For groupwise descriptive statistics, base R has the function <tt>aggregate</tt>, which offers a convenient formula interface. If we want to calculate e.g. the average systolic blood pressure in our example data for males and for females separately, we can do this:</p>
 <div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="data-processing.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">aggregate</span>(sbp <span class="sc">~</span> sex, <span class="at">data =</span> salt_ht, mean)</span>
 <span id="cb123-2"><a href="data-processing.html#cb123-2" aria-hidden="true" tabindex="-1"></a>     sex      sbp</span>
@@ -443,8 +442,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb128-5"><a href="data-processing.html#cb128-5" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> female     yes <span class="fl">164.4643</span> <span class="fl">106.17857</span></span>
 <span id="cb128-6"><a href="data-processing.html#cb128-6" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>   male     yes <span class="fl">160.2667</span> <span class="fl">102.40000</span></span></code></pre></div>
 </div>
-<div id="own-functions" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> Using your own functions</h2>
+<div id="own-functions" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Using your own functions<a href="data-processing.html#own-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Defining a function</strong> What if we want to calculate the groupwise means and standard deviations at the same time, instead of running aggregate twice, as above? Then we need a function that takes as argument a numerical vector, and returns a vector of length two, with the mean as first element and the standard deviation as second element. Among the 19,000+ add-on packages on CRAN, we are virtually certain to find such function, but finding it will not be easy - indeed, it will be <em>much</em> simpler to write our own function for this.</p>
 <p>Functions work a bit like recipes: ingredients go in, some processing takes place, and a delicious meal is returned. Let’s start with a trivial example, where we write a wrapper for the <tt>mean</tt> function. Instead of calling <tt>mean</tt> directly, we define a function with one argument <tt>x</tt>, which performs one action, namely calculating the mean value of <tt>x</tt>, and which returns exactly one value, namely that mean value, as result:</p>
 <div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="data-processing.html#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">aggregate</span>(sbp <span class="sc">~</span> sex, <span class="at">data =</span> salt_ht, <span class="cf">function</span>(x) <span class="fu">mean</span>(x))</span>
@@ -453,16 +452,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb129-4"><a href="data-processing.html#cb129-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>   male <span class="fl">150.0444</span></span></code></pre></div>
 <p>Here, <tt>function</tt> tells R that we are about define our own function, the <tt>x</tt> in parentheses tells R that we expect exactly one argument, which we decide to call <tt>x</tt>, and the rest are the actual instructions what to do with the argument. Here, we just apss it on to the usual <tt>mean</tt>-function. By default, the function will return the value of the last command executed - as we only have one command, the call to <tt>mean</tt>, this is what we get back. And indeed, this works as intended.</p>
 <p>Now that we have something simple that works, we can extend it to do something more useful: we have the same call to aggregate, starting with the same function definition, and the same argument <tt>x</tt>, but now we calculate both the mean of and the standard deviation of <tt>x</tt>; and we know already how to combine two unrelated numbers into a vector, namely by using the function <tt>c()</tt>:</p>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="data-processing.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">aggregate</span>(sbp <span class="sc">~</span> sex, <span class="at">data =</span> salt_ht, <span class="cf">function</span>(x) <span class="fu">c</span>(<span class="fu">mean</span>(x), <span class="fu">sd</span>(x)))</span>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="data-processing.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">aggregate</span>( sbp <span class="sc">~</span> sex, <span class="at">data =</span> salt_ht, <span class="cf">function</span>(x) <span class="fu">c</span>(<span class="fu">mean</span>(x), <span class="fu">sd</span>(x)) )</span>
 <span id="cb130-2"><a href="data-processing.html#cb130-2" aria-hidden="true" tabindex="-1"></a>     sex     sbp<span class="fl">.1</span>     sbp<span class="fl">.2</span></span>
 <span id="cb130-3"><a href="data-processing.html#cb130-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> female <span class="fl">157.81818</span>  <span class="fl">43.24482</span></span>
 <span id="cb130-4"><a href="data-processing.html#cb130-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>   male <span class="fl">150.04444</span>  <span class="fl">33.81632</span></span></code></pre></div>
 <p>And compared to the results above, this works exactly as intended. The only thing that is less than nice are the names of the summary columns.</p>
 <p>We can take this a step further and try to fix the name issue, simply by adding name definitions in our call to <tt>c()</tt>: we call the first element <tt>Mean</tt> and the second <tt>StdDev</tt>. Even though we have not discussed this yet, this is a valid way of calling the <tt>c</tt>-function, and the result is still a vector of length two, but now with names<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a>.</p>
-<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="data-processing.html#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">aggregate</span>(sbp <span class="sc">~</span> sex, <span class="at">data =</span> salt_ht, <span class="cf">function</span>(x) <span class="fu">c</span>(<span class="at">Mean =</span> <span class="fu">mean</span>(x), <span class="at">StdDev =</span> <span class="fu">sd</span>(x)))</span>
-<span id="cb131-2"><a href="data-processing.html#cb131-2" aria-hidden="true" tabindex="-1"></a>     sex  sbp.Mean sbp.StdDev</span>
-<span id="cb131-3"><a href="data-processing.html#cb131-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> female <span class="fl">157.81818</span>   <span class="fl">43.24482</span></span>
-<span id="cb131-4"><a href="data-processing.html#cb131-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>   male <span class="fl">150.04444</span>   <span class="fl">33.81632</span></span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="data-processing.html#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">aggregate</span>( sbp <span class="sc">~</span> sex, <span class="at">data =</span> salt_ht, </span>
+<span id="cb131-2"><a href="data-processing.html#cb131-2" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>            <span class="cf">function</span>(x) <span class="fu">c</span>(<span class="at">Mean =</span> <span class="fu">mean</span>(x), <span class="at">StdDev =</span> <span class="fu">sd</span>(x)) )</span>
+<span id="cb131-3"><a href="data-processing.html#cb131-3" aria-hidden="true" tabindex="-1"></a>     sex  sbp.Mean sbp.StdDev</span>
+<span id="cb131-4"><a href="data-processing.html#cb131-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> female <span class="fl">157.81818</span>   <span class="fl">43.24482</span></span>
+<span id="cb131-5"><a href="data-processing.html#cb131-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>   male <span class="fl">150.04444</span>   <span class="fl">33.81632</span></span></code></pre></div>
 <p>Note that this stepwise refinement of our initial, very simple and not very useful function is a nice example for the rapid prototyping / fast iteration approach that works well with R: build something simple that works, and refine it step by step until you reach your goal.</p>
 <p><strong>Creating a function object</strong> This new function that we have defined is actually not completely useless, and we may want to use it in other settings. We could of course re-type the same function definition as above whenever we need it, but that is hardly useful. Fortunately, we can save this function definition as an object (because R is not just functional, but also object-oriented):</p>
 <div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="data-processing.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> MeanSd <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">c</span>(<span class="at">Mean =</span> <span class="fu">mean</span>(x), <span class="at">StdDev =</span> <span class="fu">sd</span>(x))</span></code></pre></div>
@@ -479,8 +479,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb135-2"><a href="data-processing.html#cb135-2" aria-hidden="true" tabindex="-1"></a>     Mean    StdDev </span>
 <span id="cb135-3"><a href="data-processing.html#cb135-3" aria-hidden="true" tabindex="-1"></a><span class="fl">154.32000</span>  <span class="fl">39.28628</span> </span></code></pre></div>
 </div>
-<div id="split-apply-combine" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Split - Apply - Combine</h2>
+<div id="split-apply-combine" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Split - Apply - Combine<a href="data-processing.html#split-apply-combine" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Background</strong> <tt>aggregate</tt> works well for simple summary statistics like a mean or a median, and reasonably well for slightly more complex summary functions like <tt>MeanCI</tt> or our own <tt>MeanSd</tt>. However, for more complicated groupwise operations, this becomes awkward. Therefore, we will consider a more general mechanism that allows groupwise operations of <em>any</em> complexity, and which is well supported in a number of data processing languages. This is a three step process:</p>
 <ol style="list-style-type: decimal">
 <li><em>Split</em> the data into the groups you are interested in.</li>
@@ -538,7 +538,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb138-2"><a href="data-processing.html#cb138-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">lapply</span>(split_salt, descr, <span class="at">stats =</span> <span class="st">&quot;common&quot;</span>)</span></code></pre></div>
 <p>This creates the a list of two summary tables, using the somewhat shorter outpit format corresponding to <code>stats="common"</code> (see <code>?descr</code> for details).</p>
 <p>We can even use this mechanism to do implement something similar to <tt>aggregate</tt> by defining our own processing function: here, the argument <tt>x</tt> for the function is a data frame, the part of the original data corresponding to single grouping level; we can therefore extract the variable <tt>sbp</tt> with the usual <tt>$</tt>-notation and pass this vector as argument to <tt>MeanCI</tt>. This returns a list with two confidence intervals, one for females, one for males:</p>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="data-processing.html#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">lapply</span>(split_salt, <span class="cf">function</span>(x) <span class="fu">MeanCI</span>(x<span class="sc">$</span>sbp))</span>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="data-processing.html#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">lapply</span>( split_salt, <span class="cf">function</span>(x) <span class="fu">MeanCI</span>(x<span class="sc">$</span>sbp) )</span>
 <span id="cb139-2"><a href="data-processing.html#cb139-2" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>female</span>
 <span id="cb139-3"><a href="data-processing.html#cb139-3" aria-hidden="true" tabindex="-1"></a>    mean   lwr.ci   upr.ci </span>
 <span id="cb139-4"><a href="data-processing.html#cb139-4" aria-hidden="true" tabindex="-1"></a><span class="fl">157.8182</span> <span class="fl">146.1275</span> <span class="fl">169.5089</span> </span>
@@ -547,13 +547,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb139-7"><a href="data-processing.html#cb139-7" aria-hidden="true" tabindex="-1"></a>    mean   lwr.ci   upr.ci </span>
 <span id="cb139-8"><a href="data-processing.html#cb139-8" aria-hidden="true" tabindex="-1"></a><span class="fl">150.0444</span> <span class="fl">139.8849</span> <span class="fl">160.2040</span> </span></code></pre></div>
 <p>This is actually a sitation where we can use the <tt>sapply</tt> function to improve the output: <tt>sapply</tt> understands that the output from each of the separate function calls are all vectors of the same length and combines them for us.</p>
-<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="data-processing.html#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sapply</span>(split_salt, <span class="cf">function</span>(x) <span class="fu">MeanCI</span>(x<span class="sc">$</span>sbp))</span>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="data-processing.html#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sapply</span>( split_salt, <span class="cf">function</span>(x) <span class="fu">MeanCI</span>(x<span class="sc">$</span>sbp) )</span>
 <span id="cb140-2"><a href="data-processing.html#cb140-2" aria-hidden="true" tabindex="-1"></a>         female     male</span>
 <span id="cb140-3"><a href="data-processing.html#cb140-3" aria-hidden="true" tabindex="-1"></a>mean   <span class="fl">157.8182</span> <span class="fl">150.0444</span></span>
 <span id="cb140-4"><a href="data-processing.html#cb140-4" aria-hidden="true" tabindex="-1"></a>lwr.ci <span class="fl">146.1275</span> <span class="fl">139.8849</span></span>
 <span id="cb140-5"><a href="data-processing.html#cb140-5" aria-hidden="true" tabindex="-1"></a>upr.ci <span class="fl">169.5089</span> <span class="fl">160.2040</span></span></code></pre></div>
 <p>This is almost useful; if we combine this with the function <tt>t()</tt> (for <em>transpose</em>), which flips rows and columns of a matrix, we get something very similar to the original <tt>aggregate</tt> output:</p>
-<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="data-processing.html#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">t</span>(<span class="fu">sapply</span>(split_salt, <span class="cf">function</span>(x) <span class="fu">MeanCI</span>(x<span class="sc">$</span>sbp)))</span>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="data-processing.html#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">t</span> (<span class="fu">sapply</span>( split_salt, <span class="cf">function</span>(x) <span class="fu">MeanCI</span>(x<span class="sc">$</span>sbp) ) )</span>
 <span id="cb141-2"><a href="data-processing.html#cb141-2" aria-hidden="true" tabindex="-1"></a>           mean   lwr.ci   upr.ci</span>
 <span id="cb141-3"><a href="data-processing.html#cb141-3" aria-hidden="true" tabindex="-1"></a>female <span class="fl">157.8182</span> <span class="fl">146.1275</span> <span class="fl">169.5089</span></span>
 <span id="cb141-4"><a href="data-processing.html#cb141-4" aria-hidden="true" tabindex="-1"></a>male   <span class="fl">150.0444</span> <span class="fl">139.8849</span> <span class="fl">160.2040</span></span></code></pre></div>
@@ -588,7 +588,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb142-27"><a href="data-processing.html#cb142-27" aria-hidden="true" tabindex="-1"></a>         <span class="fl">139.4167</span>          <span class="fl">160.2667</span> </span></code></pre></div>
 <p>We get a list with two elements, <tt>female</tt> and <tt>male</tt>, and each element is a t-test result (here with a conventionally statistically significant difference for females, but not for males). Note that test results like these are relatively complicated R objects, so sapply is not going to do us much good in this situation.</p>
 <p>This works exactly the same for regression: if we want to model systolic blood pressure as function of diastolic blood pressure for females and males separately, we use the same type of wrapping function where we pass in the data argument to function <tt>lm</tt>:</p>
-<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="data-processing.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> split_lm <span class="ot">&lt;-</span> <span class="fu">lapply</span>(split_salt, <span class="cf">function</span>(x) <span class="fu">lm</span>(sbp <span class="sc">~</span> dbp, <span class="at">data =</span> x))</span>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="data-processing.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> split_lm <span class="ot">&lt;-</span> <span class="fu">lapply</span>( split_salt, <span class="cf">function</span>(x) <span class="fu">lm</span>(sbp <span class="sc">~</span> dbp, <span class="at">data =</span> x))</span>
 <span id="cb143-2"><a href="data-processing.html#cb143-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> split_lm</span>
 <span id="cb143-3"><a href="data-processing.html#cb143-3" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>female</span>
 <span id="cb143-4"><a href="data-processing.html#cb143-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -657,8 +657,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb145-2"><a href="data-processing.html#cb145-2" aria-hidden="true" tabindex="-1"></a>female.dbp   male.dbp </span>
 <span id="cb145-3"><a href="data-processing.html#cb145-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">1.450272</span>   <span class="fl">1.584973</span> </span></code></pre></div>
 </div>
-<div id="merge-data-base" class="section level2" number="6.5">
-<h2><span class="header-section-number">6.5</span> Merging data sets</h2>
+<div id="merge-data-base" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Merging data sets<a href="data-processing.html#merge-data-base" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Background</strong> So far, we have had our data conveniently available as one large data frame, with all variables and subjects of interest collected in one object. However, this is rarely how data starts out: a Swedish register study will have commonly multiple different sources of data, combining information from e.g. the cancer register, patient register, and drug prescription register. Consequently, one of the first steps of data preparation is to combine all required information from the available sources.</p>
 <p>Merging data will generally require a unique subject identifier that is shared across the different data sources: for Swedish registers, this will usually be the personal identification number (PID, Swedish <em>personnummer</em>), or some pseudonymized version thereof (usually a sequential identification number, or running number, Swedish <em>löpnummer</em>).<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a> From there, the process is straightforward: you start with your canonical list of participants (aka your study cohort), and you keep linking in information from other data sources one at a time until you have collected all required information in one table.[^yesbut]</p>
 <p>So this reduces the problem to merging two tables at a time. In base R, this can be done via the <tt>merge</tt>-function: this function is not especially fast, and has a somewhat special interface, but it works out of the box.</p>
@@ -674,22 +674,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb146-8"><a href="data-processing.html#cb146-8" aria-hidden="true" tabindex="-1"></a> 3rd Qu.<span class="sc">:</span><span class="dv">7754</span>         </span>
 <span id="cb146-9"><a href="data-processing.html#cb146-9" aria-hidden="true" tabindex="-1"></a> Max.   <span class="sc">:</span><span class="dv">9962</span>         </span></code></pre></div>
 <p>The new data frame <tt>centers</tt> has two variables, one which seems to be a unique identifier (<tt>ID</tt>) and one with the center information (<tt>Center</tt>, A-D). However, it is also clear that the new data sets has information on more subjects (more than 100) than we have in the original data. A direct comparison also shows that these data frames are definitely not in the same order:</p>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="data-processing.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> centers[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, ]</span>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="data-processing.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> centers[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,]</span>
 <span id="cb147-2"><a href="data-processing.html#cb147-2" aria-hidden="true" tabindex="-1"></a>    ID Center</span>
 <span id="cb147-3"><a href="data-processing.html#cb147-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">1006</span>      A</span>
 <span id="cb147-4"><a href="data-processing.html#cb147-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">1086</span>      A</span>
 <span id="cb147-5"><a href="data-processing.html#cb147-5" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">1219</span>      A</span>
 <span id="cb147-6"><a href="data-processing.html#cb147-6" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">1265</span>      A</span>
-<span id="cb147-7"><a href="data-processing.html#cb147-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, ]</span>
+<span id="cb147-7"><a href="data-processing.html#cb147-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,]</span>
 <span id="cb147-8"><a href="data-processing.html#cb147-8" aria-hidden="true" tabindex="-1"></a>    ID    sex sbp dbp saltadd age</span>
 <span id="cb147-9"><a href="data-processing.html#cb147-9" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">4305</span>   male <span class="dv">110</span>  <span class="dv">80</span>     yes  <span class="dv">58</span></span>
 <span id="cb147-10"><a href="data-processing.html#cb147-10" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">6606</span> female  <span class="dv">85</span>  <span class="dv">55</span>      no  <span class="dv">32</span></span>
 <span id="cb147-11"><a href="data-processing.html#cb147-11" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">5758</span> female <span class="dv">196</span> <span class="dv">128</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">53</span></span>
 <span id="cb147-12"><a href="data-processing.html#cb147-12" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">2265</span>   male <span class="dv">167</span> <span class="dv">112</span>     yes  <span class="dv">68</span></span></code></pre></div>
 <p>In a first step, we want to see how many individuals in the original salt data also have information on the health center. We can do this via the function <code>setdiff</code>, which takes as arguments two vectors, and returns the vector of all elements which are part of the first, but not the second vector:<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></p>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="data-processing.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">setdiff</span>(salt_ht<span class="sc">$</span>ID, centers<span class="sc">$</span>ID)</span>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="data-processing.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">setdiff</span>(salt_ht<span class="sc">$</span>ID, centers<span class="sc">$</span>ID)  </span>
 <span id="cb148-2"><a href="data-processing.html#cb148-2" aria-hidden="true" tabindex="-1"></a><span class="fu">integer</span>(<span class="dv">0</span>)</span>
-<span id="cb148-3"><a href="data-processing.html#cb148-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">setdiff</span>(centers<span class="sc">$</span>ID, salt_ht<span class="sc">$</span>ID)</span>
+<span id="cb148-3"><a href="data-processing.html#cb148-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">setdiff</span>(centers<span class="sc">$</span>ID, salt_ht<span class="sc">$</span>ID)  </span>
 <span id="cb148-4"><a href="data-processing.html#cb148-4" aria-hidden="true" tabindex="-1"></a> [<span class="dv">1</span>] <span class="dv">1265</span> <span class="dv">1458</span> <span class="dv">1514</span> <span class="dv">1678</span> <span class="dv">2769</span> <span class="dv">3388</span> <span class="dv">3678</span> <span class="dv">3966</span> <span class="dv">5723</span> <span class="dv">6358</span> <span class="dv">6911</span> <span class="dv">7076</span> <span class="dv">7228</span> <span class="dv">7689</span> <span class="dv">8129</span> <span class="dv">8396</span> <span class="dv">8990</span> <span class="dv">9113</span> <span class="dv">9469</span></span>
 <span id="cb148-5"><a href="data-processing.html#cb148-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">20</span>] <span class="dv">9470</span> <span class="dv">9490</span> <span class="dv">9943</span> <span class="dv">9949</span> <span class="dv">1014</span> <span class="dv">1162</span> <span class="dv">1533</span> <span class="dv">1670</span> <span class="dv">1700</span> <span class="dv">1938</span> <span class="dv">2621</span> <span class="dv">3117</span> <span class="dv">3597</span> <span class="dv">3762</span> <span class="dv">4346</span> <span class="dv">5520</span> <span class="dv">5764</span> <span class="dv">5791</span> <span class="dv">7915</span></span>
 <span id="cb148-6"><a href="data-processing.html#cb148-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">39</span>] <span class="dv">8069</span> <span class="dv">8179</span> <span class="dv">8993</span> <span class="dv">9226</span> <span class="dv">9580</span> <span class="dv">9754</span> <span class="dv">2304</span> <span class="dv">2523</span> <span class="dv">5070</span> <span class="dv">6210</span> <span class="dv">8023</span> <span class="dv">9358</span></span></code></pre></div>
@@ -719,36 +719,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb150-20"><a href="data-processing.html#cb150-20" aria-hidden="true" tabindex="-1"></a><span class="st">10 1684   male 184  98    &lt;NA&gt;  58      B</span></span></code></pre></div>
 <p>And this works: as we see here, we still have 55 women and 45 men, but we also have the extra variable <tt>Center</tt>, which breaks down roughly equally across <code>A</code>, <code>B</code> and <code>C</code>, with no missing values.</p>
 <p><strong>Example: adding rows and columns</strong> In contrast, we can request that all rows from both data sets are kept in the merged data frame, simply by also setting <code>all.y = TRUE</code>.</p>
-<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="data-processing.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht_centers_all <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x =</span> salt_ht, <span class="at">y =</span> centers, <span class="at">by =</span> <span class="st">&quot;ID&quot;</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>, <span class="at">all.y =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb151-2"><a href="data-processing.html#cb151-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(salt_ht_centers_all)</span>
-<span id="cb151-3"><a href="data-processing.html#cb151-3" aria-hidden="true" tabindex="-1"></a>       ID           sex          sbp             dbp         saltadd        age        Center</span>
-<span id="cb151-4"><a href="data-processing.html#cb151-4" aria-hidden="true" tabindex="-1"></a> Min.   <span class="sc">:</span><span class="dv">1006</span>   female<span class="sc">:</span><span class="dv">55</span>   Min.   <span class="sc">:</span> <span class="fl">80.0</span>   Min.   <span class="sc">:</span> <span class="fl">55.00</span>   no  <span class="sc">:</span><span class="dv">37</span>   Min.   <span class="sc">:</span><span class="fl">26.00</span>   A<span class="sc">:</span><span class="dv">56</span>  </span>
-<span id="cb151-5"><a href="data-processing.html#cb151-5" aria-hidden="true" tabindex="-1"></a> 1st Qu.<span class="sc">:</span><span class="dv">2787</span>   male  <span class="sc">:</span><span class="dv">45</span>   1st Qu.<span class="sc">:</span><span class="fl">121.0</span>   1st Qu.<span class="sc">:</span> <span class="fl">80.00</span>   yes <span class="sc">:</span><span class="dv">43</span>   1st Qu.<span class="sc">:</span><span class="fl">39.75</span>   B<span class="sc">:</span><span class="dv">57</span>  </span>
-<span id="cb151-6"><a href="data-processing.html#cb151-6" aria-hidden="true" tabindex="-1"></a> Median <span class="sc">:</span><span class="dv">5527</span>   NA<span class="st">&#39;s  :50   Median :148.5   Median : 96.00   NA&#39;</span>s<span class="sc">:</span><span class="dv">70</span>   Median <span class="sc">:</span><span class="fl">50.00</span>   C<span class="sc">:</span><span class="dv">37</span>  </span>
-<span id="cb151-7"><a href="data-processing.html#cb151-7" aria-hidden="true" tabindex="-1"></a> Mean   <span class="sc">:</span><span class="dv">5367</span>               Mean   <span class="sc">:</span><span class="fl">154.3</span>   Mean   <span class="sc">:</span> <span class="fl">98.51</span>             Mean   <span class="sc">:</span><span class="fl">48.71</span>         </span>
-<span id="cb151-8"><a href="data-processing.html#cb151-8" aria-hidden="true" tabindex="-1"></a> 3rd Qu.<span class="sc">:</span><span class="dv">7754</span>               3rd Qu.<span class="sc">:</span><span class="fl">184.0</span>   3rd Qu.<span class="sc">:</span><span class="fl">116.25</span>             3rd Qu.<span class="sc">:</span><span class="fl">58.00</span>         </span>
-<span id="cb151-9"><a href="data-processing.html#cb151-9" aria-hidden="true" tabindex="-1"></a> Max.   <span class="sc">:</span><span class="dv">9962</span>               Max.   <span class="sc">:</span><span class="fl">238.0</span>   Max.   <span class="sc">:</span><span class="fl">158.00</span>             Max.   <span class="sc">:</span><span class="fl">71.00</span>         </span>
-<span id="cb151-10"><a href="data-processing.html#cb151-10" aria-hidden="true" tabindex="-1"></a>                            NA<span class="st">&#39;s   :50      NA&#39;</span>s   <span class="sc">:</span><span class="dv">50</span>                 NA<span class="st">&#39;s   :50            </span></span>
-<span id="cb151-11"><a href="data-processing.html#cb151-11" aria-hidden="true" tabindex="-1"></a><span class="st">&gt; salt_ht_centers_all[1:10, ]</span></span>
-<span id="cb151-12"><a href="data-processing.html#cb151-12" aria-hidden="true" tabindex="-1"></a><span class="st">     ID    sex sbp dbp saltadd age Center</span></span>
-<span id="cb151-13"><a href="data-processing.html#cb151-13" aria-hidden="true" tabindex="-1"></a><span class="st">1  1006   male 192 118      no  42      A</span></span>
-<span id="cb151-14"><a href="data-processing.html#cb151-14" aria-hidden="true" tabindex="-1"></a><span class="st">2  1014   &lt;NA&gt;  NA  NA    &lt;NA&gt;  NA      B</span></span>
-<span id="cb151-15"><a href="data-processing.html#cb151-15" aria-hidden="true" tabindex="-1"></a><span class="st">3  1024 female 178 128     yes  63      C</span></span>
-<span id="cb151-16"><a href="data-processing.html#cb151-16" aria-hidden="true" tabindex="-1"></a><span class="st">4  1086 female 160 108     yes  47      A</span></span>
-<span id="cb151-17"><a href="data-processing.html#cb151-17" aria-hidden="true" tabindex="-1"></a><span class="st">5  1162   &lt;NA&gt;  NA  NA    &lt;NA&gt;  NA      B</span></span>
-<span id="cb151-18"><a href="data-processing.html#cb151-18" aria-hidden="true" tabindex="-1"></a><span class="st">6  1219 female 148 108     yes  55      A</span></span>
-<span id="cb151-19"><a href="data-processing.html#cb151-19" aria-hidden="true" tabindex="-1"></a><span class="st">7  1265   &lt;NA&gt;  NA  NA    &lt;NA&gt;  NA      A</span></span>
-<span id="cb151-20"><a href="data-processing.html#cb151-20" aria-hidden="true" tabindex="-1"></a><span class="st">8  1457   male 170  98      no  66      A</span></span>
-<span id="cb151-21"><a href="data-processing.html#cb151-21" aria-hidden="true" tabindex="-1"></a><span class="st">9  1458   &lt;NA&gt;  NA  NA    &lt;NA&gt;  NA      A</span></span>
-<span id="cb151-22"><a href="data-processing.html#cb151-22" aria-hidden="true" tabindex="-1"></a><span class="st">10 1511 female 149  94      no  48      B</span></span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="data-processing.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht_centers_all <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x =</span> salt_ht, <span class="at">y =</span> centers, <span class="at">by=</span><span class="st">&quot;ID&quot;</span>, </span>
+<span id="cb151-2"><a href="data-processing.html#cb151-2" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>                              <span class="at">all.x =</span> <span class="cn">TRUE</span>, <span class="at">all.y =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb151-3"><a href="data-processing.html#cb151-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(salt_ht_centers_all)</span>
+<span id="cb151-4"><a href="data-processing.html#cb151-4" aria-hidden="true" tabindex="-1"></a>       ID           sex          sbp             dbp         saltadd        age        Center</span>
+<span id="cb151-5"><a href="data-processing.html#cb151-5" aria-hidden="true" tabindex="-1"></a> Min.   <span class="sc">:</span><span class="dv">1006</span>   female<span class="sc">:</span><span class="dv">55</span>   Min.   <span class="sc">:</span> <span class="fl">80.0</span>   Min.   <span class="sc">:</span> <span class="fl">55.00</span>   no  <span class="sc">:</span><span class="dv">37</span>   Min.   <span class="sc">:</span><span class="fl">26.00</span>   A<span class="sc">:</span><span class="dv">56</span>  </span>
+<span id="cb151-6"><a href="data-processing.html#cb151-6" aria-hidden="true" tabindex="-1"></a> 1st Qu.<span class="sc">:</span><span class="dv">2787</span>   male  <span class="sc">:</span><span class="dv">45</span>   1st Qu.<span class="sc">:</span><span class="fl">121.0</span>   1st Qu.<span class="sc">:</span> <span class="fl">80.00</span>   yes <span class="sc">:</span><span class="dv">43</span>   1st Qu.<span class="sc">:</span><span class="fl">39.75</span>   B<span class="sc">:</span><span class="dv">57</span>  </span>
+<span id="cb151-7"><a href="data-processing.html#cb151-7" aria-hidden="true" tabindex="-1"></a> Median <span class="sc">:</span><span class="dv">5527</span>   NA<span class="st">&#39;s  :50   Median :148.5   Median : 96.00   NA&#39;</span>s<span class="sc">:</span><span class="dv">70</span>   Median <span class="sc">:</span><span class="fl">50.00</span>   C<span class="sc">:</span><span class="dv">37</span>  </span>
+<span id="cb151-8"><a href="data-processing.html#cb151-8" aria-hidden="true" tabindex="-1"></a> Mean   <span class="sc">:</span><span class="dv">5367</span>               Mean   <span class="sc">:</span><span class="fl">154.3</span>   Mean   <span class="sc">:</span> <span class="fl">98.51</span>             Mean   <span class="sc">:</span><span class="fl">48.71</span>         </span>
+<span id="cb151-9"><a href="data-processing.html#cb151-9" aria-hidden="true" tabindex="-1"></a> 3rd Qu.<span class="sc">:</span><span class="dv">7754</span>               3rd Qu.<span class="sc">:</span><span class="fl">184.0</span>   3rd Qu.<span class="sc">:</span><span class="fl">116.25</span>             3rd Qu.<span class="sc">:</span><span class="fl">58.00</span>         </span>
+<span id="cb151-10"><a href="data-processing.html#cb151-10" aria-hidden="true" tabindex="-1"></a> Max.   <span class="sc">:</span><span class="dv">9962</span>               Max.   <span class="sc">:</span><span class="fl">238.0</span>   Max.   <span class="sc">:</span><span class="fl">158.00</span>             Max.   <span class="sc">:</span><span class="fl">71.00</span>         </span>
+<span id="cb151-11"><a href="data-processing.html#cb151-11" aria-hidden="true" tabindex="-1"></a>                            NA<span class="st">&#39;s   :50      NA&#39;</span>s   <span class="sc">:</span><span class="dv">50</span>                 NA<span class="st">&#39;s   :50            </span></span>
+<span id="cb151-12"><a href="data-processing.html#cb151-12" aria-hidden="true" tabindex="-1"></a><span class="st">&gt; salt_ht_centers_all[1:10, ]</span></span>
+<span id="cb151-13"><a href="data-processing.html#cb151-13" aria-hidden="true" tabindex="-1"></a><span class="st">     ID    sex sbp dbp saltadd age Center</span></span>
+<span id="cb151-14"><a href="data-processing.html#cb151-14" aria-hidden="true" tabindex="-1"></a><span class="st">1  1006   male 192 118      no  42      A</span></span>
+<span id="cb151-15"><a href="data-processing.html#cb151-15" aria-hidden="true" tabindex="-1"></a><span class="st">2  1014   &lt;NA&gt;  NA  NA    &lt;NA&gt;  NA      B</span></span>
+<span id="cb151-16"><a href="data-processing.html#cb151-16" aria-hidden="true" tabindex="-1"></a><span class="st">3  1024 female 178 128     yes  63      C</span></span>
+<span id="cb151-17"><a href="data-processing.html#cb151-17" aria-hidden="true" tabindex="-1"></a><span class="st">4  1086 female 160 108     yes  47      A</span></span>
+<span id="cb151-18"><a href="data-processing.html#cb151-18" aria-hidden="true" tabindex="-1"></a><span class="st">5  1162   &lt;NA&gt;  NA  NA    &lt;NA&gt;  NA      B</span></span>
+<span id="cb151-19"><a href="data-processing.html#cb151-19" aria-hidden="true" tabindex="-1"></a><span class="st">6  1219 female 148 108     yes  55      A</span></span>
+<span id="cb151-20"><a href="data-processing.html#cb151-20" aria-hidden="true" tabindex="-1"></a><span class="st">7  1265   &lt;NA&gt;  NA  NA    &lt;NA&gt;  NA      A</span></span>
+<span id="cb151-21"><a href="data-processing.html#cb151-21" aria-hidden="true" tabindex="-1"></a><span class="st">8  1457   male 170  98      no  66      A</span></span>
+<span id="cb151-22"><a href="data-processing.html#cb151-22" aria-hidden="true" tabindex="-1"></a><span class="st">9  1458   &lt;NA&gt;  NA  NA    &lt;NA&gt;  NA      A</span></span>
+<span id="cb151-23"><a href="data-processing.html#cb151-23" aria-hidden="true" tabindex="-1"></a><span class="st">10 1511 female 149  94      no  48      B</span></span></code></pre></div>
 <p>Looking at the resulting data frame, we see the same columns (including <code>Center</code>) as before, but now also have missing values for all variables except <code>ID</code> and <code>Center</code>: these are precisely new 50 missing values in the blood pressure- and demographic variables for subjects who are part of <tt>center</tt>, but not <tt>salt_ht</tt>. This kind of merging known as a <em>full</em> or <em>outer</em> join.</p>
 </div>
-<div id="general-pipeline" class="section level2" number="6.6">
-<h2><span class="header-section-number">6.6</span> Using pipelines</h2>
+<div id="general-pipeline" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Using pipelines<a href="data-processing.html#general-pipeline" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>UNDER CONSTRUCTION</p>
 </div>
-<div id="technical-notes-1" class="section level2" number="6.7">
-<h2><span class="header-section-number">6.7</span> Technical notes</h2>
+<div id="technical-notes-1" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Technical notes<a href="data-processing.html#technical-notes-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
@@ -828,7 +829,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

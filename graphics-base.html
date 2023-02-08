@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11 Graphics in base R | Introduction to R</title>
   <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11 Graphics in base R | Introduction to R" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
   
@@ -23,7 +22,7 @@
 
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2023-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="regression-other.html"/>
 <link rel="next" href="graphics-ggplot2.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -382,25 +381,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="graphics-base" class="section level1" number="11">
-<h1><span class="header-section-number">11</span> Graphics in base R</h1>
-<div id="overview-5" class="section level2" number="11.1">
-<h2><span class="header-section-number">11.1</span> Overview</h2>
+<div id="graphics-base" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">11</span> Graphics in base R<a href="graphics-base.html#graphics-base" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-5" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Overview<a href="graphics-base.html#overview-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>UNDER CONSTRUCTION</p>
 </div>
-<div id="base-plots" class="section level2" number="11.2">
-<h2><span class="header-section-number">11.2</span> Base plots</h2>
+<div id="base-plots" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Base plots<a href="graphics-base.html#base-plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>UNDER CONSTRUCTION</p>
-<div id="vectorized-graphical-parameters" class="section level3 unnumbered">
-<h3>Vectorized graphical parameters</h3>
+<div id="vectorized-graphical-parameters" class="section level3 unnumbered hasAnchor">
+<h3>Vectorized graphical parameters<a href="graphics-base.html#vectorized-graphical-parameters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
 </div>
-<div id="low-level-and-high-level-plotting" class="section level2" number="11.3">
-<h2><span class="header-section-number">11.3</span> Low-level and high-level plotting</h2>
+<div id="low-level-and-high-level-plotting" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Low-level and high-level plotting<a href="graphics-base.html#low-level-and-high-level-plotting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>UNDER CONSTRUCTION</p>
 </div>
-<div id="displaying-saving-coloring-plots" class="section level2" number="11.4">
-<h2><span class="header-section-number">11.4</span> Displaying, saving, coloring plots</h2>
+<div id="displaying-saving-coloring-plots" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Displaying, saving, coloring plots<a href="graphics-base.html#displaying-saving-coloring-plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>UNDER CONSTRUCTION</p>
 
 </div>
@@ -471,7 +470,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

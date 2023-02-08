@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 The tidyverse | Introduction to R</title>
   <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 The tidyverse | Introduction to R" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
   
@@ -23,7 +22,7 @@
 
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2023-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="data-processing.html"/>
 <link rel="next" href="basic-stats-epi.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -382,13 +381,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-tidyverse" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> The <code>tidyverse</code></h1>
-<div id="overview-2" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Overview</h2>
+<div id="data-tidyverse" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> The <code>tidyverse</code><a href="data-tidyverse.html#data-tidyverse" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-2" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Overview<a href="data-tidyverse.html#overview-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <em>tidyverse</em> is a collection of R packages which aim to augment and replace much base R functionality, providing a more consistent user interface and focusing on data science rather than classical statistics or data analysis. The name is based on the concept of <em>tidy data</em><a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a>, which essentially requires that the data is arranged in a rectangular table where every column represents a variable, and every row an observational unit (subject). Table <a href="data-tidyverse.html#tab:tidyverse">7.1</a> lists some important <code>tidyverse</code> packages.</p>
 <table>
 <caption><span id="tab:tidyverse">Table 7.1: </span> Core <code>tidyverse</code> packages and corresponding functionality in base R (and add-on packages)</caption>
+<colgroup>
+<col width="23%" />
+<col width="30%" />
+<col width="45%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Tidyverse</th>
@@ -467,14 +471,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Below, we will use <code>dplyr</code>, a popular package for data processing, to demonstrate these design features, and how typical interactions with a <code>tidyverse</code> package can look like.</p>
 </div>
-<div id="example-using-dplyr-for-data-processing" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> Example: Using <code>dplyr</code> for data processing</h2>
-<div id="overview-3" class="section level3" number="7.2.1">
-<h3><span class="header-section-number">7.2.1</span> Overview</h3>
+<div id="example-using-dplyr-for-data-processing" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Example: Using <code>dplyr</code> for data processing<a href="data-tidyverse.html#example-using-dplyr-for-data-processing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="overview-3" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Overview<a href="data-tidyverse.html#overview-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><code>dplyr</code><a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a> can be used for general processing of data frames and data frame-like objects, and
 implements the same basic functionality for sorting, filtering, extracting and transforming data described for base R in Section <a href="data-types-struct.html#data-types-struct">5</a>; <code>dplyr</code> also supports merging and per-group processing of data as described for base R in Section <a href="data-processing.html#data-processing">6</a>. We will use the same example (data on blood pressure and salt intake) and replicate the operations in these sections.</p>
 <table>
 <caption><span id="tab:dplyr">Table 7.2: </span> Correspondence between <code>dplyr</code> and base R functionality</caption>
+<colgroup>
+<col width="32%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th><code>dplyr</code> functions</th>
@@ -522,11 +531,11 @@ implements the same basic functionality for sorting, filtering, extracting and t
 </table>
 <p>As seen in Table <a href="data-tidyverse.html#tab:dplyr">7.2</a>, <code>dplyr</code> functionality is systematically implemented using functions, in contrast to base R, where we also use the <code>[</code>- and <code>$</code>-operators. These functions have a similar interface as base functions <code>subset</code> and <code>transform</code>, where the data object is the first argument, and where variable names can be used directly, without having to quote them or use the <code>$</code>-notation.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a></p>
 </div>
-<div id="basic-data-operations" class="section level3" number="7.2.2">
-<h3><span class="header-section-number">7.2.2</span> Basic data operations</h3>
+<div id="basic-data-operations" class="section level3 hasAnchor" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> Basic data operations<a href="data-tidyverse.html#basic-data-operations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Extracting rows of data</strong> (i.e. units of observation/subjects) by their position has its own command, namely <code>slice</code>. This code extracts rows 1, 3, 4 and 89:</p>
 <div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="data-tidyverse.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(dplyr)</span>
-<span id="cb152-2"><a href="data-tidyverse.html#cb152-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">slice</span>(salt_ht, <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">89</span>))</span>
+<span id="cb152-2"><a href="data-tidyverse.html#cb152-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">slice</span>(salt_ht, <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">89</span>))</span>
 <span id="cb152-3"><a href="data-tidyverse.html#cb152-3" aria-hidden="true" tabindex="-1"></a>    ID    sex sbp dbp saltadd age</span>
 <span id="cb152-4"><a href="data-tidyverse.html#cb152-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">4305</span>   male <span class="dv">110</span>  <span class="dv">80</span>     yes  <span class="dv">58</span></span>
 <span id="cb152-5"><a href="data-tidyverse.html#cb152-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">5758</span> female <span class="dv">196</span> <span class="dv">128</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">53</span></span>
@@ -548,7 +557,7 @@ implements the same basic functionality for sorting, filtering, extracting and t
 <span id="cb153-13"><a href="data-tidyverse.html#cb153-13" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span> <span class="dv">5534</span>   male <span class="dv">200</span> <span class="dv">110</span>      no  <span class="dv">66</span></span>
 <span id="cb153-14"><a href="data-tidyverse.html#cb153-14" aria-hidden="true" tabindex="-1"></a><span class="dv">12</span> <span class="dv">9899</span> female <span class="dv">223</span> <span class="dv">102</span>     yes  <span class="dv">63</span></span></code></pre></div>
 <p>You can use multiple logical expressions separated by a comma, in which case the expression are connected via logical AND; so to extract all subjects who are both female and over 60, you can write</p>
-<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="data-tidyverse.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">filter</span>(salt_ht, sex <span class="sc">==</span> <span class="st">&quot;female&quot;</span>, age <span class="sc">&gt;</span> <span class="dv">60</span>)</span>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="data-tidyverse.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">filter</span>(salt_ht, sex<span class="sc">==</span><span class="st">&quot;female&quot;</span> , age <span class="sc">&gt;</span> <span class="dv">60</span>)</span>
 <span id="cb154-2"><a href="data-tidyverse.html#cb154-2" aria-hidden="true" tabindex="-1"></a>    ID    sex sbp dbp saltadd age</span>
 <span id="cb154-3"><a href="data-tidyverse.html#cb154-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">4767</span> female <span class="dv">149</span>  <span class="dv">72</span>     yes  <span class="dv">63</span></span>
 <span id="cb154-4"><a href="data-tidyverse.html#cb154-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">1024</span> female <span class="dv">178</span> <span class="dv">128</span>     yes  <span class="dv">63</span></span>
@@ -583,13 +592,13 @@ implements the same basic functionality for sorting, filtering, extracting and t
 <span id="cb157-7"><a href="data-tidyverse.html#cb157-7" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>   <span class="dv">7408</span> <span class="dv">145</span> <span class="dv">110</span>  <span class="dv">55</span></span>
 <span id="cb157-8"><a href="data-tidyverse.html#cb157-8" aria-hidden="true" tabindex="-1"></a>[Skipped <span class="dv">96</span> rows of output]</span></code></pre></div>
 <p><strong>Selecting a rectangular subset</strong> of a data frame object does not have a separate function in <code>dplyr</code>, in contrast to base R, where simultaneous selection of rows and columns via the <code>[,]</code>-notation is routine. Instead, this done in two steps, by first selecting rows from the original data frame, and then selecting columns from the selected rows (or the other waty around, of course). In classic R notation, this can be done as a nested function call:</p>
-<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="data-tidyverse.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">select</span>(<span class="fu">slice</span>(salt_ht, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="data-tidyverse.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">select</span>( <span class="fu">slice</span>(salt_ht, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="dv">4</span><span class="sc">:</span><span class="dv">5</span> )</span>
 <span id="cb158-2"><a href="data-tidyverse.html#cb158-2" aria-hidden="true" tabindex="-1"></a>  dbp saltadd</span>
 <span id="cb158-3"><a href="data-tidyverse.html#cb158-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">80</span>     yes</span>
 <span id="cb158-4"><a href="data-tidyverse.html#cb158-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">55</span>      no</span>
 <span id="cb158-5"><a href="data-tidyverse.html#cb158-5" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">128</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span></span>
 <span id="cb158-6"><a href="data-tidyverse.html#cb158-6" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">112</span>     yes</span>
-<span id="cb158-7"><a href="data-tidyverse.html#cb158-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">select</span>(<span class="fu">filter</span>(salt_ht, age <span class="sc">&gt;</span> <span class="dv">65</span>), dbp, sbp)</span>
+<span id="cb158-7"><a href="data-tidyverse.html#cb158-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">select</span>( <span class="fu">filter</span>(salt_ht, age<span class="sc">&gt;</span><span class="dv">65</span>), dbp, sbp )</span>
 <span id="cb158-8"><a href="data-tidyverse.html#cb158-8" aria-hidden="true" tabindex="-1"></a>  dbp sbp</span>
 <span id="cb158-9"><a href="data-tidyverse.html#cb158-9" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">112</span> <span class="dv">167</span></span>
 <span id="cb158-10"><a href="data-tidyverse.html#cb158-10" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">90</span> <span class="dv">140</span></span>
@@ -598,68 +607,63 @@ implements the same basic functionality for sorting, filtering, extracting and t
 <span id="cb158-13"><a href="data-tidyverse.html#cb158-13" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="dv">110</span> <span class="dv">200</span></span></code></pre></div>
 <p>Here, the first (inner) function call selects the subset of rows, including all columns; this smaller data set is then passed as argument to <code>select</code>, which extracts the specified columns.</p>
 <p><strong>Piping</strong> Nested function calls can take time to get used to, will get harder to write and read the more processing steps are nested within each other. This is where the <code>tidyverse</code>’s love for pipeline operators comes in: typically, the rectangualr selections above would be written as</p>
-<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="data-tidyverse.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">slice</span>(salt_ht, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb159-2"><a href="data-tidyverse.html#cb159-2" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>     <span class="fu">select</span>(<span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>)</span>
-<span id="cb159-3"><a href="data-tidyverse.html#cb159-3" aria-hidden="true" tabindex="-1"></a>  dbp saltadd</span>
-<span id="cb159-4"><a href="data-tidyverse.html#cb159-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">80</span>     yes</span>
-<span id="cb159-5"><a href="data-tidyverse.html#cb159-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">55</span>      no</span>
-<span id="cb159-6"><a href="data-tidyverse.html#cb159-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">128</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span></span>
-<span id="cb159-7"><a href="data-tidyverse.html#cb159-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">112</span>     yes</span>
-<span id="cb159-8"><a href="data-tidyverse.html#cb159-8" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="dv">110</span>     yes</span>
-<span id="cb159-9"><a href="data-tidyverse.html#cb159-9" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">filter</span>(salt_ht, age <span class="sc">&gt;</span> <span class="dv">60</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb159-10"><a href="data-tidyverse.html#cb159-10" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>     <span class="fu">select</span>(dbp, sbp)</span>
-<span id="cb159-11"><a href="data-tidyverse.html#cb159-11" aria-hidden="true" tabindex="-1"></a>   dbp sbp</span>
-<span id="cb159-12"><a href="data-tidyverse.html#cb159-12" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">112</span> <span class="dv">167</span></span>
-<span id="cb159-13"><a href="data-tidyverse.html#cb159-13" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">119</span> <span class="dv">198</span></span>
-<span id="cb159-14"><a href="data-tidyverse.html#cb159-14" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>   <span class="dv">72</span> <span class="dv">149</span></span>
-<span id="cb159-15"><a href="data-tidyverse.html#cb159-15" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>  <span class="dv">128</span> <span class="dv">178</span></span>
-<span id="cb159-16"><a href="data-tidyverse.html#cb159-16" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>   <span class="dv">90</span> <span class="dv">140</span></span>
-<span id="cb159-17"><a href="data-tidyverse.html#cb159-17" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span>   <span class="dv">84</span> <span class="dv">128</span></span>
-<span id="cb159-18"><a href="data-tidyverse.html#cb159-18" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span>  <span class="dv">148</span> <span class="dv">184</span></span>
-<span id="cb159-19"><a href="data-tidyverse.html#cb159-19" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>   <span class="dv">98</span> <span class="dv">160</span></span>
-<span id="cb159-20"><a href="data-tidyverse.html#cb159-20" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>   <span class="dv">98</span> <span class="dv">170</span></span>
-<span id="cb159-21"><a href="data-tidyverse.html#cb159-21" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="dv">124</span> <span class="dv">201</span></span>
-<span id="cb159-22"><a href="data-tidyverse.html#cb159-22" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span> <span class="dv">110</span> <span class="dv">200</span></span>
-<span id="cb159-23"><a href="data-tidyverse.html#cb159-23" aria-hidden="true" tabindex="-1"></a><span class="dv">12</span> <span class="dv">102</span> <span class="dv">223</span></span></code></pre></div>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="data-tidyverse.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">slice</span>(salt_ht, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) <span class="sc">%&gt;%</span>  <span class="fu">select</span>(<span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb159-2"><a href="data-tidyverse.html#cb159-2" aria-hidden="true" tabindex="-1"></a>  dbp saltadd</span>
+<span id="cb159-3"><a href="data-tidyverse.html#cb159-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">80</span>     yes</span>
+<span id="cb159-4"><a href="data-tidyverse.html#cb159-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">55</span>      no</span>
+<span id="cb159-5"><a href="data-tidyverse.html#cb159-5" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">128</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span></span>
+<span id="cb159-6"><a href="data-tidyverse.html#cb159-6" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">112</span>     yes</span>
+<span id="cb159-7"><a href="data-tidyverse.html#cb159-7" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="dv">110</span>     yes</span>
+<span id="cb159-8"><a href="data-tidyverse.html#cb159-8" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">filter</span>(salt_ht, age<span class="sc">&gt;</span><span class="dv">60</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(dbp, sbp)</span>
+<span id="cb159-9"><a href="data-tidyverse.html#cb159-9" aria-hidden="true" tabindex="-1"></a>   dbp sbp</span>
+<span id="cb159-10"><a href="data-tidyverse.html#cb159-10" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">112</span> <span class="dv">167</span></span>
+<span id="cb159-11"><a href="data-tidyverse.html#cb159-11" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">119</span> <span class="dv">198</span></span>
+<span id="cb159-12"><a href="data-tidyverse.html#cb159-12" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>   <span class="dv">72</span> <span class="dv">149</span></span>
+<span id="cb159-13"><a href="data-tidyverse.html#cb159-13" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>  <span class="dv">128</span> <span class="dv">178</span></span>
+<span id="cb159-14"><a href="data-tidyverse.html#cb159-14" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>   <span class="dv">90</span> <span class="dv">140</span></span>
+<span id="cb159-15"><a href="data-tidyverse.html#cb159-15" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span>   <span class="dv">84</span> <span class="dv">128</span></span>
+<span id="cb159-16"><a href="data-tidyverse.html#cb159-16" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span>  <span class="dv">148</span> <span class="dv">184</span></span>
+<span id="cb159-17"><a href="data-tidyverse.html#cb159-17" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>   <span class="dv">98</span> <span class="dv">160</span></span>
+<span id="cb159-18"><a href="data-tidyverse.html#cb159-18" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>   <span class="dv">98</span> <span class="dv">170</span></span>
+<span id="cb159-19"><a href="data-tidyverse.html#cb159-19" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="dv">124</span> <span class="dv">201</span></span>
+<span id="cb159-20"><a href="data-tidyverse.html#cb159-20" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span> <span class="dv">110</span> <span class="dv">200</span></span>
+<span id="cb159-21"><a href="data-tidyverse.html#cb159-21" aria-hidden="true" tabindex="-1"></a><span class="dv">12</span> <span class="dv">102</span> <span class="dv">223</span></span></code></pre></div>
 <p>Note that these pipelines are just a different way of specifying the same nested function calls (select rows, then select columns) - but now, we process the data in the same direction as we read &amp; write the code (i.e. from left to right), which many find more intuitive.<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a></p>
 <p><strong>Sorting</strong> Let’s use the pipe-notation from this point forward: <code>dplyr</code> also has a special function for sorting data frames called <code>arrange</code>. If we want to sort subjects by increasing age, but only display the top five rows (to save space), we can do this:</p>
-<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="data-tidyverse.html#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">arrange</span>(salt_ht, age) <span class="sc">%&gt;%</span></span>
-<span id="cb160-2"><a href="data-tidyverse.html#cb160-2" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>     <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
-<span id="cb160-3"><a href="data-tidyverse.html#cb160-3" aria-hidden="true" tabindex="-1"></a>    ID    sex sbp dbp saltadd age</span>
-<span id="cb160-4"><a href="data-tidyverse.html#cb160-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">5514</span> female <span class="dv">132</span>  <span class="dv">80</span>      no  <span class="dv">26</span></span>
-<span id="cb160-5"><a href="data-tidyverse.html#cb160-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">5618</span>   male <span class="dv">116</span>  <span class="dv">75</span>      no  <span class="dv">29</span></span>
-<span id="cb160-6"><a href="data-tidyverse.html#cb160-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">7993</span> female <span class="dv">108</span>  <span class="dv">72</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">30</span></span>
-<span id="cb160-7"><a href="data-tidyverse.html#cb160-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">4204</span>   male <span class="dv">125</span>  <span class="dv">84</span>      no  <span class="dv">30</span></span>
-<span id="cb160-8"><a href="data-tidyverse.html#cb160-8" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="dv">7663</span> female <span class="dv">105</span>  <span class="dv">78</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">31</span></span></code></pre></div>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="data-tidyverse.html#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">arrange</span>(salt_ht, age) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb160-2"><a href="data-tidyverse.html#cb160-2" aria-hidden="true" tabindex="-1"></a>    ID    sex sbp dbp saltadd age</span>
+<span id="cb160-3"><a href="data-tidyverse.html#cb160-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">5514</span> female <span class="dv">132</span>  <span class="dv">80</span>      no  <span class="dv">26</span></span>
+<span id="cb160-4"><a href="data-tidyverse.html#cb160-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">5618</span>   male <span class="dv">116</span>  <span class="dv">75</span>      no  <span class="dv">29</span></span>
+<span id="cb160-5"><a href="data-tidyverse.html#cb160-5" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">7993</span> female <span class="dv">108</span>  <span class="dv">72</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">30</span></span>
+<span id="cb160-6"><a href="data-tidyverse.html#cb160-6" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">4204</span>   male <span class="dv">125</span>  <span class="dv">84</span>      no  <span class="dv">30</span></span>
+<span id="cb160-7"><a href="data-tidyverse.html#cb160-7" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="dv">7663</span> female <span class="dv">105</span>  <span class="dv">78</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">31</span></span></code></pre></div>
 <p>And we see five rows of participants, starting with age 26 and increasing from there.</p>
 <p>This can easily be extended to sorting rows by multiple criteria:</p>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="data-tidyverse.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">arrange</span>(salt_ht, age, sex, dbp) <span class="sc">%&gt;%</span></span>
-<span id="cb161-2"><a href="data-tidyverse.html#cb161-2" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>     <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>)</span>
-<span id="cb161-3"><a href="data-tidyverse.html#cb161-3" aria-hidden="true" tabindex="-1"></a>     ID    sex sbp dbp saltadd age</span>
-<span id="cb161-4"><a href="data-tidyverse.html#cb161-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">5514</span> female <span class="dv">132</span>  <span class="dv">80</span>      no  <span class="dv">26</span></span>
-<span id="cb161-5"><a href="data-tidyverse.html#cb161-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">5618</span>   male <span class="dv">116</span>  <span class="dv">75</span>      no  <span class="dv">29</span></span>
-<span id="cb161-6"><a href="data-tidyverse.html#cb161-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>  <span class="dv">7993</span> female <span class="dv">108</span>  <span class="dv">72</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">30</span></span>
-<span id="cb161-7"><a href="data-tidyverse.html#cb161-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>  <span class="dv">4204</span>   male <span class="dv">125</span>  <span class="dv">84</span>      no  <span class="dv">30</span></span>
-<span id="cb161-8"><a href="data-tidyverse.html#cb161-8" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>  <span class="dv">8627</span> female  <span class="dv">80</span>  <span class="dv">62</span>     yes  <span class="dv">31</span></span>
-<span id="cb161-9"><a href="data-tidyverse.html#cb161-9" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span>  <span class="dv">7663</span> female <span class="dv">105</span>  <span class="dv">78</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">31</span></span>
-<span id="cb161-10"><a href="data-tidyverse.html#cb161-10" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span>  <span class="dv">5988</span> female <span class="dv">118</span>  <span class="dv">82</span>     yes  <span class="dv">31</span></span>
-<span id="cb161-11"><a href="data-tidyverse.html#cb161-11" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>  <span class="dv">8550</span>   male <span class="dv">120</span>  <span class="dv">68</span>     yes  <span class="dv">31</span></span>
-<span id="cb161-12"><a href="data-tidyverse.html#cb161-12" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>  <span class="dv">5345</span>   male <span class="dv">110</span>  <span class="dv">72</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">31</span></span>
-<span id="cb161-13"><a href="data-tidyverse.html#cb161-13" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="dv">2215</span>   male <span class="dv">120</span>  <span class="dv">82</span>      no  <span class="dv">31</span></span>
-<span id="cb161-14"><a href="data-tidyverse.html#cb161-14" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span> <span class="dv">6606</span> female  <span class="dv">85</span>  <span class="dv">55</span>      no  <span class="dv">32</span></span>
-<span id="cb161-15"><a href="data-tidyverse.html#cb161-15" aria-hidden="true" tabindex="-1"></a><span class="dv">12</span> <span class="dv">8202</span> female <span class="dv">110</span>  <span class="dv">70</span>      no  <span class="dv">32</span></span></code></pre></div>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="data-tidyverse.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">arrange</span>(salt_ht, age, sex, dbp) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb161-2"><a href="data-tidyverse.html#cb161-2" aria-hidden="true" tabindex="-1"></a>     ID    sex sbp dbp saltadd age</span>
+<span id="cb161-3"><a href="data-tidyverse.html#cb161-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">5514</span> female <span class="dv">132</span>  <span class="dv">80</span>      no  <span class="dv">26</span></span>
+<span id="cb161-4"><a href="data-tidyverse.html#cb161-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">5618</span>   male <span class="dv">116</span>  <span class="dv">75</span>      no  <span class="dv">29</span></span>
+<span id="cb161-5"><a href="data-tidyverse.html#cb161-5" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>  <span class="dv">7993</span> female <span class="dv">108</span>  <span class="dv">72</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">30</span></span>
+<span id="cb161-6"><a href="data-tidyverse.html#cb161-6" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>  <span class="dv">4204</span>   male <span class="dv">125</span>  <span class="dv">84</span>      no  <span class="dv">30</span></span>
+<span id="cb161-7"><a href="data-tidyverse.html#cb161-7" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>  <span class="dv">8627</span> female  <span class="dv">80</span>  <span class="dv">62</span>     yes  <span class="dv">31</span></span>
+<span id="cb161-8"><a href="data-tidyverse.html#cb161-8" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span>  <span class="dv">7663</span> female <span class="dv">105</span>  <span class="dv">78</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">31</span></span>
+<span id="cb161-9"><a href="data-tidyverse.html#cb161-9" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span>  <span class="dv">5988</span> female <span class="dv">118</span>  <span class="dv">82</span>     yes  <span class="dv">31</span></span>
+<span id="cb161-10"><a href="data-tidyverse.html#cb161-10" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>  <span class="dv">8550</span>   male <span class="dv">120</span>  <span class="dv">68</span>     yes  <span class="dv">31</span></span>
+<span id="cb161-11"><a href="data-tidyverse.html#cb161-11" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>  <span class="dv">5345</span>   male <span class="dv">110</span>  <span class="dv">72</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">31</span></span>
+<span id="cb161-12"><a href="data-tidyverse.html#cb161-12" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="dv">2215</span>   male <span class="dv">120</span>  <span class="dv">82</span>      no  <span class="dv">31</span></span>
+<span id="cb161-13"><a href="data-tidyverse.html#cb161-13" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span> <span class="dv">6606</span> female  <span class="dv">85</span>  <span class="dv">55</span>      no  <span class="dv">32</span></span>
+<span id="cb161-14"><a href="data-tidyverse.html#cb161-14" aria-hidden="true" tabindex="-1"></a><span class="dv">12</span> <span class="dv">8202</span> female <span class="dv">110</span>  <span class="dv">70</span>      no  <span class="dv">32</span></span></code></pre></div>
 <p>Here, rows are first sorted by age; subjects with the same ages are then sorted by sex<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a>, and individuals with the same age/sex by diastolic blood pressure.</p>
 <p><strong>Modifying data</strong> The function <code>mutate</code> can both modify existing variables and generate new variables in a data frame. If we want to add the (natural) logarithms of the blood pressure variable to the data, we do this:</p>
-<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="data-tidyverse.html#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">mutate</span>(salt_ht, <span class="at">log_dbp =</span> <span class="fu">log</span>(dbp), <span class="at">log_sbp =</span> <span class="fu">log</span>(sbp)) <span class="sc">%&gt;%</span></span>
-<span id="cb162-2"><a href="data-tidyverse.html#cb162-2" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>     <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)</span>
-<span id="cb162-3"><a href="data-tidyverse.html#cb162-3" aria-hidden="true" tabindex="-1"></a>    ID    sex sbp dbp saltadd age  log_dbp  log_sbp</span>
-<span id="cb162-4"><a href="data-tidyverse.html#cb162-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">4305</span>   male <span class="dv">110</span>  <span class="dv">80</span>     yes  <span class="dv">58</span> <span class="fl">4.382027</span> <span class="fl">4.700480</span></span>
-<span id="cb162-5"><a href="data-tidyverse.html#cb162-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">6606</span> female  <span class="dv">85</span>  <span class="dv">55</span>      no  <span class="dv">32</span> <span class="fl">4.007333</span> <span class="fl">4.442651</span></span>
-<span id="cb162-6"><a href="data-tidyverse.html#cb162-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">5758</span> female <span class="dv">196</span> <span class="dv">128</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">53</span> <span class="fl">4.852030</span> <span class="fl">5.278115</span></span>
-<span id="cb162-7"><a href="data-tidyverse.html#cb162-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">2265</span>   male <span class="dv">167</span> <span class="dv">112</span>     yes  <span class="dv">68</span> <span class="fl">4.718499</span> <span class="fl">5.117994</span></span></code></pre></div>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="data-tidyverse.html#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">mutate</span>(salt_ht, <span class="at">log_dbp =</span> <span class="fu">log</span>(dbp), <span class="at">log_sbp =</span> <span class="fu">log</span>(sbp)) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)</span>
+<span id="cb162-2"><a href="data-tidyverse.html#cb162-2" aria-hidden="true" tabindex="-1"></a>    ID    sex sbp dbp saltadd age  log_dbp  log_sbp</span>
+<span id="cb162-3"><a href="data-tidyverse.html#cb162-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">4305</span>   male <span class="dv">110</span>  <span class="dv">80</span>     yes  <span class="dv">58</span> <span class="fl">4.382027</span> <span class="fl">4.700480</span></span>
+<span id="cb162-4"><a href="data-tidyverse.html#cb162-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">6606</span> female  <span class="dv">85</span>  <span class="dv">55</span>      no  <span class="dv">32</span> <span class="fl">4.007333</span> <span class="fl">4.442651</span></span>
+<span id="cb162-5"><a href="data-tidyverse.html#cb162-5" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">5758</span> female <span class="dv">196</span> <span class="dv">128</span>    <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  <span class="dv">53</span> <span class="fl">4.852030</span> <span class="fl">5.278115</span></span>
+<span id="cb162-6"><a href="data-tidyverse.html#cb162-6" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">2265</span>   male <span class="dv">167</span> <span class="dv">112</span>     yes  <span class="dv">68</span> <span class="fl">4.718499</span> <span class="fl">5.117994</span></span></code></pre></div>
 <p><code>mutate</code> works broadly the same as base R <code>transform</code> (you could just exchange <code>mutate</code> for <code>transform</code> in the statement above, and it would still work.)<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a></p>
 <p><strong>Merging data</strong> As in Section @ref{merge-data-base}, we can add the sampling location (health centers) to the basic data set, here using the function <code>left_join</code>:</p>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="data-tidyverse.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht_centers2 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(salt_ht, centers, <span class="at">by =</span> <span class="st">&quot;ID&quot;</span>)</span>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="data-tidyverse.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht_centers2 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(salt_ht, centers, <span class="at">by=</span><span class="st">&quot;ID&quot;</span>)</span>
 <span id="cb163-2"><a href="data-tidyverse.html#cb163-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(salt_ht_centers2)</span>
 <span id="cb163-3"><a href="data-tidyverse.html#cb163-3" aria-hidden="true" tabindex="-1"></a>       ID           sex          sbp             dbp         saltadd        age        Center</span>
 <span id="cb163-4"><a href="data-tidyverse.html#cb163-4" aria-hidden="true" tabindex="-1"></a> Min.   <span class="sc">:</span><span class="dv">1006</span>   female<span class="sc">:</span><span class="dv">55</span>   Min.   <span class="sc">:</span> <span class="fl">80.0</span>   Min.   <span class="sc">:</span> <span class="fl">55.00</span>   no  <span class="sc">:</span><span class="dv">37</span>   Min.   <span class="sc">:</span><span class="fl">26.00</span>   A<span class="sc">:</span><span class="dv">33</span>  </span>
@@ -679,8 +683,8 @@ implements the same basic functionality for sorting, filtering, extracting and t
 <li>as for 3, but now sorted by decreasing age.</li>
 </ol>
 </div>
-<div id="groupwise-data-operations" class="section level3" number="7.2.3">
-<h3><span class="header-section-number">7.2.3</span> Groupwise data operations</h3>
+<div id="groupwise-data-operations" class="section level3 hasAnchor" number="7.2.3">
+<h3><span class="header-section-number">7.2.3</span> Groupwise data operations<a href="data-tidyverse.html#groupwise-data-operations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Grouped data</strong> As seen in Section @ref{group-stats}, we can use the base R function <code>aggregate</code> to calculate per-group summaries, by specifying the data, the group memberships, and a suitable summary function. <code>dplyr</code> implements this functionality somewhat differently, by adding the grouping information directly to the data, via function <code>group_by</code>, and carrying this grouped data set forward for processing and analysis:</p>
 <div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="data-tidyverse.html#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">group_by</span>(salt_ht, sex)</span>
 <span id="cb164-2"><a href="data-tidyverse.html#cb164-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 100 × 6</span></span>
@@ -704,13 +708,12 @@ implements the same basic functionality for sorting, filtering, extracting and t
 <p>For, now let’s store this grouped tibble as a separate object for re-use further down the line:</p>
 <div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="data-tidyverse.html#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht_bysex <span class="ot">&lt;-</span> <span class="fu">group_by</span>(salt_ht, sex)</span></code></pre></div>
 <p><strong>Groupwise summaries</strong> We can caclulate pre-group summaries using the <code>dplyr</code>-function <code>summarise</code>:</p>
-<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="data-tidyverse.html#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht_bysex <span class="sc">%&gt;%</span></span>
-<span id="cb166-2"><a href="data-tidyverse.html#cb166-2" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>     <span class="fu">summarise</span>(<span class="at">Count =</span> <span class="fu">n</span>(), <span class="at">Mean_syst =</span> <span class="fu">mean</span>(sbp), <span class="at">StdDev_syst =</span> <span class="fu">sd</span>(sbp))</span>
-<span id="cb166-3"><a href="data-tidyverse.html#cb166-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 2 × 4</span></span>
-<span id="cb166-4"><a href="data-tidyverse.html#cb166-4" aria-hidden="true" tabindex="-1"></a>  sex    Count Mean_syst StdDev_syst</span>
-<span id="cb166-5"><a href="data-tidyverse.html#cb166-5" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&lt;</span>fct<span class="sc">&gt;</span>  <span class="er">&lt;</span>int<span class="sc">&gt;</span>     <span class="er">&lt;</span>dbl<span class="sc">&gt;</span>       <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
-<span id="cb166-6"><a href="data-tidyverse.html#cb166-6" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> female    <span class="dv">55</span>      <span class="fl">158.</span>        <span class="fl">43.2</span></span>
-<span id="cb166-7"><a href="data-tidyverse.html#cb166-7" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> male      <span class="dv">45</span>      <span class="fl">150.</span>        <span class="fl">33.8</span></span></code></pre></div>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="data-tidyverse.html#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> salt_ht_bysex <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">Count =</span> <span class="fu">n</span>(), <span class="at">Mean_syst =</span> <span class="fu">mean</span>(sbp), <span class="at">StdDev_syst =</span> <span class="fu">sd</span>(sbp))</span>
+<span id="cb166-2"><a href="data-tidyverse.html#cb166-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 2 × 4</span></span>
+<span id="cb166-3"><a href="data-tidyverse.html#cb166-3" aria-hidden="true" tabindex="-1"></a>  sex    Count Mean_syst StdDev_syst</span>
+<span id="cb166-4"><a href="data-tidyverse.html#cb166-4" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&lt;</span>fct<span class="sc">&gt;</span>  <span class="er">&lt;</span>int<span class="sc">&gt;</span>     <span class="er">&lt;</span>dbl<span class="sc">&gt;</span>       <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
+<span id="cb166-5"><a href="data-tidyverse.html#cb166-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> female    <span class="dv">55</span>      <span class="fl">158.</span>        <span class="fl">43.2</span></span>
+<span id="cb166-6"><a href="data-tidyverse.html#cb166-6" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> male      <span class="dv">45</span>      <span class="fl">150.</span>        <span class="fl">33.8</span></span></code></pre></div>
 <p>Here, we drop the grouped data as first argument into the <code>summarise</code>-function via the pipe operator <code>%&gt;%</code>, and we define three summaries that we want to have calculated for each sex:</p>
 <ul>
 <li>the number of samples, calculated via the helper function <code>n()</code>, and stored as variable <code>Count</code>,</li>
@@ -719,18 +722,17 @@ implements the same basic functionality for sorting, filtering, extracting and t
 </ul>
 <p>Note that we get choose the names of the new variables (on the left hand side) ourselves, but we refer to existing variables on the right hand side. The output is again a tibble, but no longer grouped, and with only two rows, one for each sex in the original grouped data, and four columns, the three new variables and the name of the group.</p>
 <p>We can the same thing for more than one grouping variable, e.g. <code>sex</code> and <code>saltadd</code>:</p>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="data-tidyverse.html#cb167-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">group_by</span>(salt_ht, sex, saltadd) <span class="sc">%&gt;%</span></span>
-<span id="cb167-2"><a href="data-tidyverse.html#cb167-2" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>     <span class="fu">summarise</span>(<span class="at">Count =</span> <span class="fu">n</span>(), <span class="at">Mean_syst =</span> <span class="fu">mean</span>(sbp), <span class="at">StdDev_syst =</span> <span class="fu">sd</span>(sbp))</span>
-<span id="cb167-3"><a href="data-tidyverse.html#cb167-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 6 × 5</span></span>
-<span id="cb167-4"><a href="data-tidyverse.html#cb167-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Groups:   sex [2]</span></span>
-<span id="cb167-5"><a href="data-tidyverse.html#cb167-5" aria-hidden="true" tabindex="-1"></a>  sex    saltadd Count Mean_syst StdDev_syst</span>
-<span id="cb167-6"><a href="data-tidyverse.html#cb167-6" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&lt;</span>fct<span class="sc">&gt;</span>  <span class="er">&lt;</span>fct<span class="sc">&gt;</span>   <span class="er">&lt;</span>int<span class="sc">&gt;</span>     <span class="er">&lt;</span>dbl<span class="sc">&gt;</span>       <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
-<span id="cb167-7"><a href="data-tidyverse.html#cb167-7" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> female no         <span class="dv">13</span>      <span class="fl">134.</span>        <span class="fl">35.1</span></span>
-<span id="cb167-8"><a href="data-tidyverse.html#cb167-8" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> female yes        <span class="dv">28</span>      <span class="fl">164.</span>        <span class="fl">41.4</span></span>
-<span id="cb167-9"><a href="data-tidyverse.html#cb167-9" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> female <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>       <span class="dv">14</span>      <span class="fl">167.</span>        <span class="fl">48.1</span></span>
-<span id="cb167-10"><a href="data-tidyverse.html#cb167-10" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> male   no         <span class="dv">24</span>      <span class="fl">139.</span>        <span class="fl">26.8</span></span>
-<span id="cb167-11"><a href="data-tidyverse.html#cb167-11" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> male   yes        <span class="dv">15</span>      <span class="fl">160.</span>        <span class="fl">36.4</span></span>
-<span id="cb167-12"><a href="data-tidyverse.html#cb167-12" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span> male   <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>        <span class="dv">6</span>      <span class="dv">167</span>         <span class="fl">42.8</span></span></code></pre></div>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="data-tidyverse.html#cb167-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">group_by</span>(salt_ht, sex, saltadd) <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">Count =</span> <span class="fu">n</span>(), <span class="at">Mean_syst =</span> <span class="fu">mean</span>(sbp), <span class="at">StdDev_syst =</span> <span class="fu">sd</span>(sbp))</span>
+<span id="cb167-2"><a href="data-tidyverse.html#cb167-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 6 × 5</span></span>
+<span id="cb167-3"><a href="data-tidyverse.html#cb167-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Groups:   sex [2]</span></span>
+<span id="cb167-4"><a href="data-tidyverse.html#cb167-4" aria-hidden="true" tabindex="-1"></a>  sex    saltadd Count Mean_syst StdDev_syst</span>
+<span id="cb167-5"><a href="data-tidyverse.html#cb167-5" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&lt;</span>fct<span class="sc">&gt;</span>  <span class="er">&lt;</span>fct<span class="sc">&gt;</span>   <span class="er">&lt;</span>int<span class="sc">&gt;</span>     <span class="er">&lt;</span>dbl<span class="sc">&gt;</span>       <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
+<span id="cb167-6"><a href="data-tidyverse.html#cb167-6" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> female no         <span class="dv">13</span>      <span class="fl">134.</span>        <span class="fl">35.1</span></span>
+<span id="cb167-7"><a href="data-tidyverse.html#cb167-7" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> female yes        <span class="dv">28</span>      <span class="fl">164.</span>        <span class="fl">41.4</span></span>
+<span id="cb167-8"><a href="data-tidyverse.html#cb167-8" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> female <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>       <span class="dv">14</span>      <span class="fl">167.</span>        <span class="fl">48.1</span></span>
+<span id="cb167-9"><a href="data-tidyverse.html#cb167-9" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> male   no         <span class="dv">24</span>      <span class="fl">139.</span>        <span class="fl">26.8</span></span>
+<span id="cb167-10"><a href="data-tidyverse.html#cb167-10" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> male   yes        <span class="dv">15</span>      <span class="fl">160.</span>        <span class="fl">36.4</span></span>
+<span id="cb167-11"><a href="data-tidyverse.html#cb167-11" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span> male   <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>        <span class="dv">6</span>      <span class="dv">167</span>         <span class="fl">42.8</span></span></code></pre></div>
 <p>The output here is a tibble with six rows, as <code>dplyr</code> will by default include missing values in a grouping variable as an extra level, which is arguably preferable over silently dropping these rows.</p>
 <p>(As it happens, here the individuals with missing salt-added information have rather high mean systolic blood pressures, so it would be interesting to look more closely at why the data is actually missing here.)</p>
 <p><strong>Groupwise filtering</strong> Extracting rows from a grouped tibble via <code>filter</code> and <code>slice</code> also respects the groupind, i.e. rows will be extracted <em>per group</em>: while the condition <code>age==max(age)</code> will extract all participants with the highest age from the original tibble (one or more), it will extract the oldest participants <em>from each group</em> (so at least two):</p>
@@ -745,15 +747,14 @@ implements the same basic functionality for sorting, filtering, extracting and t
 <span id="cb168-9"><a href="data-tidyverse.html#cb168-9" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">2265</span> male     <span class="dv">167</span>   <span class="dv">112</span> yes        <span class="dv">68</span></span>
 <span id="cb168-10"><a href="data-tidyverse.html#cb168-10" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">7276</span> female   <span class="dv">201</span>   <span class="dv">124</span> no         <span class="dv">71</span></span></code></pre></div>
 <p><strong>Complex groupwise operations</strong> Grouped tibbles can also be used for more complex operations, like fitting separate regression models to different parts of the data. The most direct way is via the <code>do</code>-function:<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a></p>
-<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="data-tidyverse.html#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> split_lm2 <span class="ot">&lt;-</span> salt_ht_bysex <span class="sc">%&gt;%</span></span>
-<span id="cb169-2"><a href="data-tidyverse.html#cb169-2" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>     <span class="fu">do</span>(<span class="at">model =</span> <span class="fu">lm</span>(sbp <span class="sc">~</span> dbp, <span class="at">data =</span> .))</span>
-<span id="cb169-3"><a href="data-tidyverse.html#cb169-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> split_lm2</span>
-<span id="cb169-4"><a href="data-tidyverse.html#cb169-4" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 2 × 2</span></span>
-<span id="cb169-5"><a href="data-tidyverse.html#cb169-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Rowwise: </span></span>
-<span id="cb169-6"><a href="data-tidyverse.html#cb169-6" aria-hidden="true" tabindex="-1"></a>  sex    model </span>
-<span id="cb169-7"><a href="data-tidyverse.html#cb169-7" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&lt;</span>fct<span class="sc">&gt;</span>  <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
-<span id="cb169-8"><a href="data-tidyverse.html#cb169-8" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> female <span class="sc">&lt;</span>lm<span class="sc">&gt;</span>  </span>
-<span id="cb169-9"><a href="data-tidyverse.html#cb169-9" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> male   <span class="sc">&lt;</span>lm<span class="sc">&gt;</span>  </span></code></pre></div>
+<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="data-tidyverse.html#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> split_lm2 <span class="ot">&lt;-</span>  salt_ht_bysex <span class="sc">%&gt;%</span> <span class="fu">do</span>(<span class="at">model =</span> <span class="fu">lm</span>(sbp <span class="sc">~</span> dbp, <span class="at">data =</span> .))</span>
+<span id="cb169-2"><a href="data-tidyverse.html#cb169-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> split_lm2</span>
+<span id="cb169-3"><a href="data-tidyverse.html#cb169-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 2 × 2</span></span>
+<span id="cb169-4"><a href="data-tidyverse.html#cb169-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Rowwise: </span></span>
+<span id="cb169-5"><a href="data-tidyverse.html#cb169-5" aria-hidden="true" tabindex="-1"></a>  sex    model </span>
+<span id="cb169-6"><a href="data-tidyverse.html#cb169-6" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&lt;</span>fct<span class="sc">&gt;</span>  <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
+<span id="cb169-7"><a href="data-tidyverse.html#cb169-7" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> female <span class="sc">&lt;</span>lm<span class="sc">&gt;</span>  </span>
+<span id="cb169-8"><a href="data-tidyverse.html#cb169-8" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> male   <span class="sc">&lt;</span>lm<span class="sc">&gt;</span>  </span></code></pre></div>
 <p>Note how we specify the per-group data here, namely via a single dot <code>.</code>: when running the <code>do</code>-function, the dot will be replaced by the corresponding subsets of the data, one per grouping level. The result is a tibble with as many rows as groups, and a new variable with our (freely chosen) name <code>model</code>, which is actually internally a <em>list</em> of linear models, even if this is not obvious from the tibble output:</p>
 <div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="data-tidyverse.html#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">is.list</span>(split_lm2<span class="sc">$</span>model)</span>
 <span id="cb170-2"><a href="data-tidyverse.html#cb170-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="cn">TRUE</span></span></code></pre></div>
@@ -810,8 +811,8 @@ implements the same basic functionality for sorting, filtering, extracting and t
 <p><strong>Exercise:</strong> Group the <code>salt_ht</code> data frame by <code>sex</code> and <code>saltadd</code>, and calculate the mean and median difference between systolic and diastolic blood pressure for each group.</p>
 </div>
 </div>
-<div id="tidyverse-vs-base-r" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> <code>tidyverse</code> vs base R?</h2>
+<div id="tidyverse-vs-base-r" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> <code>tidyverse</code> vs base R?<a href="data-tidyverse.html#tidyverse-vs-base-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If the question in the heading does not make sense to you: fine! I agree - R is a general purpose computer language, and the <code>tidyverse</code> just represents one specific, if rather opinionated and coherent, way of using that language to express things - a dialect, if you will, and so far a mutually intelligible dialect of R (in the sense that e.g. a tibble is still a data frame). By its nature, R can be extended and modified to serve different uses, and an extra set of well-designed add-on packages (which is what the <code>tidyverse</code> is after all) just adds to the available choices: we can and should mix and match pragmatically according to our needs and preferences.</p>
 <p>If the question in the heading is obvious and important to you: fine! I can see where you are coming from, and FWIW, large (or at least noisy) parts of the internet agree with you (try googling “<code>tidyverse</code> vs base R”). When starting with R as a new language and analysis tool, its very flexibility can make it hard to get a grip on how to do things - even simple things, at first; encountering two very different approaches is not exactly helpful in this setting.</p>
 <p>But consider these points:</p>
@@ -829,8 +830,8 @@ implements the same basic functionality for sorting, filtering, extracting and t
 <p>Of course, to do b. well, you have to at least be aware what alternatives there are, so maybe it was for the best that we had this little talk about the <code>tidyverse</code>…</p></li>
 </ol>
 </div>
-<div id="technical-notes-2" class="section level2" number="7.4">
-<h2><span class="header-section-number">7.4</span> Technical notes</h2>
+<div id="technical-notes-2" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Technical notes<a href="data-tidyverse.html#technical-notes-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
@@ -922,7 +923,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

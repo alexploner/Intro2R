@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9 Linear regression | Introduction to R</title>
   <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9 Linear regression | Introduction to R" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
   
@@ -23,7 +22,7 @@
 
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2023-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="basic-stats-epi.html"/>
 <link rel="next" href="regression-other.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -382,10 +381,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="regression-linear" class="section level1" number="9">
-<h1><span class="header-section-number">9</span> Linear regression</h1>
-<div id="overview-4" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> Overview</h2>
+<div id="regression-linear" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> Linear regression<a href="regression-linear.html#regression-linear" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-4" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Overview<a href="regression-linear.html#overview-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We study linear regression as a template for regression modelling in R, and follow the workflow of fitting a simple model to data, extracting relevant information about the fitted model, and making predictions from it. We complement this with some descriptive and diagnostic graphical displays. In the second part, we look at different ways of generalizing to multi-predictor models, including models with interaction terms, dummy coding of discrete (factorial) predictors, and spline terms.</p>
 <p>For our examples, we use data from a small clinical study, where 20 women provided blood samples which were analysed for hemoglobin level (in g/dl) and packed cell volume (PCV, in %). The results, together with age and menopausal status of the women, are recorded in file <code>Hemoglobin.txt</code> which has been imported into a R as data frame <code>hemoglobin</code>.</p>
 <div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="regression-linear.html#cb198-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">str</span>(hemoglobin)</span>
@@ -396,24 +395,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb198-6"><a href="regression-linear.html#cb198-6" aria-hidden="true" tabindex="-1"></a> <span class="sc">$</span> Menopause<span class="sc">:</span> Factor w<span class="sc">/</span> <span class="dv">2</span> levels <span class="st">&quot;No&quot;</span>,<span class="st">&quot;Yes&quot;</span><span class="sc">:</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">2</span> ...</span></code></pre></div>
 <p>The primary question of interest is how hemoglobin levels vary as a function of PCV, possibly adjusted for the other variables.</p>
 </div>
-<div id="background-3" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> Background</h2>
+<div id="background-3" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Background<a href="regression-linear.html#background-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Linear regression in itself is not the most common class of regression models used in epidemiology. However, all common models like logistic regression or Cox proportional hazard models, as well as many other models (Poisson, log-binomial, negative binomial, flexible parametric survival etc.) generalize the same basic idea that at some specific scale, the relationship between outcome and predictor(s) is linear - in other words, a constant increase in a predictor leads to a constant and proportional change in an outcome, or risk of an outcome. This assumption is intuitive, visually attractive, and often at least approximately and/or locally appropriate.</p>
 <p>Part of the appeal is that simple linear regression models with only one predictor can easily be extended to include multiple predictors. Conceptually, this is a big step in epidemiology, as it allows discussing and addressing confounding through adjustment, but from a model building perspective, the principle is straightforward: we have an outcome of interest on the left hand side of an equation, and a weighted sum of predictors on the right hand side, and we want to choose the weights for the predictors so that the two sides agree as closely as possible. In this setting, new predictors enter the equation on a democratic basis: each gets their own parameter, and is otherwise allowed to contribute to the right hand side in exactly the same manner as all other predictors.<a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a></p>
 <p>These attractive properties have motivated the definition of many derived models, including those listed above: we take a suitably transformed outcome (not necessarily continuous) and relate it to a suitably transformed weighted sum of predictors, where the nature of the relationship is determined by the (assumed) probability distribution of the outcome. This often manages to preserve much of the original linear model goodness.</p>
 <p>Important for our purposes, this holds not only on an abstract mathematical level, but quite generally also for the implementation and interface of models in statistical software. The core concept in R is the specification of a model relationship through a <em>formula</em> that relates a dependent left hand side to one or several predictors on the rioght hand side of the model equation.</p>
 </div>
-<div id="simple-linear-regression" class="section level2" number="9.3">
-<h2><span class="header-section-number">9.3</span> Simple linear regression</h2>
+<div id="simple-linear-regression" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Simple linear regression<a href="regression-linear.html#simple-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The equation below shows the most basic situation mathematically, though the terminology often varies: we want to relate a <em>dependent variable</em> (or outcome, or response, commonly referred to as <span class="math inline">\(y\)</span>) to one <em>independent variable</em> (or predictor, or covariate, commonly referred to as <span class="math inline">\(x\)</span>). We can write this as
 <span class="math display">\[
 y_i = \beta_0 + \beta_1 x_i + \epsilon_i
 \]</span>
 where the index <span class="math inline">\(i\)</span> refers to an observation (<span class="math inline">\(i \in 1\ldots n\)</span>), <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are <em>regression coefficients</em> or <em>parameters</em> of the model (corresponding to intercept and slope of the regression line), and <span class="math inline">\(\epsilon_i\)</span> is a subject-specific random variable (<em>‘error’</em>) generally assumed to be (approximately) normally distributed with mean 0 and some unknown but fixed variance <span class="math inline">\(\sigma^2\)</span>.</p>
-<div id="scatter-loess" class="section level3" number="9.3.1">
-<h3><span class="header-section-number">9.3.1</span> Looking at the data</h3>
+<div id="scatter-loess" class="section level3 hasAnchor" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Looking at the data<a href="regression-linear.html#scatter-loess" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The canonical display of a simple linear regression is the <em>scatterplot</em>, where by convention the dependent variable is plotted on the vertical axis:</p>
-<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="regression-linear.html#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">plot</span>(Hb <span class="sc">~</span> PCV, <span class="at">data =</span> hemoglobin)</span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="regression-linear.html#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">plot</span>(Hb <span class="sc">~</span> PCV, <span class="at">data=</span>hemoglobin)</span></code></pre></div>
 <p><img src="introductio-to-r_files/figure-html/unnamed-chunk-209-1.png" width="80%" style="display: block; margin: auto;" />
 Here we see a reasonable, but not excessively strong linear relationship between PCV and hemoglobin levels, though this can be somewhat difficult to assess visually based on just a few observations. Note how the plot is specified via a formula relating a left hand side (<code>Hb</code>) to a right hand side (<code>PCV</code>), where the operator <code>~</code> should be read as <em>“as function of”</em>, in the same manner as for boxplots (as described in Section @ref(ex_desc_stats).</p>
 <p>R also has the specialized function <code>scatter.smooth</code>, which adds a useful graphical summary of the relationship between x and y, a so-called <em>smoother</em> or <em>smoothing function</em>:</p>
@@ -428,10 +427,10 @@ Figure 9.1: Animated loess smooth example <a href="https://simplystatistics.org/
 </div>
 <p>For our example above, we see a mostly linear and increasing association, with a bit of a bump in the middle. At first glance, a linear regression model seems like an acceptable working hypothesis.</p>
 </div>
-<div id="fitting-a-linear-regression-model" class="section level3" number="9.3.2">
-<h3><span class="header-section-number">9.3.2</span> Fitting a linear regression model</h3>
+<div id="fitting-a-linear-regression-model" class="section level3 hasAnchor" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> Fitting a linear regression model<a href="regression-linear.html#fitting-a-linear-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This is the easy part: we simply pass the same formula as above to function <code>lm</code> (for <em>linear model</em>):</p>
-<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="regression-linear.html#cb201-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lm1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Hb <span class="sc">~</span> PCV, <span class="at">data =</span> hemoglobin)</span></code></pre></div>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="regression-linear.html#cb201-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lm1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Hb <span class="sc">~</span> PCV, <span class="at">data=</span>hemoglobin)</span></code></pre></div>
 <p>Printing the linear model object however is not very rewarding:</p>
 <div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="regression-linear.html#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lm1</span>
 <span id="cb202-2"><a href="regression-linear.html#cb202-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -449,8 +448,8 @@ Figure 9.1: Animated loess smooth example <a href="https://simplystatistics.org/
 <span id="cb203-5"><a href="regression-linear.html#cb203-5" aria-hidden="true" tabindex="-1"></a> [<span class="dv">7</span>] <span class="st">&quot;qr&quot;</span>            <span class="st">&quot;df.residual&quot;</span>   <span class="st">&quot;xlevels&quot;</span>       <span class="st">&quot;call&quot;</span>          <span class="st">&quot;terms&quot;</span>         <span class="st">&quot;model&quot;</span>        </span></code></pre></div>
 <p>The very general idea of model fitting in R is that we use a function (of course) to fit the model, save the resulting fit to an object (naturally), and then use a series of helper functions to extract whatever information we are interested in from that object: in the same way that we will use the formula notation to specify a model equation for the fitting function, regardless of model type, we also use the same set of helper functions as below for extracting information across different model types.</p>
 </div>
-<div id="regression-table-and-inference" class="section level3" number="9.3.3">
-<h3><span class="header-section-number">9.3.3</span> Regression table and inference</h3>
+<div id="regression-table-and-inference" class="section level3 hasAnchor" number="9.3.3">
+<h3><span class="header-section-number">9.3.3</span> Regression table and inference<a href="regression-linear.html#regression-table-and-inference" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The standard way to generate a standard display of a fitted regression model in R is via the function <code>summary</code>: when applied to a regression model, it will generate a table of regression coefficients, but also important statistics and measures for the model as a whole:</p>
 <div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="regression-linear.html#cb204-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(lm1)</span>
 <span id="cb204-2"><a href="regression-linear.html#cb204-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -501,8 +500,8 @@ Figure 9.1: Animated loess smooth example <a href="https://simplystatistics.org/
 <li>Bonus for linear regression aficionados: calculate the <span class="math inline">\(R^2\)</span> and adjusted <span class="math inline">\(R^2\)</span> using the functions <code>var</code> and <code>cor</code>, and the estimated residual standard error from the model fit.</li>
 </ol>
 </div>
-<div id="prediction" class="section level3" number="9.3.4">
-<h3><span class="header-section-number">9.3.4</span> Prediction</h3>
+<div id="prediction" class="section level3 hasAnchor" number="9.3.4">
+<h3><span class="header-section-number">9.3.4</span> Prediction<a href="regression-linear.html#prediction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Basic prediction</strong> Once a model has been fitted, we can use it to make predictions about the expected value of the outcome variable for a given value of the predictor variable. So in terms of the basic equation above, for any value <span class="math inline">\(x_0\)</span> of the independent variable, we can predict the corresponding expexcted / average value of the dependent variable:
 <span class="math display">\[
 {\hat y}_0 = {\hat \beta}_0 + {\hat \beta}_1 \times x_0
@@ -645,24 +644,23 @@ So we just plug the estimated regression parameters into the regression equation
 <li>Make the same predictions on the observed predictor values as the “short” form <code>predict(lm1)</code> produces, but by explicitly specifying a target via <code>newdata</code>; include a confidence interval, and build a nice prediction table that combines the target values, the predicted values and the confidence intervals.</li>
 </ol>
 </div>
-<div id="diagnostics" class="section level3" number="9.3.5">
-<h3><span class="header-section-number">9.3.5</span> Diagnostics</h3>
+<div id="diagnostics" class="section level3 hasAnchor" number="9.3.5">
+<h3><span class="header-section-number">9.3.5</span> Diagnostics<a href="regression-linear.html#diagnostics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>UNDER CONSTRUCTION</p>
 </div>
-<div id="binary-predictor-and-dummy-coding" class="section level3" number="9.3.6">
-<h3><span class="header-section-number">9.3.6</span> Binary predictor and dummy coding</h3>
+<div id="binary-predictor-and-dummy-coding" class="section level3 hasAnchor" number="9.3.6">
+<h3><span class="header-section-number">9.3.6</span> Binary predictor and dummy coding<a href="regression-linear.html#binary-predictor-and-dummy-coding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Dummy coding</strong> We can also use a binary variable as predictor in a simple linear regression model, by using <em>dummy coding</em>: for any variable with two levels, we can generate a <em>dummy variable</em> which haz value zero for one level (the <em>reference level</em>) and one for the other level (sometimes called <em>exposure level</em>). For such a dummy variable <span class="math inline">\(x_{dummy}\)</span>, we can write down the same regression equation as before:
 <span class="math display">\[
 y = \beta_0 + \beta_1 \times x_{dummy} + \epsilon
 \]</span>
-Note that we can get only two different variants of this equation:
-[</p>
-y = {
-<span class="math display">\[\begin{array}{lr} \beta_0 +          \epsilon &amp; \mathrm{iff} \,\, x_{dummy} = 0 \\
-                             \beta_0 + \beta_1 + \epsilon &amp; \mathrm{iff} \,\,x_{dummy} = 1 
-           \end{array}\]</span>
-<p>.</p>
-<p>]
+Note that we can get only two different variants of this equation:</p>
+<p><span class="math display">\[
+y = \left\{
+\begin{array}{lr} \beta_0 +          \epsilon &amp; \mathrm{iff} \,\, x_{dummy} = 0 \\
+                  \beta_0 + \beta_1 + \epsilon &amp; \mathrm{iff} \,\,x_{dummy} = 1
+\end{array}  \right.
+\]</span>
 We generally do not have to do our own dummy coding in R - this is one of the things that the formula notation does for us. However, we still need to understand the concept to understand the output that is generated.</p>
 <p><strong>Dummy coding in R</strong> Let’s look at our example, which includes menopausal status:</p>
 <div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="regression-linear.html#cb215-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> hemoglobin<span class="sc">$</span>Menopause</span>
@@ -701,7 +699,7 @@ MenopauseYes     3.74      0.664    5.63 2.41e-05</code></pre>
 <span id="cb218-4"><a href="regression-linear.html#cb218-4" aria-hidden="true" tabindex="-1"></a> [<span class="dv">1</span>] No  No  No  No  No  No  No  No  No  Yes No  Yes Yes Yes Yes Yes Yes Yes Yes Yes</span>
 <span id="cb218-5"><a href="regression-linear.html#cb218-5" aria-hidden="true" tabindex="-1"></a>Levels<span class="sc">:</span> Yes No</span></code></pre></div>
 <p><code>Yes</code> is now the first factor level in the modified data set; if we re-fit the model for the modified data, we get this:</p>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="regression-linear.html#cb219-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(<span class="fu">lm</span>(Hb <span class="sc">~</span> Menopause, hemo2))</span>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="regression-linear.html#cb219-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>( <span class="fu">lm</span>(Hb <span class="sc">~</span> Menopause, hemo2) )</span>
 <span id="cb219-2"><a href="regression-linear.html#cb219-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb219-3"><a href="regression-linear.html#cb219-3" aria-hidden="true" tabindex="-1"></a>Call<span class="sc">:</span></span>
 <span id="cb219-4"><a href="regression-linear.html#cb219-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(<span class="at">formula =</span> Hb <span class="sc">~</span> Menopause, <span class="at">data =</span> hemo2)</span>
@@ -740,8 +738,8 @@ MenopauseYes     3.74      0.664    5.63 2.41e-05</code></pre>
 <li><p>For the linear model with the re-leveled menopausal variable, can you write the complete process (releveling the factor variable, fitting the linear model, extarting the summary) in one row of R code (e.g. as nested function calls or as pipeline)?</p></li>
 </ol>
 </div>
-<div id="nicer-regression-tables" class="section level3" number="9.3.7">
-<h3><span class="header-section-number">9.3.7</span> Nicer regression tables</h3>
+<div id="nicer-regression-tables" class="section level3 hasAnchor" number="9.3.7">
+<h3><span class="header-section-number">9.3.7</span> Nicer regression tables<a href="regression-linear.html#nicer-regression-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We can use <code>pander</code> also for regression models. Directly applied to the fitted model, we get the regression table:</p>
 <div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="regression-linear.html#cb222-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">pander</span>(lm1)</span></code></pre></div>
 <table style="width:88%;">
@@ -842,10 +840,10 @@ MenopauseYes     3.74      0.664    5.63 2.41e-05</code></pre>
 </table>
 </div>
 </div>
-<div id="multiple-linear-regression" class="section level2" number="9.4">
-<h2><span class="header-section-number">9.4</span> Multiple linear regression</h2>
-<div id="multiple-predictors" class="section level3" number="9.4.1">
-<h3><span class="header-section-number">9.4.1</span> Multiple predictors</h3>
+<div id="multiple-linear-regression" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Multiple linear regression<a href="regression-linear.html#multiple-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="multiple-predictors" class="section level3 hasAnchor" number="9.4.1">
+<h3><span class="header-section-number">9.4.1</span> Multiple predictors<a href="regression-linear.html#multiple-predictors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In epidemiology, the final model in an analysis will rarely be a simple regression model with only one predictor: generally, there will be an attempt to adjust the estimated association between the main exposure and an outcome of interest for confounding by including the potential confounding variables as additional predictors in the model.</p>
 <p>In our example, we can consider age and menopausal status as such potential confounders. Including them in the model just requires adding them to the right hand side of the model formula</p>
 <div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="regression-linear.html#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lm3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Hb <span class="sc">~</span> PCV <span class="sc">+</span> Age <span class="sc">+</span> Menopause, <span class="at">data =</span> hemo)</span>
@@ -874,8 +872,8 @@ MenopauseYes     3.74      0.664    5.63 2.41e-05</code></pre>
 <p>Note that the adjusted model explains most of the variability in the data, with an adjusted <span class="math inline">\(R^2=82\%\)</span>. We also see that now, the null hypothesis of the F-test can be interesting: namely that the model as a whole (i.e. including all three predictors) does not fit the data better than a simple constant mean model (i.e. that all three slope parameters are zero at the same time). We can reject this hypothesis at <span class="math inline">\(p=7.5E-7\)</span>: we have cealry stronger evidence against the joint null hypothesis of the F-test than for the per-parameter null hypothesis for each of the parameters in the regression table.</p>
 <p>Note that the other helper functions we have discussed (<code>confint</code>, <code>predict</code> as well as <code>plot</code>) still work in the same manner.<a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a></p>
 </div>
-<div id="categorical-predictors-with-2-levels" class="section level3" number="9.4.2">
-<h3><span class="header-section-number">9.4.2</span> Categorical predictors with <span class="math inline">\(&gt;\)</span> 2 levels</h3>
+<div id="categorical-predictors-with-2-levels" class="section level3 hasAnchor" number="9.4.2">
+<h3><span class="header-section-number">9.4.2</span> Categorical predictors with <span class="math inline">\(&gt;\)</span> 2 levels<a href="regression-linear.html#categorical-predictors-with-2-levels" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Another way of adding more parameters than just intercept and slope to a regression models is by using a discrete predictor variable with more than two levels: we still get to choose one level as reference level, but then we have to add one dummy variable for each remaining level of the factor.</p>
 <p>For our example, we may want to categorize age by splitting to into three approximately equally big groups.<a href="#fn51" class="footnote-ref" id="fnref51"><sup>51</sup></a> We can use the function <code>quantile</code> to identify reasonable categories:</p>
 <div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="regression-linear.html#cb225-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">quantile</span>(hemoglobin<span class="sc">$</span>Age, <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.33</span>, <span class="fl">0.67</span>))</span>
@@ -883,7 +881,7 @@ MenopauseYes     3.74      0.664    5.63 2.41e-05</code></pre>
 <span id="cb225-3"><a href="regression-linear.html#cb225-3" aria-hidden="true" tabindex="-1"></a><span class="fl">32.81</span> <span class="fl">54.73</span> </span></code></pre></div>
 <p>So we could e.g. split the data at 35 and 55 years of age (to nicer limits):</p>
 <div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="regression-linear.html#cb226-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> hemoglobin <span class="ot">&lt;-</span> <span class="fu">transform</span>(hemoglobin, <span class="at">Age_gr =</span> <span class="fu">cut</span>(Age, <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">33</span>, <span class="dv">55</span>, <span class="dv">99</span>)))</span>
-<span id="cb226-2"><a href="regression-linear.html#cb226-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(hemoglobin<span class="sc">$</span>Age_gr)</span>
+<span id="cb226-2"><a href="regression-linear.html#cb226-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>( hemoglobin<span class="sc">$</span>Age_gr)</span>
 <span id="cb226-3"><a href="regression-linear.html#cb226-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb226-4"><a href="regression-linear.html#cb226-4" aria-hidden="true" tabindex="-1"></a> (<span class="dv">0</span>,<span class="dv">33</span>] (<span class="dv">33</span>,<span class="dv">55</span>] (<span class="dv">55</span>,<span class="dv">99</span>] </span>
 <span id="cb226-5"><a href="regression-linear.html#cb226-5" aria-hidden="true" tabindex="-1"></a>      <span class="dv">7</span>       <span class="dv">7</span>       <span class="dv">6</span> </span></code></pre></div>
@@ -916,11 +914,11 @@ Age_gr(33,55]     2.86      0.690    4.14 6.83e-04
 Age_gr(55,99]     4.97      0.718    6.92 2.46e-06</code></pre>
 <p>We now have two rows where the parameter name is constructed as variable name + exposure level: <code>Age_gr(33,55]</code> and <code>Age_gr(55, 99]</code>, each corresponding to a dummy variable for the exposure level given in the parameter name. As before, the reference level is by default the first level of the factor predictor, and is not shown explicitly in the regression table (we just happen to know that it is <code>(0,33]</code> from before). Note we have a nice and increasing trend with age: for the reference group, the average hemoglobin level is ca. 11.6 g/dl, which increases by ca. 2.9 g/dl for the 33-55 year old women, and by ca. 5.00 g/dl for the women over 55 (again relative to the reference group).</p>
 </div>
-<div id="interactions" class="section level3" number="9.4.3">
-<h3><span class="header-section-number">9.4.3</span> Interactions</h3>
+<div id="interactions" class="section level3 hasAnchor" number="9.4.3">
+<h3><span class="header-section-number">9.4.3</span> Interactions<a href="regression-linear.html#interactions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If we already more at least two predictors in a model, we can include interaction terms between that allows to easily test for effect modification. In the formula notation, we can use a <code>*</code> between two (or more) predictors to indicate that we want to include both predictors and their interaction.</p>
 <p>In our example, we may be interested to know if the association between PCV and hemoglobin level is the same for pre- and post-menopausal women: in other words, whether menopause can be considered an effect modifier for the PCV/hemoglobin association.</p>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="regression-linear.html#cb229-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lm_ia <span class="ot">=</span> <span class="fu">lm</span>(Hb <span class="sc">~</span> PCV <span class="sc">*</span> Menopause, <span class="at">data =</span> hemoglobin)</span>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="regression-linear.html#cb229-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lm_ia <span class="ot">=</span> <span class="fu">lm</span>(Hb <span class="sc">~</span> PCV <span class="sc">*</span> Menopause, <span class="at">data=</span>hemoglobin)</span>
 <span id="cb229-2"><a href="regression-linear.html#cb229-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(lm_ia)</span>
 <span id="cb229-3"><a href="regression-linear.html#cb229-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb229-4"><a href="regression-linear.html#cb229-4" aria-hidden="true" tabindex="-1"></a>Call<span class="sc">:</span></span>
@@ -951,8 +949,8 @@ Age_gr(55,99]     4.97      0.718    6.92 2.46e-06</code></pre>
 <p>UNDER CONSTRUCTION Interactions are tricky beasts, and I won’t go into too much detail here; as a general rule, if in doubt, always write down the regression equation, including any dummy variables, and set the interaction variables to the actual arithmetic product of the contributing main effect variables: in our example, the variable corresponding to <code>PCV:MenopauseYes</code> has the same value as PCV whenever the menopausal status dummy is zero (i.e. pre-menopausal/reference level) and zero otherwise. This can then be used to understand which parameter contributes to the mean of which combination of exposure levels.</p>
 <p>For the current example, we only have one interaction parameter. The corresponding null hypothesis is that the slope for the association between PCV and hemoglobin level is the same for pre- and post-menopausal women; given the rather large <span class="math inline">\(p=0.84\)</span>, we conclude that this data set does not procide sufficient evidence to reject this null hypothesis - in other words, there is no statistically significant interaction between PCV and menopausal status, and we prefer model <code>lm1</code> over model <code>lm4</code> here.</p>
 </div>
-<div id="splines" class="section level3" number="9.4.4">
-<h3><span class="header-section-number">9.4.4</span> Splines</h3>
+<div id="splines" class="section level3 hasAnchor" number="9.4.4">
+<h3><span class="header-section-number">9.4.4</span> Splines<a href="regression-linear.html#splines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Despite the name, we can use linear regression models for what are apparently “non-linear” associations between a predictor and an outcome variable, by adding transformations of the predictor variable to the model. The simplest case is a quadratic regression model:
 <span class="math display">\[
 y = \beta_0 + \beta_1 \times x + \beta_2 \times x^2
@@ -961,7 +959,7 @@ Despite being a multi-predictor linear regression model (with predictors <span c
 <p>A more general variant of this idea (using multiple transformations of the same underlying variable as predictors) can be implemented via so-called <em>spline terms</em>. These are smoothing functions similar to the loess smoother we have seen in sub-section <a href="regression-linear.html#scatter-loess">9.3.1</a>, but designed to be included in a regression model rather than just for visual representation. Like the loess curves, splines have the ability to summarize a curvilinear relationship between two variables with a smooth curve.</p>
 <p>In our example, we can add such a spline term via function <code>ns</code> in package <code>splines</code>. We simply apply <code>ns</code> to the variable for which we want to have a spline term include, in our case PCV:</p>
 <div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="regression-linear.html#cb230-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">require</span>(splines)</span>
-<span id="cb230-2"><a href="regression-linear.html#cb230-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lm_spl <span class="ot">&lt;-</span> <span class="fu">lm</span>(Hb <span class="sc">~</span> <span class="fu">ns</span>(PCV, <span class="at">df =</span> <span class="dv">3</span>), <span class="at">data =</span> hemoglobin)</span></code></pre></div>
+<span id="cb230-2"><a href="regression-linear.html#cb230-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lm_spl <span class="ot">&lt;-</span> <span class="fu">lm</span>(Hb <span class="sc">~</span> <span class="fu">ns</span>(PCV, <span class="at">df=</span><span class="dv">3</span>), <span class="at">data =</span> hemoglobin)</span></code></pre></div>
 <p>The second argument to <code>ns</code> are the <em>degrees of freedom</em>, which is the number of transformed variables (and therefore the number of regression parameters) that will be included in the model for the relationship between PCV and hemoglobin level; generally speaking, the more degrees of freedom we add, the more closely the curve will follow the data, and the fewer we use, the stronger the spline term will smooth out local variability. For our small data set, three degrees of freedom is seems like a suitable starting point.</p>
 <p>Let’s look at the summary:</p>
 <div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="regression-linear.html#cb231-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(lm_spl)</span>
@@ -992,8 +990,8 @@ Despite being a multi-predictor linear regression model (with predictors <span c
 We see that the spline curve actually captures the same small bump in the middle of the scatterplot that we have seen from the loess curve above.</p>
 <p><strong>Exercise:</strong> You can experiment with <code>ns(PCV, df=k)</code> and <code>termplot</code> to study the shape of the spline curve for different values <span class="math inline">\(k\)</span> as degrees of freedom. What happens if you increase <span class="math inline">\(k\)</span>? When you decrease it? Is the expression “overfitting” appropriate in any setting?</p>
 </div>
-<div id="model-comparisons" class="section level3" number="9.4.5">
-<h3><span class="header-section-number">9.4.5</span> Model comparisons</h3>
+<div id="model-comparisons" class="section level3 hasAnchor" number="9.4.5">
+<h3><span class="header-section-number">9.4.5</span> Model comparisons<a href="regression-linear.html#model-comparisons" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We are reasonably often interested in comparing two regression models for the same data. If the two models are nested, i.e. all predictors variables of the smaller model are also included in the larger model, we can use an F-test to test the null hypothesis that both models explan the data equally well (i.e. the larger model does not contribute anything extra), via the function <code>anova</code>.</p>
 <p>For our example, we may be interested in comparing the model with a simple linear association between PCV and hemoglobin level (<code>lm1</code>) and the spline model we have just fitted in the previous sub-section:<a href="#fn53" class="footnote-ref" id="fnref53"><sup>53</sup></a></p>
 <div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="regression-linear.html#cb233-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">anova</span>(lm1, lm_spl)</span>
@@ -1015,8 +1013,8 @@ We see that the spline curve actually captures the same small bump in the middle
 <p><strong>Exercise</strong>: Compare the <span class="math inline">\(R^2\)</span>- and adjusted <span class="math inline">\(R^2\)</span>-values for models <code>lm1</code> and <code>lm_spl</code>. In the light of the <code>anova</code>-results above, which value seems to describe the actual model fit better?</p>
 </div>
 </div>
-<div id="technical-notes-4" class="section level2" number="9.5">
-<h2><span class="header-section-number">9.5</span> Technical notes</h2>
+<div id="technical-notes-4" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Technical notes<a href="regression-linear.html#technical-notes-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
@@ -1101,7 +1099,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

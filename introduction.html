@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Working with R | Introduction to R</title>
   <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Working with R | Introduction to R" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
   
@@ -23,7 +22,7 @@
 
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2023-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="background.html"/>
 <link rel="next" href="intro_rstudio.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -382,10 +381,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Working with R</h1>
-<div id="starting-r" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Starting R</h2>
+<div id="introduction" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Working with R<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="starting-r" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Starting R<a href="introduction.html#starting-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>R is started like any other program, depending on the operating system (Start menu, Launchpad etc.). The resulting application window looks quite different between systems. Below we see the window for an elderly R 3.6.1 on Windows 10.</p>
 <p><img src="figures/Rgui_3_6_1_Windows10.png" width="90%" style="display: block; margin: auto;" /></p>
 <p>Note that the application window has a menu bar at the top - however, it only offers a limited set of entries that deal with meta-issues: running script files, changing working directories, installing and loading add-on packages and displaying help information. None of this is directly concerned with data processing or analysis, and everything offered by the menu bar can be done in the R console using the appropriate commands or key-combinations (Ctrl-V etc.)</p>
@@ -400,11 +399,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>(In computer science, this is also known as <em>REPL</em>, a read-evaluate-print loop.)</p>
 <p>Compared to a menu-driven program like SPSS or Stata, this has the obvious disadvantage that you have to know what commands to use: it is not enough to know that you want to fit a linear model, but you also have to remember that the command for linear models is <code>lm</code>. We have to invest the time to get reasonably familiar with at least enough R commands to (a) be somewhat productive and (b) learn more as required.</p>
 <p><strong>Example: Numerical calculations</strong> Numerical expressions can be directly evaluated at the command line:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">1</span><span class="sc">+</span><span class="dv">1</span></span>
 <span id="cb1-2"><a href="introduction.html#cb1-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">2</span></span>
-<span id="cb1-3"><a href="introduction.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">7</span></span>
+<span id="cb1-3"><a href="introduction.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">2</span><span class="sc">*</span><span class="dv">7</span></span>
 <span id="cb1-4"><a href="introduction.html#cb1-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">14</span></span>
-<span id="cb1-5"><a href="introduction.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">*</span> (<span class="fl">0.5</span> <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb1-5"><a href="introduction.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span> <span class="sc">+</span> <span class="dv">3</span><span class="sc">*</span>(<span class="fl">0.5</span> <span class="sc">+</span> <span class="dv">1</span>)</span>
 <span id="cb1-6"><a href="introduction.html#cb1-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">4.642857</span></span>
 <span id="cb1-7"><a href="introduction.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">2</span><span class="sc">^</span><span class="dv">3</span></span>
 <span id="cb1-8"><a href="introduction.html#cb1-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">8</span></span></code></pre></div>
@@ -430,22 +429,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-10"><a href="introduction.html#cb2-10" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">2</span></span></code></pre></div>
 <p>In order to apply a function, we simply type the name of the function at the command prompt, followed by the value we want to apply it to in parentheses. This value in parenthesis is referred to as the <em>argument</em> of the function.</p>
 <p>Numerical functions of this type can be mixed with general numerical expressions in a completely natural and intuitive manner:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">7</span> <span class="sc">+</span> <span class="dv">9</span>)</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">7</span><span class="sc">+</span><span class="dv">9</span>)</span>
 <span id="cb3-2"><a href="introduction.html#cb3-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">4</span></span>
-<span id="cb3-3"><a href="introduction.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> (<span class="fl">2.1</span> <span class="sc">+</span> <span class="fl">7.4</span> <span class="sc">+</span> <span class="fl">3.5</span>)<span class="sc">/</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">sqrt</span>(<span class="dv">23</span><span class="sc">/</span><span class="dv">3</span>)</span>
+<span id="cb3-3"><a href="introduction.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> (<span class="fl">2.1</span> <span class="sc">+</span> <span class="fl">7.4</span> <span class="sc">+</span> <span class="fl">3.5</span>) <span class="sc">/</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">23</span> <span class="sc">/</span> <span class="dv">3</span>)</span>
 <span id="cb3-4"><a href="introduction.html#cb3-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">9.871083</span></span>
-<span id="cb3-5"><a href="introduction.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">exp</span>(<span class="fl">0.71</span> <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> <span class="fl">0.12</span>)</span>
+<span id="cb3-5"><a href="introduction.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">exp</span>(<span class="fl">0.71</span> <span class="sc">-</span> <span class="fl">1.96</span><span class="sc">*</span><span class="fl">0.12</span>)</span>
 <span id="cb3-6"><a href="introduction.html#cb3-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">1.607693</span></span></code></pre></div>
 <p>Interesting fact: R does not worry about blank spaces, as long as they do not appear within names (or strings - more about that later)</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">5</span>)</span>
 <span id="cb4-2"><a href="introduction.html#cb4-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.236068</span></span>
-<span id="cb4-3"><a href="introduction.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">5</span>)</span>
+<span id="cb4-3"><a href="introduction.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>( <span class="dv">5</span> )</span>
 <span id="cb4-4"><a href="introduction.html#cb4-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.236068</span></span>
-<span id="cb4-5"><a href="introduction.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">5</span>)</span>
+<span id="cb4-5"><a href="introduction.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>  (  <span class="dv">5</span> )</span>
 <span id="cb4-6"><a href="introduction.html#cb4-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.236068</span></span></code></pre></div>
 </div>
-<div id="storing-data-as-objects" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Storing data as objects</h2>
+<div id="storing-data-as-objects" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Storing data as objects<a href="introduction.html#storing-data-as-objects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>R allows you to store values as <em>variables</em> or <em>objects</em> under a name of your choice (with some technical limitations, see below). This name can then be used in any kind of expression as a shorthand for the value; when the expression is evaluated, R will substitute the value for the name.</p>
 <p>This definition of values is done via <em>assignment</em>: we write first the name of the variable, an assignment operator, and the value we want to store. Symbolically:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>name<span class="sc">&gt;</span> <span class="er">&lt;</span><span class="sc">-</span> <span class="er">&lt;</span>value<span class="sc">&gt;</span></span></code></pre></div>
@@ -472,14 +471,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb9-7"><a href="introduction.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="sc">+</span> y</span>
 <span id="cb9-8"><a href="introduction.html#cb9-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">21.10555</span></span>
 <span id="cb9-9"><a href="introduction.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> z <span class="ot">&lt;-</span> x <span class="sc">+</span> y</span>
-<span id="cb9-10"><a href="introduction.html#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="sc">*</span> y <span class="sc">+</span> <span class="fu">log</span>(z)</span>
+<span id="cb9-10"><a href="introduction.html#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x<span class="sc">*</span>y <span class="sc">+</span> <span class="fu">log</span>(z)</span>
 <span id="cb9-11"><a href="introduction.html#cb9-11" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">66.14668</span></span></code></pre></div>
 <p>We can always overwrite an existing variable with a new value:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="introduction.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
 <span id="cb10-2"><a href="introduction.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x</span>
 <span id="cb10-3"><a href="introduction.html#cb10-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">1</span></span></code></pre></div>
-<div id="about-variable-names" class="section level3" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> About variable names</h3>
+<div id="about-variable-names" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> About variable names<a href="introduction.html#about-variable-names" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The R documentation states : “A syntactically valid name consists of letters, numbers and the dot or underline characters and starts with a letter or the dot not followed by a number.”</p>
 <p>In practice:</p>
 <ul>
@@ -488,20 +487,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </div>
 </div>
-<div id="data-structure-i-the-vector" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Data structure I: The vector</h2>
+<div id="data-structure-i-the-vector" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Data structure I: The vector<a href="introduction.html#data-structure-i-the-vector" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>All this is reasonable as long as we want to work with one observation at a time. But what if we want to calculate the mean of five numbers? We want to be able to deal with multiple observations of the same type (here: numbers) in one go: we want to store them together, calculate their mean and standard deviation with one simple function, plot them in the same figure etc.</p>
 <p>This is where the concept of a <em>vector</em> comes in: this is a collection of numbers arranged in linear order, from first to last value. Conceptually, if we measure some kind of quantity, like e.g. height or weight, on a number of subjects, the measurements from first to last subject form a vector of numbers.</p>
 <p>The key to defining a vector is the function <code>c</code> used to <em>combine</em> several data items of the same type. Example:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="introduction.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.9</span>, <span class="fl">2.45</span>)</span>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="introduction.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.90</span>, <span class="fl">2.45</span>)</span>
 <span id="cb11-2"><a href="introduction.html#cb11-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.57</span> <span class="fl">3.14</span> <span class="fl">3.78</span> <span class="fl">1.90</span> <span class="fl">2.45</span></span></code></pre></div>
 <p>Note that <em>c</em> is a function, same as <code>sqrt</code> or <code>log</code>, but it accepts any number of arguments (the numbers to be combined together). It returns a vector consisting of these arguments.</p>
 <p>We can feed the resulting vector directly to e.g. function <code>mean</code> like this:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="introduction.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">mean</span>(<span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.9</span>, <span class="fl">2.45</span>))</span>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="introduction.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">mean</span>( <span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.90</span>, <span class="fl">2.45</span>) )</span>
 <span id="cb12-2"><a href="introduction.html#cb12-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.768</span></span></code></pre></div>
 <p>Here, <code>mean</code> is a function that takes a vector as argument, and returns one value, the arithemtic mean of the values in the vector. However, this not the most useful way of handling data, as we still have to carry around a (potentially very long) set of values. In practice, the real power of the vector-concept is realized when we store them as an object: this gives us a useful handle (the name) for accessing and processing what is a potentially a very large amount of data.</p>
 <p>Example:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="introduction.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.9</span>, <span class="fl">2.45</span>)</span>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="introduction.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.90</span>, <span class="fl">2.45</span>)</span>
 <span id="cb13-2"><a href="introduction.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">mean</span>(x)</span>
 <span id="cb13-3"><a href="introduction.html#cb13-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.768</span></span>
 <span id="cb13-4"><a href="introduction.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">median</span>(x)</span>
@@ -512,8 +511,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb13-9"><a href="introduction.html#cb13-9" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">1.90</span> <span class="fl">3.78</span></span></code></pre></div>
 <p>Note that the functions above work as you would expect from their (abbreviated) names. They all take a vector as argument and return a single value, the desired statistic, except for <code>range</code>, which returns two values, the minimum and maximum of the values in the vector. In other words, <code>range</code> returns a vector of length two.</p>
 <p>As a matter of fact, technically and conceptually, a single number in R is just a vector of length one: the basic concept is not the single number, intuitive as it appears to us, but the vector, which just may happen to be really short.</p>
-<div id="example-simple-descriptives" class="section level3" number="2.3.1">
-<h3><span class="header-section-number">2.3.1</span> Example: simple descriptives</h3>
+<div id="example-simple-descriptives" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Example: simple descriptives<a href="introduction.html#example-simple-descriptives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s pretend that our current vector <code>x</code> actually contains interesting data, and that we want to run some very basic descriptives on it, by calculating some common numerical descriptives, and generating a somewhat informative plot.</p>
 <p>A very commonly used function in R is <code>summary</code>: when applied to a numerical vector, it will return a six-value summary of the data in the vector (note that this is one more summary value than actual data values for this example, but bear with me).</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="introduction.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(x)</span>
@@ -531,8 +530,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb15-3"><a href="introduction.html#cb15-3" aria-hidden="true" tabindex="-1"></a>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
 <span id="cb15-4"><a href="introduction.html#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fl">1.900</span>   <span class="fl">2.450</span>   <span class="fl">2.570</span>   <span class="fl">2.768</span>   <span class="fl">3.140</span>   <span class="fl">3.780</span> </span></code></pre></div>
 </div>
-<div id="example-simple-plots" class="section level3" number="2.3.2">
-<h3><span class="header-section-number">2.3.2</span> Example: simple plots</h3>
+<div id="example-simple-plots" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Example: simple plots<a href="introduction.html#example-simple-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now let’s produce a simple boxplot. This could not be any simpler:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="introduction.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">boxplot</span>(x)</span></code></pre></div>
 <p><img src="introductio-to-r_files/figure-html/unnamed-chunk-18-1.png" width="80%" style="display: block; margin: auto;" /></p>
@@ -550,8 +549,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 </div>
 </div>
-<div id="non-numeric-data" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Non-numeric data</h2>
+<div id="non-numeric-data" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Non-numeric data<a href="introduction.html#non-numeric-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s take one step back. In real data analysis, we do not only deal with numbers, but also with textual data: sex, disease, case-control status, tumor grade etc. Now this information can of course be coded numerically, but you do want a statistics program that actually does that for you when and if that is really required. Also, to this day I cannot rememeber whether a numerical code of 1 is supposed to stand for male or female, so coding everything numerically is a very good way to produce all kinds of mis-interpretations of your data and results.</p>
 <p>So any useful statistics program needs to be able to deal with textual information, and R is pretty good at that.</p>
 <p>The basic data type for text is <code>character</code>: character values are specified by enclosing the text we want to process in matched quotation marks, either double (<code>"</code>) or single (<code>'</code>). E.g.:</p>
@@ -559,7 +558,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb18-2"><a href="introduction.html#cb18-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;female&quot;</span></span>
 <span id="cb18-3"><a href="introduction.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&quot;male&quot;</span></span>
 <span id="cb18-4"><a href="introduction.html#cb18-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;male&quot;</span></span>
-<span id="cb18-5"><a href="introduction.html#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&quot;case&quot;</span></span>
+<span id="cb18-5"><a href="introduction.html#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&#39;case&#39;</span></span>
 <span id="cb18-6"><a href="introduction.html#cb18-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;case&quot;</span></span>
 <span id="cb18-7"><a href="introduction.html#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&quot;Grade III&quot;</span></span>
 <span id="cb18-8"><a href="introduction.html#cb18-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;Grade III&quot;</span></span></code></pre></div>
@@ -581,8 +580,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb21-2"><a href="introduction.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> g</span>
 <span id="cb21-3"><a href="introduction.html#cb21-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;case&quot;</span>    <span class="st">&quot;control&quot;</span> <span class="st">&quot;control&quot;</span> <span class="st">&quot;case&quot;</span>    <span class="st">&quot;control&quot;</span></span></code></pre></div>
 <p>We have now defined the case/control status for five different subjects (e.g. the same five subjects). How would we run descriptives for them?</p>
-<div id="descriptives-for-grouping-data" class="section level3" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> Descriptives for grouping data</h3>
+<div id="descriptives-for-grouping-data" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Descriptives for grouping data<a href="introduction.html#descriptives-for-grouping-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Observations that are not naturally reported as numbers, but rather as text, are on a nominal (or at best ordinal) scale. Their information can be naturally described via their absolute and relative frequencies.</p>
 <p>The standard way to report frequencies is via the function <code>table</code>: if given a vector, it will return a table with the counts for each distinct value that is part of the vector:</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="introduction.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(g)</span>
@@ -601,7 +600,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb24-4"><a href="introduction.html#cb24-4" aria-hidden="true" tabindex="-1"></a>   case control </span>
 <span id="cb24-5"><a href="introduction.html#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.4</span>     <span class="fl">0.6</span> </span></code></pre></div>
 <p>It is however absolutely legitimate in R to do this in one step, by nesting the function calls like so:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="introduction.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">proportions</span>(<span class="fu">table</span>(g))</span>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="introduction.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">proportions</span>( <span class="fu">table</span>(g) )</span>
 <span id="cb25-2"><a href="introduction.html#cb25-2" aria-hidden="true" tabindex="-1"></a>g</span>
 <span id="cb25-3"><a href="introduction.html#cb25-3" aria-hidden="true" tabindex="-1"></a>   case control </span>
 <span id="cb25-4"><a href="introduction.html#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.4</span>     <span class="fl">0.6</span> </span></code></pre></div>
@@ -610,7 +609,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="introduction.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">barplot</span>(tab)</span></code></pre></div>
 <p><img src="introductio-to-r_files/figure-html/unnamed-chunk-28-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>And of course we could do the same for the relative frequencies, though this would not change anything except for the scale of the vertical axis in our simple example. We therefore decide to use the function <code>title</code> to add an appropriate header (title) to the plot:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="introduction.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">barplot</span>(<span class="fu">proportions</span>(tab))</span>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="introduction.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">barplot</span>( <span class="fu">proportions</span>(tab) )</span>
 <span id="cb27-2"><a href="introduction.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">title</span>(<span class="st">&quot;Proportion of cases &amp; controls&quot;</span>)</span></code></pre></div>
 <p><img src="introductio-to-r_files/figure-html/unnamed-chunk-29-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Here, <code>title</code> is a function that takes as argument a string and puts it on top of the existing plot. Again, we don’t see a return value, but a side effect.</p>
@@ -620,8 +619,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>What happens if there is no plot defined when we use the <code>title</code> function (kill the plotting window if necessary)?</li>
 </ol>
 </div>
-<div id="character-vector-vs-factor" class="section level3" number="2.4.2">
-<h3><span class="header-section-number">2.4.2</span> Character vector vs factor</h3>
+<div id="character-vector-vs-factor" class="section level3 hasAnchor" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Character vector vs factor<a href="introduction.html#character-vector-vs-factor" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>While character is the basic data type for non-numeric data, R has a second, different data type that serves the same purpose, i.e. capturing non-numeric information. This data type is <em>factor</em>. Factors are generated by applying the function of the same name to a vector.</p>
 <p>For a simple example, we can use <code>factor</code> to convert the grouping variable that we have previously defined:</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="introduction.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> f <span class="ot">&lt;-</span> <span class="fu">factor</span>(g)</span>
@@ -645,8 +644,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>As a general rule, more based on tradition than strict necessity these days, we use factors in R for nominal data, and characters for (often unique) names and labels.</p>
 </div>
 </div>
-<div id="general-data-in-r" class="section level2" number="2.5">
-<h2><span class="header-section-number">2.5</span> General data in R</h2>
+<div id="general-data-in-r" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> General data in R<a href="introduction.html#general-data-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have now two variables for our trivial example: <code>x</code> containing the continuous measurements and <code>f</code> containing the grouping information. These variables have the same length and relate to the same subjects, i.e. the first elements of the vectors hold the information for the first subject. In reality of course, we generally have more than just two variables in the same data set, and handling them all as separate objects is highly impractical. We need a way to combine all information related to the same subjects into one object for easy reference and manipulation.</p>
 <p>In R, the basic data type for a general data set containing numerical, grouping or other variables is the <em>data frame</em>. This is a rectangular arrangement of data, where rows correspond to different subjects and columns to different variables - the standard arrangement of data for statistical software (not just R). A data frame can be generated in different ways; if the variables (columns) are already defined as for our trivial example, we can use the function <code>data.frame</code> to combine them into a a data frame:</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="introduction.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> exdat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(f, x)</span>
@@ -668,8 +667,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb32-7"><a href="introduction.html#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>    case    <span class="fl">1.90</span></span>
 <span id="cb32-8"><a href="introduction.html#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> control    <span class="fl">2.45</span></span></code></pre></div>
 <p>The rules for the column names are the same as for object names in R, see above.</p>
-<div id="extracting-parts-of-a-data-frame" class="section level3" number="2.5.1">
-<h3><span class="header-section-number">2.5.1</span> Extracting parts of a data frame</h3>
+<div id="extracting-parts-of-a-data-frame" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Extracting parts of a data frame<a href="introduction.html#extracting-parts-of-a-data-frame" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now that we have put all our data together into a data frame, we don’t want this to be a black hole: we want to be able to get everything out that we have put in. We will take about this in some detail in Section <a href="data-processing.html#data-processing">6</a>, but for now we will focus on how we can get back either the original vectors or subsets of the full data.</p>
 <p>To extract a vector from a data frame, we can use the <code>$</code> notation: the name of the data frame followed by the name of the column, separated by a <code>$</code> symbol:</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="introduction.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> exdat<span class="sc">$</span>Group</span>
@@ -700,8 +699,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>What happens if we define an invalid condition, e.g. <code>Group == "ccase"</code>?</li>
 </ol>
 </div>
-<div id="ex_desc_stats" class="section level3" number="2.5.2">
-<h3><span class="header-section-number">2.5.2</span> Example: descriptive statistics</h3>
+<div id="ex_desc_stats" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> Example: descriptive statistics<a href="introduction.html#ex_desc_stats" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We can use the function <code>summary</code> to calculate the standard summaries for all columns of a data frame:</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="introduction.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(exdat)</span>
 <span id="cb36-2"><a href="introduction.html#cb36-2" aria-hidden="true" tabindex="-1"></a>     Group      Outcome     </span>
@@ -717,7 +716,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="introductio-to-r_files/figure-html/unnamed-chunk-39-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Here, the first argument is a so-called <em>formula</em>, a type of specification that we will see more of when we do regression. Formulas are characterized by the tilde symbol <code>~</code> that in R can be generally read as “as a function of”: in our example, we can read the function call above as “create a boxplot of <code>Outcome</code> as a function of <code>Group</code>, where the data (and column names) are taken from data frame <code>exdat</code>”.</p>
 <p>Note that we can combine the <code>summary</code> and <code>subset</code> commands to generate descriptives for parts of the data:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="introduction.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(<span class="fu">subset</span>(exdat, Group <span class="sc">==</span> <span class="st">&quot;control&quot;</span>))</span>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="introduction.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>( <span class="fu">subset</span>(exdat, Group <span class="sc">==</span> <span class="st">&quot;control&quot;</span>) )</span>
 <span id="cb38-2"><a href="introduction.html#cb38-2" aria-hidden="true" tabindex="-1"></a>     Group      Outcome     </span>
 <span id="cb38-3"><a href="introduction.html#cb38-3" aria-hidden="true" tabindex="-1"></a> case   <span class="sc">:</span><span class="dv">0</span>   Min.   <span class="sc">:</span><span class="fl">2.450</span>  </span>
 <span id="cb38-4"><a href="introduction.html#cb38-4" aria-hidden="true" tabindex="-1"></a> control<span class="sc">:</span><span class="dv">3</span>   1st Qu.<span class="sc">:</span><span class="fl">2.795</span>  </span>
@@ -727,13 +726,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb38-8"><a href="introduction.html#cb38-8" aria-hidden="true" tabindex="-1"></a>             Max.   <span class="sc">:</span><span class="fl">3.780</span>  </span></code></pre></div>
 </div>
 </div>
-<div id="importing-data" class="section level2" number="2.6">
-<h2><span class="header-section-number">2.6</span> Importing data</h2>
+<div id="importing-data" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Importing data<a href="introduction.html#importing-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Generally, we do not use R for data entry, which is as it should be: the data entry facilities in R are minimalistic, and it is overall a good idea to separate any kind of manual data modification and the actual data analysis. Instead, we usually have an external source of data, either as a data file (or several) or as a database. For small to medium data sets, the standard format for data exchange is still often a text file: they are simple, robust and are supported by pretty much every statistical software.</p>
 <p>Text files can be read into R by the function <code>read.table</code>. This function takes as main argument the name of the file to be read, and returns a data frame with the content of the file. <code>read.table</code> has a large number of additional arguments that can be used to control in great detail how exactly the text file is processed into a data frame, but for starters we can live with the pre-defined default values for almost all of them, see example below.</p>
 <p>However, in order to read files, we have to understand how R interacts with the file system and its folders on the hard disk. The central concept here is the <em>working directory</em> in R (not to be confused with the working environment), which is the default place where R looks for files if no explicit path is specified. We can use the function <code>getwd</code> to check what the current working directory is:</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="introduction.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">getwd</span>()</span>
-<span id="cb39-2"><a href="introduction.html#cb39-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;/home/work_monkey/@ownCloudKI/Intro2R_book&quot;</span></span></code></pre></div>
+<span id="cb39-2"><a href="introduction.html#cb39-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;/home/work_monkey/@OneDriveKI/Intro2R_book&quot;</span></span></code></pre></div>
 <p>This function returns a string with the name of the directory (note that R uses by default the slash <code>/</code> as separator between directory names, even on Windows, where the backslash <code>\</code> is standard; we’ll take more about this when we look a bit closer at strings).</p>
 <p>We can use the function <code>dir</code> to display the content of the working directory:</p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="introduction.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">dir</span>()</span>
@@ -744,24 +743,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb40-6"><a href="introduction.html#cb40-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">&quot;figures&quot;</span>                   <span class="st">&quot;graphics_base.Rmd&quot;</span>         <span class="st">&quot;graphics_ggplot2.Rmd&quot;</span>     </span>
 <span id="cb40-7"><a href="introduction.html#cb40-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">16</span>] <span class="st">&quot;index.Rmd&quot;</span>                 <span class="st">&quot;intro_example.Rmd&quot;</span>         <span class="st">&quot;intro_R.Rmd&quot;</span>              </span>
 <span id="cb40-8"><a href="introduction.html#cb40-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">19</span>] <span class="st">&quot;intro_RStudio.Rmd&quot;</span>         <span class="st">&quot;introductio-to-r_cache&quot;</span>    <span class="st">&quot;introductio-to-r_files&quot;</span>   </span>
-<span id="cb40-9"><a href="introduction.html#cb40-9" aria-hidden="true" tabindex="-1"></a>[<span class="dv">22</span>] <span class="st">&quot;introductio-to-r.Rmd&quot;</span>      <span class="st">&quot;introduction2r.Rproj&quot;</span>      <span class="st">&quot;nice_tables.Rmd&quot;</span>          </span>
-<span id="cb40-10"><a href="introduction.html#cb40-10" aria-hidden="true" tabindex="-1"></a>[<span class="dv">25</span>] <span class="st">&quot;packages.bib&quot;</span>              <span class="st">&quot;preamble.tex&quot;</span>              <span class="st">&quot;regression_linear.Rmd&quot;</span>    </span>
-<span id="cb40-11"><a href="introduction.html#cb40-11" aria-hidden="true" tabindex="-1"></a>[<span class="dv">28</span>] <span class="st">&quot;regression_other.Rmd&quot;</span>      <span class="st">&quot;scripting_workflow.Rmd&quot;</span>    <span class="st">&quot;style.css&quot;</span>                </span>
-<span id="cb40-12"><a href="introduction.html#cb40-12" aria-hidden="true" tabindex="-1"></a>[<span class="dv">31</span>] <span class="st">&quot;toc.css&quot;</span>                  </span></code></pre></div>
+<span id="cb40-9"><a href="introduction.html#cb40-9" aria-hidden="true" tabindex="-1"></a>[<span class="dv">22</span>] <span class="st">&quot;introductio-to-r.Rmd&quot;</span>      <span class="st">&quot;introduction2r.Rproj&quot;</span>      <span class="st">&quot;libs&quot;</span>                     </span>
+<span id="cb40-10"><a href="introduction.html#cb40-10" aria-hidden="true" tabindex="-1"></a>[<span class="dv">25</span>] <span class="st">&quot;nice_tables.Rmd&quot;</span>           <span class="st">&quot;packages.bib&quot;</span>              <span class="st">&quot;preamble.tex&quot;</span>             </span>
+<span id="cb40-11"><a href="introduction.html#cb40-11" aria-hidden="true" tabindex="-1"></a>[<span class="dv">28</span>] <span class="st">&quot;regression_linear.Rmd&quot;</span>     <span class="st">&quot;regression_other.Rmd&quot;</span>      <span class="st">&quot;scripting_workflow.Rmd&quot;</span>   </span>
+<span id="cb40-12"><a href="introduction.html#cb40-12" aria-hidden="true" tabindex="-1"></a>[<span class="dv">31</span>] <span class="st">&quot;style.css&quot;</span>                 <span class="st">&quot;toc.css&quot;</span>                  </span></code></pre></div>
 <p>This function returns a character vector with the names of the files and sub-directories of the current working directory. In our case, the file we will need for the following example, <code>saltadd.txt</code> is in sub-directory <code>Data</code>.</p>
 </div>
-<div id="meta-activity" class="section level2" number="2.7">
-<h2><span class="header-section-number">2.7</span> Meta-activity</h2>
+<div id="meta-activity" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Meta-activity<a href="introduction.html#meta-activity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This covers activities that are not part of the actual data handling, but are still crucial for using R efficiently.</p>
-<div id="getting-help" class="section level3" number="2.7.1">
-<h3><span class="header-section-number">2.7.1</span> Getting help</h3>
+<div id="getting-help" class="section level3 hasAnchor" number="2.7.1">
+<h3><span class="header-section-number">2.7.1</span> Getting help<a href="introduction.html#getting-help" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Getting help on functions in R is easy:</p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="introduction.html#cb41-1" aria-hidden="true" tabindex="-1"></a>?sd</span></code></pre></div>
 <p>This will generally open the R HTML help page for the function of interest in the default browser. Note that this page has active links to the package where the function lives (and usually related functions as well) and to the top index of the HTML help.</p>
 <p>Exercise: read the documentation for function <code>make.names</code> to make sure that the description of a valid name for an R object given above is correct; check the examples to see the effect of the function.</p>
 </div>
-<div id="keeping-track-of-objects" class="section level3" number="2.7.2">
-<h3><span class="header-section-number">2.7.2</span> Keeping track of objects</h3>
+<div id="keeping-track-of-objects" class="section level3 hasAnchor" number="2.7.2">
+<h3><span class="header-section-number">2.7.2</span> Keeping track of objects<a href="introduction.html#keeping-track-of-objects" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We have now actually defined a number of objects. All of these are stored under their name in the working or global environment, which is just a part of the main memory that R has set aside for storing variables. From the top of your head, how many objects are there?</p>
 <p>… so we need a way of keeping track of the variables; as usually in R this is done via a function, in this case <code>ls</code> (for <em>list</em>):</p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="introduction.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ls</span>()</span>
@@ -789,8 +788,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb44-5"><a href="introduction.html#cb44-5" aria-hidden="true" tabindex="-1"></a> [<span class="dv">9</span>] <span class="st">&quot;pi&quot;</span>                 <span class="st">&quot;sum_x&quot;</span>              <span class="st">&quot;tab&quot;</span>                <span class="st">&quot;x&quot;</span>                 </span>
 <span id="cb44-6"><a href="introduction.html#cb44-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">&quot;y&quot;</span>                  <span class="st">&quot;z&quot;</span>                 </span></code></pre></div>
 </div>
-<div id="quitting-r" class="section level3" number="2.7.3">
-<h3><span class="header-section-number">2.7.3</span> Quitting R</h3>
+<div id="quitting-r" class="section level3 hasAnchor" number="2.7.3">
+<h3><span class="header-section-number">2.7.3</span> Quitting R<a href="introduction.html#quitting-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Once we are done for the day, we want to safely shut down our computer, including R, and go home (well, at least pre-pandemic). We want to be able to do this without losing our work, though, therefore some remarks on how to quit R safely.</p>
 <p>We can terminate the program through the GUI either via a menu or by killing the console window, or as usually in R, by calling a function - usually <code>q()</code> (function <code>q</code> without argument, like <code>ls</code> above).</p>
 <p>There are three aspects to our work:</p>
@@ -878,7 +877,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

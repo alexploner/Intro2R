@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Working in RStudio | Introduction to R</title>
   <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Working in RStudio | Introduction to R" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
   
@@ -23,7 +22,7 @@
 
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2023-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="introduction.html"/>
 <link rel="next" href="intro-example.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -382,10 +381,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro_rstudio" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Working in RStudio</h1>
-<div id="getting-started" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Getting started</h2>
+<div id="intro_rstudio" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Working in RStudio<a href="intro_rstudio.html#intro_rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="getting-started" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Getting started<a href="intro_rstudio.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The RStudio program window is typically split into up to four different quadrants
 or <em>panes</em>. The screenshot below shows a typical configuration with three panes:</p>
 <p><img src="figures/RStudio_1_4_1106/Full3pane_empty.png" width="90%" style="display: block; margin: auto;" /></p>
@@ -394,17 +393,17 @@ or <em>panes</em>. The screenshot below shows a typical configuration with three
 <p>In the bottom right panel, we see the <strong>Files</strong> tab, which lists the files in the current working directory. This pane works as an internal file browser, where the user can travel through the directory hierarchy on the hard disk and inspect and manipulate files.</p>
 <p>Note that all three panes are <em>tabbed</em>, i.e. other functionality is available in separate tabs (like <em>History</em> on the top and <em>Packages</em> and <em>Plots</em> on the bottom).</p>
 </div>
-<div id="a-quick-tour-of-the-gui" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> A quick tour of the GUI</h2>
-<div id="console-and-friends" class="section level3" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> Console and friends</h3>
+<div id="a-quick-tour-of-the-gui" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> A quick tour of the GUI<a href="intro_rstudio.html#a-quick-tour-of-the-gui" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="console-and-friends" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Console and friends<a href="intro_rstudio.html#console-and-friends" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For all practical purposes, the RStudio console is identical to the R console. We can run the same commands as above to generate some example data and objects:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="intro_rstudio.html#cb45-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.9</span>, <span class="fl">2.45</span>)</span>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="intro_rstudio.html#cb45-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.90</span>, <span class="fl">2.45</span>)</span>
 <span id="cb45-2"><a href="intro_rstudio.html#cb45-2" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;case&quot;</span>, <span class="st">&quot;control&quot;</span>, <span class="st">&quot;control&quot;</span>, <span class="st">&quot;case&quot;</span>, <span class="st">&quot;control&quot;</span>)</span>
 <span id="cb45-3"><a href="intro_rstudio.html#cb45-3" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">factor</span>(g)</span>
 <span id="cb45-4"><a href="intro_rstudio.html#cb45-4" aria-hidden="true" tabindex="-1"></a>exdat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Group =</span> f, <span class="at">Outcome =</span> x)</span>
 <span id="cb45-5"><a href="intro_rstudio.html#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(exdat)</span>
-<span id="cb45-6"><a href="intro_rstudio.html#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(exdat<span class="sc">$</span>Group))</span>
+<span id="cb45-6"><a href="intro_rstudio.html#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>( <span class="fu">table</span>(exdat<span class="sc">$</span>Group) )</span>
 <span id="cb45-7"><a href="intro_rstudio.html#cb45-7" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Outcome <span class="sc">~</span> Group, <span class="at">dat =</span> exdat)</span></code></pre></div>
 <p>If you copy and paste these commands to the RStudio console, you will get something like the figure below:
 <img src="figures/RStudio_1_4_1106/Full3pane_example.png" width="90%" style="display: block; margin: auto;" />
@@ -423,24 +422,24 @@ The console looks as expected, with a mix of commands and results, you can still
 </ol>
 <p>Most of the tabs in the extra panes correspond to what we have called meta-activities previously - this is not an accident, and indeed a closer look below will clarify that <em>all</em> tabs provide support for connecting the console to other parts of the world, or at least the computer. We can still use the console to achieve the same effect, based on the functions previously described as well as others, at the price however of interrupting the main analysis flow.</p>
 </div>
-<div id="rstudio-console-specials" class="section level3" number="3.2.2">
-<h3><span class="header-section-number">3.2.2</span> RStudio Console specials</h3>
+<div id="rstudio-console-specials" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> RStudio Console specials<a href="intro_rstudio.html#rstudio-console-specials" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>RStudio console works exactly as the R console with regard to commands, however, it has some convenient features which are only partially implemented in base R. The simplest one is <em>auto-close</em> for parentheses and strings: if you open a parenthesis, RStudio automatically adds the closing parenthesis, and puts the cursor in between for the next input. The same happens when you open a string, by typing either double or single quotation marks.</p>
 <p>Then there is <em>auto-complete</em>: when typing at the prompt, RStudio will show you a context menu with the functions and data sets that match what you have typed so far, with some help text for the highlighted selection. You can scroll through the context menu with the arrow keys, and select an entry via hitting Enter or the Tab key. In the same way, if the cursor is between the parentheses after the function name, you get auto-complete for the arguments of the function, displaying a drop-down menu with the list of available arguments, plus some help text. This also works for the columns of a data frame, if you hit the Tab key after the $ sign for column extraction.</p>
 <p>Additionally, there is also auto-complete for paths and file names: if the cursor is between a pair of matching quotes, single or double, and you hit the Tab key, RStudio will attempt to auto-complete the string with a matching directory- or file name. If the string is empty or not unique, RStudio will again show you a context menu for selection. This allows you to enter valid file names very quickly, even across nested sub-directories.</p>
 </div>
-<div id="navigating-the-pane-layout" class="section level3" number="3.2.3">
-<h3><span class="header-section-number">3.2.3</span> Navigating the pane layout</h3>
+<div id="navigating-the-pane-layout" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Navigating the pane layout<a href="intro_rstudio.html#navigating-the-pane-layout" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The pane layout can be arranged to your personal preference in different ways:</p>
 <ul>
 <li><p>interactively, using the GUI window elements, by changing the width and height of panes by dragging the space separating them, by maximizing or minimizing the panes, or by clicking into a pane to move the focus there.</p></li>
-<li><p>via the pane button  in the tool bar: zooming a pane or tab changes the focus there, zooming a second time to the same pane or tab maximizes it at the expense of all other, whereas <em>Show all panes</em> reverses this and displays again all open panes with their active tabs. maximized pane. The item _ Pane Layout_ switches to the Options menu where the user can control the pane arrangements in more detail, by e.g. flipping the console to the left, or moving tabs between panes.</p></li>
+<li><p>via the pane button in the tool bar: zooming a pane or tab changes the focus there, zooming a second time to the same pane or tab maximizes it at the expense of all other, whereas <em>Show all panes</em> reverses this and displays again all open panes with their active tabs. maximized pane. The item _ Pane Layout_ switches to the Options menu where the user can control the pane arrangements in more detail, by e.g. flipping the console to the left, or moving tabs between panes.</p></li>
 <li><p>via menus: View and Options/Pane Layout offer the same functionality as the pane button, though less conveniently.</p></li>
 <li><p>via keyboard shortcuts, as listed e.g. next to the items in the pane button menu.</p></li>
 </ul>
 </div>
-<div id="the-default-upper-pane" class="section level3" number="3.2.4">
-<h3><span class="header-section-number">3.2.4</span> The default upper pane</h3>
+<div id="the-default-upper-pane" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> The default upper pane<a href="intro_rstudio.html#the-default-upper-pane" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-49"></span>
 <img src="figures/RStudio_1_4_1106/Environment_tab_example.png" alt="Tabs in the upper right panel: Environment, Environment/Import, History" width="30%" /><img src="figures/RStudio_1_4_1106/Environment_tab_Import_example.png" alt="Tabs in the upper right panel: Environment, Environment/Import, History" width="30%" /><img src="figures/RStudio_1_4_1106/History_tab_example.png" alt="Tabs in the upper right panel: Environment, Environment/Import, History" width="30%" />
 <p class="caption">
@@ -458,8 +457,8 @@ Figure 3.1: Tabs in the upper right panel: Environment, Environment/Import, Hist
 <p>Importantly, commands selected as above can also be copied to a text file open in RStudio’s source code editor, the <em>Source pane</em>, by clicking on the <code>To Source</code> button. This is by far the easiest way of turning an interactive analysis in the console into a draft script file for editing and refinement, and will be discussed in more detail in Section <a href="intro_rstudio.html#console2source">3.3.1</a> below.</p>
 <p>Other tabs that appear by default in the upper pane are the <em>Connections</em> tab, which allows setting up connections to database servers (useful, but system specific) and <em>Tutorial</em>, which provides an introduction with focus on the <em>tidyverse</em> (see also Section <a href="data-tidyverse.html#data-tidyverse">7</a>).</p>
 </div>
-<div id="the-default-lower-pane" class="section level3" number="3.2.5">
-<h3><span class="header-section-number">3.2.5</span> The default lower pane</h3>
+<div id="the-default-lower-pane" class="section level3 hasAnchor" number="3.2.5">
+<h3><span class="header-section-number">3.2.5</span> The default lower pane<a href="intro_rstudio.html#the-default-lower-pane" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-50"></span>
 <img src="figures/RStudio_1_4_1106/Files_tab_example.png" alt="Tabs in the lower right panel: Files, Plots, Help" width="30%" /><img src="figures/RStudio_1_4_1106/Plots_tab_example.png" alt="Tabs in the lower right panel: Files, Plots, Help" width="30%" /><img src="figures/RStudio_1_4_1106/Help_tab_example.png" alt="Tabs in the lower right panel: Files, Plots, Help" width="30%" />
 <p class="caption">
@@ -480,10 +479,10 @@ in plain R, but integrated into the application window (however, if you prefer a
 <p>Note that the tab offers two search bars: the top bar is for searching among all documented data sets and functions in the help system, whole the lower one is only for searching for text in the currently displayed help page (these can get long).</p>
 </div>
 </div>
-<div id="source-pane-scripting" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Source pane &amp; scripting</h2>
-<div id="console2source" class="section level3" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> From console to source</h3>
+<div id="source-pane-scripting" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Source pane &amp; scripting<a href="intro_rstudio.html#source-pane-scripting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="console2source" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> From console to source<a href="intro_rstudio.html#console2source" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We now want to turn our interactive analysis in the console into a script that we can save and re-use as we please. For that, we return to the History tab, where we select all commands from our initial toy example. In this situation, clicking on <code>To Source</code> then has several effects: RSTudio will</p>
 <ol style="list-style-type: decimal">
 <li>open a new text file,</li>
@@ -494,21 +493,21 @@ in plain R, but integrated into the application window (however, if you prefer a
 <img src="figures/RStudio_1_4_1106/Full4pane_ToSource.png" width="90%" style="display: block; margin: auto;" /></p>
 <p>This is a first step away from our interactive, console-only workflow so far. By turning our analysis into a script that lives outside of R/RStudio, we have a record of our analysis that can be edited, commented, shared, de-bugged, re-run, modified, criticized, put under version control etc. <em>This turns messing with data into actual data analysis.</em> More will be said on this subject, starting with the extended example in Section <a href="intro-example.html#intro-example">4</a>.</p>
 </div>
-<div id="the-source-pane-file-editor" class="section level3" number="3.3.2">
-<h3><span class="header-section-number">3.3.2</span> The Source pane file editor</h3>
+<div id="the-source-pane-file-editor" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> The Source pane file editor<a href="intro_rstudio.html#the-source-pane-file-editor" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Before we carry on, we should really save the currently still untitled file under a suitable name, to actually generate that permanent record. Saving the file with extension <code>.R</code> makes it easier to display and re-run, so e.g. <code>ExampleScript.R</code> will do here.</p>
 <p>The Source pane works as a standard text editor, where you can add, delete and modify the commands copied from the console, search and replace text etc. However, the Source pane is also tightly integrated with the console: to start with, when typing in the Source pane, we have the same auto-close and auto-complete support for functions, arguments etc. as at the console.</p>
 <p>And second, we can select parts or all of the code in the Source pane and directly send it to the console to be run. The Source pane toolbar offers a couple of icons and a drop-down menu for this, but I strongly encourage you to use the correct keyboard shortcut right from the start: press <code>Control+Enter</code> at the same time, and the current line, or the currently highlighted section of the script file will be sent to the console. This enables a rapid workflow that combines the advantages of working at the console with building a record of the analysis.</p>
 </div>
-<div id="displays" class="section level3" number="3.3.3">
-<h3><span class="header-section-number">3.3.3</span> Displays</h3>
+<div id="displays" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Displays<a href="intro_rstudio.html#displays" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The Source pane can also be used in other ways:</p>
 <ul>
 <li><p>you can directly open a new script file via the menu <em>File/New/R Script</em> instead going through the History tab &amp; <code>To Source</code>;</p></li>
 <li><p>you can open and edit any kind of text file in the Source pane, not just script files, by simply by clicking on the corresponding name in the Files tab;</p></li>
 <li><p>RStudio also uses the Source pane to display some read-only information, e.g. the content of a a data frame when you click on it in the Environment tab.</p></li>
 </ul>
-<p>The Source pane has an additional <em>extremely</em> useful feature available through the the <code>Compile report</code> icon  or the shortcut <code>Ctrl-Shift-K</code>, which makes it extremely easy to turn a script into a draft report, and which is demonstrated in Section @ref(exp_res).</p>
+<p>The Source pane has an additional <em>extremely</em> useful feature available through the the <code>Compile report</code> icon or the shortcut <code>Ctrl-Shift-K</code>, which makes it extremely easy to turn a script into a draft report, and which is demonstrated in Section @ref(exp_res).</p>
 
 </div>
 </div>
@@ -579,7 +578,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
