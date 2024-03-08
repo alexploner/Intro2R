@@ -141,7 +141,7 @@ specifying-colors-by-name
 specifying-colors-mathematically
 using-sets-of-colors-palettes
 next-steps-2
-ggplot2-an-alternative-plotting-system
+graphics-ggplot2
 introduction-1
 concepts-basic-usage
 practicalities

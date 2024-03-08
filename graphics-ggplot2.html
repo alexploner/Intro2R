@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 Graphics using ggplot2 | Introduction to R</title>
+  <title>12 ggplot2: an alternative plotting system | Introduction to R</title>
   <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 Graphics using ggplot2 | Introduction to R" />
+  <meta property="og:title" content="12 ggplot2: an alternative plotting system | Introduction to R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 Graphics using ggplot2 | Introduction to R" />
+  <meta name="twitter:title" content="12 ggplot2: an alternative plotting system | Introduction to R" />
   
   <meta name="twitter:description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
   
@@ -247,7 +247,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.7.3" data-path="data-types-struct.html"><a href="data-types-struct.html#named_lists"><i class="fa fa-check"></i><b>5.7.3</b> Named lists</a></li>
 <li class="chapter" data-level="5.7.4" data-path="data-types-struct.html"><a href="data-types-struct.html#example-data-frames"><i class="fa fa-check"></i><b>5.7.4</b> Example: data frames</a></li>
 </ul></li>
-<li class="chapter" data-level="5.8" data-path="data-types-struct.html"><a href="data-types-struct.html#technical-notes"><i class="fa fa-check"></i><b>5.8</b> Technical notes</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data-processing.html"><a href="data-processing.html"><i class="fa fa-check"></i><b>6</b> Processing data</a>
 <ul>
@@ -257,7 +256,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4" data-path="data-processing.html"><a href="data-processing.html#split-apply-combine"><i class="fa fa-check"></i><b>6.4</b> Split - Apply - Combine</a></li>
 <li class="chapter" data-level="6.5" data-path="data-processing.html"><a href="data-processing.html#merge-data-base"><i class="fa fa-check"></i><b>6.5</b> Merging data sets</a></li>
 <li class="chapter" data-level="6.6" data-path="data-processing.html"><a href="data-processing.html#general-pipeline"><i class="fa fa-check"></i><b>6.6</b> Using pipelines</a></li>
-<li class="chapter" data-level="6.7" data-path="data-processing.html"><a href="data-processing.html#technical-notes-1"><i class="fa fa-check"></i><b>6.7</b> Technical notes</a></li>
+<li class="chapter" data-level="6.7" data-path="data-processing.html"><a href="data-processing.html#next-steps"><i class="fa fa-check"></i><b>6.7</b> Next steps</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="data-tidyverse.html"><a href="data-tidyverse.html"><i class="fa fa-check"></i><b>7</b> The <code>tidyverse</code></a>
 <ul>
@@ -269,7 +268,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.2.3" data-path="data-tidyverse.html"><a href="data-tidyverse.html#groupwise-data-operations"><i class="fa fa-check"></i><b>7.2.3</b> Groupwise data operations</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="data-tidyverse.html"><a href="data-tidyverse.html#tidyverse-vs-base-r"><i class="fa fa-check"></i><b>7.3</b> <code>tidyverse</code> vs base R?</a></li>
-<li class="chapter" data-level="7.4" data-path="data-tidyverse.html"><a href="data-tidyverse.html#technical-notes-2"><i class="fa fa-check"></i><b>7.4</b> Technical notes</a></li>
 </ul></li>
 <li class="part"><span><b>III Estimation, inference, modelling</b></span></li>
 <li class="chapter" data-level="8" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html"><i class="fa fa-check"></i><b>8</b> Basic Statistics &amp; Epidemiology</a>
@@ -283,8 +281,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#statistical-tests"><i class="fa fa-check"></i><b>8.3</b> Statistical tests</a></li>
 <li class="chapter" data-level="8.4" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#epidemiological-risk-measures"><i class="fa fa-check"></i><b>8.4</b> Epidemiological risk measures</a></li>
 <li class="chapter" data-level="8.5" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#pander-intro"><i class="fa fa-check"></i><b>8.5</b> Improved display of descriptives</a></li>
-<li class="chapter" data-level="8.6" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#next-steps"><i class="fa fa-check"></i><b>8.6</b> Next steps</a></li>
-<li class="chapter" data-level="8.7" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#technical-notes-3"><i class="fa fa-check"></i><b>8.7</b> Technical notes</a></li>
+<li class="chapter" data-level="8.6" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#next-steps-1"><i class="fa fa-check"></i><b>8.6</b> Next steps</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="regression-linear.html"><a href="regression-linear.html"><i class="fa fa-check"></i><b>9</b> Linear regression</a>
 <ul>
@@ -308,7 +305,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.4.4" data-path="regression-linear.html"><a href="regression-linear.html#splines"><i class="fa fa-check"></i><b>9.4.4</b> Splines</a></li>
 <li class="chapter" data-level="9.4.5" data-path="regression-linear.html"><a href="regression-linear.html#model-comparisons"><i class="fa fa-check"></i><b>9.4.5</b> Model comparisons</a></li>
 </ul></li>
-<li class="chapter" data-level="9.5" data-path="regression-linear.html"><a href="regression-linear.html#technical-notes-4"><i class="fa fa-check"></i><b>9.5</b> Technical notes</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="regression-other.html"><a href="regression-other.html"><i class="fa fa-check"></i><b>10</b> More regression models</a>
 <ul>
@@ -328,38 +324,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11" data-path="graphics-base.html"><a href="graphics-base.html"><i class="fa fa-check"></i><b>11</b> Graphics in base R</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="graphics-base.html"><a href="graphics-base.html#overview-5"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
-<li class="chapter" data-level="11.2" data-path="graphics-base.html"><a href="graphics-base.html#base-plots"><i class="fa fa-check"></i><b>11.2</b> Base plots</a>
+<li class="chapter" data-level="11.2" data-path="graphics-base.html"><a href="graphics-base.html#base-plots-base-plots"><i class="fa fa-check"></i><b>11.2</b> Base plots</a></li>
+<li class="chapter" data-level="11.3" data-path="graphics-base.html"><a href="graphics-base.html#graphical-parameters"><i class="fa fa-check"></i><b>11.3</b> Graphical parameters</a>
 <ul>
 <li class="chapter" data-level="" data-path="graphics-base.html"><a href="graphics-base.html#vectorized-graphical-parameters"><i class="fa fa-check"></i>Vectorized graphical parameters</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="graphics-base.html"><a href="graphics-base.html#low-level-and-high-level-plotting"><i class="fa fa-check"></i><b>11.3</b> Low-level and high-level plotting</a></li>
-<li class="chapter" data-level="11.4" data-path="graphics-base.html"><a href="graphics-base.html#displaying-saving-coloring-plots"><i class="fa fa-check"></i><b>11.4</b> Displaying, saving, coloring plots</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html"><i class="fa fa-check"></i><b>12</b> Graphics using <code>ggplot2</code></a>
+<li class="chapter" data-level="11.4" data-path="graphics-base.html"><a href="graphics-base.html#graphical-devices"><i class="fa fa-check"></i><b>11.4</b> Displaying and saving plots</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#overview-6"><i class="fa fa-check"></i><b>12.1</b> Overview</a>
-<ul>
-<li class="chapter" data-level="12.1.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#data-example-hemoglobin"><i class="fa fa-check"></i><b>12.1.1</b> Data example: Hemoglobin</a></li>
+<li class="chapter" data-level="11.4.1" data-path="graphics-base.html"><a href="graphics-base.html#device-par"><i class="fa fa-check"></i><b>11.4.1</b> Controlling a device through <code>par</code></a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#background-4"><i class="fa fa-check"></i><b>12.2</b> Background</a></li>
-<li class="chapter" data-level="12.3" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#concepts"><i class="fa fa-check"></i><b>12.3</b> Concepts</a>
+<li class="chapter" data-level="11.5" data-path="graphics-base.html"><a href="graphics-base.html#high-low-plots"><i class="fa fa-check"></i><b>11.5</b> High- vs. low-level plotting</a></li>
+<li class="chapter" data-level="11.6" data-path="graphics-base.html"><a href="graphics-base.html#using-colors"><i class="fa fa-check"></i><b>11.6</b> Using colors</a>
 <ul>
-<li class="chapter" data-level="12.3.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#aesthetics"><i class="fa fa-check"></i><b>12.3.1</b> Aesthetics</a></li>
-<li class="chapter" data-level="12.3.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#example-data"><i class="fa fa-check"></i><b>12.3.2</b> Example data</a></li>
+<li class="chapter" data-level="11.6.1" data-path="graphics-base.html"><a href="graphics-base.html#specifying-colors-by-name"><i class="fa fa-check"></i><b>11.6.1</b> Specifying colors by name</a></li>
+<li class="chapter" data-level="11.6.2" data-path="graphics-base.html"><a href="graphics-base.html#specifying-colors-mathematically"><i class="fa fa-check"></i><b>11.6.2</b> Specifying colors mathematically</a></li>
+<li class="chapter" data-level="11.6.3" data-path="graphics-base.html"><a href="graphics-base.html#using-sets-of-colors-palettes"><i class="fa fa-check"></i><b>11.6.3</b> Using sets of colors: palettes</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#background-5"><i class="fa fa-check"></i><b>12.4</b> Background</a></li>
-<li class="chapter" data-level="12.5" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#basic-usage"><i class="fa fa-check"></i><b>12.5</b> Basic usage</a></li>
-<li class="chapter" data-level="12.6" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#slightly-extended-usage"><i class="fa fa-check"></i><b>12.6</b> Slightly extended usage</a></li>
-<li class="chapter" data-level="12.7" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#multiple-layers"><i class="fa fa-check"></i><b>12.7</b> Multiple layers</a></li>
-<li class="chapter" data-level="12.8" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#splitting-the-plot"><i class="fa fa-check"></i><b>12.8</b> Splitting the plot</a></li>
-<li class="chapter" data-level="12.9" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#messing-with-the-defaults"><i class="fa fa-check"></i><b>12.9</b> Messing with the defaults</a>
+<li class="chapter" data-level="11.7" data-path="graphics-base.html"><a href="graphics-base.html#next-steps-2"><i class="fa fa-check"></i><b>11.7</b> Next steps</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html"><i class="fa fa-check"></i><b>12</b> ggplot2: an alternative plotting system</a>
 <ul>
-<li class="chapter" data-level="12.9.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#fixing-aesthetics"><i class="fa fa-check"></i><b>12.9.1</b> {-} Fixing aesthetics</a></li>
-<li class="chapter" data-level="" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#scales"><i class="fa fa-check"></i>Scales</a></li>
+<li class="chapter" data-level="12.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#introduction-1"><i class="fa fa-check"></i><b>12.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#concepts-basic-usage"><i class="fa fa-check"></i><b>12.1.1</b> Concepts &amp; basic usage</a></li>
+<li class="chapter" data-level="12.1.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#practicalities"><i class="fa fa-check"></i><b>12.1.2</b> Practicalities</a></li>
 </ul></li>
-<li class="chapter" data-level="12.10" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#messing-with-defaults-ii-themes"><i class="fa fa-check"></i><b>12.10</b> Messing with defaults II: themes</a></li>
-<li class="chapter" data-level="12.11" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#extension-packages"><i class="fa fa-check"></i><b>12.11</b> Extension packages</a></li>
-<li class="chapter" data-level="12.12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#technical-notes-5"><i class="fa fa-check"></i><b>12.12</b> Technical notes</a></li>
+<li class="chapter" data-level="12.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#more-about-aesthetics-and-geoms"><i class="fa fa-check"></i><b>12.2</b> More about aesthetics and geoms</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#optional-aesthetics"><i class="fa fa-check"></i><b>12.2.1</b> Optional aesthetics</a></li>
+<li class="chapter" data-level="12.2.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#multiple-geoms"><i class="fa fa-check"></i><b>12.2.2</b> Multiple geoms</a></li>
+<li class="chapter" data-level="12.2.3" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#using-geom-arguments"><i class="fa fa-check"></i><b>12.2.3</b> Using geom arguments</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#splitting-plots-by-sub-groups"><i class="fa fa-check"></i><b>12.3</b> Splitting plots by sub-groups</a></li>
+<li class="chapter" data-level="12.4" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#changing-the-default-appearance"><i class="fa fa-check"></i><b>12.4</b> Changing the default appearance</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#scales"><i class="fa fa-check"></i><b>12.4.1</b> Scales</a></li>
+<li class="chapter" data-level="12.4.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#fixing-aesthetics"><i class="fa fa-check"></i><b>12.4.2</b> Fixing aesthetics</a></li>
+<li class="chapter" data-level="12.4.3" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#themes"><i class="fa fa-check"></i><b>12.4.3</b> Themes</a></li>
+<li class="chapter" data-level="12.4.4" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#other"><i class="fa fa-check"></i><b>12.4.4</b> Other</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#complex-layering-and-annotation"><i class="fa fa-check"></i><b>12.5</b> Complex layering and annotation</a></li>
+<li class="chapter" data-level="12.6" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#extensions"><i class="fa fa-check"></i><b>12.6</b> Extensions</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#assemble-multi-panel-plots-patchwork"><i class="fa fa-check"></i><b>12.6.1</b> Assemble multi-panel plots: patchwork</a></li>
+<li class="chapter" data-level="12.6.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#others"><i class="fa fa-check"></i><b>12.6.2</b> Others</a></li>
+</ul></li>
+<li class="chapter" data-level="12.7" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#next-steps-3"><i class="fa fa-check"></i><b>12.7</b> Next steps</a></li>
 </ul></li>
 <li class="part"><span><b>V Organizing the analysis</b></span></li>
 <li class="chapter" data-level="13" data-path="tables-nice.html"><a href="tables-nice.html"><i class="fa fa-check"></i><b>13</b> Generating nice tables</a></li>
@@ -386,75 +396,606 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="graphics-ggplot2" class="section level1 hasAnchor" number="12">
-<h1><span class="header-section-number">12</span> Graphics using <code>ggplot2</code><a href="graphics-ggplot2.html#graphics-ggplot2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="overview-6" class="section level2 hasAnchor" number="12.1">
-<h2><span class="header-section-number">12.1</span> Overview<a href="graphics-ggplot2.html#overview-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>UNDER CONSTRUCTION</p>
-<div id="data-example-hemoglobin" class="section level3 hasAnchor" number="12.1.1">
-<h3><span class="header-section-number">12.1.1</span> Data example: Hemoglobin<a href="graphics-ggplot2.html#data-example-hemoglobin" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h1><span class="header-section-number">12</span> ggplot2: an alternative plotting system<a href="graphics-ggplot2.html#graphics-ggplot2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-1" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Introduction<a href="graphics-ggplot2.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This is a <em>very</em> short introduction to using the package <code>ggplot2</code> for plotting. For a thorough treatment, I recommend the book <em>ggplot2: Elegant Graphics for Data Analysis</em> by the package author Hadley Wickham, which is available online at <a href="https://ggplot2-book.org/" class="uri">https://ggplot2-book.org/</a>.</p>
+<div id="concepts-basic-usage" class="section level3 hasAnchor" number="12.1.1">
+<h3><span class="header-section-number">12.1.1</span> Concepts &amp; basic usage<a href="graphics-ggplot2.html#concepts-basic-usage" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In contrast to the base graphic system, where different plot types are packaged as separate functions(e.g. <code>hist</code>, <code>boxplot</code>), the <code>ggplot2</code>-package implements a Lego-like system where plots are assembled from individual components. We’ll start here with minimal plot examples, and add more functionality through the rest of the chapter.</p>
+<p>Note that even if you are happy with the base system of graphics, the <code>ggplot2</code>-approach is interesting in its own right, as a different way of thinking about visualizing data.</p>
+<p>A minimal graphical display in ggplot2 requires two steps:</p>
+<ol style="list-style-type: decimal">
+<li><p>Specify the data set which you want to use for plotting, and map the variables you are interested in to the available graphical information channels, using the functions <code>ggplot</code> and <code>aes</code>.</p>
+<p>The graphical information channels are just the different ways in which we can add visual information to our display: if we start with an empty sheet of paper (at least as a mental model, in reality we will plot to a graphical device, as discussed in <a href="graphics-base.html#graphical-devices">11.4</a>), it is completely white<a href="#fn73" class="footnote-ref" id="fnref73"><sup>73</sup></a>. You encode information by adding blobs of ink to the paper, with different variables determining the position, color, shape and size of the blob; in reverse, when a reader looks at the collection of ink blobs, they will be able to decode the information they represent in terms of the original variables. ggplot2 refers to these information channels as <em>aesthetics</em>, and some common ones are listed in Table <a href="graphics-ggplot2.html#tab:aesthetics">12.1</a> below.</p>
+<p>Note that this first step only does the setup for the actual plotting (mostly, see Exercises); any actually informative plotting is done in the next step.</p></li>
+<li><p>Specify a geom (short for <em>geometry</em> in ggplot2) that takes the information from the first step and does some actual plotting (i.e. putting ink blobs on paper). Geoms are implemented in ggplot2 as functions starting with <code>geom_</code>, and they take the steps required to turn the specifications into e.g. a histogram on the current graphical device.</p>
+<p>Table <a href="graphics-ggplot2.html#tab:geom">12.2</a> below lists some of the more common geoms we are going to discuss in this chapter (there are many more geoms doing other stuff, both in ggplot2 and in its many. many extension packages). An important point is that the geoms understand at least a subset of the aesthetics specified in the first step: indeed, most geoms will absolutely <em>require</em> at least one (often more) mapped aesthetic, as well as be able to interpret a number of other optional aesthetics.</p></li>
+</ol>
+<p>Let’s look at some examples.</p>
+<p><strong>Example 1:</strong> a boxplot of the age at baseline of the participants in the Harvest data set</p>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="graphics-ggplot2.html#cb282-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> Age)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-288-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Here, we use <code>ggplot</code> to specify the data set we want to use, as well as (via a call to function <code>aes</code>), what variable we want to display on the x-axis - this is the setup; we then add (literally, using the “<code>+</code>” operator) a call to the function <code>geom_boxplot</code>, which as you would guess, knows how to draw a boxplot.</p>
+<p>What does the result look like? Well, it looks like a boxplot, with the box defined by the quartiles, the median indicated as a separator in the box, and the whiskers indicating the tails of the data distribution; in this case, we have a <em>horizontal</em> boxplot, because we mapped the variable of interest (Age) to the x-axis, and so all the statistics displayed (median, quartiles etc.) can be read off the x-axis.</p>
+<p><strong>Example 2:</strong> a histogram of the baseline ages in the Harvest data</p>
+<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb283-1"><a href="graphics-ggplot2.html#cb283-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> Age)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-289-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>The construction of the histogram differs from the boxplot above <em>only</em> in the choice of geom function: we still use the same data set, we still want to see ages on the horizontal axis, just the way that raw age information is translated into informative ink blobs is different, emphasizing different aspects of the data distribution: generally, we get more information from a histogram when the data set is sufficiently large (like here), though the out-of-the-box example with default settings we get here is neither especially attractive or informative (the problem is the too narrow class width, which leads to a jagged skyline-look that is more noisy than a good histogram should be; we’ll fix this in the next section).</p>
+<p><strong>Example 3:</strong> a barplot of the sex distribution in the Harvest data</p>
+<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="graphics-ggplot2.html#cb284-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> Sex)) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-290-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>This a plot of a categorical variable (the factor variable <code>Sex</code> in data frame <code>hh</code>); note that we do not have to tabulate the data so show frequencies as bars, as in base graphics: the <code>geom_bar</code> function knows that by default, it needs to run tabulation before producing a barchart of a discrete variable.</p>
+<p><strong>Example 4:</strong> a scatterplot of diastolic vs systolic blood pressure in the Harvest data</p>
+<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="graphics-ggplot2.html#cb285-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> SystBP, <span class="at">y =</span> DiaBP)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-291-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Here, we have to specify <em>two</em> aesthetics, as the function <code>geom_point</code> requires that both the horizontal (x-) and vertical (y-) position aesthetics are mapped to variables (which makes sense, in terms of a scatterplot). Otherwise, this follows the same logic as the univariable plots above.</p>
+<p><strong>Exercises:</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>What happens if you only call <code>ggplot</code>, with the data and the mapping, but without adding a call to a <code>geom_</code>-function? Does this produce graphical output? Is it logically consistent? Interesting?</p></li>
+<li><p>What happens if you do not map a variable to the y-aesthetic in the scatterplot example above?</p></li>
+<li><p>How can you flip the axes in the scatterplot example above?</p></li>
+<li><p>How can you turn the horizontal example boxplot above into a vertical boxplot?</p></li>
+</ol>
+</div>
+<div id="practicalities" class="section level3 hasAnchor" number="12.1.2">
+<h3><span class="header-section-number">12.1.2</span> Practicalities<a href="graphics-ggplot2.html#practicalities" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A big and important difference to base graphics is that ggplot2 creates <em>R objects</em>: plots can be assigned to variable names, stored in .RData files, modified, combined into a list etc. etc.</p>
+<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="graphics-ggplot2.html#cb286-1" tabindex="-1"></a><span class="sc">&gt;</span> pl1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> Age)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span>
+<span id="cb286-2"><a href="graphics-ggplot2.html#cb286-2" tabindex="-1"></a><span class="sc">&gt;</span> pl1</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-292-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>This saves the boxplot from our first example as an object called <code>pl1</code>. Note that while the assignment creates a plot object, it does not actually generate graphical output - if you want to see what the boxplot looks like, you have to evaluate the object at the command line (which is why we have a second row with just <code>pl1</code> above).</p>
+<p>Alternatively, we can also explicitly plot or print the <code>ggplot2</code>-object:</p>
+<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb287-1"><a href="graphics-ggplot2.html#cb287-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">print</span>(pl1)</span>
+<span id="cb287-2"><a href="graphics-ggplot2.html#cb287-2" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">plot</span>(pl1)</span></code></pre></div>
+<p>in order to get a graphical representation of <code>pl1</code> on the currently open graphical device (i.e. the Plot-tab in Rstudio).</p>
+<p>This is just consistent: if you type an expression like <code>3+4</code> directly at the console, R will evaluate it and directly show the result; however, if you assign the same expression to a variable name, say <code>a &lt;- 3+4</code>, the result will be stored under the name <code>a</code>, but not displayed.</p>
+<p>If you want to save a <code>ggplot2</code> display to a file, you have the same options as for base graphics: you can doit manually, via the options in the RStudio Plot-tab or the R plotting window; alternatively, if you want to save a plot from the console or a script in a replicable manner, you can use a graphical device function (like <code>jpeg</code> or <code>png</code>) discussed in the previous chapter REF, with the same workflow: open the device - send plot to device - close device.</p>
+<p>However, <code>ggplot2</code> offers a wrapper function for the device-based approach called <code>ggsave</code> that offers useful arguments:</p>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="graphics-ggplot2.html#cb288-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggsave</span>(<span class="st">&quot;pl_harvest_sex.jpg&quot;</span>, pl, <span class="at">width =</span> <span class="fl">12.5</span>, <span class="at">height =</span> <span class="fl">12.5</span>, <span class="at">units =</span> <span class="st">&quot;cm&quot;</span>, <span class="at">scale =</span> <span class="fl">0.8</span>)</span>
+<span id="cb288-2"><a href="graphics-ggplot2.html#cb288-2" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">browseURL</span>(<span class="st">&quot;pl_harvest_sex.jpg&quot;</span>)</span></code></pre></div>
+<p>Note that we do not have to specify the device type (<code>ggsave</code> guesses from the file extension that we want a jpeg-file), and that we do not have to override an inadequate default resolution (argument <code>dpi</code> of <code>ggsave</code> is by default at 300).</p>
+<table>
+<caption><span id="tab:aesthetics">Table 12.1: </span> An incomplete list of aesthetics<a href="#fn74" class="footnote-ref" id="fnref74"><sup>74</sup></a>.</caption>
+<colgroup>
+<col width="23%" />
+<col width="76%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>x,y</td>
+<td>Horizontal and vertical position</td>
+</tr>
+<tr class="even">
+<td>color, colour</td>
+<td>Color (of lines, outlines)</td>
+</tr>
+<tr class="odd">
+<td>fill</td>
+<td>Color (of shapes, areas)</td>
+</tr>
+<tr class="even">
+<td>shape</td>
+<td>Shape (of plotting symbol)</td>
+</tr>
+<tr class="odd">
+<td>size</td>
+<td>Size (of plotting symbol)</td>
+</tr>
+<tr class="even">
+<td>alpha</td>
+<td>Transparency (of lines/symbols)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:geom">Table 12.2: </span> An incomplete list of geom functions, with required and some optional aesthetics<a href="#fn75" class="footnote-ref" id="fnref75"><sup>75</sup></a>.</caption>
+<colgroup>
+<col width="18%" />
+<col width="24%" />
+<col width="23%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+<th>Required aesthetics</th>
+<th>Selected optional aesthetics</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>geom_point</td>
+<td>Scatterplot</td>
+<td>x, y</td>
+<td>color, shape, size, fill, alpha</td>
+</tr>
+<tr class="even">
+<td>geom_histogram</td>
+<td>Histogram</td>
+<td>x or y</td>
+<td>fill, color, alpha</td>
+</tr>
+<tr class="odd">
+<td>geom_bar</td>
+<td>Bar plot</td>
+<td>x or y</td>
+<td>fill, color, alpha</td>
+</tr>
+<tr class="even">
+<td>geom_boxplot</td>
+<td>Boxplot</td>
+<td>x or y</td>
+<td>fill, color, alpha</td>
+</tr>
+<tr class="odd">
+<td>geom_density</td>
+<td>Density plot</td>
+<td>x or y</td>
+<td>fill, color, alpha</td>
+</tr>
+<tr class="even">
+<td>geom_smooth</td>
+<td>Smoothing curve</td>
+<td>x, y</td>
+<td>color, alpha, linetype, linewidth</td>
+</tr>
+<tr class="odd">
+<td>geom_linerange</td>
+<td>Interval line</td>
+<td>x/xmin/xmax or y/ymin/ymax</td>
+<td>color, linetype, linewidth</td>
+</tr>
+<tr class="even">
+<td>geom_ribbon</td>
+<td>Interval area</td>
+<td>x/xmin/xmax or y/ymin/ymax</td>
+<td>fill, color, alpha</td>
+</tr>
+<tr class="odd">
+<td>geom_hline</td>
+<td>Horizontal line</td>
+<td>yintercept</td>
+<td>color, alpha, linewidth, linetype</td>
+</tr>
+<tr class="even">
+<td>geom_text</td>
+<td>Text label</td>
+<td>x, y, text</td>
+<td>size, family, color, angle, h/vjust</td>
+</tr>
+<tr class="odd">
+<td>geom_label</td>
+<td>Text label with background</td>
+<td>x, y, text</td>
+<td>size, family, color, angle, h/vjust</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<div id="background-4" class="section level2 hasAnchor" number="12.2">
-<h2><span class="header-section-number">12.2</span> Background<a href="graphics-ggplot2.html#background-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>UNDER CONSTRUCTION</p>
+<div id="more-about-aesthetics-and-geoms" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> More about aesthetics and geoms<a href="graphics-ggplot2.html#more-about-aesthetics-and-geoms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="optional-aesthetics" class="section level3 hasAnchor" number="12.2.1">
+<h3><span class="header-section-number">12.2.1</span> Optional aesthetics<a href="graphics-ggplot2.html#optional-aesthetics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>So far, we have only specified the minimally <em>required</em> aesthetics for each geom to generate basic plots. By mapping extra variables to <em>optional</em> aesthetics, we can add extra information and build considerably more complex and informative displays.
+What optional aesthetics are available, and how they will be affect the plot, differs to some degree between geom-functions. How this works is probably most obvious for <code>geom_point</code>, but the general idea is always to somehow encode the extra variables mapped to the optional aesthetics in the base plot, often in a natural and intuitive manner (see boxplots below).</p>
+<p><strong>Example 5:</strong> incorporating information about sex in the scatterplot of diastolic vs systolic blood pressure in the Harvest data</p>
+<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="graphics-ggplot2.html#cb290-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> SystBP, <span class="at">y =</span> DiaBP, <span class="at">color =</span> Sex)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-295-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>So <code>geom_point</code> uses different colors for males and females, and despite some over-plotting, we see that the blood pressures show mild correlation for both groups, though the lowest diastolic pressures seem to be almost exclusively men - and all we had to do was to add the extra mapping <code>color=Sex</code> in the call to <code>aes</code>; all the rest was handled by <code>geom_point</code>:</p>
+<ul>
+<li>identify a range of reasonable default colors for the levels of the mapped variable (here just two, but can be more),</li>
+<li>use the chosen colors when creating a scatterplot,</li>
+<li>add an informative legend linking the colors to the levels of the mapped variable at the side of the plot.</li>
+</ul>
+<p>You may want to change the default colors or placement of the legend based on your preferences or publisher’s requirements, but for a first, effectively zero-effort shot at visualization this is extremely convenient and informative (and we will see how to change appearances below).</p>
+<p>Note that we can map other variables to other optional aesthetics at no extra cost, and we still get a set of informative legends for free (even if the resulting plot is a bit crowded here).</p>
+<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="graphics-ggplot2.html#cb291-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> SystBP, <span class="at">y =</span> DiaBP, <span class="at">color =</span> Sex, <span class="at">shape =</span> Smoking)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-296-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 6:</strong> show different boxplots of age by sex, and by sex and smoking status</p>
+<p>We can simply map a grouping variable to the “other” axis (the one not showing the continuous variable of interest) to get side-by-side boxplots:</p>
+<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="graphics-ggplot2.html#cb292-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> Sex, <span class="at">y =</span> Age)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-297-1.png" width="80%" style="display: block; margin: auto;" />
+Here, we see that while the age range is comparable for men and women, female participants tend to be older than male participant (quartiles &amp; median shifted upwards).</p>
+<p>We can add another level of grouping by mapping the variable <code>Smoking</code> to the aesthetic <code>fill</code>, to get separate boxplots for smokers and non-smokers (distinguished by color) for both women and men.</p>
+<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="graphics-ggplot2.html#cb293-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> Sex, <span class="at">y =</span> Age, <span class="at">fill =</span> Smoking)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-298-1.png" width="80%" style="display: block; margin: auto;" />
+Clearly, there are few if any differences in age distribution between smokers and non-smokers when broken down by sex.</p>
+<p>Note the use of the aesthetic <code>fill</code> here instead of <code>color</code> - in <code>ggplot2</code>, the former generally refers to the color of an area, whereas the latter refers to symbols, lines and outlines.</p>
+<p><strong>Example 7:</strong> add smoking status to the barchart of the sex distribution</p>
+<p>This uses the same mechanism and and a similar intuition as the boxplot example above, by mapping the extra grouping variable to <code>fill</code>, which then colors the original bars according to the number of smokers and non-smokers (legend included).</p>
+<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="graphics-ggplot2.html#cb294-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> Sex, <span class="at">fill =</span> Smoking)) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-299-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>(You may have expected side-by-side bars, as for the boxplots above - as we will see below, that is abosultely an option, just not the default option in this case.)</p>
+<p><strong>Exercises:</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Re-run the scatterplot example, but now map a continuous variable like BMI to the color aesthetic. What happens? Is this (potentially) meaningful and/or interesting?</p></li>
+<li><p>Re-run one of the boxplot examples, but with horizontal side-by-side plots.</p></li>
+</ol>
 </div>
-<div id="concepts" class="section level2 hasAnchor" number="12.3">
-<h2><span class="header-section-number">12.3</span> Concepts<a href="graphics-ggplot2.html#concepts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>UNDER CONSTRUCTION</p>
-<div id="aesthetics" class="section level3 hasAnchor" number="12.3.1">
-<h3><span class="header-section-number">12.3.1</span> Aesthetics<a href="graphics-ggplot2.html#aesthetics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="multiple-geoms" class="section level3 hasAnchor" number="12.2.2">
+<h3><span class="header-section-number">12.2.2</span> Multiple geoms<a href="graphics-ggplot2.html#multiple-geoms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>While you need to specify at least one geom to create an informative plot, you can add additional geoms to annotate or extend the basic plot. The mental model for this is that each new geom draws on top of the previous geoms, adding a new layer of ink on top.</p>
+<p><strong>Example 8:</strong> add a smoothing curve on top of the blood pressure scatterplot</p>
+<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="graphics-ggplot2.html#cb295-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> SystBP, <span class="at">y =</span> DiaBP)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>()</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-300-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>We see a reasonably fat blue smoothing curve added on top of the previous scatterplot, indicating a mild correlation between systolic and diastolic blood pressure, with little curvature. Note that:</p>
+<ul>
+<li><p>the smoothing line is solid, and covers the scatterplot symbols it runs across, as expected when an upper layer in a plot covers a lower layer;</p></li>
+<li><p>in addition to the smoothing curve, we also get (point-wise) 95% confidence intervals around the curve, indicated by the slightly darker grey shading - while the shaded area is very tight in the middle of the data range, indicating little uncertainty about the shape of the curve, it is somewhat wider at the ends, where we have less data (also, very sensibly, the shading is semi-transparent and does not obscure the scatterplot, which would otherwise make the confidence area visually too strong);</p></li>
+<li><p><code>geom_smooth</code> uses different default smoothing methods depending on sample size - here, for a reasonably large data set, it uses a GAM (generalized additive model), as indicated by the warning on top of the plot (more about smoothing methods in the next section).</p></li>
+</ul>
+<p><strong>Example 9</strong>: plotting means with confidence intervals</p>
+<p>Given a data frame with</p>
+<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="graphics-ggplot2.html#cb296-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="do">## </span><span class="al">FIXME</span><span class="do">: DATA PREP</span></span>
+<span id="cb296-2"><a href="graphics-ggplot2.html#cb296-2" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">library</span>(DescTools)</span>
+<span id="cb296-3"><a href="graphics-ggplot2.html#cb296-3" tabindex="-1"></a><span class="sc">&gt;</span> agg1 <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(Age <span class="sc">~</span> Sport, <span class="at">data =</span> hh, <span class="at">FUN =</span> MeanCI)</span>
+<span id="cb296-4"><a href="graphics-ggplot2.html#cb296-4" tabindex="-1"></a><span class="sc">&gt;</span> agg2 <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="fu">data.frame</span>(<span class="at">Sport =</span> agg1[,<span class="dv">1</span>], agg1[,<span class="dv">2</span>])</span>
+<span id="cb296-5"><a href="graphics-ggplot2.html#cb296-5" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(agg2, <span class="fu">aes</span>(<span class="at">x =</span> Sport, <span class="at">y =</span> mean, <span class="at">ymin =</span> lwr.ci, <span class="at">ymax =</span> upr.ci)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_linerange</span>()</span></code></pre></div>
+<p><strong>Exercises:</strong></p>
+<ol style="list-style-type: decimal">
+<li>Drop the <code>geom_point</code>-call from the scatterplot example above, only keeping the <code>geom_smooth</code>-call - does this work? Make sense?</li>
+</ol>
 </div>
-<div id="example-data" class="section level3 hasAnchor" number="12.3.2">
-<h3><span class="header-section-number">12.3.2</span> Example data<a href="graphics-ggplot2.html#example-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="using-geom-arguments" class="section level3 hasAnchor" number="12.2.3">
+<h3><span class="header-section-number">12.2.3</span> Using geom arguments<a href="graphics-ggplot2.html#using-geom-arguments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>So far, we have used the geom functions without any arguments, simply as e.g. <code>geom_boxplot()</code>. This is not because the geoms have no arguments - they do, some that are common for all geoms (as we will see below when talking more about layers) and others that are specific to the graphical ouput that a geom produces. Consequently, the empty set of parentheses <code>()</code> at the end of the function call indicates that we simply call the geom with arguments set to their default values<a href="#fn76" class="footnote-ref" id="fnref76"><sup>76</sup></a>.</p>
+<p>(Arguably, a lot of the cleverness of the <code>ggplot2</code> system lies in providing reasonable defaults for almost every aspect of the display, as well as in setting up things in such a manner that these defaults are available to all functions in the package.)</p>
+<p><strong>Example 10:</strong> a histogram with nicer class / bar widths</p>
+<p>As we have seen above, the default histogram generated by <code>geom_histogram</code> is actually not all that great. In practice, you will need to set your own width, either directly (via argument <code>binwidth=</code>) or indirectly (via argument <code>bin=</code>). For this example, a width of five years for the Harvest baseline age seems reasonable.</p>
+<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="graphics-ggplot2.html#cb297-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> Age)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-302-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>We see a somewhwat skewed distribution of ages between ca. 25 and 45, with a pronounced peak around 40, and a few younger/older participants.</p>
+<p><strong>Example 11:</strong> change the arrangement of bars in a barchart with <code>fill</code>-mapping</p>
+<p>As mentioned above, the default behavior for a barchart that shows sub-groups by mapping an extra grouping variable to the <code>fill</code>-aesthetic is to stack the different colors on top of each other. The actual arrangement of the colored bars is actually regulated by the value of the argument <code>position=</code> in <code>geom_bar</code>:</p>
+<ul>
+<li><p><code>position="stack"</code> is the default and just stacks them on top of each other,</p></li>
+<li><p><code>position="dodge"</code> puts them side-by-side,</p></li>
+<li><p><code>position="fill"</code> is interesting, in that it not only changes the appearance of the plot, but also the interpretation: the color bars are still stacked on top of each other, but the stacked bars are now stretched to <em>fill</em> all the available vertical space - in other words, all stacked bars have the same height, and the area of the colored bars now represents the <em>proportions</em> of the extra grouping variable rather than the counts.</p></li>
+</ul>
+<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="graphics-ggplot2.html#cb298-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> Sex, <span class="at">fill =</span> Smoking)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">&quot;fill&quot;</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-303-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>So here we see that while the number of smokers differs between men and women, as seen above, the actual <em>proportion</em> of smokers is almost identical (around 20%).</p>
+<p>Note that this an example where the logic behind constructing a plot using <code>ggplot2</code> is still sound, but not exactly intuitive, and does not map especially well to graphical ideas rooted in the base system.</p>
+<p><strong>Example 12:</strong> change the default smoothing function in <code>geom_smooth</code></p>
+<p>As seen before, a general smoothing curve for the blood pressure scatterplot has little curvature, i.e. is almost a straight line; if we want to compare the curve with a straight line fit, we can slightly abuse <code>geom_smooth</code> via the argument <code>method=</code>:</p>
+<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="graphics-ggplot2.html#cb299-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> SystBP, <span class="at">y =</span> DiaBP)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-304-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>While the resulting “curve” (straight line) is not a smooth in the traditional sense, it still serves as a handy graphical summary of the relationship between systolic and diastolic blood pressure. This is achieved by specifying a linear model fit via function <code>lm</code> described in REF<a href="#fn77" class="footnote-ref" id="fnref77"><sup>77</sup></a></p>
+<p><strong>Exercises:</strong></p>
+<ol style="list-style-type: decimal">
+<li>Re-do the blood pressure scatterplot with a smoothing function of your choice, but without the shaded area indicating the 95% confidence interval around the fit.</li>
+</ol>
+<p>————–FIXME</p>
+<p>all together - multi aesthetic, multi-geom, with arguments? E.g. scatter by sex/color with lm smooth?
+geom_hline? geom_ribbon with transparency?</p>
+<p><strong>Example 13:</strong></p>
+<p>Exercises:</p>
+<ol style="list-style-type: decimal">
+<li><p>Map a quantitative variable, e.g. Age, to color; what happens?</p></li>
+<li><p>Can use geom_smooth without geom_point()?</p></li>
+</ol>
+<hr />
 </div>
 </div>
-<div id="background-5" class="section level2 hasAnchor" number="12.4">
-<h2><span class="header-section-number">12.4</span> Background<a href="graphics-ggplot2.html#background-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>UNDER CONSTRUCTION</p>
+<div id="splitting-plots-by-sub-groups" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">12.3</span> Splitting plots by sub-groups<a href="graphics-ggplot2.html#splitting-plots-by-sub-groups" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Another way of adding or highlighting extra information in a graphical display is to split the display into several panels, depending on the value of one or several variables in the data set of interest. We have already seen examples for this, either using the base function <code>coplot</code> to generate conditioning plots, or doing it manually ourselves (REF).</p>
+<p><code>ggplot2</code> refers to the divisions of the plotting device as <em>facets</em> rather than panels, but makes it possible to split any graphical display using one of two functions:</p>
+<ul>
+<li><p>the more general <code>facet_wrap</code> splits the display according to the specified variable (or variables) and arranges them in a rectangular pattern across the current graphical device,</p></li>
+<li><p>the more specialized <code>facet_grid</code> also splits the display according to the specified variables, but arranges them as a fixed grid on the device.</p></li>
+</ul>
+<p><code>facet_wrap</code> works best with one variable defining the facets, whereas <code>facet_grid</code> generally works best with two grouping variables with a small number of levels and all possible combinations observed, as seen below.</p>
+<p><strong>Example 14:</strong> histogram of age by physical training status</p>
+<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="graphics-ggplot2.html#cb300-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> Age)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>Sport)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-305-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>We get four histograms, one per level of the <code>Sport</code> variable, in a 2x2 arrangement; the ordering of the histograms follows the ordering of the levels from least active (<code>None</code>) to most active (<code>Compet</code>) from top left to bottom right, filled row-wise. By default, all facets share the same horizontal and vertical scaling: here, this makes it here easy to compare the number of participants per facet - clearly, most participants are not physically active, and the other levels have roughly the same number of participants each; also, the strong spike around 40 years of age that we have already seen above seems to be limited to the non-sporty sub-group.</p>
+<p>Note that it makes sense to have a different mechanism from mapping to aesthetics for splitting a display in this manner: while a faceting variable strongly affects the appearance of the display, not actual values, or transformation of its values, are shown, so there is really no way to map the faceting to an aesthetic (see Exercise 2 below if in doubt).</p>
+<p><strong>Example 15:</strong> scatterplot of systolic and diastolic blood pressure by sex and smoking status</p>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="graphics-ggplot2.html#cb301-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> SystBP, <span class="at">y =</span> DiaBP)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">facet_grid</span>(Sex <span class="sc">~</span> Smoking)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-306-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Here, we get again four facets, but now based on the combinations of the two variables <code>Sex</code> and <code>Smoking</code>, which each have two levels; the 2x2 combinations of values are arranged with the levels of smoking forming the columns of the grid, and the levels of sex forming the rows. Consequently, we get a side-by-side comparison of non-smokers and smokers by sex, or equivalently, a top-to-bottom comparison of females and males by smoking status. For our example, it appears that i) there is a moderate linear relationship between systolic and diastolic blood pressure for all combinations of smoking and sex, ii) diastolic blood pressures tend to be lower among smokers, iii) systolic blood pressure are somewhat downwards skewed among the non-smokers, and iv) males have a wider range of diastolic blood pressures than females.</p>
+<p>Both faceting functions have options for modifying the display and arrangment of the sub-plots, so that you can</p>
+<ul>
+<li>have separate instead of shared horizontal and vertical axes (<code>scales=</code>, see below),</li>
+<li>change the order in which facets are drawn (<code>as.table=</code>)),</li>
+<li>modify the labels of the facets (<code>labeller=</code>)</li>
+<li>(for <code>facet_wrap</code>only), determine the number of rows and columns of facets (<code>nrow=</code>, <code>ncol</code>),</li>
+</ul>
+<p>among other things (as usually, check with <code>?facet_wrap</code> and <code>?facet_grid</code> for what is possible).</p>
+<p><strong>Example 16:</strong>: histograms of age by level of physical activity, with separate y-axes, arranged as a 1D strip of panels, and adding the name of the variable to the label</p>
+<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="graphics-ggplot2.html#cb302-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> Age)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>Sport, <span class="at">scales =</span> <span class="st">&quot;free_y&quot;</span>, <span class="at">nrow =</span> <span class="dv">1</span>,</span>
+<span id="cb302-2"><a href="graphics-ggplot2.html#cb302-2" tabindex="-1"></a><span class="sc">+</span>     <span class="at">labeller =</span> label_both)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-307-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>By allowing a separate y-scale, each facet can use all of the available vertical space for its histogram. Compared to Example 14 above, a lot of white space is eliminated, and we get a closer look at the age distribution in the rare categories of physical activity, because the counts are no longer compressed by the scale of the most common category - the price for this is that the different frequencies between the categories are no longer as prominent as above, we have to actually look at the labels of the y-axis to understand this<a href="#fn78" class="footnote-ref" id="fnref78"><sup>78</sup></a>.</p>
+<p><strong>Exercises:</strong></p>
+<ol style="list-style-type: decimal">
+<li>Construct a plot where <code>facet_wrap</code> is used with a continuous variable like heart rate or BMI. Is this useful?<br />
+</li>
+<li>What happens if you use a variable both for faceting and mapping to an aesthetic - is this informative? Demonstrate using an example or speculate freely.</li>
+<li>Swap the rows and columns in Example 15 above. Is this intuitive?</li>
+<li>The comment on Example 15 above makes a number of rather detailed claims i)-iv) about the relationships between the variables in the plot. For each of these claims, construct a new plot that clarifies / illustrates whether it is actually correct. <em>Hint:</em> the new plots do not need to be scatterplots, and can use extra geoms for illustration, but will likely involve facetting of some kind.</li>
+</ol>
 </div>
-<div id="basic-usage" class="section level2 hasAnchor" number="12.5">
-<h2><span class="header-section-number">12.5</span> Basic usage<a href="graphics-ggplot2.html#basic-usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>UNDER CONSTRUCTION</p>
+<div id="changing-the-default-appearance" class="section level2 hasAnchor" number="12.4">
+<h2><span class="header-section-number">12.4</span> Changing the default appearance<a href="graphics-ggplot2.html#changing-the-default-appearance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A reference plot for modification</p>
+<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb303-1"><a href="graphics-ggplot2.html#cb303-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(hemo, <span class="fu">aes</span>(<span class="at">x =</span> PCV, <span class="at">y =</span> Hb, <span class="at">color =</span> Menopause)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span>
+<span id="cb303-2"><a href="graphics-ggplot2.html#cb303-2" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-308-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<div id="scales" class="section level3 hasAnchor" number="12.4.1">
+<h3><span class="header-section-number">12.4.1</span> Scales<a href="graphics-ggplot2.html#scales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Scales are an important concept in the <code>ggplot2</code> graphical system. It is all well and good to generically map a variable to an aesthetic, say smoking status to color, but at some point before the ink hits the paper, or the current hits the transistor switch of the pixel, we have to determine exactly <em>which</em> color should be applied, and how this color relates to the original data values (“N” or “no” or “non-smoker” etc.). This concrete mapping of raw data values to actual colors, line types etc. is managed in <code>ggplot2</code> by <em>scales</em>. Indeed, for every aesthetic that you include in a <code>ggplot</code>-object, there is a corresponding scale attached.</p>
+<p>You’ll notice that at this point, we have already generated some quite sophisticated plots without knowing or caring that scales exist. Indeed, one of the selling points of <code>ggplot2</code> compared to base graphics has been that we do <em>not</em> have to worry about details of color, symbol shape, line width etc. - and this is because every aesthetic comes with a <em>default scale</em> attached. In other words, many of the reasonable default settings that make <code>ggplot2</code> convenient to work with are implemented via these default scales. Or to look at it another way, many of the default settings for color, shape etc. can be modified by overriding the default scale.</p>
+<p>For this short introduction, we are not going to look deeply into how this works<a href="#fn79" class="footnote-ref" id="fnref79"><sup>79</sup></a>. Instead, I’ll just demonstrate some common use cases; the basic idea is that scales are implemented in the finest R tradition as functions, and that you override the default scale by adding a scale function to the plot object via <code>+</code> (same as for geoms).</p>
+<p>The number and variety of scale functions is somewhat daunting, but note that the naming convention very generally follows the pattern <code>scale_&lt;aesthetic&gt;_&lt;name&gt;</code>, where <code>&lt;aesthetic&gt;</code> is the name of the aesthetic you want to modify, and the <code>&lt;name&gt;</code> characterizes what the scale does. E.g. if I want to change anything about a mapped <code>fill</code>-color, I will look for a function starting with <code>scale_fill_</code>, and if I want to choose one of the Brewer color schemes discussed in REF, I would pick the function <code>scale_fill_brewer</code>.</p>
+<p><strong>Example 17:</strong> change default colors for a grouping variable, and modify the name of the legend as well as the grouping labels</p>
+<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="graphics-ggplot2.html#cb304-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Set1&quot;</span>, <span class="at">name =</span> <span class="st">&quot;Status&quot;</span>, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Pre-menopausal&quot;</span>,</span>
+<span id="cb304-2"><a href="graphics-ggplot2.html#cb304-2" tabindex="-1"></a><span class="sc">+</span>     <span class="st">&quot;Post-menopausal&quot;</span>))</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-309-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Here, the specific task of picking a Brewer color palette is delegated to the scale function <code>scale_color_brewer</code>, specifying the Brewer palette <code>Set1</code>. The arguments <code>name</code>, <code>breaks</code> and <code>labels</code> affect the display of the legend for the color aesthetic, and are similar for most scale functions: <code>name</code> is simply the heading used for the legend; <code>breaks</code> refers to the values of the original data, and <code>labels</code> lists the labels displayed in the legend corresponding to the data values (so <code>No</code> -&gt; <code>Pre-menopausal</code>).</p>
+<p><strong>Example 18:</strong> use a scale to remove all data points with hemoglobin levels under 12 g/dl from the scatterplot</p>
+<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="graphics-ggplot2.html#cb305-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="cn">NA</span>))</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-310-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>As the hemoglobin levels are mapped to the y-axis, we can use the default scale <code>scale_y_continous</code> and pass the desired limits as an argument (as we only want to filter at the lower end of the data range, we set the upper limit to NA). Consequently, the scale function maps all values outside of the limits to <code>NA</code> (which triggers the warning at the top of the plot). Note that this happens before the rest of the plot is constructed, so any derived quantities (smoothing curves, the quartiles for a boxplot etc.) are calculated without these data points (unlike <code>coord_</code>-functions, see below).</p>
+<p>While this is a legitimate application of scale functions, this is common enough that <code>ggplot2</code> includes the small helper functions <code>lims</code>, <code>xlim</code> and <code>ylim</code> that provide the same service wihout reference to scales. We could have constructed exactly the same plot as</p>
+<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="graphics-ggplot2.html#cb306-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">12</span>, <span class="cn">NA</span>)</span>
+<span id="cb306-2"><a href="graphics-ggplot2.html#cb306-2" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">lims</span>(<span class="at">y =</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="cn">NA</span>))</span></code></pre></div>
+<p><strong>Example 19:</strong> use the log10-values of hemoglobin in the scatterplot</p>
+<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="graphics-ggplot2.html#cb307-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">trans =</span> <span class="st">&quot;log10&quot;</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-312-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Again, we want to affect the display of the y-axis, so we use the scale function <code>scale_y_continuous</code>, bit set the argument <code>trans=</code> to a non-default value. Note that this is superior to just log10-transforming the data: the labels of the y-axis are still in the original units, only now spaced on alogarithmic scale.</p>
+<p>Again, this is common enough to have a shortcut: we would get the same plot using</p>
+<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb308-1"><a href="graphics-ggplot2.html#cb308-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">scale_y_log10</span>()</span></code></pre></div>
+<p><strong>Exercises:</strong></p>
+<ol style="list-style-type: decimal">
+<li>Find out how many scale functions (names starting with <code>scale_</code>) are defined in <code>ggplot2</code>.</li>
+<li>Modify the scatterplot of the Harvest data in Example 5 to i) only show data points with diastolic blood pressures above 80 and systolic blood pressures under 175, ii) to label groups as “Female” and “Male”, and iii) change the color palette to one of the available Viridis-palettes.</li>
+</ol>
 </div>
-<div id="slightly-extended-usage" class="section level2 hasAnchor" number="12.6">
-<h2><span class="header-section-number">12.6</span> Slightly extended usage<a href="graphics-ggplot2.html#slightly-extended-usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>UNDER CONSTRUCTION</p>
+<div id="fixing-aesthetics" class="section level3 hasAnchor" number="12.4.2">
+<h3><span class="header-section-number">12.4.2</span> Fixing aesthetics<a href="graphics-ggplot2.html#fixing-aesthetics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sometimes, there is an aspect of the plot where we want to have a very specific look, not something based on the content of the data or the default scales: sometimes, we do want a blue histogram, or a barchart in university colors. In <code>ggplot2</code>, this is referred to as <em>fixing</em> an aesthetic (instead of mapping it to a variable in the data).</p>
+<p>Possible use cases include:</p>
+<ul>
+<li><p>fixing the <code>color</code> and <code>fill</code> aesthetics to specific colors; while this is obvious and easy, it is not all that common, as it requires exactly the kind of fiddling with color codes that we want to avoid, and you are generally better off using a scale function and some pre-defined palette, as described above;</p></li>
+<li><p>adding horizontal or vertical reference lines to a plot (often at zero or one), using one of <code>geom_hline</code> or <code>geom_vline</code>, with the respective aesthetics of <code>yintercept</code> and <code>xintercept</code>;</p></li>
+<li><p>making colors transparent, to reduce the visual impact of overplotting, by fixing the <code>alpha</code> aesthetic (by default one, as in fully solid colors, with smaller values down to zero indicating more transparency).</p></li>
+</ul>
+<p>Aesthetics are fixed by assigning them the desired value in the call of a geom, but <em>outside of a an <code>aes</code> function call</em>, see examples below.</p>
+<p><strong>Example 20:</strong> for our patient cohort, 12 g/dl is a clinically relevant threshold for low hemoglobin</p>
+<div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb309-1"><a href="graphics-ggplot2.html#cb309-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">12</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-314-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Note how the assigment <code>yintercept = 12</code> is a direct argument to the call of the <code>geom_hline</code>-function, not wrapped into a call to <code>aes</code>.</p>
+<p>Actually, reference lines are a situation where you may want to also fix other aesthetics to get the kind of line you like; me, I like them darkish gray and a bit thicker than default:</p>
+<div class="sourceCode" id="cb310"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb310-1"><a href="graphics-ggplot2.html#cb310-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">12</span>, <span class="at">color =</span> <span class="fu">grey</span>(<span class="fl">0.6</span>), <span class="at">size =</span> <span class="fl">1.2</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-315-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 21:</strong> density plots for different groups are a good example where reduced transparency increases the readability of the plot; say we want to compare the distribution of heart rates between women and men in the Harvest data:</p>
+<div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb311-1"><a href="graphics-ggplot2.html#cb311-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(hh, <span class="fu">aes</span>(<span class="at">x =</span> HR, <span class="at">fill =</span> Sex)) <span class="sc">+</span> <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-316-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>We see that the distributions are quite similar, only that the heart rates among women are ca. 5 bpm higher - we can assess the similarity of the distribution curves because the women’s density can be seen through overlaying men’s density; without introducing transparency, most of the women’s density would be covered.</p>
+<p><strong>Exercises:</strong></p>
+<ol style="list-style-type: decimal">
+<li>Create a boxplot of the age at baseline in the Harvest cohort with changed fill- and outline color.</li>
+<li>Add a red (instead of default blue) smoothing curve to the scatterplot of hemoglobin vs packed cell volume.</li>
+<li>Use the function <code>geom_abline</code> to add a linear regression line to the Hb vs PCV scatterplot, and compare the result with the linear smoothing curve generated with <code>geom_smooth</code>.</li>
+<li>Create a bar chart of the levels of physical activity in the Harvest data, using KI Dark Plum (RGB 79/4/51) as the fill color.</li>
+</ol>
 </div>
-<div id="multiple-layers" class="section level2 hasAnchor" number="12.7">
-<h2><span class="header-section-number">12.7</span> Multiple layers<a href="graphics-ggplot2.html#multiple-layers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>UNDER CONSTRUCTION</p>
+<div id="themes" class="section level3 hasAnchor" number="12.4.3">
+<h3><span class="header-section-number">12.4.3</span> Themes<a href="graphics-ggplot2.html#themes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We have seen that geoms and scales handle the aspects of a plot that can be mapped to the underlying data, at least in principle (even if we e.g. decide to fix an aesthetic as seen above). There are still numerous graphical aspects of the plot that will affect how it is perceived by the viewer: the presence and placement of titles and labels, the font family and font face used for text, the presence and look of a background with or without gridlines, and the appearance and placement of legends: these non-data related aspects are referred to as plot <em>elements</em>, and these elements are collectively assembled and manipulated as <em>themes</em>.</p>
+<p>In the best spirit of <code>ggplot2</code>, themes share three properties with geoms and scales:</p>
+<ol style="list-style-type: decimal">
+<li><p>Access and manipulation are handled via functions following a naming pattern (here, starting with <code>theme_</code>)</p></li>
+<li><p>There is a reasonable default theme that will be applied if nothing else is specified (here, <code>theme_gray</code> with its very recognizable gray background and white reference lines).</p></li>
+<li><p>The default theme can be overridden either completely or partially by adding a call to a theme-function to a defined <code>ggplot2</code> object (e.g. as <code>+ theme_bw()</code>).</p></li>
+</ol>
+<p>Functionally, themes cover a similar set of graphical parameters as the function <code>par</code> for base graphics, but where <code>par</code> sets the parameters for a graphical device, and needs to be called before the plotting function, themes define properties of a plot, regardless of the device, and can be added after a plot was defined as an object.<a href="#fn80" class="footnote-ref" id="fnref80"><sup>80</sup></a></p>
+<p><strong>Complete themes</strong> The easiest way to change the appearance of a plot is to use <em>complete themes</em>, which set defaults for all plot elements in one function call. <code>ggplot2</code> comes with a set of basic themes, see <code>?theme_gray</code> for a list and below for some examples. Additionally, there are many add-on packages that define their own sets of themes, see below.</p>
+<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb312-1"><a href="graphics-ggplot2.html#cb312-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-317-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Here, we do not have the usual gray background with reference lines, instead we have a white background with black axes. Some more included themes:</p>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-318-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><strong>Changing the default theme</strong> There is a sizable minority of users<a href="#fn81" class="footnote-ref" id="fnref81"><sup>81</sup></a> who really dislike the gray default theme. Instead of having to override the default theme for every single plot they create, they can use the function <code>theme_set</code> to change to a different default theme, so that all <code>ggplot2</code>-objects created without a specific theme will be using the new default:</p>
+<div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb313-1"><a href="graphics-ggplot2.html#cb313-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">theme_set</span>(<span class="fu">theme_dark</span>())</span>
+<span id="cb313-2"><a href="graphics-ggplot2.html#cb313-2" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-319-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Note that still works, even though we have defined <code>pl_hemo</code> before we changed the default: the settings of the default theme are not ‘frozen’ into the plot object at creation, instead no explicit theme settings are recorded with the plot, which implies “use whatever default is in place at the time of display or saving to file”. If however we set a theme explicitly as part of the plot definition, the default will simply be ignored:</p>
+<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb314-1"><a href="graphics-ggplot2.html#cb314-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo2 <span class="ot">&lt;-</span> pl_hemo <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
+<span id="cb314-2"><a href="graphics-ggplot2.html#cb314-2" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo2</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-320-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>The new default theme will persist until the R session is closed<a href="#fn82" class="footnote-ref" id="fnref82"><sup>82</sup></a>, unless you re-set it to its default by calling <code>theme_set</code> again:</p>
+<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="graphics-ggplot2.html#cb315-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">theme_set</span>(<span class="fu">theme_gray</span>())</span></code></pre></div>
+<p><strong>Changing specific elements</strong> Sometimes, we only want to change specific elements in a theme. Similar to geoms and scales, we can do this by specifying the elements we want to change as arguments to a function call, in this case simply the function <code>theme</code> (no underscore, no further name).</p>
+<p>Note that there are currently 97 different elements / graphical parameters that can be modified in a call to <code>theme</code><a href="#fn83" class="footnote-ref" id="fnref83"><sup>83</sup></a>, so while this clearly allows fine control over how things will look, this can get technical. Here, I will demonstrate two specific use cases, one of which is reasonably common, and the other occurrs occasionally</p>
+<p><strong>Example 22:</strong> change the position of the legend</p>
+<div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb317-1"><a href="graphics-ggplot2.html#cb317-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-322-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb318-1"><a href="graphics-ggplot2.html#cb318-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>, <span class="at">legend.justification =</span> <span class="dv">1</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-322-2.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>This is straightforward, and is often appropriate for a wide plot with a reasonably long legend, where the default legend position on the right uses a lot of white space. Other parameters that will affect the appearance of a legend:</p>
+<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb319-1"><a href="graphics-ggplot2.html#cb319-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">names</span>(<span class="fu">theme_get</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb319-2"><a href="graphics-ggplot2.html#cb319-2" tabindex="-1"></a><span class="sc">+</span>     <span class="fu">grep</span>(<span class="at">pattern =</span> <span class="st">&quot;^legend&quot;</span>, <span class="at">value =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb319-3"><a href="graphics-ggplot2.html#cb319-3" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;legend.background&quot;</span>     <span class="st">&quot;legend.margin&quot;</span>         <span class="st">&quot;legend.spacing&quot;</span>        <span class="st">&quot;legend.spacing.x&quot;</span>     </span>
+<span id="cb319-4"><a href="graphics-ggplot2.html#cb319-4" tabindex="-1"></a> [<span class="dv">5</span>] <span class="st">&quot;legend.spacing.y&quot;</span>      <span class="st">&quot;legend.key&quot;</span>            <span class="st">&quot;legend.key.size&quot;</span>       <span class="st">&quot;legend.key.height&quot;</span>    </span>
+<span id="cb319-5"><a href="graphics-ggplot2.html#cb319-5" tabindex="-1"></a> [<span class="dv">9</span>] <span class="st">&quot;legend.key.width&quot;</span>      <span class="st">&quot;legend.text&quot;</span>           <span class="st">&quot;legend.text.align&quot;</span>     <span class="st">&quot;legend.title&quot;</span>         </span>
+<span id="cb319-6"><a href="graphics-ggplot2.html#cb319-6" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">&quot;legend.title.align&quot;</span>    <span class="st">&quot;legend.position&quot;</span>       <span class="st">&quot;legend.direction&quot;</span>      <span class="st">&quot;legend.justification&quot;</span> </span>
+<span id="cb319-7"><a href="graphics-ggplot2.html#cb319-7" tabindex="-1"></a>[<span class="dv">17</span>] <span class="st">&quot;legend.box&quot;</span>            <span class="st">&quot;legend.box.just&quot;</span>       <span class="st">&quot;legend.box.margin&quot;</span>     <span class="st">&quot;legend.box.background&quot;</span></span>
+<span id="cb319-8"><a href="graphics-ggplot2.html#cb319-8" tabindex="-1"></a>[<span class="dv">21</span>] <span class="st">&quot;legend.box.spacing&quot;</span>   </span></code></pre></div>
+<p>(see <code>?theme</code> for details)</p>
+<p><strong>Example 23:</strong> change the font of the text in the plot</p>
+<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb320-1"><a href="graphics-ggplot2.html#cb320-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">&quot;Times&quot;</span>))</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-324-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Rarely, a picky journal may require a specific font to be used in plots. In the example above, the default (sans-serif) font is replaced with (serif) Times New Roman, so the letters in the axis labels, legend title and -labels now all have little tails.</p>
+<p>There are a couple of things to unpack here:</p>
+<ul>
+<li><p>We do not simply specify the name of the new font as an argument, but we rather use another access function called <code>element_text</code>. This is simply more efficient - we have many different text elements in the plot, so having a separate argument in <code>theme</code> for setting the font, size, color etc. of each of these text elements would be insane; instead, we bundle all the relevant information into one object<a href="#fn84" class="footnote-ref" id="fnref84"><sup>84</sup></a>, where all individual properties can be modified via the access function. E.g. the default <code>text</code>-element for <code>theme_gray</code> is defined as</p>
+<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb323-1"><a href="graphics-ggplot2.html#cb323-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">theme_gray</span>()<span class="sc">$</span>text</span>
+<span id="cb323-2"><a href="graphics-ggplot2.html#cb323-2" tabindex="-1"></a>List of <span class="dv">11</span></span>
+<span id="cb323-3"><a href="graphics-ggplot2.html#cb323-3" tabindex="-1"></a> <span class="sc">$</span> family       <span class="sc">:</span> chr <span class="st">&quot;&quot;</span></span>
+<span id="cb323-4"><a href="graphics-ggplot2.html#cb323-4" tabindex="-1"></a> <span class="sc">$</span> face         <span class="sc">:</span> chr <span class="st">&quot;plain&quot;</span></span>
+<span id="cb323-5"><a href="graphics-ggplot2.html#cb323-5" tabindex="-1"></a> <span class="sc">$</span> colour       <span class="sc">:</span> chr <span class="st">&quot;black&quot;</span></span>
+<span id="cb323-6"><a href="graphics-ggplot2.html#cb323-6" tabindex="-1"></a> <span class="sc">$</span> size         <span class="sc">:</span> num <span class="dv">11</span></span>
+<span id="cb323-7"><a href="graphics-ggplot2.html#cb323-7" tabindex="-1"></a> <span class="sc">$</span> hjust        <span class="sc">:</span> num <span class="fl">0.5</span></span>
+<span id="cb323-8"><a href="graphics-ggplot2.html#cb323-8" tabindex="-1"></a> <span class="sc">$</span> vjust        <span class="sc">:</span> num <span class="fl">0.5</span></span>
+<span id="cb323-9"><a href="graphics-ggplot2.html#cb323-9" tabindex="-1"></a> <span class="sc">$</span> angle        <span class="sc">:</span> num <span class="dv">0</span></span>
+<span id="cb323-10"><a href="graphics-ggplot2.html#cb323-10" tabindex="-1"></a> <span class="sc">$</span> lineheight   <span class="sc">:</span> num <span class="fl">0.9</span></span>
+<span id="cb323-11"><a href="graphics-ggplot2.html#cb323-11" tabindex="-1"></a> <span class="sc">$</span> margin       <span class="sc">:</span> <span class="st">&#39;margin&#39;</span> num [<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>] 0points 0points 0points 0points</span>
+<span id="cb323-12"><a href="graphics-ggplot2.html#cb323-12" tabindex="-1"></a>  ..<span class="sc">-</span> <span class="fu">attr</span>(<span class="sc">*</span>, <span class="st">&quot;unit&quot;</span>)<span class="ot">=</span> int <span class="dv">8</span></span>
+<span id="cb323-13"><a href="graphics-ggplot2.html#cb323-13" tabindex="-1"></a> <span class="sc">$</span> debug        <span class="sc">:</span> logi <span class="cn">FALSE</span></span>
+<span id="cb323-14"><a href="graphics-ggplot2.html#cb323-14" tabindex="-1"></a> <span class="sc">$</span> inherit.blank<span class="sc">:</span> logi <span class="cn">TRUE</span></span>
+<span id="cb323-15"><a href="graphics-ggplot2.html#cb323-15" tabindex="-1"></a> <span class="sc">-</span> <span class="fu">attr</span>(<span class="sc">*</span>, <span class="st">&quot;class&quot;</span>)<span class="ot">=</span> chr [<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="st">&quot;element_text&quot;</span> <span class="st">&quot;element&quot;</span></span></code></pre></div>
+<p>So we have nine modifiable properties here, including e.g. horizontal and verical alignment of the text and the size of the margins on all four sides of the text box.</p></li>
+<li><p>We use the argument <code>text=</code> to set the font for all text elements in the plot. This works because the plot elements that are accessed by <code>theme</code> have a clever hierarchical structure, where all text elements <em>inherit</em> from <code>text=</code>: <code>axis.text=</code> for the axis tick labels, <code>axis.title=</code> for the axis titles, <code>legend.title=</code> for the legend title, and <code>legend.text=</code> for the individual item labels in the legend; so instead of having to specify a new font for each element separately, we can just set them all via <code>text=</code>, which is of course the most obvious use case.[^element_hierarchy]</p></li>
+</ul>
+<p>The combination of access functions and the hierarchy/inheritance makes this an extremely flexible setup - if e.g. for some bizarre reason we want to i) set a new font for all text elements in a plot, ii) use bold font only for the title of the x-axis, we can do this quite efficiently via</p>
+<div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb324-1"><a href="graphics-ggplot2.html#cb324-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">&quot;Times&quot;</span>), <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
+<p>Comparable access functions and hierarchies exist for other plot elements (titles, lines, rectangles, margins), see <code>?theme</code> and <code>?element_text</code>.</p>
+<p><strong>Exercises:</strong></p>
+<ol style="list-style-type: decimal">
+<li>Add the ‘empty’ <code>theme_void</code> to one of the previously defined plots. Which aspects of the plot are no longer displayed? Which aspects are preserved? Interpret these aspects as either elements or aesthetics.</li>
+</ol>
 </div>
-<div id="splitting-the-plot" class="section level2 hasAnchor" number="12.8">
-<h2><span class="header-section-number">12.8</span> Splitting the plot<a href="graphics-ggplot2.html#splitting-the-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>UNDER CONSTRUCTION</p>
+<div id="other" class="section level3 hasAnchor" number="12.4.4">
+<h3><span class="header-section-number">12.4.4</span> Other<a href="graphics-ggplot2.html#other" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This is a somewhat random collection of occasionally useful bits and pieces.</p>
+<p><strong>Plot annotation</strong> <code>ggplot2</code> offers a number of ways to add explanatory (non-data) text to a plot via the helper function <code>labs</code></p>
+<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="graphics-ggplot2.html#cb325-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;title=&quot;</span>, <span class="at">subtitle =</span> <span class="st">&quot;subtitle=&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;caption=&quot;</span>, <span class="at">tag =</span> <span class="st">&quot;tag=&quot;</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-327-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>For convenience, we can also set labels for other aesthetics, something that we would usually do via a scale function:</p>
+<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb326-1"><a href="graphics-ggplot2.html#cb326-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Packed Cell Volume (PCV)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Hemoglobin (Hb)&quot;</span>, <span class="at">color =</span> <span class="st">&quot;Has menopause?&quot;</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-328-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>For even more convenience, we can use wrapper functions <code>xlab</code>, <code>ylab</code> and <code>ggtitle</code> to explicitly set some of the annotations available through <code>labs</code><a href="#fn85" class="footnote-ref" id="fnref85"><sup>85</sup></a></p>
+<p><strong>Zooming in</strong> On top of geoms, scales, themes etc., <code>ggplot2</code> also includes the concept of <em>coordinate systems</em>. We will not not not discuss this here, but there is one neat hack that allows you to zoom in on a rectangular are of an existing plot using <code>coord_cartesian</code>:</p>
+<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="graphics-ggplot2.html#cb328-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>) <span class="sc">+</span> <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">35</span>, <span class="dv">50</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="fl">17.5</span>))</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-329-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>This is different from using limits in scales or <code>xlim</code> that we have seen above, where the limits are used to filter the underlying data, and the plot is re-built using the filtered data set: here, the plot is built with the original data, and the call to <code>coord_cartesian</code> just zooms in on the specified part of the plots; as a consequence, summary statistics like the linear regression smoother added here are calculated for the original data, not just the data displayed (indicated visually by the regression lines not being truncated, but continuing out of frame).</p>
+<p><strong>Messing with axes</strong> We can use <code>scale_x_reverse</code> and <code>scale_y_reverse</code> to reverse the direction of the plot axes (i.e. right to left instead of left to right, and top to bottom instead of bottom to top). Similar, we can use function <code>coord_flip</code> to exchange x- and y-axis to “flip” (transpose a plot)<a href="#fn86" class="footnote-ref" id="fnref86"><sup>86</sup></a>.</p>
+<p><strong>Exercise:</strong> Reverse the direction of the x-axis on the Hb vs PCV scatterplot. <em>Bonus:</em> put the reversed x-axis at the top of the plot instead of the bottom.</p>
 </div>
-<div id="messing-with-the-defaults" class="section level2 hasAnchor" number="12.9">
-<h2><span class="header-section-number">12.9</span> Messing with the defaults<a href="graphics-ggplot2.html#messing-with-the-defaults" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>UNDER CONSTRUCTION</p>
-<div id="fixing-aesthetics" class="section level3 hasAnchor" number="12.9.1">
-<h3><span class="header-section-number">12.9.1</span> {-} Fixing aesthetics<a href="graphics-ggplot2.html#fixing-aesthetics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="scales" class="section level3 unnumbered hasAnchor">
-<h3>Scales<a href="graphics-ggplot2.html#scales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="complex-layering-and-annotation" class="section level2 hasAnchor" number="12.5">
+<h2><span class="header-section-number">12.5</span> Complex layering and annotation<a href="graphics-ggplot2.html#complex-layering-and-annotation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have already combined multiple geoms in a plot, layering their graphical output on top of each other. In this approach, each geom uses the same data and mapping of variables to aesthetics as set in the defining <code>ggplot</code> function call - the geoms <em>inherit</em> data and mapping. However, the logic underlying <code>ggplot2</code><a href="#fn87" class="footnote-ref" id="fnref87"><sup>87</sup></a> allows for different data and different mapping in each layer of a plot<a href="#fn88" class="footnote-ref" id="fnref88"><sup>88</sup></a>. This is a cool way of thinking about graphical data representation, as well as a useful concept for understanding how <code>ggplot2</code> hangs together - however, for the usual reasons, we will focus on a concrete use case, in this case how to use layers to annotate plots.</p>
+<p><strong>Example 24:</strong> annotate a subset of points in a data set. As discussed above, a threshold of 12 g/dl is a clinically relevant cutoff for hemglobin levels that are too low; here, we want to add an identifying label to each point below this threshold.</p>
+<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="graphics-ggplot2.html#cb329-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">geom_text</span>(<span class="at">data =</span> <span class="fu">subset</span>(hemo, Hb <span class="sc">&lt;</span> <span class="dv">12</span>), <span class="fu">aes</span>(<span class="at">label =</span> ID))</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-330-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>So the basic idea here is to use <code>geom_text</code> to add the identifier for the specified subset of the data. This requires two extra pieces of information (arguments) when calling <code>geom_text</code>:</p>
+<ol style="list-style-type: decimal">
+<li><p>As outlined above, we need to specify the data where we want to have the annotation. As expected, we do this via the <code>data=</code> argument and a call to the <code>subset</code> function.</p></li>
+<li><p><code>geom_text</code> requires three aesthetics: a horizontal and vertical coordinate indicating where to put the label (aesthetics <code>x</code> and <code>y</code>), put also the actual text to put there (aesthetic <code>label</code>). While the x- and y-coordinates have been mapped in the original plot object <code>pl_hemo</code>, which <code>geom_text</code> inherits by default, we need to specify an additional mapping for the text; this we do as before via a call to <code>aes</code> that maps the <code>label</code> aesthetic to the variable <code>ID</code> in the data frame generated by <code>subset</code>.</p></li>
+</ol>
+<p>The resulting plot above does in principle what we want it do, i.e. identify the low hemoglobin levels. However, it has a couple of less attractive features:</p>
+<ul>
+<li><p>the labels are in the same color as the data points, indicating the menopausal status of the women; here, this is not really what we want, and hard to read to boot;</p></li>
+<li><p>somehow, the legend to the right of the plot got an extra text symbol on top of the data points, which is not pretty;</p></li>
+<li><p>the labels are smack on top of plotting symbols, which makes them hard to read.</p></li>
+</ul>
+<p>Fortunately these defects are easy to fix by a combination of old and new magic:</p>
+<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb330-1"><a href="graphics-ggplot2.html#cb330-1" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">geom_text</span>(<span class="at">data =</span> <span class="fu">subset</span>(hemo, Hb <span class="sc">&lt;</span> <span class="dv">12</span>), <span class="fu">aes</span>(<span class="at">label =</span> ID), <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">nudge_x =</span> <span class="fl">0.5</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-331-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>The old magic, which we have discussed above, is to fix the color aesthetic to black: as <code>geom_text</code> supports the color aesthetic (i.e. we can have labels in different colors depending on data), the mapping to variable <code>Menopause</code> was inherited from <code>pl_hemo</code>. We override this inheritance by fixing the color aesthetic (i.e. assigning it a fixed value outside of the call to <code>aes</code>), and that takes care both of the color of the ID labels and the somewhat messed up legend.</p>
+<p>The new magic is the use of the argument <code>nudge_x</code> for shifting the labels horizontally from the exact location specified, in this case by six months to the right, aka +0.5 years on the horizontal age axis (getting the exact position of labels right is often tricky - here, a simple <code>nudge_x</code> and a reasonable guess for the shift works ok; there are other arguments to <code>geom_text</code> that can help, but the most robust/least guesswork solution is implemented in package <code>ggrepel</code>, see below).</p>
+<p><strong>Example 25:</strong></p>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb331-1"><a href="graphics-ggplot2.html#cb331-1" tabindex="-1"></a><span class="sc">&gt;</span> anndf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">xcoord =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">25</span>), <span class="at">ycoord =</span> <span class="fu">c</span>(<span class="dv">11</span>, <span class="dv">13</span>), <span class="at">text =</span> <span class="fu">c</span>(<span class="st">&quot;Too low&quot;</span>, <span class="st">&quot;Sufficient&quot;</span>))</span>
+<span id="cb331-2"><a href="graphics-ggplot2.html#cb331-2" tabindex="-1"></a><span class="sc">&gt;</span> anndf</span>
+<span id="cb331-3"><a href="graphics-ggplot2.html#cb331-3" tabindex="-1"></a>  xcoord ycoord       text</span>
+<span id="cb331-4"><a href="graphics-ggplot2.html#cb331-4" tabindex="-1"></a><span class="dv">1</span>     <span class="dv">25</span>     <span class="dv">11</span>    Too low</span>
+<span id="cb331-5"><a href="graphics-ggplot2.html#cb331-5" tabindex="-1"></a><span class="dv">2</span>     <span class="dv">25</span>     <span class="dv">13</span> Sufficient</span>
+<span id="cb331-6"><a href="graphics-ggplot2.html#cb331-6" tabindex="-1"></a><span class="sc">&gt;</span> pl_hemo <span class="sc">+</span> <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">12</span>, <span class="at">color =</span> <span class="fu">grey</span>(<span class="fl">0.6</span>), <span class="at">size =</span> <span class="fl">1.2</span>) <span class="sc">+</span> <span class="fu">geom_label</span>(<span class="at">data =</span> anndf, <span class="fu">aes</span>(<span class="at">x =</span> xcoord,</span>
+<span id="cb331-7"><a href="graphics-ggplot2.html#cb331-7" tabindex="-1"></a><span class="sc">+</span>     <span class="at">y =</span> ycoord, <span class="at">label =</span> text), <span class="at">hjust =</span> <span class="st">&quot;left&quot;</span>, <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<p><img src="introductio-to-r_files/figure-html/unnamed-chunk-332-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><strong>Exercises:</strong>:</p>
+</div>
+<div id="extensions" class="section level2 hasAnchor" number="12.6">
+<h2><span class="header-section-number">12.6</span> Extensions<a href="graphics-ggplot2.html#extensions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="assemble-multi-panel-plots-patchwork" class="section level3 hasAnchor" number="12.6.1">
+<h3><span class="header-section-number">12.6.1</span> Assemble multi-panel plots: patchwork<a href="graphics-ggplot2.html#assemble-multi-panel-plots-patchwork" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="others" class="section level3 hasAnchor" number="12.6.2">
+<h3><span class="header-section-number">12.6.2</span> Others<a href="graphics-ggplot2.html#others" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>pl_hemo + ggthemes::theme_stata()</p>
+<p>ggrepel</p>
+<p>ggblanket</p>
 </div>
 </div>
-<div id="messing-with-defaults-ii-themes" class="section level2 hasAnchor" number="12.10">
-<h2><span class="header-section-number">12.10</span> Messing with defaults II: themes<a href="graphics-ggplot2.html#messing-with-defaults-ii-themes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>UNDER CONSTRUCTION</p>
-</div>
-<div id="extension-packages" class="section level2 hasAnchor" number="12.11">
-<h2><span class="header-section-number">12.11</span> Extension packages<a href="graphics-ggplot2.html#extension-packages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>UNDER CONSTRUCTION</p>
-</div>
-<div id="technical-notes-5" class="section level2 hasAnchor" number="12.12">
-<h2><span class="header-section-number">12.12</span> Technical notes<a href="graphics-ggplot2.html#technical-notes-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>UNDER CONSTRUCTION</p>
+<div id="next-steps-3" class="section level2 hasAnchor" number="12.7">
+<h2><span class="header-section-number">12.7</span> Next steps<a href="graphics-ggplot2.html#next-steps-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
 
 
 
+<div class="footnotes">
+<hr />
+<ol start="73">
+<li id="fn73"><p>Or whatever background color you prefer.<a href="graphics-ggplot2.html#fnref73" class="footnote-back">↩︎</a></p></li>
+<li id="fn74"><p>See <code>vignette("ggplot2-specs", package = "ggplot2")</code> for more details.<a href="graphics-ggplot2.html#fnref74" class="footnote-back">↩︎</a></p></li>
+<li id="fn75"><p>A list of available geom functions (assuming that <code>ggplot2</code> has been loaded):</p>
+<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="#cb289-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ls</span>(<span class="st">&quot;package:ggplot2&quot;</span>, <span class="at">pattern =</span> <span class="st">&quot;^geom_&quot;</span>)</span>
+<span id="cb289-2"><a href="#cb289-2" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;geom_abline&quot;</span>            <span class="st">&quot;geom_area&quot;</span>              <span class="st">&quot;geom_bar&quot;</span>              </span>
+<span id="cb289-3"><a href="#cb289-3" tabindex="-1"></a> [<span class="dv">4</span>] <span class="st">&quot;geom_bin_2d&quot;</span>            <span class="st">&quot;geom_bin2d&quot;</span>             <span class="st">&quot;geom_blank&quot;</span>            </span>
+<span id="cb289-4"><a href="#cb289-4" tabindex="-1"></a> [<span class="dv">7</span>] <span class="st">&quot;geom_boxplot&quot;</span>           <span class="st">&quot;geom_col&quot;</span>               <span class="st">&quot;geom_contour&quot;</span>          </span>
+<span id="cb289-5"><a href="#cb289-5" tabindex="-1"></a>[<span class="dv">10</span>] <span class="st">&quot;geom_contour_filled&quot;</span>    <span class="st">&quot;geom_count&quot;</span>             <span class="st">&quot;geom_crossbar&quot;</span>         </span>
+<span id="cb289-6"><a href="#cb289-6" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">&quot;geom_curve&quot;</span>             <span class="st">&quot;geom_density&quot;</span>           <span class="st">&quot;geom_density_2d&quot;</span>       </span>
+<span id="cb289-7"><a href="#cb289-7" tabindex="-1"></a>[<span class="dv">16</span>] <span class="st">&quot;geom_density_2d_filled&quot;</span> <span class="st">&quot;geom_density2d&quot;</span>         <span class="st">&quot;geom_density2d_filled&quot;</span> </span>
+<span id="cb289-8"><a href="#cb289-8" tabindex="-1"></a>[<span class="dv">19</span>] <span class="st">&quot;geom_dotplot&quot;</span>           <span class="st">&quot;geom_errorbar&quot;</span>          <span class="st">&quot;geom_errorbarh&quot;</span>        </span>
+<span id="cb289-9"><a href="#cb289-9" tabindex="-1"></a>[<span class="dv">22</span>] <span class="st">&quot;geom_freqpoly&quot;</span>          <span class="st">&quot;geom_function&quot;</span>          <span class="st">&quot;geom_hex&quot;</span>              </span>
+<span id="cb289-10"><a href="#cb289-10" tabindex="-1"></a>[<span class="dv">25</span>] <span class="st">&quot;geom_histogram&quot;</span>         <span class="st">&quot;geom_hline&quot;</span>             <span class="st">&quot;geom_jitter&quot;</span>           </span>
+<span id="cb289-11"><a href="#cb289-11" tabindex="-1"></a>[<span class="dv">28</span>] <span class="st">&quot;geom_label&quot;</span>             <span class="st">&quot;geom_line&quot;</span>              <span class="st">&quot;geom_linerange&quot;</span>        </span>
+<span id="cb289-12"><a href="#cb289-12" tabindex="-1"></a>[<span class="dv">31</span>] <span class="st">&quot;geom_map&quot;</span>               <span class="st">&quot;geom_path&quot;</span>              <span class="st">&quot;geom_point&quot;</span>            </span>
+<span id="cb289-13"><a href="#cb289-13" tabindex="-1"></a>[<span class="dv">34</span>] <span class="st">&quot;geom_pointrange&quot;</span>        <span class="st">&quot;geom_polygon&quot;</span>           <span class="st">&quot;geom_qq&quot;</span>               </span>
+<span id="cb289-14"><a href="#cb289-14" tabindex="-1"></a>[<span class="dv">37</span>] <span class="st">&quot;geom_qq_line&quot;</span>           <span class="st">&quot;geom_quantile&quot;</span>          <span class="st">&quot;geom_raster&quot;</span>           </span>
+<span id="cb289-15"><a href="#cb289-15" tabindex="-1"></a>[<span class="dv">40</span>] <span class="st">&quot;geom_rect&quot;</span>              <span class="st">&quot;geom_ribbon&quot;</span>            <span class="st">&quot;geom_rug&quot;</span>              </span>
+<span id="cb289-16"><a href="#cb289-16" tabindex="-1"></a>[<span class="dv">43</span>] <span class="st">&quot;geom_segment&quot;</span>           <span class="st">&quot;geom_sf&quot;</span>                <span class="st">&quot;geom_sf_label&quot;</span>         </span>
+<span id="cb289-17"><a href="#cb289-17" tabindex="-1"></a>[<span class="dv">46</span>] <span class="st">&quot;geom_sf_text&quot;</span>           <span class="st">&quot;geom_smooth&quot;</span>            <span class="st">&quot;geom_spoke&quot;</span>            </span>
+<span id="cb289-18"><a href="#cb289-18" tabindex="-1"></a>[<span class="dv">49</span>] <span class="st">&quot;geom_step&quot;</span>              <span class="st">&quot;geom_text&quot;</span>              <span class="st">&quot;geom_tile&quot;</span>             </span>
+<span id="cb289-19"><a href="#cb289-19" tabindex="-1"></a>[<span class="dv">52</span>] <span class="st">&quot;geom_violin&quot;</span>            <span class="st">&quot;geom_vline&quot;</span>            </span></code></pre></div>
+<p>.<a href="graphics-ggplot2.html#fnref75" class="footnote-back">↩︎</a></p></li>
+<li id="fn76"><p>In order to become familiar with available arguments in geom functions, you will need to familiarize yourself with their documentation, but you were expecting this, weren’t you?<a href="graphics-ggplot2.html#fnref76" class="footnote-back">↩︎</a></p></li>
+<li id="fn77"><p>Indeed, via a combination of arguments <code>method=</code> and <code>formula=</code>, you can use most modelling functions in R, as long as they support a standard <code>predict</code>-method; see <code>?geom_smooth</code>, of course.<a href="graphics-ggplot2.html#fnref77" class="footnote-back">↩︎</a></p></li>
+<li id="fn78"><p>In other words, the white space generated by the shared y-axis was not simply wasted, but used to emphasize the difference in counts between categories, at the price of squishing three of four histograms flat. By allowing separate y-axis, we now use the previously white space to emphasize a different aspect of the data, namely the different/similar shapes of the histograms.</p>
+<p>In the right context, “nothing” can be informative.<a href="graphics-ggplot2.html#fnref78" class="footnote-back">↩︎</a></p></li>
+<li id="fn79"><p>For background reading, consult <a href="https://ggplot2-book.org/scales" class="uri">https://ggplot2-book.org/scales</a> and <a href="https://ggplot2-book.org/scales-guides" class="uri">https://ggplot2-book.org/scales-guides</a><a href="graphics-ggplot2.html#fnref79" class="footnote-back">↩︎</a></p></li>
+<li id="fn80"><p>This reflects one of the fundamental differences between base graphics and <code>ggplot2</code> - in this sense, <code>ggplot2</code> reflects the object-oriented nature of R, as discussed in REF, better than the somewhat ad-hoc, dumping-plot-to-a-device base graphics.<a href="graphics-ggplot2.html#fnref80" class="footnote-back">↩︎</a></p></li>
+<li id="fn81"><p>Besides a large majority of users who do not really care.<a href="graphics-ggplot2.html#fnref81" class="footnote-back">↩︎</a></p></li>
+<li id="fn82"><p>Or the <code>ggplot2</code> package is detached from the search path<a href="graphics-ggplot2.html#fnref82" class="footnote-back">↩︎</a></p></li>
+<li id="fn83"><p>Number of plot elements in your currently installed <code>ggplot2</code> version:</p>
+<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb316-1"><a href="#cb316-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">theme_get</span>() <span class="sc">|&gt;</span> <span class="fu">length</span>()</span>
+<span id="cb316-2"><a href="#cb316-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">97</span></span></code></pre></div>
+<p>.<a href="graphics-ggplot2.html#fnref83" class="footnote-back">↩︎</a></p></li>
+<li id="fn84"><p>Yes, this object is essentially a list (with some decorations), how did you guess?</p>
+<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb321-1"><a href="#cb321-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">is.list</span>(<span class="fu">element_text</span>())</span>
+<span id="cb321-2"><a href="#cb321-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="cn">TRUE</span></span></code></pre></div>
+<p>As a matter of fact, <code>ggplot2</code> plot objects are also lists:</p>
+<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb322-1"><a href="#cb322-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">is.list</span>(pl_hemo)</span>
+<span id="cb322-2"><a href="#cb322-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="cn">TRUE</span></span></code></pre></div>
+<p>.<a href="graphics-ggplot2.html#fnref84" class="footnote-back">↩︎</a></p></li>
+<li id="fn85"><p>The code for these wrapper functions is very straightforward, e.g. </p>
+<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="#cb327-1" tabindex="-1"></a><span class="sc">&gt;</span> ggplot2<span class="sc">::</span>ggtitle</span>
+<span id="cb327-2"><a href="#cb327-2" tabindex="-1"></a><span class="cf">function</span> (label, <span class="at">subtitle =</span> <span class="fu">waiver</span>()) </span>
+<span id="cb327-3"><a href="#cb327-3" tabindex="-1"></a>{</span>
+<span id="cb327-4"><a href="#cb327-4" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> label, <span class="at">subtitle =</span> subtitle)</span>
+<span id="cb327-5"><a href="#cb327-5" tabindex="-1"></a>}</span>
+<span id="cb327-6"><a href="#cb327-6" tabindex="-1"></a><span class="sc">&lt;</span>bytecode<span class="sc">:</span> <span class="dv">0x5ed5e73c4760</span><span class="sc">&gt;</span></span>
+<span id="cb327-7"><a href="#cb327-7" tabindex="-1"></a><span class="er">&lt;</span>environment<span class="sc">:</span> namespace<span class="sc">:</span>ggplot2<span class="sc">&gt;</span></span></code></pre></div>
+<p>Not more really more complicated than our own basic functions in Section <a href="data-processing.html#own-functions">6.3</a>.<a href="graphics-ggplot2.html#fnref85" class="footnote-back">↩︎</a></p></li>
+<li id="fn86"><p>Use of <code>coord_flip</code> is often lazy - you have built a complex multi-geom plot with scale changes etc., and realize at the end that the plot would look better flipped, so instead of going back and carefully changing mappings, scales etc. along the way, you just flip the final plot.<a href="graphics-ggplot2.html#fnref86" class="footnote-back">↩︎</a></p></li>
+<li id="fn87"><p>This underlying logic, a systematic, abstract way of thinking about how to represent data graphically, was originally developed by Leland Wilkinson and is described in his book <em>The Grammar of Graphics</em> available e.g. from <a href="https://books.google.se/books/about/The_Grammar_of_Graphics.html?id=_kRX4LoFfGQC">Google Books</a>. A short, accessible description by Hadley Wickham is available at <a href="http://vita.had.co.nz/papers/layered-grammar.pdf" class="uri">http://vita.had.co.nz/papers/layered-grammar.pdf</a>.<a href="graphics-ggplot2.html#fnref87" class="footnote-back">↩︎</a></p></li>
+<li id="fn88"><p>Indeed, the working horse function that implements the geom functions we use is <code>layer</code>.<a href="graphics-ggplot2.html#fnref88" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
             </section>
 
           </div>
