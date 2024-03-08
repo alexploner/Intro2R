@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Working with R | Introduction to R</title>
   <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Working with R | Introduction to R" />
   <meta property="og:type" content="book" />
@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2023-03-05" />
+<meta name="date" content="2024-03-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -118,6 +118,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -170,10 +174,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.6.1" data-path="introduction.html"><a href="introduction.html#getting-help"><i class="fa fa-check"></i><b>2.6.1</b> Getting help</a></li>
 <li class="chapter" data-level="2.6.2" data-path="introduction.html"><a href="introduction.html#keeping-track-of-objects"><i class="fa fa-check"></i><b>2.6.2</b> Keeping track of objects</a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="introduction.html"><a href="introduction.html#finding-files"><i class="fa fa-check"></i><b>2.7</b> Finding files</a>
-<ul>
-<li class="chapter" data-level="2.7.1" data-path="introduction.html"><a href="introduction.html#quitting-r"><i class="fa fa-check"></i><b>2.7.1</b> Quitting R</a></li>
+<li class="chapter" data-level="2.6.3" data-path="introduction.html"><a href="introduction.html#finding-files"><i class="fa fa-check"></i><b>2.6.3</b> Finding files</a></li>
+<li class="chapter" data-level="2.6.4" data-path="introduction.html"><a href="introduction.html#quitting-r"><i class="fa fa-check"></i><b>2.6.4</b> Quitting R</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="intro_rstudio.html"><a href="intro_rstudio.html"><i class="fa fa-check"></i><b>3</b> Working in RStudio</a>
@@ -327,7 +329,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="graphics-base.html"><a href="graphics-base.html#vectorized-graphical-parameters"><i class="fa fa-check"></i>Vectorized graphical parameters</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="graphics-base.html"><a href="graphics-base.html#displaying-and-saving-plots"><i class="fa fa-check"></i><b>11.4</b> Displaying and saving plots</a>
+<li class="chapter" data-level="11.4" data-path="graphics-base.html"><a href="graphics-base.html#graphical-devices"><i class="fa fa-check"></i><b>11.4</b> Displaying and saving plots</a>
 <ul>
 <li class="chapter" data-level="11.4.1" data-path="graphics-base.html"><a href="graphics-base.html#device-par"><i class="fa fa-check"></i><b>11.4.1</b> Controlling a device through <code>par</code></a></li>
 </ul></li>
@@ -340,31 +342,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="11.7" data-path="graphics-base.html"><a href="graphics-base.html#next-steps-2"><i class="fa fa-check"></i><b>11.7</b> Next steps</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html"><i class="fa fa-check"></i><b>12</b> Graphics using <code>ggplot2</code></a>
+<li class="chapter" data-level="12" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html"><i class="fa fa-check"></i><b>12</b> ggplot2: an alternative plotting system</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#overview-6"><i class="fa fa-check"></i><b>12.1</b> Overview</a>
+<li class="chapter" data-level="12.1" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#introduction-1"><i class="fa fa-check"></i><b>12.1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="12.1.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#data-example-hemoglobin"><i class="fa fa-check"></i><b>12.1.1</b> Data example: Hemoglobin</a></li>
+<li class="chapter" data-level="12.1.1" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#concepts-basic-usage"><i class="fa fa-check"></i><b>12.1.1</b> Concepts &amp; basic usage</a></li>
+<li class="chapter" data-level="12.1.2" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#practicalities"><i class="fa fa-check"></i><b>12.1.2</b> Practicalities</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#background-4"><i class="fa fa-check"></i><b>12.2</b> Background</a></li>
-<li class="chapter" data-level="12.3" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#concepts"><i class="fa fa-check"></i><b>12.3</b> Concepts</a>
+<li class="chapter" data-level="12.2" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#more-about-aesthetics-and-geoms"><i class="fa fa-check"></i><b>12.2</b> More about aesthetics and geoms</a>
 <ul>
-<li class="chapter" data-level="12.3.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#aesthetics"><i class="fa fa-check"></i><b>12.3.1</b> Aesthetics</a></li>
-<li class="chapter" data-level="12.3.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#example-data"><i class="fa fa-check"></i><b>12.3.2</b> Example data</a></li>
+<li class="chapter" data-level="12.2.1" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#optional-aesthetics"><i class="fa fa-check"></i><b>12.2.1</b> Optional aesthetics</a></li>
+<li class="chapter" data-level="12.2.2" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#multiple-geoms"><i class="fa fa-check"></i><b>12.2.2</b> Multiple geoms</a></li>
+<li class="chapter" data-level="12.2.3" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#using-geom-arguments"><i class="fa fa-check"></i><b>12.2.3</b> Using geom arguments</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#background-5"><i class="fa fa-check"></i><b>12.4</b> Background</a></li>
-<li class="chapter" data-level="12.5" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#basic-usage"><i class="fa fa-check"></i><b>12.5</b> Basic usage</a></li>
-<li class="chapter" data-level="12.6" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#slightly-extended-usage"><i class="fa fa-check"></i><b>12.6</b> Slightly extended usage</a></li>
-<li class="chapter" data-level="12.7" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#multiple-layers"><i class="fa fa-check"></i><b>12.7</b> Multiple layers</a></li>
-<li class="chapter" data-level="12.8" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#splitting-the-plot"><i class="fa fa-check"></i><b>12.8</b> Splitting the plot</a></li>
-<li class="chapter" data-level="12.9" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#messing-with-the-defaults"><i class="fa fa-check"></i><b>12.9</b> Messing with the defaults</a>
+<li class="chapter" data-level="12.3" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#splitting-plots-by-sub-groups"><i class="fa fa-check"></i><b>12.3</b> Splitting plots by sub-groups</a></li>
+<li class="chapter" data-level="12.4" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#changing-the-default-appearance"><i class="fa fa-check"></i><b>12.4</b> Changing the default appearance</a>
 <ul>
-<li class="chapter" data-level="12.9.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#fixing-aesthetics"><i class="fa fa-check"></i><b>12.9.1</b> {-} Fixing aesthetics</a></li>
-<li class="chapter" data-level="" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#scales"><i class="fa fa-check"></i>Scales</a></li>
+<li class="chapter" data-level="12.4.1" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#scales"><i class="fa fa-check"></i><b>12.4.1</b> Scales</a></li>
+<li class="chapter" data-level="12.4.2" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#fixing-aesthetics"><i class="fa fa-check"></i><b>12.4.2</b> Fixing aesthetics</a></li>
+<li class="chapter" data-level="12.4.3" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#themes"><i class="fa fa-check"></i><b>12.4.3</b> Themes</a></li>
+<li class="chapter" data-level="12.4.4" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#other"><i class="fa fa-check"></i><b>12.4.4</b> Other</a></li>
 </ul></li>
-<li class="chapter" data-level="12.10" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#messing-with-defaults-ii-themes"><i class="fa fa-check"></i><b>12.10</b> Messing with defaults II: themes</a></li>
-<li class="chapter" data-level="12.11" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#extension-packages"><i class="fa fa-check"></i><b>12.11</b> Extension packages</a></li>
-<li class="chapter" data-level="12.12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#technical-notes"><i class="fa fa-check"></i><b>12.12</b> Technical notes</a></li>
+<li class="chapter" data-level="12.5" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#complex-layering-and-annotation"><i class="fa fa-check"></i><b>12.5</b> Complex layering and annotation</a></li>
+<li class="chapter" data-level="12.6" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#extensions"><i class="fa fa-check"></i><b>12.6</b> Extensions</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#assemble-multi-panel-plots-patchwork"><i class="fa fa-check"></i><b>12.6.1</b> Assemble multi-panel plots: patchwork</a></li>
+<li class="chapter" data-level="12.6.2" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#others"><i class="fa fa-check"></i><b>12.6.2</b> Others</a></li>
+</ul></li>
+<li class="chapter" data-level="12.7" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#next-steps-3"><i class="fa fa-check"></i><b>12.7</b> Next steps</a></li>
 </ul></li>
 <li class="part"><span><b>V Organizing the analysis</b></span></li>
 <li class="chapter" data-level="13" data-path="tables-nice.html"><a href="tables-nice.html"><i class="fa fa-check"></i><b>13</b> Generating nice tables</a></li>
@@ -408,14 +413,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In computer science, this is also known as <em>REPL</em>, a read-evaluate-print loop.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
 <p>Compared to a menu-driven program like SPSS or Stata, this has the obvious disadvantage that you have to know what commands to use: it is not enough to know that you want to fit a linear model, but you also have to remember that the command for linear models is <code>lm</code>. We have to invest the time to get reasonably familiar with at least enough R commands to (a) be somewhat productive and (b) learn more as required.</p>
 <p><strong>Example: Numerical calculations</strong> Numerical expressions can be directly evaluated at the command line:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb1-2"><a href="introduction.html#cb1-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">2</span></span>
-<span id="cb1-3"><a href="introduction.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">7</span></span>
-<span id="cb1-4"><a href="introduction.html#cb1-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">14</span></span>
-<span id="cb1-5"><a href="introduction.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">*</span> (<span class="fl">0.5</span> <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb1-6"><a href="introduction.html#cb1-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">4.642857</span></span>
-<span id="cb1-7"><a href="introduction.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">2</span><span class="sc">^</span><span class="dv">3</span></span>
-<span id="cb1-8"><a href="introduction.html#cb1-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">8</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction.html#cb1-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb1-2"><a href="introduction.html#cb1-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">2</span></span>
+<span id="cb1-3"><a href="introduction.html#cb1-3" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">7</span></span>
+<span id="cb1-4"><a href="introduction.html#cb1-4" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">14</span></span>
+<span id="cb1-5"><a href="introduction.html#cb1-5" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">*</span> (<span class="fl">0.5</span> <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb1-6"><a href="introduction.html#cb1-6" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">4.642857</span></span>
+<span id="cb1-7"><a href="introduction.html#cb1-7" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">2</span><span class="sc">^</span><span class="dv">3</span></span>
+<span id="cb1-8"><a href="introduction.html#cb1-8" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">8</span></span></code></pre></div>
 <p>From this, we can see several things:</p>
 <ul>
 <li>Commands and results are shown one after the other; there is a continuous flow of command / result / command …</li>
@@ -426,66 +431,66 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Importantly, R supports easy re-use and modification of commands / expressions: at the command prompt, we can use the arrow keys up/down to move through the list of previous commands, which can be edited and re-used by simply hitting return again.</p>
 <p><strong>Example: Calculating with functions</strong> R implements a very wide range of mathematical functions. Some common examples:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introduction.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">16</span>)</span>
-<span id="cb2-2"><a href="introduction.html#cb2-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">4</span></span>
-<span id="cb2-3"><a href="introduction.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">exp</span>(<span class="dv">1</span>)</span>
-<span id="cb2-4"><a href="introduction.html#cb2-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.718282</span></span>
-<span id="cb2-5"><a href="introduction.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">log</span>(<span class="dv">10</span>)</span>
-<span id="cb2-6"><a href="introduction.html#cb2-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.302585</span></span>
-<span id="cb2-7"><a href="introduction.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">log2</span>(<span class="dv">16</span>)</span>
-<span id="cb2-8"><a href="introduction.html#cb2-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">4</span></span>
-<span id="cb2-9"><a href="introduction.html#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">log10</span>(<span class="dv">100</span>)</span>
-<span id="cb2-10"><a href="introduction.html#cb2-10" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introduction.html#cb2-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">16</span>)</span>
+<span id="cb2-2"><a href="introduction.html#cb2-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">4</span></span>
+<span id="cb2-3"><a href="introduction.html#cb2-3" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">exp</span>(<span class="dv">1</span>)</span>
+<span id="cb2-4"><a href="introduction.html#cb2-4" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.718282</span></span>
+<span id="cb2-5"><a href="introduction.html#cb2-5" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">log</span>(<span class="dv">10</span>)</span>
+<span id="cb2-6"><a href="introduction.html#cb2-6" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.302585</span></span>
+<span id="cb2-7"><a href="introduction.html#cb2-7" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">log2</span>(<span class="dv">16</span>)</span>
+<span id="cb2-8"><a href="introduction.html#cb2-8" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">4</span></span>
+<span id="cb2-9"><a href="introduction.html#cb2-9" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">log10</span>(<span class="dv">100</span>)</span>
+<span id="cb2-10"><a href="introduction.html#cb2-10" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">2</span></span></code></pre></div>
 <p>In order to apply a function, we simply type the name of the function at the command prompt, followed by the value we want to apply it to in parentheses. This value in parenthesis is referred to as the <em>argument</em> of the function.</p>
 <p>Numerical functions of this type can be mixed with general numerical expressions in a completely natural and intuitive manner:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">7</span> <span class="sc">+</span> <span class="dv">9</span>)</span>
-<span id="cb3-2"><a href="introduction.html#cb3-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">4</span></span>
-<span id="cb3-3"><a href="introduction.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> (<span class="fl">2.1</span> <span class="sc">+</span> <span class="fl">7.4</span> <span class="sc">+</span> <span class="fl">3.5</span>)<span class="sc">/</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">sqrt</span>(<span class="dv">23</span><span class="sc">/</span><span class="dv">3</span>)</span>
-<span id="cb3-4"><a href="introduction.html#cb3-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">9.871083</span></span>
-<span id="cb3-5"><a href="introduction.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">exp</span>(<span class="fl">0.71</span> <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> <span class="fl">0.12</span>)</span>
-<span id="cb3-6"><a href="introduction.html#cb3-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">1.607693</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction.html#cb3-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">7</span> <span class="sc">+</span> <span class="dv">9</span>)</span>
+<span id="cb3-2"><a href="introduction.html#cb3-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">4</span></span>
+<span id="cb3-3"><a href="introduction.html#cb3-3" tabindex="-1"></a><span class="sc">&gt;</span> (<span class="fl">2.1</span> <span class="sc">+</span> <span class="fl">7.4</span> <span class="sc">+</span> <span class="fl">3.5</span>)<span class="sc">/</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">sqrt</span>(<span class="dv">23</span><span class="sc">/</span><span class="dv">3</span>)</span>
+<span id="cb3-4"><a href="introduction.html#cb3-4" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">9.871083</span></span>
+<span id="cb3-5"><a href="introduction.html#cb3-5" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">exp</span>(<span class="fl">0.71</span> <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> <span class="fl">0.12</span>)</span>
+<span id="cb3-6"><a href="introduction.html#cb3-6" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">1.607693</span></span></code></pre></div>
 <p>Interesting fact: R does not worry about blank spaces, as long as they do not appear within names (or strings - more about that later)</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">5</span>)</span>
-<span id="cb4-2"><a href="introduction.html#cb4-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.236068</span></span>
-<span id="cb4-3"><a href="introduction.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">5</span>)</span>
-<span id="cb4-4"><a href="introduction.html#cb4-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.236068</span></span>
-<span id="cb4-5"><a href="introduction.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">5</span>)</span>
-<span id="cb4-6"><a href="introduction.html#cb4-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.236068</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction.html#cb4-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">5</span>)</span>
+<span id="cb4-2"><a href="introduction.html#cb4-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.236068</span></span>
+<span id="cb4-3"><a href="introduction.html#cb4-3" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">5</span>)</span>
+<span id="cb4-4"><a href="introduction.html#cb4-4" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.236068</span></span>
+<span id="cb4-5"><a href="introduction.html#cb4-5" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">5</span>)</span>
+<span id="cb4-6"><a href="introduction.html#cb4-6" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.236068</span></span></code></pre></div>
 </div>
 <div id="storing-data-as-objects" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Storing data as objects<a href="introduction.html#storing-data-as-objects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>R allows you to store values as <em>variables</em> or <em>objects</em> under a name of your choice (with some technical limitations, see below). This name can then be used in any kind of expression as a shorthand for the value; when the expression is evaluated, R will substitute the value for the name.</p>
 <p>This definition of values is done via <em>assignment</em>: we write first the name of the variable, an assignment operator, and the value we want to store. Symbolically:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>name<span class="sc">&gt;</span> <span class="er">&lt;</span><span class="sc">-</span> <span class="er">&lt;</span>value<span class="sc">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction.html#cb5-1" tabindex="-1"></a><span class="sc">&lt;</span>name<span class="sc">&gt;</span> <span class="er">&lt;</span><span class="sc">-</span> <span class="er">&lt;</span>value<span class="sc">&gt;</span></span></code></pre></div>
 <p>A simple example: we want to store a reasonable approximation for the value of <span class="math inline">\(\pi\)</span> under the name <code>pi</code> for future reference in calculating circle areas and circumferences:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introduction.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> pi <span class="ot">&lt;-</span> <span class="fl">3.1415927</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introduction.html#cb6-1" tabindex="-1"></a><span class="sc">&gt;</span> pi <span class="ot">&lt;-</span> <span class="fl">3.1415927</span></span></code></pre></div>
 <p>This can be read as the command “Store the value 3.1415927 under the name pi”. Note that this command does not generate a visible return value, like our calculations above. Instead, it has a <em>side effect</em>, namely storing the given value under the name <code>pi</code>.</p>
 <p>Typing <code>pi</code> at the command prompt has now the same effect as typing the number:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introduction.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fl">3.1415927</span></span>
-<span id="cb7-2"><a href="introduction.html#cb7-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">3.141593</span></span>
-<span id="cb7-3"><a href="introduction.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> pi</span>
-<span id="cb7-4"><a href="introduction.html#cb7-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">3.141593</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introduction.html#cb7-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fl">3.1415927</span></span>
+<span id="cb7-2"><a href="introduction.html#cb7-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">3.141593</span></span>
+<span id="cb7-3"><a href="introduction.html#cb7-3" tabindex="-1"></a><span class="sc">&gt;</span> pi</span>
+<span id="cb7-4"><a href="introduction.html#cb7-4" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">3.141593</span></span></code></pre></div>
 <p>We can now use <code>pi</code> for calculations, saving us the trouble of typing out the full number; for a circle with radius <span class="math inline">\(r=5\)</span>, we can calculate circumference and area in the usual manner:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introduction.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">5</span> <span class="sc">*</span> pi</span>
-<span id="cb8-2"><a href="introduction.html#cb8-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">31.41593</span></span>
-<span id="cb8-3"><a href="introduction.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">5</span><span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> pi</span>
-<span id="cb8-4"><a href="introduction.html#cb8-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">78.53982</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introduction.html#cb8-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">5</span> <span class="sc">*</span> pi</span>
+<span id="cb8-2"><a href="introduction.html#cb8-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">31.41593</span></span>
+<span id="cb8-3"><a href="introduction.html#cb8-3" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">5</span><span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> pi</span>
+<span id="cb8-4"><a href="introduction.html#cb8-4" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">78.53982</span></span></code></pre></div>
 <p>This ability gives us a lot of flexibility: we can define multiple variables and combine them in expressions, with both numbers and functions. For example:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="introduction.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="ot">&lt;-</span> <span class="fl">17.5</span></span>
-<span id="cb9-2"><a href="introduction.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x</span>
-<span id="cb9-3"><a href="introduction.html#cb9-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">17.5</span></span>
-<span id="cb9-4"><a href="introduction.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> y <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="dv">13</span>)</span>
-<span id="cb9-5"><a href="introduction.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> y</span>
-<span id="cb9-6"><a href="introduction.html#cb9-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">3.605551</span></span>
-<span id="cb9-7"><a href="introduction.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="sc">+</span> y</span>
-<span id="cb9-8"><a href="introduction.html#cb9-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">21.10555</span></span>
-<span id="cb9-9"><a href="introduction.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> z <span class="ot">&lt;-</span> x <span class="sc">+</span> y</span>
-<span id="cb9-10"><a href="introduction.html#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="sc">*</span> y <span class="sc">+</span> <span class="fu">log</span>(z)</span>
-<span id="cb9-11"><a href="introduction.html#cb9-11" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">66.14668</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="introduction.html#cb9-1" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="ot">&lt;-</span> <span class="fl">17.5</span></span>
+<span id="cb9-2"><a href="introduction.html#cb9-2" tabindex="-1"></a><span class="sc">&gt;</span> x</span>
+<span id="cb9-3"><a href="introduction.html#cb9-3" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">17.5</span></span>
+<span id="cb9-4"><a href="introduction.html#cb9-4" tabindex="-1"></a><span class="sc">&gt;</span> y <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="dv">13</span>)</span>
+<span id="cb9-5"><a href="introduction.html#cb9-5" tabindex="-1"></a><span class="sc">&gt;</span> y</span>
+<span id="cb9-6"><a href="introduction.html#cb9-6" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">3.605551</span></span>
+<span id="cb9-7"><a href="introduction.html#cb9-7" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="sc">+</span> y</span>
+<span id="cb9-8"><a href="introduction.html#cb9-8" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">21.10555</span></span>
+<span id="cb9-9"><a href="introduction.html#cb9-9" tabindex="-1"></a><span class="sc">&gt;</span> z <span class="ot">&lt;-</span> x <span class="sc">+</span> y</span>
+<span id="cb9-10"><a href="introduction.html#cb9-10" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="sc">*</span> y <span class="sc">+</span> <span class="fu">log</span>(z)</span>
+<span id="cb9-11"><a href="introduction.html#cb9-11" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">66.14668</span></span></code></pre></div>
 <p>We can always overwrite an existing variable with a new value:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="introduction.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb10-2"><a href="introduction.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x</span>
-<span id="cb10-3"><a href="introduction.html#cb10-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="introduction.html#cb10-1" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb10-2"><a href="introduction.html#cb10-2" tabindex="-1"></a><span class="sc">&gt;</span> x</span>
+<span id="cb10-3"><a href="introduction.html#cb10-3" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">1</span></span></code></pre></div>
 <div id="about-variable-names" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> About variable names<a href="introduction.html#about-variable-names" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The R documentation states : “A syntactically valid name consists of letters, numbers and the dot or underline characters and starts with a letter or the dot not followed by a number.”</p>
@@ -501,56 +506,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>All this is reasonable as long as we want to work with one observation at a time. But what if we want to calculate the mean of five numbers? We want to be able to deal with multiple observations of the same type (here: numbers) in one go: we want to store them together, calculate their mean and standard deviation with one simple function, plot them in the same figure etc.</p>
 <p>This is where the concept of a <em>vector</em> comes in: this is a collection of numbers arranged in linear order, from first to last value. Conceptually, if we measure some kind of quantity, like e.g. height or weight, on a number of subjects, the measurements from first to last subject form a vector of numbers.</p>
 <p>The key to defining a vector is the function <code>c</code> used to <em>combine</em> several data items of the same type. Example:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="introduction.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.9</span>, <span class="fl">2.45</span>)</span>
-<span id="cb11-2"><a href="introduction.html#cb11-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.57</span> <span class="fl">3.14</span> <span class="fl">3.78</span> <span class="fl">1.90</span> <span class="fl">2.45</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="introduction.html#cb11-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.9</span>, <span class="fl">2.45</span>)</span>
+<span id="cb11-2"><a href="introduction.html#cb11-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.57</span> <span class="fl">3.14</span> <span class="fl">3.78</span> <span class="fl">1.90</span> <span class="fl">2.45</span></span></code></pre></div>
 <p>Note that <em>c</em> is a function, same as <code>sqrt</code> or <code>log</code>, but it accepts any number of arguments (the numbers to be combined together). It returns a vector consisting of these arguments.</p>
 <p>We can feed the resulting vector directly to e.g. function <code>mean</code> like this:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="introduction.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">mean</span>(<span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.9</span>, <span class="fl">2.45</span>))</span>
-<span id="cb12-2"><a href="introduction.html#cb12-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.768</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="introduction.html#cb12-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">mean</span>(<span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.9</span>, <span class="fl">2.45</span>))</span>
+<span id="cb12-2"><a href="introduction.html#cb12-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.768</span></span></code></pre></div>
 <p>Here, <code>mean</code> is a function that takes a vector as argument, and returns one value, the arithemtic mean of the values in the vector. However, this not the most useful way of handling data, as we still have to carry around a (potentially very long) set of values. In practice, the real power of the vector-concept is realized when we store them as an object: this gives us a useful handle (the name) for accessing and processing what is a potentially a large amount of data.</p>
 <p>Example:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="introduction.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.9</span>, <span class="fl">2.45</span>)</span>
-<span id="cb13-2"><a href="introduction.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">mean</span>(x)</span>
-<span id="cb13-3"><a href="introduction.html#cb13-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.768</span></span>
-<span id="cb13-4"><a href="introduction.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">median</span>(x)</span>
-<span id="cb13-5"><a href="introduction.html#cb13-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.57</span></span>
-<span id="cb13-6"><a href="introduction.html#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sd</span>(x)</span>
-<span id="cb13-7"><a href="introduction.html#cb13-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.7169868</span></span>
-<span id="cb13-8"><a href="introduction.html#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">range</span>(x)</span>
-<span id="cb13-9"><a href="introduction.html#cb13-9" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">1.90</span> <span class="fl">3.78</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="introduction.html#cb13-1" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.57</span>, <span class="fl">3.14</span>, <span class="fl">3.78</span>, <span class="fl">1.9</span>, <span class="fl">2.45</span>)</span>
+<span id="cb13-2"><a href="introduction.html#cb13-2" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">mean</span>(x)</span>
+<span id="cb13-3"><a href="introduction.html#cb13-3" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.768</span></span>
+<span id="cb13-4"><a href="introduction.html#cb13-4" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">median</span>(x)</span>
+<span id="cb13-5"><a href="introduction.html#cb13-5" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">2.57</span></span>
+<span id="cb13-6"><a href="introduction.html#cb13-6" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">sd</span>(x)</span>
+<span id="cb13-7"><a href="introduction.html#cb13-7" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.7169868</span></span>
+<span id="cb13-8"><a href="introduction.html#cb13-8" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">range</span>(x)</span>
+<span id="cb13-9"><a href="introduction.html#cb13-9" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">1.90</span> <span class="fl">3.78</span></span></code></pre></div>
 <p>Note that the functions above work as you would expect from their (abbreviated) names. They all take a vector as argument and return a single value, the desired statistic, except for <code>range</code>, which returns two values, the minimum and maximum of the values in the vector. In other words, <code>range</code> returns a vector of length two.</p>
 <p>As a matter of fact, technically and conceptually, a single number in R is just a vector of length one: the basic concept is not the single number, intuitive as it appears to us, but the vector, which just may happen to be really short.</p>
 <div id="ex-simple-desc" class="section level3 hasAnchor" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> Example: simple descriptives<a href="introduction.html#ex-simple-desc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s pretend that our current vector <code>x</code> actually contains interesting data, and that we want to run some very basic descriptives on it, by calculating some common numerical descriptives, and generating a somewhat informative plot.</p>
 <p>A very commonly used function in R is <code>summary</code>: when applied to a numerical vector, it will return a six-value summary of the data in the vector (here this is one more summary value than actual data values, but bear with me for the example’s sake…).</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="introduction.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(x)</span>
-<span id="cb14-2"><a href="introduction.html#cb14-2" aria-hidden="true" tabindex="-1"></a>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
-<span id="cb14-3"><a href="introduction.html#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">1.900</span>   <span class="fl">2.450</span>   <span class="fl">2.570</span>   <span class="fl">2.768</span>   <span class="fl">3.140</span>   <span class="fl">3.780</span> </span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="introduction.html#cb14-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(x)</span>
+<span id="cb14-2"><a href="introduction.html#cb14-2" tabindex="-1"></a>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
+<span id="cb14-3"><a href="introduction.html#cb14-3" tabindex="-1"></a>  <span class="fl">1.900</span>   <span class="fl">2.450</span>   <span class="fl">2.570</span>   <span class="fl">2.768</span>   <span class="fl">3.140</span>   <span class="fl">3.780</span> </span></code></pre></div>
 <p>So we get information about min/max, quartiles and mean/median of the data, all potentially useful and informative.</p>
 <p>Two important points to make here:</p>
 <ol style="list-style-type: decimal">
 <li><p>The value returned by <code>summary</code> is something new: it’s not a vector (no <code>[1]</code> at the start of the line), and it combines both text and numbers. This is a typical situation for R function calls: the result of a statistical calculation (e.g. a regression model) is only rarely a simple number, or even vector of numbers, but something rather more complicated. R tries to generate a useful display of the result, like here, but often, there is more information hidden underneath (not here, though).</p></li>
 <li><p>The result from <code>summary</code> is only displayed here: it’s still on screen, and I can copy/paste it, if required, but if I clear the screen (<code>Ctrl-L</code>) or quit R, the value will be gone. Values that are not assigned to variables are not stored, only displayed.</p></li>
 </ol>
-<p>This means that if we want to keep around the output for further inspection or display, we have store it as an object, like e.g.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="introduction.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> sum_x <span class="ot">&lt;-</span> <span class="fu">summary</span>(x)</span>
-<span id="cb15-2"><a href="introduction.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> sum_x</span>
-<span id="cb15-3"><a href="introduction.html#cb15-3" aria-hidden="true" tabindex="-1"></a>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
-<span id="cb15-4"><a href="introduction.html#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fl">1.900</span>   <span class="fl">2.450</span>   <span class="fl">2.570</span>   <span class="fl">2.768</span>   <span class="fl">3.140</span>   <span class="fl">3.780</span> </span></code></pre></div>
+<p>This means that if we want to keep around the output for further inspection or display, we have to store it as an object, like e.g.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="introduction.html#cb15-1" tabindex="-1"></a><span class="sc">&gt;</span> sum_x <span class="ot">&lt;-</span> <span class="fu">summary</span>(x)</span>
+<span id="cb15-2"><a href="introduction.html#cb15-2" tabindex="-1"></a><span class="sc">&gt;</span> sum_x</span>
+<span id="cb15-3"><a href="introduction.html#cb15-3" tabindex="-1"></a>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
+<span id="cb15-4"><a href="introduction.html#cb15-4" tabindex="-1"></a>  <span class="fl">1.900</span>   <span class="fl">2.450</span>   <span class="fl">2.570</span>   <span class="fl">2.768</span>   <span class="fl">3.140</span>   <span class="fl">3.780</span> </span></code></pre></div>
 </div>
 <div id="ex-simple-plots" class="section level3 hasAnchor" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> Example: simple plots<a href="introduction.html#ex-simple-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now let’s produce a simple boxplot. This could not be any simpler:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="introduction.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">boxplot</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="introduction.html#cb16-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">boxplot</span>(x)</span></code></pre></div>
 <p><img src="introductio-to-r_files/figure-html/unnamed-chunk-18-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>If you do this in the R console, you’ll notice two things: (a) there is no direct result that is returned at the command line (like for variable assignments), (b) rather more dramatically, a separate plotting window is opened, and a boxplot of the data is displayed. This is typical for the ordinary base plotting functions in R - we are (usually) not interested in any return value, but we are very much interested in the side effect the function has, i.e. generating a plot.</p>
 <p>Note that once the plot window has been opened, it will be re-used for further plots; so if we want to produce a barplot of the data, like so,</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="introduction.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">barplot</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="introduction.html#cb17-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">barplot</span>(x)</span></code></pre></div>
 <p><img src="introductio-to-r_files/figure-html/unnamed-chunk-19-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>it will overwrite the old plot, similar to how a new assignment will overwrite the value stored under an existing variable name (this is somewhat different in RStudio).</p>
-<p>(Aside: on a Windows machine, press <code>ALT-W V</code> in windows to align the console window and plot window nicely.)</p>
-<p>Exercise: say we have measured the heights of six students in cm, as 176, 182, 162, 171, 189 and 165.</p>
+<p>(Aside: on a Windows machine, press <code>ALT-W V</code> to align the console window and plot window nicely.)</p>
+<p><strong>Exercise:</strong> say we have measured the heights of six students in cm, as 176, 182, 162, 171, 189 and 165.</p>
 <ol style="list-style-type: decimal">
 <li>Enter the data as a vector at the R command line.</li>
 <li>Calculate mean, standard deviation and first and third quartile.</li>
@@ -563,63 +568,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Let’s take one step back. In real data analysis, we do not only deal with numbers, but also with textual data: sex, disease, case-control status, tumor grade etc. Now this information can of course be coded numerically, but you do want a statistics program that actually does that for you when and if that is really required. Also, to this day I cannot remember whether a numerical code of 1 is supposed to stand for male or female, so coding everything numerically is a very good way to produce all kinds of mis-interpretations of your data and results.</p>
 <p>So any useful statistics program needs to be able to deal with textual information, and R is pretty good at that.</p>
 <p>The basic data type for text is <code>character</code>: character values are specified by enclosing the text we want to process in matched quotation marks, either double (<code>"</code>) or single (<code>'</code>). E.g.:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="introduction.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&quot;female&quot;</span></span>
-<span id="cb18-2"><a href="introduction.html#cb18-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;female&quot;</span></span>
-<span id="cb18-3"><a href="introduction.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&quot;male&quot;</span></span>
-<span id="cb18-4"><a href="introduction.html#cb18-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;male&quot;</span></span>
-<span id="cb18-5"><a href="introduction.html#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&quot;case&quot;</span></span>
-<span id="cb18-6"><a href="introduction.html#cb18-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;case&quot;</span></span>
-<span id="cb18-7"><a href="introduction.html#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&quot;Grade III&quot;</span></span>
-<span id="cb18-8"><a href="introduction.html#cb18-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;Grade III&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="introduction.html#cb18-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&quot;female&quot;</span></span>
+<span id="cb18-2"><a href="introduction.html#cb18-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;female&quot;</span></span>
+<span id="cb18-3"><a href="introduction.html#cb18-3" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&quot;male&quot;</span></span>
+<span id="cb18-4"><a href="introduction.html#cb18-4" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;male&quot;</span></span>
+<span id="cb18-5"><a href="introduction.html#cb18-5" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&#39;case&#39;</span></span>
+<span id="cb18-6"><a href="introduction.html#cb18-6" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;case&quot;</span></span>
+<span id="cb18-7"><a href="introduction.html#cb18-7" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&quot;Grade III&quot;</span></span>
+<span id="cb18-8"><a href="introduction.html#cb18-8" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;Grade III&quot;</span></span></code></pre></div>
 <p>Between these matching quotation marks, you can write pretty much anything that your system setup supports:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="introduction.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&quot;`dafsfåååY ___@£$¤#&quot;</span></span>
-<span id="cb19-2"><a href="introduction.html#cb19-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;`dafsfåååY ___@£$¤#&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="introduction.html#cb19-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="st">&quot;`dafsfåååY ___@£$¤#&quot;</span></span>
+<span id="cb19-2"><a href="introduction.html#cb19-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;`dafsfåååY ___@£$¤#&quot;</span></span></code></pre></div>
 <p>With these strings of characters, we can do the same things as with numbers: i.e. apply functions, save them as objects, and combine them into vectors (and store these vectors again as objects):</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="introduction.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">nchar</span>(<span class="st">&quot;your name&quot;</span>)</span>
-<span id="cb20-2"><a href="introduction.html#cb20-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">9</span></span>
-<span id="cb20-3"><a href="introduction.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> first <span class="ot">=</span> <span class="st">&quot;Makoto&quot;</span></span>
-<span id="cb20-4"><a href="introduction.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> first</span>
-<span id="cb20-5"><a href="introduction.html#cb20-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;Makoto&quot;</span></span>
-<span id="cb20-6"><a href="introduction.html#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> last <span class="ot">=</span> <span class="st">&quot;Shinkai&quot;</span></span>
-<span id="cb20-7"><a href="introduction.html#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> names <span class="ot">=</span> <span class="fu">c</span>(first, last)</span>
-<span id="cb20-8"><a href="introduction.html#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> names</span>
-<span id="cb20-9"><a href="introduction.html#cb20-9" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;Makoto&quot;</span>  <span class="st">&quot;Shinkai&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="introduction.html#cb20-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">nchar</span>(<span class="st">&quot;your name&quot;</span>)</span>
+<span id="cb20-2"><a href="introduction.html#cb20-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">9</span></span>
+<span id="cb20-3"><a href="introduction.html#cb20-3" tabindex="-1"></a><span class="sc">&gt;</span> first <span class="ot">=</span> <span class="st">&quot;Makoto&quot;</span></span>
+<span id="cb20-4"><a href="introduction.html#cb20-4" tabindex="-1"></a><span class="sc">&gt;</span> first</span>
+<span id="cb20-5"><a href="introduction.html#cb20-5" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;Makoto&quot;</span></span>
+<span id="cb20-6"><a href="introduction.html#cb20-6" tabindex="-1"></a><span class="sc">&gt;</span> last <span class="ot">=</span> <span class="st">&quot;Shinkai&quot;</span></span>
+<span id="cb20-7"><a href="introduction.html#cb20-7" tabindex="-1"></a><span class="sc">&gt;</span> names <span class="ot">=</span> <span class="fu">c</span>(first, last)</span>
+<span id="cb20-8"><a href="introduction.html#cb20-8" tabindex="-1"></a><span class="sc">&gt;</span> names</span>
+<span id="cb20-9"><a href="introduction.html#cb20-9" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;Makoto&quot;</span>  <span class="st">&quot;Shinkai&quot;</span></span></code></pre></div>
 <p>Let’s define a vector of character strings that goes with our data vector <code>x</code> from before:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="introduction.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> g <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;case&quot;</span>, <span class="st">&quot;control&quot;</span>, <span class="st">&quot;control&quot;</span>, <span class="st">&quot;case&quot;</span>, <span class="st">&quot;control&quot;</span>)</span>
-<span id="cb21-2"><a href="introduction.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> g</span>
-<span id="cb21-3"><a href="introduction.html#cb21-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;case&quot;</span>    <span class="st">&quot;control&quot;</span> <span class="st">&quot;control&quot;</span> <span class="st">&quot;case&quot;</span>    <span class="st">&quot;control&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="introduction.html#cb21-1" tabindex="-1"></a><span class="sc">&gt;</span> g <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;case&quot;</span>, <span class="st">&quot;control&quot;</span>, <span class="st">&quot;control&quot;</span>, <span class="st">&quot;case&quot;</span>, <span class="st">&quot;control&quot;</span>)</span>
+<span id="cb21-2"><a href="introduction.html#cb21-2" tabindex="-1"></a><span class="sc">&gt;</span> g</span>
+<span id="cb21-3"><a href="introduction.html#cb21-3" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;case&quot;</span>    <span class="st">&quot;control&quot;</span> <span class="st">&quot;control&quot;</span> <span class="st">&quot;case&quot;</span>    <span class="st">&quot;control&quot;</span></span></code></pre></div>
 <p>We have now defined the case/control status for five different subjects (e.g. the same five subjects). How would we run descriptives for them?</p>
 <div id="descriptives-for-grouping-data" class="section level3 hasAnchor" number="2.4.1">
 <h3><span class="header-section-number">2.4.1</span> Descriptives for grouping data<a href="introduction.html#descriptives-for-grouping-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Observations that are not naturally reported as numbers, but rather as text, are on a nominal (or at best ordinal) scale. Their information can be naturally described via their absolute and relative frequencies.</p>
 <p>The standard way to report frequencies is via the function <code>table</code>: if given a vector, it will return a table with the counts for each distinct value that is part of the vector:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="introduction.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(g)</span>
-<span id="cb22-2"><a href="introduction.html#cb22-2" aria-hidden="true" tabindex="-1"></a>g</span>
-<span id="cb22-3"><a href="introduction.html#cb22-3" aria-hidden="true" tabindex="-1"></a>   case control </span>
-<span id="cb22-4"><a href="introduction.html#cb22-4" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span>       <span class="dv">3</span> </span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="introduction.html#cb22-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(g)</span>
+<span id="cb22-2"><a href="introduction.html#cb22-2" tabindex="-1"></a>g</span>
+<span id="cb22-3"><a href="introduction.html#cb22-3" tabindex="-1"></a>   case control </span>
+<span id="cb22-4"><a href="introduction.html#cb22-4" tabindex="-1"></a>      <span class="dv">2</span>       <span class="dv">3</span> </span></code></pre></div>
 <p>This also works for numerical vectors, though it’s generally not very useful:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="introduction.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(x)</span>
-<span id="cb23-2"><a href="introduction.html#cb23-2" aria-hidden="true" tabindex="-1"></a>x</span>
-<span id="cb23-3"><a href="introduction.html#cb23-3" aria-hidden="true" tabindex="-1"></a> <span class="fl">1.9</span> <span class="fl">2.45</span> <span class="fl">2.57</span> <span class="fl">3.14</span> <span class="fl">3.78</span> </span>
-<span id="cb23-4"><a href="introduction.html#cb23-4" aria-hidden="true" tabindex="-1"></a>   <span class="dv">1</span>    <span class="dv">1</span>    <span class="dv">1</span>    <span class="dv">1</span>    <span class="dv">1</span> </span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="introduction.html#cb23-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(x)</span>
+<span id="cb23-2"><a href="introduction.html#cb23-2" tabindex="-1"></a>x</span>
+<span id="cb23-3"><a href="introduction.html#cb23-3" tabindex="-1"></a> <span class="fl">1.9</span> <span class="fl">2.45</span> <span class="fl">2.57</span> <span class="fl">3.14</span> <span class="fl">3.78</span> </span>
+<span id="cb23-4"><a href="introduction.html#cb23-4" tabindex="-1"></a>   <span class="dv">1</span>    <span class="dv">1</span>    <span class="dv">1</span>    <span class="dv">1</span>    <span class="dv">1</span> </span></code></pre></div>
 <p>We can get the relative frequencies (proportions) in a table by applying the function <code>proportions</code> to the output of the <code>table</code> function. One way of doing this is in two steps:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="introduction.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> tab <span class="ot">&lt;-</span> <span class="fu">table</span>(g)</span>
-<span id="cb24-2"><a href="introduction.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">proportions</span>(tab)</span>
-<span id="cb24-3"><a href="introduction.html#cb24-3" aria-hidden="true" tabindex="-1"></a>g</span>
-<span id="cb24-4"><a href="introduction.html#cb24-4" aria-hidden="true" tabindex="-1"></a>   case control </span>
-<span id="cb24-5"><a href="introduction.html#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.4</span>     <span class="fl">0.6</span> </span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="introduction.html#cb24-1" tabindex="-1"></a><span class="sc">&gt;</span> tab <span class="ot">&lt;-</span> <span class="fu">table</span>(g)</span>
+<span id="cb24-2"><a href="introduction.html#cb24-2" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">proportions</span>(tab)</span>
+<span id="cb24-3"><a href="introduction.html#cb24-3" tabindex="-1"></a>g</span>
+<span id="cb24-4"><a href="introduction.html#cb24-4" tabindex="-1"></a>   case control </span>
+<span id="cb24-5"><a href="introduction.html#cb24-5" tabindex="-1"></a>    <span class="fl">0.4</span>     <span class="fl">0.6</span> </span></code></pre></div>
 <p>It is however absolutely legitimate in R to do this in one step, by nesting the function calls like so:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="introduction.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">proportions</span>(<span class="fu">table</span>(g))</span>
-<span id="cb25-2"><a href="introduction.html#cb25-2" aria-hidden="true" tabindex="-1"></a>g</span>
-<span id="cb25-3"><a href="introduction.html#cb25-3" aria-hidden="true" tabindex="-1"></a>   case control </span>
-<span id="cb25-4"><a href="introduction.html#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.4</span>     <span class="fl">0.6</span> </span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="introduction.html#cb25-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">proportions</span>(<span class="fu">table</span>(g))</span>
+<span id="cb25-2"><a href="introduction.html#cb25-2" tabindex="-1"></a>g</span>
+<span id="cb25-3"><a href="introduction.html#cb25-3" tabindex="-1"></a>   case control </span>
+<span id="cb25-4"><a href="introduction.html#cb25-4" tabindex="-1"></a>    <span class="fl">0.4</span>     <span class="fl">0.6</span> </span></code></pre></div>
 <p>This is no more complicated then e.g. <code>log(sqrt(10))</code>. However, it can be kind of hard to read for longer function calls, and it means that the actual counts (produced by <code>table</code>) are neither shown nor stored anywhere, which may not be what you want.</p>
 <p>The standard way of displaying basic information about a grouping variable is a barplot. We can use the same function as above, applied to the frequency table:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="introduction.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">barplot</span>(tab)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="introduction.html#cb26-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">barplot</span>(tab)</span></code></pre></div>
 <p><img src="introductio-to-r_files/figure-html/unnamed-chunk-28-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>And of course we could do the same for the relative frequencies, though this would not change anything except for the scale of the vertical axis in our simple example. We therefore decide to use the function <code>title</code> to add an appropriate header (title) to the plot:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="introduction.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">barplot</span>(<span class="fu">proportions</span>(tab))</span>
-<span id="cb27-2"><a href="introduction.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">title</span>(<span class="st">&quot;Proportion of cases &amp; controls&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="introduction.html#cb27-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">barplot</span>(<span class="fu">proportions</span>(tab))</span>
+<span id="cb27-2"><a href="introduction.html#cb27-2" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">title</span>(<span class="st">&quot;Proportion of cases &amp; controls&quot;</span>)</span></code></pre></div>
 <p><img src="introductio-to-r_files/figure-html/unnamed-chunk-29-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Here, <code>title</code> is a function that takes as argument a string and puts it on top of the existing plot. Again, we don’t see a return value, but a side effect.</p>
 <p>Graphical questions (for experimentation):</p>
@@ -632,23 +637,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">2.4.2</span> Character vector vs factor<a href="introduction.html#character-vector-vs-factor" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>While character is the basic data type for non-numeric data, R has a second, different data type that serves the same purpose, i.e. capturing non-numeric information. This data type is <em>factor</em>. Factors are generated by applying the function of the same name to a vector.</p>
 <p>For a simple example, we can use <code>factor</code> to convert the grouping variable that we have previously defined:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="introduction.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> f <span class="ot">&lt;-</span> <span class="fu">factor</span>(g)</span>
-<span id="cb28-2"><a href="introduction.html#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> f</span>
-<span id="cb28-3"><a href="introduction.html#cb28-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] case    control control case    control</span>
-<span id="cb28-4"><a href="introduction.html#cb28-4" aria-hidden="true" tabindex="-1"></a>Levels<span class="sc">:</span> case control</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="introduction.html#cb28-1" tabindex="-1"></a><span class="sc">&gt;</span> f <span class="ot">&lt;-</span> <span class="fu">factor</span>(g)</span>
+<span id="cb28-2"><a href="introduction.html#cb28-2" tabindex="-1"></a><span class="sc">&gt;</span> f</span>
+<span id="cb28-3"><a href="introduction.html#cb28-3" tabindex="-1"></a>[<span class="dv">1</span>] case    control control case    control</span>
+<span id="cb28-4"><a href="introduction.html#cb28-4" tabindex="-1"></a>Levels<span class="sc">:</span> case control</span></code></pre></div>
 <p>Note that while the information is obviously the same, the display is different from what we have seen for character vectors: the labels (<code>case</code> and <code>control</code>) are listed without surrounding quotation marks, and are listed explicitly as <code>Levels:</code> under the data proper.</p>
 <p>We can use the same functions for factors as for character vectors to generate e.g. tables:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="introduction.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(f)</span>
-<span id="cb29-2"><a href="introduction.html#cb29-2" aria-hidden="true" tabindex="-1"></a>f</span>
-<span id="cb29-3"><a href="introduction.html#cb29-3" aria-hidden="true" tabindex="-1"></a>   case control </span>
-<span id="cb29-4"><a href="introduction.html#cb29-4" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span>       <span class="dv">3</span> </span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="introduction.html#cb29-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(f)</span>
+<span id="cb29-2"><a href="introduction.html#cb29-2" tabindex="-1"></a>f</span>
+<span id="cb29-3"><a href="introduction.html#cb29-3" tabindex="-1"></a>   case control </span>
+<span id="cb29-4"><a href="introduction.html#cb29-4" tabindex="-1"></a>      <span class="dv">2</span>       <span class="dv">3</span> </span></code></pre></div>
 <p>Why have two different data types for the same thing? Partly due to historical reasons: factors are implemented as numerical vectors (i.e. different numbers for different groups) with an extra label argument; for large data sets, this is more efficient than just storing copies of the same label over and over again. However, as modern R is rather more clever than storing multiple copies of the same label repeatedly, this is is no longer a strong reason for using factors.</p>
 <p>There are still some advantages to using factors: it is slightly easier to keep track of misspelled or dropped levels in the data, we can decide on the order of the labels (which will come in handy when doing regression later), and the <code>factor</code> function is convenient for converting numerically coded variables to proper grouping variables, e.g. as in</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="introduction.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> numgrp <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb30-2"><a href="introduction.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> f <span class="ot">&lt;-</span> <span class="fu">factor</span>(numgrp, <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;case&quot;</span>, <span class="st">&quot;control&quot;</span>))</span>
-<span id="cb30-3"><a href="introduction.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> f</span>
-<span id="cb30-4"><a href="introduction.html#cb30-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] case    control control case    control</span>
-<span id="cb30-5"><a href="introduction.html#cb30-5" aria-hidden="true" tabindex="-1"></a>Levels<span class="sc">:</span> case control</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="introduction.html#cb30-1" tabindex="-1"></a><span class="sc">&gt;</span> numgrp <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb30-2"><a href="introduction.html#cb30-2" tabindex="-1"></a><span class="sc">&gt;</span> f <span class="ot">&lt;-</span> <span class="fu">factor</span>(numgrp, <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;case&quot;</span>, <span class="st">&quot;control&quot;</span>))</span>
+<span id="cb30-3"><a href="introduction.html#cb30-3" tabindex="-1"></a><span class="sc">&gt;</span> f</span>
+<span id="cb30-4"><a href="introduction.html#cb30-4" tabindex="-1"></a>[<span class="dv">1</span>] case    control control case    control</span>
+<span id="cb30-5"><a href="introduction.html#cb30-5" tabindex="-1"></a>Levels<span class="sc">:</span> case control</span></code></pre></div>
 <p>Here, <code>factor</code> takes as first argument a numerical vector of grouping information, as second argument (named <code>levels</code>) a vector of valid levels for the numerical data, and as third argument (named <code>labels</code>) the vector of group levels corresponding to the valid levels. The result is the same as the original factor <code>f</code> before.</p>
 <p>As a general rule, more based on tradition than strict necessity these days, we use factors in R for nominal data, and characters for (often unique) names and labels.</p>
 </div>
@@ -657,51 +662,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">2.5</span> General data in R<a href="introduction.html#general-data-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have now two variables for our trivial example: <code>x</code> containing the continuous measurements and <code>f</code> containing the grouping information. These variables have the same length and relate to the same subjects, i.e. the first elements of the vectors hold the information for the first subject. In reality of course, we generally have more than just two variables in the same data set, and handling them all as separate objects is highly impractical. We need a way to combine all information related to the same subjects into one object for easy reference and manipulation.</p>
 <p>In R, the basic data type for a general data set containing numerical, grouping or other variables is the <em>data frame</em>. This is a rectangular arrangement of data, where rows correspond to different subjects and columns to different variables - the standard arrangement of data for statistical software (not just R). A data frame can be generated in different ways; if the variables (columns) are already defined as for our trivial example, we can use the function <code>data.frame</code> to combine them into a a data frame:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="introduction.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> exdat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(f, x)</span>
-<span id="cb31-2"><a href="introduction.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> exdat</span>
-<span id="cb31-3"><a href="introduction.html#cb31-3" aria-hidden="true" tabindex="-1"></a>        f    x</span>
-<span id="cb31-4"><a href="introduction.html#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>    case <span class="fl">2.57</span></span>
-<span id="cb31-5"><a href="introduction.html#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> control <span class="fl">3.14</span></span>
-<span id="cb31-6"><a href="introduction.html#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> control <span class="fl">3.78</span></span>
-<span id="cb31-7"><a href="introduction.html#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>    case <span class="fl">1.90</span></span>
-<span id="cb31-8"><a href="introduction.html#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> control <span class="fl">2.45</span></span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="introduction.html#cb31-1" tabindex="-1"></a><span class="sc">&gt;</span> exdat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(f, x)</span>
+<span id="cb31-2"><a href="introduction.html#cb31-2" tabindex="-1"></a><span class="sc">&gt;</span> exdat</span>
+<span id="cb31-3"><a href="introduction.html#cb31-3" tabindex="-1"></a>        f    x</span>
+<span id="cb31-4"><a href="introduction.html#cb31-4" tabindex="-1"></a><span class="dv">1</span>    case <span class="fl">2.57</span></span>
+<span id="cb31-5"><a href="introduction.html#cb31-5" tabindex="-1"></a><span class="dv">2</span> control <span class="fl">3.14</span></span>
+<span id="cb31-6"><a href="introduction.html#cb31-6" tabindex="-1"></a><span class="dv">3</span> control <span class="fl">3.78</span></span>
+<span id="cb31-7"><a href="introduction.html#cb31-7" tabindex="-1"></a><span class="dv">4</span>    case <span class="fl">1.90</span></span>
+<span id="cb31-8"><a href="introduction.html#cb31-8" tabindex="-1"></a><span class="dv">5</span> control <span class="fl">2.45</span></span></code></pre></div>
 <p><code>data.frame</code> is a function that accepts one or several vectors of the same length and returns a data frame with these vectors as columns, in the same order as they are passed to the function. Note that the rows are numbered by default, and the names of the variables are used as column headers.</p>
 <p>Actually, we can use a slightly different form of calling <code>data.frame</code> to define more informative column names at this point:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="introduction.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> exdat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Group =</span> f, <span class="at">Outcome =</span> x)</span>
-<span id="cb32-2"><a href="introduction.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> exdat</span>
-<span id="cb32-3"><a href="introduction.html#cb32-3" aria-hidden="true" tabindex="-1"></a>    Group Outcome</span>
-<span id="cb32-4"><a href="introduction.html#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>    case    <span class="fl">2.57</span></span>
-<span id="cb32-5"><a href="introduction.html#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> control    <span class="fl">3.14</span></span>
-<span id="cb32-6"><a href="introduction.html#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> control    <span class="fl">3.78</span></span>
-<span id="cb32-7"><a href="introduction.html#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>    case    <span class="fl">1.90</span></span>
-<span id="cb32-8"><a href="introduction.html#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> control    <span class="fl">2.45</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="introduction.html#cb32-1" tabindex="-1"></a><span class="sc">&gt;</span> exdat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Group =</span> f, <span class="at">Outcome =</span> x)</span>
+<span id="cb32-2"><a href="introduction.html#cb32-2" tabindex="-1"></a><span class="sc">&gt;</span> exdat</span>
+<span id="cb32-3"><a href="introduction.html#cb32-3" tabindex="-1"></a>    Group Outcome</span>
+<span id="cb32-4"><a href="introduction.html#cb32-4" tabindex="-1"></a><span class="dv">1</span>    case    <span class="fl">2.57</span></span>
+<span id="cb32-5"><a href="introduction.html#cb32-5" tabindex="-1"></a><span class="dv">2</span> control    <span class="fl">3.14</span></span>
+<span id="cb32-6"><a href="introduction.html#cb32-6" tabindex="-1"></a><span class="dv">3</span> control    <span class="fl">3.78</span></span>
+<span id="cb32-7"><a href="introduction.html#cb32-7" tabindex="-1"></a><span class="dv">4</span>    case    <span class="fl">1.90</span></span>
+<span id="cb32-8"><a href="introduction.html#cb32-8" tabindex="-1"></a><span class="dv">5</span> control    <span class="fl">2.45</span></span></code></pre></div>
 <p>The rules for the column names are the same as for object names in R, see above.</p>
 <div id="extracting-parts-of-a-data-frame" class="section level3 hasAnchor" number="2.5.1">
 <h3><span class="header-section-number">2.5.1</span> Extracting parts of a data frame<a href="introduction.html#extracting-parts-of-a-data-frame" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now that we have put all our data together into a data frame, we don’t want this to be a black hole: we want to be able to get everything out that we have put in. We will talk about this in some detail in Section <a href="data-processing.html#data-processing">6</a>, but for now we will focus on how we can get back either the original vectors or subsets of the full data.</p>
 <p>To extract a vector from a data frame, we can use the <code>$</code> notation: the name of the data frame followed by the name of the column, separated by a <code>$</code> symbol:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="introduction.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> exdat<span class="sc">$</span>Group</span>
-<span id="cb33-2"><a href="introduction.html#cb33-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] case    control control case    control</span>
-<span id="cb33-3"><a href="introduction.html#cb33-3" aria-hidden="true" tabindex="-1"></a>Levels<span class="sc">:</span> case control</span>
-<span id="cb33-4"><a href="introduction.html#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(exdat<span class="sc">$</span>Group)</span>
-<span id="cb33-5"><a href="introduction.html#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-6"><a href="introduction.html#cb33-6" aria-hidden="true" tabindex="-1"></a>   case control </span>
-<span id="cb33-7"><a href="introduction.html#cb33-7" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span>       <span class="dv">3</span> </span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="introduction.html#cb33-1" tabindex="-1"></a><span class="sc">&gt;</span> exdat<span class="sc">$</span>Group</span>
+<span id="cb33-2"><a href="introduction.html#cb33-2" tabindex="-1"></a>[<span class="dv">1</span>] case    control control case    control</span>
+<span id="cb33-3"><a href="introduction.html#cb33-3" tabindex="-1"></a>Levels<span class="sc">:</span> case control</span>
+<span id="cb33-4"><a href="introduction.html#cb33-4" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(exdat<span class="sc">$</span>Group)</span>
+<span id="cb33-5"><a href="introduction.html#cb33-5" tabindex="-1"></a></span>
+<span id="cb33-6"><a href="introduction.html#cb33-6" tabindex="-1"></a>   case control </span>
+<span id="cb33-7"><a href="introduction.html#cb33-7" tabindex="-1"></a>      <span class="dv">2</span>       <span class="dv">3</span> </span></code></pre></div>
 <p>As a slight simplification, we do not have to spell out the full name of the variable, only enough to make it unique among all columns names. So</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="introduction.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> exdat<span class="sc">$</span>Gro</span>
-<span id="cb34-2"><a href="introduction.html#cb34-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] case    control control case    control</span>
-<span id="cb34-3"><a href="introduction.html#cb34-3" aria-hidden="true" tabindex="-1"></a>Levels<span class="sc">:</span> case control</span>
-<span id="cb34-4"><a href="introduction.html#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> exdat<span class="sc">$</span>G</span>
-<span id="cb34-5"><a href="introduction.html#cb34-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] case    control control case    control</span>
-<span id="cb34-6"><a href="introduction.html#cb34-6" aria-hidden="true" tabindex="-1"></a>Levels<span class="sc">:</span> case control</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="introduction.html#cb34-1" tabindex="-1"></a><span class="sc">&gt;</span> exdat<span class="sc">$</span>Gro</span>
+<span id="cb34-2"><a href="introduction.html#cb34-2" tabindex="-1"></a>[<span class="dv">1</span>] case    control control case    control</span>
+<span id="cb34-3"><a href="introduction.html#cb34-3" tabindex="-1"></a>Levels<span class="sc">:</span> case control</span>
+<span id="cb34-4"><a href="introduction.html#cb34-4" tabindex="-1"></a><span class="sc">&gt;</span> exdat<span class="sc">$</span>G</span>
+<span id="cb34-5"><a href="introduction.html#cb34-5" tabindex="-1"></a>[<span class="dv">1</span>] case    control control case    control</span>
+<span id="cb34-6"><a href="introduction.html#cb34-6" tabindex="-1"></a>Levels<span class="sc">:</span> case control</span></code></pre></div>
 <p>work equally well; at the command line, we can also use tab-expansion to complete the name of the column that we are interested in .</p>
 <p>In order to extract only a subset of a data frame, e.g. only cases or only controls, we can use the utility function <code>subset</code>:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="introduction.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">subset</span>(exdat, Group <span class="sc">==</span> <span class="st">&quot;case&quot;</span>)</span>
-<span id="cb35-2"><a href="introduction.html#cb35-2" aria-hidden="true" tabindex="-1"></a>  Group Outcome</span>
-<span id="cb35-3"><a href="introduction.html#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  case    <span class="fl">2.57</span></span>
-<span id="cb35-4"><a href="introduction.html#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>  case    <span class="fl">1.90</span></span></code></pre></div>
-<p>This is a function that takes as first argument a data frame and as second argument a logical expression (comparison) and returns only the rows of the data frame for which the logical condition is true (note that we use a doubled equation sign <code>==</code> for comparison in R). This is a point which has many lovely subtleties, which we will discuss in Section <a href="data-types-struct.html#data-types-struct">5</a>), but for now, we will employ this as a useful shortcut.</p>
-<p></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="introduction.html#cb35-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">subset</span>(exdat, Group <span class="sc">==</span> <span class="st">&quot;case&quot;</span>)</span>
+<span id="cb35-2"><a href="introduction.html#cb35-2" tabindex="-1"></a>  Group Outcome</span>
+<span id="cb35-3"><a href="introduction.html#cb35-3" tabindex="-1"></a><span class="dv">1</span>  case    <span class="fl">2.57</span></span>
+<span id="cb35-4"><a href="introduction.html#cb35-4" tabindex="-1"></a><span class="dv">4</span>  case    <span class="fl">1.90</span></span></code></pre></div>
+<p>This is a function that takes as first argument a data frame and as second argument a logical expression (comparison) and returns only the rows of the data frame for which the logical condition is true (note that we use a doubled equation sign <code>==</code> for comparison in R). This is a point which has many lovely subtleties, which we will discuss in Section <a href="data-types-struct.html#data-types-struct">5</a>, but for now, we will employ this as a useful shortcut.</p>
+<p><strong>Exercises:</strong></p>
 <ol style="list-style-type: decimal">
 <li>Extract only the controls from our example data.</li>
 <li>How can we extract only rows where the outcome is greater than 3?</li>
@@ -711,28 +716,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="ex_desc_stats" class="section level3 hasAnchor" number="2.5.2">
 <h3><span class="header-section-number">2.5.2</span> Example: descriptive statistics<a href="introduction.html#ex_desc_stats" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We can use the function <code>summary</code> to calculate the standard summaries for all columns of a data frame:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="introduction.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(exdat)</span>
-<span id="cb36-2"><a href="introduction.html#cb36-2" aria-hidden="true" tabindex="-1"></a>     Group      Outcome     </span>
-<span id="cb36-3"><a href="introduction.html#cb36-3" aria-hidden="true" tabindex="-1"></a> case   <span class="sc">:</span><span class="dv">2</span>   Min.   <span class="sc">:</span><span class="fl">1.900</span>  </span>
-<span id="cb36-4"><a href="introduction.html#cb36-4" aria-hidden="true" tabindex="-1"></a> control<span class="sc">:</span><span class="dv">3</span>   1st Qu.<span class="sc">:</span><span class="fl">2.450</span>  </span>
-<span id="cb36-5"><a href="introduction.html#cb36-5" aria-hidden="true" tabindex="-1"></a>             Median <span class="sc">:</span><span class="fl">2.570</span>  </span>
-<span id="cb36-6"><a href="introduction.html#cb36-6" aria-hidden="true" tabindex="-1"></a>             Mean   <span class="sc">:</span><span class="fl">2.768</span>  </span>
-<span id="cb36-7"><a href="introduction.html#cb36-7" aria-hidden="true" tabindex="-1"></a>             3rd Qu.<span class="sc">:</span><span class="fl">3.140</span>  </span>
-<span id="cb36-8"><a href="introduction.html#cb36-8" aria-hidden="true" tabindex="-1"></a>             Max.   <span class="sc">:</span><span class="fl">3.780</span>  </span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="introduction.html#cb36-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(exdat)</span>
+<span id="cb36-2"><a href="introduction.html#cb36-2" tabindex="-1"></a>     Group      Outcome     </span>
+<span id="cb36-3"><a href="introduction.html#cb36-3" tabindex="-1"></a> case   <span class="sc">:</span><span class="dv">2</span>   Min.   <span class="sc">:</span><span class="fl">1.900</span>  </span>
+<span id="cb36-4"><a href="introduction.html#cb36-4" tabindex="-1"></a> control<span class="sc">:</span><span class="dv">3</span>   1st Qu.<span class="sc">:</span><span class="fl">2.450</span>  </span>
+<span id="cb36-5"><a href="introduction.html#cb36-5" tabindex="-1"></a>             Median <span class="sc">:</span><span class="fl">2.570</span>  </span>
+<span id="cb36-6"><a href="introduction.html#cb36-6" tabindex="-1"></a>             Mean   <span class="sc">:</span><span class="fl">2.768</span>  </span>
+<span id="cb36-7"><a href="introduction.html#cb36-7" tabindex="-1"></a>             3rd Qu.<span class="sc">:</span><span class="fl">3.140</span>  </span>
+<span id="cb36-8"><a href="introduction.html#cb36-8" tabindex="-1"></a>             Max.   <span class="sc">:</span><span class="fl">3.780</span>  </span></code></pre></div>
 <p>Note that <code>summary</code> for data frames is clever enough to do different things for different columns: for the grouping variable, a factor, it simply displays a tabulation of the values, as means or medians would not make sense; for the continous measurement on the other hand we get the standard six-number summary.</p>
 <p>Let’s plot the outcome by group. This can be done easily via side-by-side boxplots, a representation that we can get from the <code>boxplot</code> above if we modify the function call somewhat:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="introduction.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">boxplot</span>(Outcome <span class="sc">~</span> Group, <span class="at">data =</span> exdat)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="introduction.html#cb37-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">boxplot</span>(Outcome <span class="sc">~</span> Group, <span class="at">data =</span> exdat)</span></code></pre></div>
 <p><img src="introductio-to-r_files/figure-html/unnamed-chunk-39-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>Here, the first argument is a so-called <em>formula</em>, a type of specification that we will see more of when we do statistical tests and regression. Formulas are characterized by the tilde symbol <code>~</code> that in R can be generally read as “as a function of”: in our example, we can read the function call above as “create a boxplot of <code>Outcome</code> as a function of <code>Group</code>, where the data (and column names) are taken from data frame <code>exdat</code>”.</p>
 <p>Note that we can combine the <code>summary</code> and <code>subset</code> commands to generate descriptives for parts of the data:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="introduction.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(<span class="fu">subset</span>(exdat, Group <span class="sc">==</span> <span class="st">&quot;control&quot;</span>))</span>
-<span id="cb38-2"><a href="introduction.html#cb38-2" aria-hidden="true" tabindex="-1"></a>     Group      Outcome     </span>
-<span id="cb38-3"><a href="introduction.html#cb38-3" aria-hidden="true" tabindex="-1"></a> case   <span class="sc">:</span><span class="dv">0</span>   Min.   <span class="sc">:</span><span class="fl">2.450</span>  </span>
-<span id="cb38-4"><a href="introduction.html#cb38-4" aria-hidden="true" tabindex="-1"></a> control<span class="sc">:</span><span class="dv">3</span>   1st Qu.<span class="sc">:</span><span class="fl">2.795</span>  </span>
-<span id="cb38-5"><a href="introduction.html#cb38-5" aria-hidden="true" tabindex="-1"></a>             Median <span class="sc">:</span><span class="fl">3.140</span>  </span>
-<span id="cb38-6"><a href="introduction.html#cb38-6" aria-hidden="true" tabindex="-1"></a>             Mean   <span class="sc">:</span><span class="fl">3.123</span>  </span>
-<span id="cb38-7"><a href="introduction.html#cb38-7" aria-hidden="true" tabindex="-1"></a>             3rd Qu.<span class="sc">:</span><span class="fl">3.460</span>  </span>
-<span id="cb38-8"><a href="introduction.html#cb38-8" aria-hidden="true" tabindex="-1"></a>             Max.   <span class="sc">:</span><span class="fl">3.780</span>  </span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="introduction.html#cb38-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(<span class="fu">subset</span>(exdat, Group <span class="sc">==</span> <span class="st">&quot;control&quot;</span>))</span>
+<span id="cb38-2"><a href="introduction.html#cb38-2" tabindex="-1"></a>     Group      Outcome     </span>
+<span id="cb38-3"><a href="introduction.html#cb38-3" tabindex="-1"></a> case   <span class="sc">:</span><span class="dv">0</span>   Min.   <span class="sc">:</span><span class="fl">2.450</span>  </span>
+<span id="cb38-4"><a href="introduction.html#cb38-4" tabindex="-1"></a> control<span class="sc">:</span><span class="dv">3</span>   1st Qu.<span class="sc">:</span><span class="fl">2.795</span>  </span>
+<span id="cb38-5"><a href="introduction.html#cb38-5" tabindex="-1"></a>             Median <span class="sc">:</span><span class="fl">3.140</span>  </span>
+<span id="cb38-6"><a href="introduction.html#cb38-6" tabindex="-1"></a>             Mean   <span class="sc">:</span><span class="fl">3.123</span>  </span>
+<span id="cb38-7"><a href="introduction.html#cb38-7" tabindex="-1"></a>             3rd Qu.<span class="sc">:</span><span class="fl">3.460</span>  </span>
+<span id="cb38-8"><a href="introduction.html#cb38-8" tabindex="-1"></a>             Max.   <span class="sc">:</span><span class="fl">3.780</span>  </span></code></pre></div>
 </div>
 </div>
 <div id="meta-activity" class="section level2 hasAnchor" number="2.6">
@@ -741,90 +746,148 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="getting-help" class="section level3 hasAnchor" number="2.6.1">
 <h3><span class="header-section-number">2.6.1</span> Getting help<a href="introduction.html#getting-help" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Getting help on functions in R is easy:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="introduction.html#cb39-1" aria-hidden="true" tabindex="-1"></a>?sd</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="introduction.html#cb39-1" tabindex="-1"></a>?sd</span></code></pre></div>
 <p>This will generally open the R HTML help page for the function of interest in the default browser. Note that this page has active links to the package where the function lives (and usually related functions as well) and to the top index of the HTML help.</p>
-<p>Exercise: read the documentation for function <code>make.names</code> to make sure that the description of a valid name for an R object given above is correct; check the examples to see the effect of the function.</p>
+<p><strong>Exercise:</strong> read the documentation for function <code>make.names</code> to make sure that the description of a valid name for an R object given above is correct; check the examples to see the effect of the function.</p>
 </div>
 <div id="keeping-track-of-objects" class="section level3 hasAnchor" number="2.6.2">
 <h3><span class="header-section-number">2.6.2</span> Keeping track of objects<a href="introduction.html#keeping-track-of-objects" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We have now actually defined a number of objects. All of these are stored under their name in the working or global environment, which is just a part of the main memory that R has set aside for storing variables. From the top of your head, how many objects are there?</p>
 <p>… so we need a way of keeping track of the variables; as usually in R this is done via a function, in this case <code>ls</code> (for <em>list</em>):</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="introduction.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ls</span>()</span>
-<span id="cb40-2"><a href="introduction.html#cb40-2" aria-hidden="true" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;exdat&quot;</span>              <span class="st">&quot;f&quot;</span>                  <span class="st">&quot;first&quot;</span>              <span class="st">&quot;g&quot;</span>                 </span>
-<span id="cb40-3"><a href="introduction.html#cb40-3" aria-hidden="true" tabindex="-1"></a> [<span class="dv">5</span>] <span class="st">&quot;hook_output&quot;</span>        <span class="st">&quot;include_screenshot&quot;</span> <span class="st">&quot;last&quot;</span>               <span class="st">&quot;names&quot;</span>             </span>
-<span id="cb40-4"><a href="introduction.html#cb40-4" aria-hidden="true" tabindex="-1"></a> [<span class="dv">9</span>] <span class="st">&quot;numgrp&quot;</span>             <span class="st">&quot;pi&quot;</span>                 <span class="st">&quot;sum_x&quot;</span>              <span class="st">&quot;tab&quot;</span>               </span>
-<span id="cb40-5"><a href="introduction.html#cb40-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">&quot;x&quot;</span>                  <span class="st">&quot;y&quot;</span>                  <span class="st">&quot;z&quot;</span>                 </span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="introduction.html#cb40-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ls</span>()</span>
+<span id="cb40-2"><a href="introduction.html#cb40-2" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;exdat&quot;</span>              <span class="st">&quot;f&quot;</span>                  <span class="st">&quot;first&quot;</span>              <span class="st">&quot;g&quot;</span>                 </span>
+<span id="cb40-3"><a href="introduction.html#cb40-3" tabindex="-1"></a> [<span class="dv">5</span>] <span class="st">&quot;hook_output&quot;</span>        <span class="st">&quot;include_screenshot&quot;</span> <span class="st">&quot;last&quot;</span>               <span class="st">&quot;names&quot;</span>             </span>
+<span id="cb40-4"><a href="introduction.html#cb40-4" tabindex="-1"></a> [<span class="dv">9</span>] <span class="st">&quot;numgrp&quot;</span>             <span class="st">&quot;pi&quot;</span>                 <span class="st">&quot;sum_x&quot;</span>              <span class="st">&quot;tab&quot;</span>               </span>
+<span id="cb40-5"><a href="introduction.html#cb40-5" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">&quot;x&quot;</span>                  <span class="st">&quot;y&quot;</span>                  <span class="st">&quot;z&quot;</span>                 </span></code></pre></div>
 <p>Note that we call this function without an argument, though we still have to specify the parentheses, so that R knows we want to run the function <code>ls</code>. If called in this way, it will return a character vector of the names of the objects that are currently defined in the working environment.</p>
-<p>If we want to know the value of an object, we can just type its name at the command line, as we have done right from the beginning. Sometimes however, especially when the data set is bigger, some more compressed information is preferable. This is where the function <code>str</code> (for structure) comes in:</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="introduction.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">str</span>(x)</span>
-<span id="cb41-2"><a href="introduction.html#cb41-2" aria-hidden="true" tabindex="-1"></a> num [<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>] <span class="fl">2.57</span> <span class="fl">3.14</span> <span class="fl">3.78</span> <span class="fl">1.9</span> <span class="fl">2.45</span></span>
-<span id="cb41-3"><a href="introduction.html#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">str</span>(g)</span>
-<span id="cb41-4"><a href="introduction.html#cb41-4" aria-hidden="true" tabindex="-1"></a> chr [<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>] <span class="st">&quot;case&quot;</span> <span class="st">&quot;control&quot;</span> <span class="st">&quot;control&quot;</span> <span class="st">&quot;case&quot;</span> <span class="st">&quot;control&quot;</span></span>
-<span id="cb41-5"><a href="introduction.html#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">str</span>(f)</span>
-<span id="cb41-6"><a href="introduction.html#cb41-6" aria-hidden="true" tabindex="-1"></a> Factor w<span class="sc">/</span> <span class="dv">2</span> levels <span class="st">&quot;case&quot;</span>,<span class="st">&quot;control&quot;</span><span class="sc">:</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">2</span> <span class="dv">1</span> <span class="dv">2</span></span>
-<span id="cb41-7"><a href="introduction.html#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">str</span>(exdat)</span>
-<span id="cb41-8"><a href="introduction.html#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;data.frame&#39;</span><span class="sc">:</span>   <span class="dv">5</span> obs. of  <span class="dv">2</span> variables<span class="sc">:</span></span>
-<span id="cb41-9"><a href="introduction.html#cb41-9" aria-hidden="true" tabindex="-1"></a> <span class="er">$</span> Group  <span class="sc">:</span> Factor w<span class="sc">/</span> <span class="dv">2</span> levels <span class="st">&quot;case&quot;</span>,<span class="st">&quot;control&quot;</span><span class="sc">:</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">2</span> <span class="dv">1</span> <span class="dv">2</span></span>
-<span id="cb41-10"><a href="introduction.html#cb41-10" aria-hidden="true" tabindex="-1"></a> <span class="sc">$</span> Outcome<span class="sc">:</span> num  <span class="fl">2.57</span> <span class="fl">3.14</span> <span class="fl">3.78</span> <span class="fl">1.9</span> <span class="fl">2.45</span></span></code></pre></div>
-<p>We can also remove objects that we don’t need anymore, using the function <code>rm</code> (for remove):</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="introduction.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">rm</span>(g)</span>
-<span id="cb42-2"><a href="introduction.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ls</span>()</span>
-<span id="cb42-3"><a href="introduction.html#cb42-3" aria-hidden="true" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;exdat&quot;</span>              <span class="st">&quot;f&quot;</span>                  <span class="st">&quot;first&quot;</span>              <span class="st">&quot;hook_output&quot;</span>       </span>
-<span id="cb42-4"><a href="introduction.html#cb42-4" aria-hidden="true" tabindex="-1"></a> [<span class="dv">5</span>] <span class="st">&quot;include_screenshot&quot;</span> <span class="st">&quot;last&quot;</span>               <span class="st">&quot;names&quot;</span>              <span class="st">&quot;numgrp&quot;</span>            </span>
-<span id="cb42-5"><a href="introduction.html#cb42-5" aria-hidden="true" tabindex="-1"></a> [<span class="dv">9</span>] <span class="st">&quot;pi&quot;</span>                 <span class="st">&quot;sum_x&quot;</span>              <span class="st">&quot;tab&quot;</span>                <span class="st">&quot;x&quot;</span>                 </span>
-<span id="cb42-6"><a href="introduction.html#cb42-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">&quot;y&quot;</span>                  <span class="st">&quot;z&quot;</span>                 </span></code></pre></div>
+<p>If we want to know the value of an object, we can just type its name at the command line, as we have done right from the beginning. Sometimes however, especially when the data set is bigger, some more compressed information is preferable. This is where the function <code>str</code> (for <em>structure</em>) comes in:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="introduction.html#cb41-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">str</span>(x)</span>
+<span id="cb41-2"><a href="introduction.html#cb41-2" tabindex="-1"></a> num [<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>] <span class="fl">2.57</span> <span class="fl">3.14</span> <span class="fl">3.78</span> <span class="fl">1.9</span> <span class="fl">2.45</span></span>
+<span id="cb41-3"><a href="introduction.html#cb41-3" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">str</span>(g)</span>
+<span id="cb41-4"><a href="introduction.html#cb41-4" tabindex="-1"></a> chr [<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>] <span class="st">&quot;case&quot;</span> <span class="st">&quot;control&quot;</span> <span class="st">&quot;control&quot;</span> <span class="st">&quot;case&quot;</span> <span class="st">&quot;control&quot;</span></span>
+<span id="cb41-5"><a href="introduction.html#cb41-5" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">str</span>(f)</span>
+<span id="cb41-6"><a href="introduction.html#cb41-6" tabindex="-1"></a> Factor w<span class="sc">/</span> <span class="dv">2</span> levels <span class="st">&quot;case&quot;</span>,<span class="st">&quot;control&quot;</span><span class="sc">:</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">2</span> <span class="dv">1</span> <span class="dv">2</span></span>
+<span id="cb41-7"><a href="introduction.html#cb41-7" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">str</span>(exdat)</span>
+<span id="cb41-8"><a href="introduction.html#cb41-8" tabindex="-1"></a><span class="st">&#39;data.frame&#39;</span><span class="sc">:</span>   <span class="dv">5</span> obs. of  <span class="dv">2</span> variables<span class="sc">:</span></span>
+<span id="cb41-9"><a href="introduction.html#cb41-9" tabindex="-1"></a> <span class="er">$</span> Group  <span class="sc">:</span> Factor w<span class="sc">/</span> <span class="dv">2</span> levels <span class="st">&quot;case&quot;</span>,<span class="st">&quot;control&quot;</span><span class="sc">:</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">2</span> <span class="dv">1</span> <span class="dv">2</span></span>
+<span id="cb41-10"><a href="introduction.html#cb41-10" tabindex="-1"></a> <span class="sc">$</span> Outcome<span class="sc">:</span> num  <span class="fl">2.57</span> <span class="fl">3.14</span> <span class="fl">3.78</span> <span class="fl">1.9</span> <span class="fl">2.45</span></span></code></pre></div>
+<p>We can also remove objects that we don’t need anymore, using the function <code>rm</code> (for <em>remove</em>):</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="introduction.html#cb42-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">rm</span>(g)</span>
+<span id="cb42-2"><a href="introduction.html#cb42-2" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ls</span>()</span>
+<span id="cb42-3"><a href="introduction.html#cb42-3" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;exdat&quot;</span>              <span class="st">&quot;f&quot;</span>                  <span class="st">&quot;first&quot;</span>              <span class="st">&quot;hook_output&quot;</span>       </span>
+<span id="cb42-4"><a href="introduction.html#cb42-4" tabindex="-1"></a> [<span class="dv">5</span>] <span class="st">&quot;include_screenshot&quot;</span> <span class="st">&quot;last&quot;</span>               <span class="st">&quot;names&quot;</span>              <span class="st">&quot;numgrp&quot;</span>            </span>
+<span id="cb42-5"><a href="introduction.html#cb42-5" tabindex="-1"></a> [<span class="dv">9</span>] <span class="st">&quot;pi&quot;</span>                 <span class="st">&quot;sum_x&quot;</span>              <span class="st">&quot;tab&quot;</span>                <span class="st">&quot;x&quot;</span>                 </span>
+<span id="cb42-6"><a href="introduction.html#cb42-6" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">&quot;y&quot;</span>                  <span class="st">&quot;z&quot;</span>                 </span></code></pre></div>
 </div>
-</div>
-<div id="finding-files" class="section level2 hasAnchor" number="2.7">
-<h2><span class="header-section-number">2.7</span> Finding files<a href="introduction.html#finding-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Reading and writing data from and to the hard disk is a central part of the workflow for all statistical software: data files need to be imported, results need to be stored for reference of further processing, plots need to be saved for inclusion in reports etc. We will talk a lot more about these activities in R, but before we do that, we have to understand how R interacts with the file system and its folders on the hard disk.</p>
+<div id="finding-files" class="section level3 hasAnchor" number="2.6.3">
+<h3><span class="header-section-number">2.6.3</span> Finding files<a href="introduction.html#finding-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Reading and writing data from and to the hard disk is a central part of the workflow for all statistical software: data files need to be imported, results need to be stored for reference or further processing, plots need to be saved for inclusion in reports etc. We will talk a lot more about these activities in the rest of this guide, but before we do that, we have to understand how R interacts with the file system and its folders on the hard disk.</p>
 <p>The central concept here is the <em>working directory</em> in R (not to be confused with the working environment), which is the default place where R looks for files if no explicit path is specified. We can use the function <code>getwd</code> to check what the current working directory is:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="introduction.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">getwd</span>()</span>
-<span id="cb43-2"><a href="introduction.html#cb43-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;C:/Users/aleplo/OneDrive - Karolinska Institutet/Intro2R_book&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="introduction.html#cb43-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">getwd</span>()</span>
+<span id="cb43-2"><a href="introduction.html#cb43-2" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;/home/work_monkey/@OneDriveKI/Intro2R_book&quot;</span></span></code></pre></div>
 <p>This function returns a string with the name of the working directory. Note that R uses by default the slash <code>/</code> as separator between directory names, even on Windows, where the backslash <code>\</code> is standard; we’ll talk more about this when we look closer at strings.</p>
 <p>If we want to change the working directory, we have the complementary function <code>setwd</code>, which accepts as argument a character string with the name of the target directory.</p>
 <p><strong>Example:</strong> We use the function <code>dir</code> to display the content of the current working directory:</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="introduction.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">dir</span>()</span>
-<span id="cb44-2"><a href="introduction.html#cb44-2" aria-hidden="true" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;_book&quot;</span>                     <span class="st">&quot;_book_publish&quot;</span>             <span class="st">&quot;_bookdown.yml&quot;</span>            </span>
-<span id="cb44-3"><a href="introduction.html#cb44-3" aria-hidden="true" tabindex="-1"></a> [<span class="dv">4</span>] <span class="st">&quot;_bookdown_files&quot;</span>           <span class="st">&quot;_output.yml&quot;</span>               <span class="st">&quot;background.Rmd&quot;</span>           </span>
-<span id="cb44-4"><a href="introduction.html#cb44-4" aria-hidden="true" tabindex="-1"></a> [<span class="dv">7</span>] <span class="st">&quot;basic_stats_epi.Rmd&quot;</span>       <span class="st">&quot;Data&quot;</span>                      <span class="st">&quot;data_processing.Rmd&quot;</span>      </span>
-<span id="cb44-5"><a href="introduction.html#cb44-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">10</span>] <span class="st">&quot;data_tidy.Rmd&quot;</span>             <span class="st">&quot;data_types_structures.Rmd&quot;</span> <span class="st">&quot;dynamic_documents.Rmd&quot;</span>    </span>
-<span id="cb44-6"><a href="introduction.html#cb44-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">&quot;figures&quot;</span>                   <span class="st">&quot;graphics_base.Rmd&quot;</span>         <span class="st">&quot;graphics_ggplot2.Rmd&quot;</span>     </span>
-<span id="cb44-7"><a href="introduction.html#cb44-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">16</span>] <span class="st">&quot;index.Rmd&quot;</span>                 <span class="st">&quot;intro_example.Rmd&quot;</span>         <span class="st">&quot;intro_R.Rmd&quot;</span>              </span>
-<span id="cb44-8"><a href="introduction.html#cb44-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">19</span>] <span class="st">&quot;intro_RStudio.Rmd&quot;</span>         <span class="st">&quot;introductio-to-r.Rmd&quot;</span>      <span class="st">&quot;introductio-to-r_cache&quot;</span>   </span>
-<span id="cb44-9"><a href="introduction.html#cb44-9" aria-hidden="true" tabindex="-1"></a>[<span class="dv">22</span>] <span class="st">&quot;introductio-to-r_files&quot;</span>    <span class="st">&quot;introduction2r.Rproj&quot;</span>      <span class="st">&quot;nice_tables.Rmd&quot;</span>          </span>
-<span id="cb44-10"><a href="introduction.html#cb44-10" aria-hidden="true" tabindex="-1"></a>[<span class="dv">25</span>] <span class="st">&quot;packages.bib&quot;</span>              <span class="st">&quot;preamble.tex&quot;</span>              <span class="st">&quot;regression_linear.Rmd&quot;</span>    </span>
-<span id="cb44-11"><a href="introduction.html#cb44-11" aria-hidden="true" tabindex="-1"></a>[<span class="dv">28</span>] <span class="st">&quot;regression_other.Rmd&quot;</span>      <span class="st">&quot;scripting_workflow.Rmd&quot;</span>    <span class="st">&quot;style.css&quot;</span>                </span>
-<span id="cb44-12"><a href="introduction.html#cb44-12" aria-hidden="true" tabindex="-1"></a>[<span class="dv">31</span>] <span class="st">&quot;toc.css&quot;</span>                  </span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="introduction.html#cb44-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">dir</span>()</span>
+<span id="cb44-2"><a href="introduction.html#cb44-2" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;_book&quot;</span>                                                            </span>
+<span id="cb44-3"><a href="introduction.html#cb44-3" tabindex="-1"></a> [<span class="dv">2</span>] <span class="st">&quot;_book_publish&quot;</span>                                                    </span>
+<span id="cb44-4"><a href="introduction.html#cb44-4" tabindex="-1"></a> [<span class="dv">3</span>] <span class="st">&quot;_bookdown_files&quot;</span>                                                  </span>
+<span id="cb44-5"><a href="introduction.html#cb44-5" tabindex="-1"></a> [<span class="dv">4</span>] <span class="st">&quot;_bookdown.yml&quot;</span>                                                    </span>
+<span id="cb44-6"><a href="introduction.html#cb44-6" tabindex="-1"></a> [<span class="dv">5</span>] <span class="st">&quot;_bookdown.yml.full&quot;</span>                                               </span>
+<span id="cb44-7"><a href="introduction.html#cb44-7" tabindex="-1"></a> [<span class="dv">6</span>] <span class="st">&quot;_output.yml&quot;</span>                                                      </span>
+<span id="cb44-8"><a href="introduction.html#cb44-8" tabindex="-1"></a> [<span class="dv">7</span>] <span class="st">&quot;404.html&quot;</span>                                                         </span>
+<span id="cb44-9"><a href="introduction.html#cb44-9" tabindex="-1"></a> [<span class="dv">8</span>] <span class="st">&quot;a-bit-much-overprinting-but-ok.html&quot;</span>                              </span>
+<span id="cb44-10"><a href="introduction.html#cb44-10" tabindex="-1"></a> [<span class="dv">9</span>] <span class="st">&quot;add-labels-for-all-species-we-add-a-new-mapping-in-geom_text.html&quot;</span></span>
+<span id="cb44-11"><a href="introduction.html#cb44-11" tabindex="-1"></a>[<span class="dv">10</span>] <span class="st">&quot;background.Rmd&quot;</span>                                                   </span>
+<span id="cb44-12"><a href="introduction.html#cb44-12" tabindex="-1"></a>[<span class="dv">11</span>] <span class="st">&quot;basic_stats_epi.Rmd&quot;</span>                                              </span>
+<span id="cb44-13"><a href="introduction.html#cb44-13" tabindex="-1"></a>[<span class="dv">12</span>] <span class="st">&quot;Data&quot;</span>                                                             </span>
+<span id="cb44-14"><a href="introduction.html#cb44-14" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">&quot;data_processing.Rmd&quot;</span>                                              </span>
+<span id="cb44-15"><a href="introduction.html#cb44-15" tabindex="-1"></a>[<span class="dv">14</span>] <span class="st">&quot;data_tidy.Rmd&quot;</span>                                                    </span>
+<span id="cb44-16"><a href="introduction.html#cb44-16" tabindex="-1"></a>[<span class="dv">15</span>] <span class="st">&quot;data_types_structures.Rmd&quot;</span>                                        </span>
+<span id="cb44-17"><a href="introduction.html#cb44-17" tabindex="-1"></a>[<span class="dv">16</span>] <span class="st">&quot;dynamic_documents.Rmd&quot;</span>                                            </span>
+<span id="cb44-18"><a href="introduction.html#cb44-18" tabindex="-1"></a>[<span class="dv">17</span>] <span class="st">&quot;figures&quot;</span>                                                          </span>
+<span id="cb44-19"><a href="introduction.html#cb44-19" tabindex="-1"></a>[<span class="dv">18</span>] <span class="st">&quot;FIXME&quot;</span>                                                            </span>
+<span id="cb44-20"><a href="introduction.html#cb44-20" tabindex="-1"></a>[<span class="dv">19</span>] <span class="st">&quot;ggplot2_files&quot;</span>                                                    </span>
+<span id="cb44-21"><a href="introduction.html#cb44-21" tabindex="-1"></a>[<span class="dv">20</span>] <span class="st">&quot;graphics_base.Rmd&quot;</span>                                                </span>
+<span id="cb44-22"><a href="introduction.html#cb44-22" tabindex="-1"></a>[<span class="dv">21</span>] <span class="st">&quot;graphics_ggplot2.Rmd&quot;</span>                                             </span>
+<span id="cb44-23"><a href="introduction.html#cb44-23" tabindex="-1"></a>[<span class="dv">22</span>] <span class="st">&quot;index.Rmd&quot;</span>                                                        </span>
+<span id="cb44-24"><a href="introduction.html#cb44-24" tabindex="-1"></a>[<span class="dv">23</span>] <span class="st">&quot;intro_example.Rmd&quot;</span>                                                </span>
+<span id="cb44-25"><a href="introduction.html#cb44-25" tabindex="-1"></a>[<span class="dv">24</span>] <span class="st">&quot;intro_R.Rmd&quot;</span>                                                      </span>
+<span id="cb44-26"><a href="introduction.html#cb44-26" tabindex="-1"></a>[<span class="dv">25</span>] <span class="st">&quot;intro_RStudio.Rmd&quot;</span>                                                </span>
+<span id="cb44-27"><a href="introduction.html#cb44-27" tabindex="-1"></a>[<span class="dv">26</span>] <span class="st">&quot;introductio-to-r_files&quot;</span>                                           </span>
+<span id="cb44-28"><a href="introduction.html#cb44-28" tabindex="-1"></a>[<span class="dv">27</span>] <span class="st">&quot;introductio-to-r.log&quot;</span>                                             </span>
+<span id="cb44-29"><a href="introduction.html#cb44-29" tabindex="-1"></a>[<span class="dv">28</span>] <span class="st">&quot;introductio-to-r.pdf&quot;</span>                                             </span>
+<span id="cb44-30"><a href="introduction.html#cb44-30" tabindex="-1"></a>[<span class="dv">29</span>] <span class="st">&quot;introductio-to-r.Rmd&quot;</span>                                             </span>
+<span id="cb44-31"><a href="introduction.html#cb44-31" tabindex="-1"></a>[<span class="dv">30</span>] <span class="st">&quot;libs&quot;</span>                                                             </span>
+<span id="cb44-32"><a href="introduction.html#cb44-32" tabindex="-1"></a>[<span class="dv">31</span>] <span class="st">&quot;nice_tables.Rmd&quot;</span>                                                  </span>
+<span id="cb44-33"><a href="introduction.html#cb44-33" tabindex="-1"></a>[<span class="dv">32</span>] <span class="st">&quot;packages.bib&quot;</span>                                                     </span>
+<span id="cb44-34"><a href="introduction.html#cb44-34" tabindex="-1"></a>[<span class="dv">33</span>] <span class="st">&quot;preamble.tex&quot;</span>                                                     </span>
+<span id="cb44-35"><a href="introduction.html#cb44-35" tabindex="-1"></a>[<span class="dv">34</span>] <span class="st">&quot;regression_linear.Rmd&quot;</span>                                            </span>
+<span id="cb44-36"><a href="introduction.html#cb44-36" tabindex="-1"></a>[<span class="dv">35</span>] <span class="st">&quot;regression_other.Rmd&quot;</span>                                             </span>
+<span id="cb44-37"><a href="introduction.html#cb44-37" tabindex="-1"></a>[<span class="dv">36</span>] <span class="st">&quot;scripting_workflow.Rmd&quot;</span>                                           </span>
+<span id="cb44-38"><a href="introduction.html#cb44-38" tabindex="-1"></a>[<span class="dv">37</span>] <span class="st">&quot;style.css&quot;</span>                                                        </span>
+<span id="cb44-39"><a href="introduction.html#cb44-39" tabindex="-1"></a>[<span class="dv">38</span>] <span class="st">&quot;table1_st.html&quot;</span>                                                   </span>
+<span id="cb44-40"><a href="introduction.html#cb44-40" tabindex="-1"></a>[<span class="dv">39</span>] <span class="st">&quot;tables.Rmd&quot;</span>                                                       </span>
+<span id="cb44-41"><a href="introduction.html#cb44-41" tabindex="-1"></a>[<span class="dv">40</span>] <span class="st">&quot;toc.css&quot;</span>                                                          </span></code></pre></div>
 <p>We can use the function <code>setwd</code> to change the current working directory to the sub-directory <code>Data</code> listed above:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="introduction.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">setwd</span>(<span class="st">&quot;Data&quot;</span>)</span>
-<span id="cb45-2"><a href="introduction.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">getwd</span>()</span>
-<span id="cb45-3"><a href="introduction.html#cb45-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;C:/Users/aleplo/OneDrive - Karolinska Institutet/Intro2R_book/Data&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="introduction.html#cb45-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">setwd</span>(<span class="st">&quot;Data&quot;</span>)</span>
+<span id="cb45-2"><a href="introduction.html#cb45-2" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">getwd</span>()</span>
+<span id="cb45-3"><a href="introduction.html#cb45-3" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;/home/work_monkey/@OneDriveKI/Intro2R_book/Data&quot;</span></span></code></pre></div>
 <p>When we call <code>dir</code>, we now see the content of the new working directory:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="introduction.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">dir</span>()</span>
-<span id="cb46-2"><a href="introduction.html#cb46-2" aria-hidden="true" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;_book&quot;</span>                     <span class="st">&quot;_book_publish&quot;</span>             <span class="st">&quot;_bookdown.yml&quot;</span>            </span>
-<span id="cb46-3"><a href="introduction.html#cb46-3" aria-hidden="true" tabindex="-1"></a> [<span class="dv">4</span>] <span class="st">&quot;_bookdown_files&quot;</span>           <span class="st">&quot;_output.yml&quot;</span>               <span class="st">&quot;background.Rmd&quot;</span>           </span>
-<span id="cb46-4"><a href="introduction.html#cb46-4" aria-hidden="true" tabindex="-1"></a> [<span class="dv">7</span>] <span class="st">&quot;basic_stats_epi.Rmd&quot;</span>       <span class="st">&quot;Data&quot;</span>                      <span class="st">&quot;data_processing.Rmd&quot;</span>      </span>
-<span id="cb46-5"><a href="introduction.html#cb46-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">10</span>] <span class="st">&quot;data_tidy.Rmd&quot;</span>             <span class="st">&quot;data_types_structures.Rmd&quot;</span> <span class="st">&quot;dynamic_documents.Rmd&quot;</span>    </span>
-<span id="cb46-6"><a href="introduction.html#cb46-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">&quot;figures&quot;</span>                   <span class="st">&quot;graphics_base.Rmd&quot;</span>         <span class="st">&quot;graphics_ggplot2.Rmd&quot;</span>     </span>
-<span id="cb46-7"><a href="introduction.html#cb46-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">16</span>] <span class="st">&quot;index.Rmd&quot;</span>                 <span class="st">&quot;intro_example.Rmd&quot;</span>         <span class="st">&quot;intro_R.Rmd&quot;</span>              </span>
-<span id="cb46-8"><a href="introduction.html#cb46-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">19</span>] <span class="st">&quot;intro_RStudio.Rmd&quot;</span>         <span class="st">&quot;introductio-to-r.Rmd&quot;</span>      <span class="st">&quot;introductio-to-r_cache&quot;</span>   </span>
-<span id="cb46-9"><a href="introduction.html#cb46-9" aria-hidden="true" tabindex="-1"></a>[<span class="dv">22</span>] <span class="st">&quot;introductio-to-r_files&quot;</span>    <span class="st">&quot;introduction2r.Rproj&quot;</span>      <span class="st">&quot;nice_tables.Rmd&quot;</span>          </span>
-<span id="cb46-10"><a href="introduction.html#cb46-10" aria-hidden="true" tabindex="-1"></a>[<span class="dv">25</span>] <span class="st">&quot;packages.bib&quot;</span>              <span class="st">&quot;preamble.tex&quot;</span>              <span class="st">&quot;regression_linear.Rmd&quot;</span>    </span>
-<span id="cb46-11"><a href="introduction.html#cb46-11" aria-hidden="true" tabindex="-1"></a>[<span class="dv">28</span>] <span class="st">&quot;regression_other.Rmd&quot;</span>      <span class="st">&quot;scripting_workflow.Rmd&quot;</span>    <span class="st">&quot;style.css&quot;</span>                </span>
-<span id="cb46-12"><a href="introduction.html#cb46-12" aria-hidden="true" tabindex="-1"></a>[<span class="dv">31</span>] <span class="st">&quot;toc.css&quot;</span>                  </span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="introduction.html#cb46-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">dir</span>()</span>
+<span id="cb46-2"><a href="introduction.html#cb46-2" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">&quot;_book&quot;</span>                                                            </span>
+<span id="cb46-3"><a href="introduction.html#cb46-3" tabindex="-1"></a> [<span class="dv">2</span>] <span class="st">&quot;_book_publish&quot;</span>                                                    </span>
+<span id="cb46-4"><a href="introduction.html#cb46-4" tabindex="-1"></a> [<span class="dv">3</span>] <span class="st">&quot;_bookdown_files&quot;</span>                                                  </span>
+<span id="cb46-5"><a href="introduction.html#cb46-5" tabindex="-1"></a> [<span class="dv">4</span>] <span class="st">&quot;_bookdown.yml&quot;</span>                                                    </span>
+<span id="cb46-6"><a href="introduction.html#cb46-6" tabindex="-1"></a> [<span class="dv">5</span>] <span class="st">&quot;_bookdown.yml.full&quot;</span>                                               </span>
+<span id="cb46-7"><a href="introduction.html#cb46-7" tabindex="-1"></a> [<span class="dv">6</span>] <span class="st">&quot;_output.yml&quot;</span>                                                      </span>
+<span id="cb46-8"><a href="introduction.html#cb46-8" tabindex="-1"></a> [<span class="dv">7</span>] <span class="st">&quot;404.html&quot;</span>                                                         </span>
+<span id="cb46-9"><a href="introduction.html#cb46-9" tabindex="-1"></a> [<span class="dv">8</span>] <span class="st">&quot;a-bit-much-overprinting-but-ok.html&quot;</span>                              </span>
+<span id="cb46-10"><a href="introduction.html#cb46-10" tabindex="-1"></a> [<span class="dv">9</span>] <span class="st">&quot;add-labels-for-all-species-we-add-a-new-mapping-in-geom_text.html&quot;</span></span>
+<span id="cb46-11"><a href="introduction.html#cb46-11" tabindex="-1"></a>[<span class="dv">10</span>] <span class="st">&quot;background.Rmd&quot;</span>                                                   </span>
+<span id="cb46-12"><a href="introduction.html#cb46-12" tabindex="-1"></a>[<span class="dv">11</span>] <span class="st">&quot;basic_stats_epi.Rmd&quot;</span>                                              </span>
+<span id="cb46-13"><a href="introduction.html#cb46-13" tabindex="-1"></a>[<span class="dv">12</span>] <span class="st">&quot;Data&quot;</span>                                                             </span>
+<span id="cb46-14"><a href="introduction.html#cb46-14" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">&quot;data_processing.Rmd&quot;</span>                                              </span>
+<span id="cb46-15"><a href="introduction.html#cb46-15" tabindex="-1"></a>[<span class="dv">14</span>] <span class="st">&quot;data_tidy.Rmd&quot;</span>                                                    </span>
+<span id="cb46-16"><a href="introduction.html#cb46-16" tabindex="-1"></a>[<span class="dv">15</span>] <span class="st">&quot;data_types_structures.Rmd&quot;</span>                                        </span>
+<span id="cb46-17"><a href="introduction.html#cb46-17" tabindex="-1"></a>[<span class="dv">16</span>] <span class="st">&quot;dynamic_documents.Rmd&quot;</span>                                            </span>
+<span id="cb46-18"><a href="introduction.html#cb46-18" tabindex="-1"></a>[<span class="dv">17</span>] <span class="st">&quot;figures&quot;</span>                                                          </span>
+<span id="cb46-19"><a href="introduction.html#cb46-19" tabindex="-1"></a>[<span class="dv">18</span>] <span class="st">&quot;FIXME&quot;</span>                                                            </span>
+<span id="cb46-20"><a href="introduction.html#cb46-20" tabindex="-1"></a>[<span class="dv">19</span>] <span class="st">&quot;ggplot2_files&quot;</span>                                                    </span>
+<span id="cb46-21"><a href="introduction.html#cb46-21" tabindex="-1"></a>[<span class="dv">20</span>] <span class="st">&quot;graphics_base.Rmd&quot;</span>                                                </span>
+<span id="cb46-22"><a href="introduction.html#cb46-22" tabindex="-1"></a>[<span class="dv">21</span>] <span class="st">&quot;graphics_ggplot2.Rmd&quot;</span>                                             </span>
+<span id="cb46-23"><a href="introduction.html#cb46-23" tabindex="-1"></a>[<span class="dv">22</span>] <span class="st">&quot;index.Rmd&quot;</span>                                                        </span>
+<span id="cb46-24"><a href="introduction.html#cb46-24" tabindex="-1"></a>[<span class="dv">23</span>] <span class="st">&quot;intro_example.Rmd&quot;</span>                                                </span>
+<span id="cb46-25"><a href="introduction.html#cb46-25" tabindex="-1"></a>[<span class="dv">24</span>] <span class="st">&quot;intro_R.Rmd&quot;</span>                                                      </span>
+<span id="cb46-26"><a href="introduction.html#cb46-26" tabindex="-1"></a>[<span class="dv">25</span>] <span class="st">&quot;intro_RStudio.Rmd&quot;</span>                                                </span>
+<span id="cb46-27"><a href="introduction.html#cb46-27" tabindex="-1"></a>[<span class="dv">26</span>] <span class="st">&quot;introductio-to-r_files&quot;</span>                                           </span>
+<span id="cb46-28"><a href="introduction.html#cb46-28" tabindex="-1"></a>[<span class="dv">27</span>] <span class="st">&quot;introductio-to-r.log&quot;</span>                                             </span>
+<span id="cb46-29"><a href="introduction.html#cb46-29" tabindex="-1"></a>[<span class="dv">28</span>] <span class="st">&quot;introductio-to-r.pdf&quot;</span>                                             </span>
+<span id="cb46-30"><a href="introduction.html#cb46-30" tabindex="-1"></a>[<span class="dv">29</span>] <span class="st">&quot;introductio-to-r.Rmd&quot;</span>                                             </span>
+<span id="cb46-31"><a href="introduction.html#cb46-31" tabindex="-1"></a>[<span class="dv">30</span>] <span class="st">&quot;libs&quot;</span>                                                             </span>
+<span id="cb46-32"><a href="introduction.html#cb46-32" tabindex="-1"></a>[<span class="dv">31</span>] <span class="st">&quot;nice_tables.Rmd&quot;</span>                                                  </span>
+<span id="cb46-33"><a href="introduction.html#cb46-33" tabindex="-1"></a>[<span class="dv">32</span>] <span class="st">&quot;packages.bib&quot;</span>                                                     </span>
+<span id="cb46-34"><a href="introduction.html#cb46-34" tabindex="-1"></a>[<span class="dv">33</span>] <span class="st">&quot;preamble.tex&quot;</span>                                                     </span>
+<span id="cb46-35"><a href="introduction.html#cb46-35" tabindex="-1"></a>[<span class="dv">34</span>] <span class="st">&quot;regression_linear.Rmd&quot;</span>                                            </span>
+<span id="cb46-36"><a href="introduction.html#cb46-36" tabindex="-1"></a>[<span class="dv">35</span>] <span class="st">&quot;regression_other.Rmd&quot;</span>                                             </span>
+<span id="cb46-37"><a href="introduction.html#cb46-37" tabindex="-1"></a>[<span class="dv">36</span>] <span class="st">&quot;scripting_workflow.Rmd&quot;</span>                                           </span>
+<span id="cb46-38"><a href="introduction.html#cb46-38" tabindex="-1"></a>[<span class="dv">37</span>] <span class="st">&quot;style.css&quot;</span>                                                        </span>
+<span id="cb46-39"><a href="introduction.html#cb46-39" tabindex="-1"></a>[<span class="dv">38</span>] <span class="st">&quot;table1_st.html&quot;</span>                                                   </span>
+<span id="cb46-40"><a href="introduction.html#cb46-40" tabindex="-1"></a>[<span class="dv">39</span>] <span class="st">&quot;tables.Rmd&quot;</span>                                                       </span>
+<span id="cb46-41"><a href="introduction.html#cb46-41" tabindex="-1"></a>[<span class="dv">40</span>] <span class="st">&quot;toc.css&quot;</span>                                                          </span></code></pre></div>
 <p>And we can easily go up one level of the hierarchy using the <code>..</code> dummy directory:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="introduction.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">setwd</span>(<span class="st">&quot;..&quot;</span>)</span>
-<span id="cb47-2"><a href="introduction.html#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">getwd</span>()</span>
-<span id="cb47-3"><a href="introduction.html#cb47-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;C:/Users/aleplo/OneDrive - Karolinska Institutet&quot;</span></span></code></pre></div>
-<div id="quitting-r" class="section level3 hasAnchor" number="2.7.1">
-<h3><span class="header-section-number">2.7.1</span> Quitting R<a href="introduction.html#quitting-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Once we are done for the day, we want to safely shut down our computer, including R, and go home (or go out if working from home). We want to be able to do this without losing our work, though, therefore some remarks on how to quit R safely.</p>
-<p>We can terminate the program through the GUI either via a menu or by killing the console window, or as usually in R, by calling a function - usually <code>q()</code> (function <code>q</code> without argument, like <code>ls</code> above).</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="introduction.html#cb47-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">setwd</span>(<span class="st">&quot;..&quot;</span>)</span>
+<span id="cb47-2"><a href="introduction.html#cb47-2" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">getwd</span>()</span>
+<span id="cb47-3"><a href="introduction.html#cb47-3" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;/home/work_monkey/@OneDriveKI&quot;</span></span></code></pre></div>
+</div>
+<div id="quitting-r" class="section level3 hasAnchor" number="2.6.4">
+<h3><span class="header-section-number">2.6.4</span> Quitting R<a href="introduction.html#quitting-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once we are done for the day, we want to safely shut down our computer, including R, and go home. We want to be able to do this without losing our work, though, therefore some remarks on how to quit R safely.</p>
+<p>We can terminate the program through the GUI either via a menu or by killing the console window, or as usually in R, by calling a function - usually <code>q()</code> (function <code>q</code> without an argument, like <code>ls</code> above).</p>
 <p>There are three aspects to our work:</p>
 <ol style="list-style-type: decimal">
 <li>the objects we have generated during an R session (here e.g. <code>x</code> or <code>exdat</code>),</li>
-<li>the sequence of function calls we have used to generate results (read-in data, summaries, plots),</li>
+<li>the sequence of function calls we have used to generate results (data, summaries, plots),</li>
 <li>the output we have generated (i.e. numerical summaries and plots we have generated).</li>
 </ol>
 <p>During a typical interactive session, all of this only exists in computer memory. If you quit without saving, you will lose all of it! This is why R is extremely paranoid about saving when quitting: by default, it will <em>always</em> ask whether you want to save the workspace image. For now, this is an excellent idea - it will save both the objects we have generated (Item 1 above, as file <code>.RData</code> in the working directory) and the history of our function calls (Item 2 above, as file <code>.Rhistory</code>).</p>

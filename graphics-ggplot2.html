@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>12 Graphics using ggplot2 | Introduction to R</title>
   <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="12 Graphics using ggplot2 | Introduction to R" />
   <meta property="og:type" content="book" />
@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2023-03-05" />
+<meta name="date" content="2024-03-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -118,6 +118,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -170,10 +174,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.6.1" data-path="introduction.html"><a href="introduction.html#getting-help"><i class="fa fa-check"></i><b>2.6.1</b> Getting help</a></li>
 <li class="chapter" data-level="2.6.2" data-path="introduction.html"><a href="introduction.html#keeping-track-of-objects"><i class="fa fa-check"></i><b>2.6.2</b> Keeping track of objects</a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="introduction.html"><a href="introduction.html#finding-files"><i class="fa fa-check"></i><b>2.7</b> Finding files</a>
-<ul>
-<li class="chapter" data-level="2.7.1" data-path="introduction.html"><a href="introduction.html#quitting-r"><i class="fa fa-check"></i><b>2.7.1</b> Quitting R</a></li>
+<li class="chapter" data-level="2.6.3" data-path="introduction.html"><a href="introduction.html#finding-files"><i class="fa fa-check"></i><b>2.6.3</b> Finding files</a></li>
+<li class="chapter" data-level="2.6.4" data-path="introduction.html"><a href="introduction.html#quitting-r"><i class="fa fa-check"></i><b>2.6.4</b> Quitting R</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="intro_rstudio.html"><a href="intro_rstudio.html"><i class="fa fa-check"></i><b>3</b> Working in RStudio</a>
@@ -245,6 +247,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.7.3" data-path="data-types-struct.html"><a href="data-types-struct.html#named_lists"><i class="fa fa-check"></i><b>5.7.3</b> Named lists</a></li>
 <li class="chapter" data-level="5.7.4" data-path="data-types-struct.html"><a href="data-types-struct.html#example-data-frames"><i class="fa fa-check"></i><b>5.7.4</b> Example: data frames</a></li>
 </ul></li>
+<li class="chapter" data-level="5.8" data-path="data-types-struct.html"><a href="data-types-struct.html#technical-notes"><i class="fa fa-check"></i><b>5.8</b> Technical notes</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="data-processing.html"><a href="data-processing.html"><i class="fa fa-check"></i><b>6</b> Processing data</a>
 <ul>
@@ -254,7 +257,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4" data-path="data-processing.html"><a href="data-processing.html#split-apply-combine"><i class="fa fa-check"></i><b>6.4</b> Split - Apply - Combine</a></li>
 <li class="chapter" data-level="6.5" data-path="data-processing.html"><a href="data-processing.html#merge-data-base"><i class="fa fa-check"></i><b>6.5</b> Merging data sets</a></li>
 <li class="chapter" data-level="6.6" data-path="data-processing.html"><a href="data-processing.html#general-pipeline"><i class="fa fa-check"></i><b>6.6</b> Using pipelines</a></li>
-<li class="chapter" data-level="6.7" data-path="data-processing.html"><a href="data-processing.html#next-steps"><i class="fa fa-check"></i><b>6.7</b> Next steps</a></li>
+<li class="chapter" data-level="6.7" data-path="data-processing.html"><a href="data-processing.html#technical-notes-1"><i class="fa fa-check"></i><b>6.7</b> Technical notes</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="data-tidyverse.html"><a href="data-tidyverse.html"><i class="fa fa-check"></i><b>7</b> The <code>tidyverse</code></a>
 <ul>
@@ -266,6 +269,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.2.3" data-path="data-tidyverse.html"><a href="data-tidyverse.html#groupwise-data-operations"><i class="fa fa-check"></i><b>7.2.3</b> Groupwise data operations</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="data-tidyverse.html"><a href="data-tidyverse.html#tidyverse-vs-base-r"><i class="fa fa-check"></i><b>7.3</b> <code>tidyverse</code> vs base R?</a></li>
+<li class="chapter" data-level="7.4" data-path="data-tidyverse.html"><a href="data-tidyverse.html#technical-notes-2"><i class="fa fa-check"></i><b>7.4</b> Technical notes</a></li>
 </ul></li>
 <li class="part"><span><b>III Estimation, inference, modelling</b></span></li>
 <li class="chapter" data-level="8" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html"><i class="fa fa-check"></i><b>8</b> Basic Statistics &amp; Epidemiology</a>
@@ -279,7 +283,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#statistical-tests"><i class="fa fa-check"></i><b>8.3</b> Statistical tests</a></li>
 <li class="chapter" data-level="8.4" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#epidemiological-risk-measures"><i class="fa fa-check"></i><b>8.4</b> Epidemiological risk measures</a></li>
 <li class="chapter" data-level="8.5" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#pander-intro"><i class="fa fa-check"></i><b>8.5</b> Improved display of descriptives</a></li>
-<li class="chapter" data-level="8.6" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#next-steps-1"><i class="fa fa-check"></i><b>8.6</b> Next steps</a></li>
+<li class="chapter" data-level="8.6" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#next-steps"><i class="fa fa-check"></i><b>8.6</b> Next steps</a></li>
+<li class="chapter" data-level="8.7" data-path="basic-stats-epi.html"><a href="basic-stats-epi.html#technical-notes-3"><i class="fa fa-check"></i><b>8.7</b> Technical notes</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="regression-linear.html"><a href="regression-linear.html"><i class="fa fa-check"></i><b>9</b> Linear regression</a>
 <ul>
@@ -303,6 +308,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.4.4" data-path="regression-linear.html"><a href="regression-linear.html#splines"><i class="fa fa-check"></i><b>9.4.4</b> Splines</a></li>
 <li class="chapter" data-level="9.4.5" data-path="regression-linear.html"><a href="regression-linear.html#model-comparisons"><i class="fa fa-check"></i><b>9.4.5</b> Model comparisons</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="regression-linear.html"><a href="regression-linear.html#technical-notes-4"><i class="fa fa-check"></i><b>9.5</b> Technical notes</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="regression-other.html"><a href="regression-other.html"><i class="fa fa-check"></i><b>10</b> More regression models</a>
 <ul>
@@ -322,23 +328,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11" data-path="graphics-base.html"><a href="graphics-base.html"><i class="fa fa-check"></i><b>11</b> Graphics in base R</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="graphics-base.html"><a href="graphics-base.html#overview-5"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
-<li class="chapter" data-level="11.2" data-path="graphics-base.html"><a href="graphics-base.html#base-plots-base-plots"><i class="fa fa-check"></i><b>11.2</b> Base plots</a></li>
-<li class="chapter" data-level="11.3" data-path="graphics-base.html"><a href="graphics-base.html#graphical-parameters"><i class="fa fa-check"></i><b>11.3</b> Graphical parameters</a>
+<li class="chapter" data-level="11.2" data-path="graphics-base.html"><a href="graphics-base.html#base-plots"><i class="fa fa-check"></i><b>11.2</b> Base plots</a>
 <ul>
 <li class="chapter" data-level="" data-path="graphics-base.html"><a href="graphics-base.html#vectorized-graphical-parameters"><i class="fa fa-check"></i>Vectorized graphical parameters</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="graphics-base.html"><a href="graphics-base.html#displaying-and-saving-plots"><i class="fa fa-check"></i><b>11.4</b> Displaying and saving plots</a>
-<ul>
-<li class="chapter" data-level="11.4.1" data-path="graphics-base.html"><a href="graphics-base.html#device-par"><i class="fa fa-check"></i><b>11.4.1</b> Controlling a device through <code>par</code></a></li>
-</ul></li>
-<li class="chapter" data-level="11.5" data-path="graphics-base.html"><a href="graphics-base.html#high-low-plots"><i class="fa fa-check"></i><b>11.5</b> High- vs. low-level plotting</a></li>
-<li class="chapter" data-level="11.6" data-path="graphics-base.html"><a href="graphics-base.html#using-colors"><i class="fa fa-check"></i><b>11.6</b> Using colors</a>
-<ul>
-<li class="chapter" data-level="11.6.1" data-path="graphics-base.html"><a href="graphics-base.html#specifying-colors-by-name"><i class="fa fa-check"></i><b>11.6.1</b> Specifying colors by name</a></li>
-<li class="chapter" data-level="11.6.2" data-path="graphics-base.html"><a href="graphics-base.html#specifying-colors-mathematically"><i class="fa fa-check"></i><b>11.6.2</b> Specifying colors mathematically</a></li>
-<li class="chapter" data-level="11.6.3" data-path="graphics-base.html"><a href="graphics-base.html#using-sets-of-colors-palettes"><i class="fa fa-check"></i><b>11.6.3</b> Using sets of colors: palettes</a></li>
-</ul></li>
-<li class="chapter" data-level="11.7" data-path="graphics-base.html"><a href="graphics-base.html#next-steps-2"><i class="fa fa-check"></i><b>11.7</b> Next steps</a></li>
+<li class="chapter" data-level="11.3" data-path="graphics-base.html"><a href="graphics-base.html#low-level-and-high-level-plotting"><i class="fa fa-check"></i><b>11.3</b> Low-level and high-level plotting</a></li>
+<li class="chapter" data-level="11.4" data-path="graphics-base.html"><a href="graphics-base.html#displaying-saving-coloring-plots"><i class="fa fa-check"></i><b>11.4</b> Displaying, saving, coloring plots</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html"><i class="fa fa-check"></i><b>12</b> Graphics using <code>ggplot2</code></a>
 <ul>
@@ -364,7 +359,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="12.10" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#messing-with-defaults-ii-themes"><i class="fa fa-check"></i><b>12.10</b> Messing with defaults II: themes</a></li>
 <li class="chapter" data-level="12.11" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#extension-packages"><i class="fa fa-check"></i><b>12.11</b> Extension packages</a></li>
-<li class="chapter" data-level="12.12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#technical-notes"><i class="fa fa-check"></i><b>12.12</b> Technical notes</a></li>
+<li class="chapter" data-level="12.12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#technical-notes-5"><i class="fa fa-check"></i><b>12.12</b> Technical notes</a></li>
 </ul></li>
 <li class="part"><span><b>V Organizing the analysis</b></span></li>
 <li class="chapter" data-level="13" data-path="tables-nice.html"><a href="tables-nice.html"><i class="fa fa-check"></i><b>13</b> Generating nice tables</a></li>
@@ -451,8 +446,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">12.11</span> Extension packages<a href="graphics-ggplot2.html#extension-packages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>UNDER CONSTRUCTION</p>
 </div>
-<div id="technical-notes" class="section level2 hasAnchor" number="12.12">
-<h2><span class="header-section-number">12.12</span> Technical notes<a href="graphics-ggplot2.html#technical-notes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="technical-notes-5" class="section level2 hasAnchor" number="12.12">
+<h2><span class="header-section-number">12.12</span> Technical notes<a href="graphics-ggplot2.html#technical-notes-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>UNDER CONSTRUCTION</p>
 
 </div>

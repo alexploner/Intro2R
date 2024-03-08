@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>14 Dynamic documents | Introduction to R</title>
   <meta name="description" content="This is the material for the course Introduction to R, given at Karolinska Institutet, Stockholm, Sweden, as part of the doctoral program in epidemiology." />
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="14 Dynamic documents | Introduction to R" />
   <meta property="og:type" content="book" />
@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2023-03-05" />
+<meta name="date" content="2024-03-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -118,6 +118,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -170,10 +174,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.6.1" data-path="introduction.html"><a href="introduction.html#getting-help"><i class="fa fa-check"></i><b>2.6.1</b> Getting help</a></li>
 <li class="chapter" data-level="2.6.2" data-path="introduction.html"><a href="introduction.html#keeping-track-of-objects"><i class="fa fa-check"></i><b>2.6.2</b> Keeping track of objects</a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="introduction.html"><a href="introduction.html#finding-files"><i class="fa fa-check"></i><b>2.7</b> Finding files</a>
-<ul>
-<li class="chapter" data-level="2.7.1" data-path="introduction.html"><a href="introduction.html#quitting-r"><i class="fa fa-check"></i><b>2.7.1</b> Quitting R</a></li>
+<li class="chapter" data-level="2.6.3" data-path="introduction.html"><a href="introduction.html#finding-files"><i class="fa fa-check"></i><b>2.6.3</b> Finding files</a></li>
+<li class="chapter" data-level="2.6.4" data-path="introduction.html"><a href="introduction.html#quitting-r"><i class="fa fa-check"></i><b>2.6.4</b> Quitting R</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="intro_rstudio.html"><a href="intro_rstudio.html"><i class="fa fa-check"></i><b>3</b> Working in RStudio</a>
@@ -327,7 +329,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="graphics-base.html"><a href="graphics-base.html#vectorized-graphical-parameters"><i class="fa fa-check"></i>Vectorized graphical parameters</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="graphics-base.html"><a href="graphics-base.html#displaying-and-saving-plots"><i class="fa fa-check"></i><b>11.4</b> Displaying and saving plots</a>
+<li class="chapter" data-level="11.4" data-path="graphics-base.html"><a href="graphics-base.html#graphical-devices"><i class="fa fa-check"></i><b>11.4</b> Displaying and saving plots</a>
 <ul>
 <li class="chapter" data-level="11.4.1" data-path="graphics-base.html"><a href="graphics-base.html#device-par"><i class="fa fa-check"></i><b>11.4.1</b> Controlling a device through <code>par</code></a></li>
 </ul></li>
@@ -340,31 +342,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="11.7" data-path="graphics-base.html"><a href="graphics-base.html#next-steps-2"><i class="fa fa-check"></i><b>11.7</b> Next steps</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html"><i class="fa fa-check"></i><b>12</b> Graphics using <code>ggplot2</code></a>
+<li class="chapter" data-level="12" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html"><i class="fa fa-check"></i><b>12</b> ggplot2: an alternative plotting system</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#overview-6"><i class="fa fa-check"></i><b>12.1</b> Overview</a>
+<li class="chapter" data-level="12.1" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#introduction-1"><i class="fa fa-check"></i><b>12.1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="12.1.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#data-example-hemoglobin"><i class="fa fa-check"></i><b>12.1.1</b> Data example: Hemoglobin</a></li>
+<li class="chapter" data-level="12.1.1" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#concepts-basic-usage"><i class="fa fa-check"></i><b>12.1.1</b> Concepts &amp; basic usage</a></li>
+<li class="chapter" data-level="12.1.2" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#practicalities"><i class="fa fa-check"></i><b>12.1.2</b> Practicalities</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#background-4"><i class="fa fa-check"></i><b>12.2</b> Background</a></li>
-<li class="chapter" data-level="12.3" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#concepts"><i class="fa fa-check"></i><b>12.3</b> Concepts</a>
+<li class="chapter" data-level="12.2" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#more-about-aesthetics-and-geoms"><i class="fa fa-check"></i><b>12.2</b> More about aesthetics and geoms</a>
 <ul>
-<li class="chapter" data-level="12.3.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#aesthetics"><i class="fa fa-check"></i><b>12.3.1</b> Aesthetics</a></li>
-<li class="chapter" data-level="12.3.2" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#example-data"><i class="fa fa-check"></i><b>12.3.2</b> Example data</a></li>
+<li class="chapter" data-level="12.2.1" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#optional-aesthetics"><i class="fa fa-check"></i><b>12.2.1</b> Optional aesthetics</a></li>
+<li class="chapter" data-level="12.2.2" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#multiple-geoms"><i class="fa fa-check"></i><b>12.2.2</b> Multiple geoms</a></li>
+<li class="chapter" data-level="12.2.3" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#using-geom-arguments"><i class="fa fa-check"></i><b>12.2.3</b> Using geom arguments</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#background-5"><i class="fa fa-check"></i><b>12.4</b> Background</a></li>
-<li class="chapter" data-level="12.5" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#basic-usage"><i class="fa fa-check"></i><b>12.5</b> Basic usage</a></li>
-<li class="chapter" data-level="12.6" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#slightly-extended-usage"><i class="fa fa-check"></i><b>12.6</b> Slightly extended usage</a></li>
-<li class="chapter" data-level="12.7" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#multiple-layers"><i class="fa fa-check"></i><b>12.7</b> Multiple layers</a></li>
-<li class="chapter" data-level="12.8" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#splitting-the-plot"><i class="fa fa-check"></i><b>12.8</b> Splitting the plot</a></li>
-<li class="chapter" data-level="12.9" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#messing-with-the-defaults"><i class="fa fa-check"></i><b>12.9</b> Messing with the defaults</a>
+<li class="chapter" data-level="12.3" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#splitting-plots-by-sub-groups"><i class="fa fa-check"></i><b>12.3</b> Splitting plots by sub-groups</a></li>
+<li class="chapter" data-level="12.4" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#changing-the-default-appearance"><i class="fa fa-check"></i><b>12.4</b> Changing the default appearance</a>
 <ul>
-<li class="chapter" data-level="12.9.1" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#fixing-aesthetics"><i class="fa fa-check"></i><b>12.9.1</b> {-} Fixing aesthetics</a></li>
-<li class="chapter" data-level="" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#scales"><i class="fa fa-check"></i>Scales</a></li>
+<li class="chapter" data-level="12.4.1" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#scales"><i class="fa fa-check"></i><b>12.4.1</b> Scales</a></li>
+<li class="chapter" data-level="12.4.2" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#fixing-aesthetics"><i class="fa fa-check"></i><b>12.4.2</b> Fixing aesthetics</a></li>
+<li class="chapter" data-level="12.4.3" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#themes"><i class="fa fa-check"></i><b>12.4.3</b> Themes</a></li>
+<li class="chapter" data-level="12.4.4" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#other"><i class="fa fa-check"></i><b>12.4.4</b> Other</a></li>
 </ul></li>
-<li class="chapter" data-level="12.10" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#messing-with-defaults-ii-themes"><i class="fa fa-check"></i><b>12.10</b> Messing with defaults II: themes</a></li>
-<li class="chapter" data-level="12.11" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#extension-packages"><i class="fa fa-check"></i><b>12.11</b> Extension packages</a></li>
-<li class="chapter" data-level="12.12" data-path="graphics-ggplot2.html"><a href="graphics-ggplot2.html#technical-notes"><i class="fa fa-check"></i><b>12.12</b> Technical notes</a></li>
+<li class="chapter" data-level="12.5" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#complex-layering-and-annotation"><i class="fa fa-check"></i><b>12.5</b> Complex layering and annotation</a></li>
+<li class="chapter" data-level="12.6" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#extensions"><i class="fa fa-check"></i><b>12.6</b> Extensions</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#assemble-multi-panel-plots-patchwork"><i class="fa fa-check"></i><b>12.6.1</b> Assemble multi-panel plots: patchwork</a></li>
+<li class="chapter" data-level="12.6.2" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#others"><i class="fa fa-check"></i><b>12.6.2</b> Others</a></li>
+</ul></li>
+<li class="chapter" data-level="12.7" data-path="ggplot2-an-alternative-plotting-system.html"><a href="ggplot2-an-alternative-plotting-system.html#next-steps-3"><i class="fa fa-check"></i><b>12.7</b> Next steps</a></li>
 </ul></li>
 <li class="part"><span><b>V Organizing the analysis</b></span></li>
 <li class="chapter" data-level="13" data-path="tables-nice.html"><a href="tables-nice.html"><i class="fa fa-check"></i><b>13</b> Generating nice tables</a></li>
